@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trading · hub</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0B1F3A;--navy2:#2E4A6B;--grey:#6B7280;--grey2:#B8BEC7;--gold:#C9A227;--ink:#111418;--paper:#F7F7F5;--white:#FFFFFF;--rule:#D9DDE3;--rule2:#E6E8EB;--up:#2E6B4A;--dn:#8B2E2E;
+--serif:"Cormorant Garamond",Georgia,serif;--sans:"Source Sans 3",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.45}
+a{color:var(--navy)}
+.serif{font-family:var(--serif)}.mono{font-family:var(--mono)}
+header{background:var(--navy);color:var(--paper);padding:14px 20px;border-bottom:3px solid var(--gold);display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+header .t{font-family:var(--serif);font-size:26px;font-weight:600}header .t span{color:var(--grey2);font-family:var(--sans);font-size:14px;margin-left:10px;font-weight:400}
+header .m{font-family:var(--mono);font-size:12px;color:var(--grey2)}
+nav{display:flex;background:var(--white);border-bottom:1px solid var(--rule);padding:0 10px;overflow-x:auto}
+nav a{padding:11px 14px;color:var(--grey);text-decoration:none;border-bottom:2px solid transparent;white-space:nowrap}
+nav a.on{color:var(--navy);border-bottom-color:var(--gold);font-weight:600}
+main{padding:14px 16px;max-width:1180px;margin:0 auto;display:grid;gap:12px}
+.card{background:var(--white);border:1px solid var(--rule);padding:12px 14px}
+.lbl{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--grey)}
+.h{font-family:var(--serif);font-size:19px;font-weight:600;color:var(--navy)}
+table{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:12.5px}
+th,td{padding:6px 8px;border-bottom:1px solid var(--rule2);text-align:right;white-space:nowrap}
+th{font-family:var(--sans);font-weight:600;color:var(--grey);font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+td:first-child,th:first-child{text-align:left}
+.up{color:var(--up)}.dn{color:var(--dn)}.mut{color:var(--grey)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.strip{border-left:4px solid var(--gold);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.chip{display:inline-block;font-size:10.5px;padding:1px 5px;border:1px solid var(--navy2);color:var(--navy);background:#EEF1F5;margin:1px 2px 1px 0;font-family:var(--mono);cursor:default;position:relative}
+.chip.hi{background:var(--navy);color:var(--paper);border-color:var(--navy)}
+.chip .tip{display:none;position:absolute;left:0;top:120%;z-index:5;background:var(--navy);color:var(--paper);padding:8px 10px;width:220px;border-top:2px solid var(--gold);font-size:11px;white-space:normal;text-align:left}
+.chip:hover .tip{display:block}
+.cal td{height:52px;vertical-align:top;text-align:left;font-size:11px;color:var(--grey);border:1px solid var(--rule2);padding:3px 4px;white-space:normal}
+.cal th{text-align:left}
+.empty{color:var(--grey);font-size:12.5px;padding:6px 0}
+.foot{font-family:var(--mono);font-size:10.5px;color:var(--grey);text-align:right}
+.sec{display:none}.sec.on{display:grid;gap:12px}
+svg text{font-family:var(--mono)}
+@media (max-width:600px){main{padding:10px}header .t{font-size:22px}th,td{padding:5px 6px;font-size:12px}}
+</style>
+</head>
+<body>
+<header><div class="t">Trading<span>hub</span></div><div class="m" id="hdr">loading…</div></header>
+<nav id="nav">
+<a href="#brief" data-t="brief">Brief</a><a href="#macro" data-t="macro">Macro</a><a href="#assets" data-t="assets">Assets</a><a href="#tradingview" data-t="tradingview">TradingView</a><a href="#journal" data-t="journal">Journal</a>
+</nav>
+<main>
+<section id="brief" class="sec">
+  <div class="card strip" id="yesterday"><div><span class="lbl">Yesterday</span> <span class="mono" id="ystr">—</span></div><div class="mono" id="hit">—</div></div>
+  <div class="card"><div class="lbl" style="margin-bottom:6px">Snapshot</div><div style="overflow-x:auto"><table id="snap"><thead><tr><th>Asset</th><th>Last</th><th>1d</th><th>1w</th><th>1m</th><th>RSI</th><th>Trend</th><th>Bias</th></tr></thead><tbody></tbody></table></div></div>
+  <div class="grid2" id="cards"></div>
+  <div class="card"><div class="lbl" style="margin-bottom:8px">Macro nowcast</div><div class="grid3" id="nowcast"></div></div>
+  <div class="card"><div style="display:flex;justify-content:space-between;flex-wrap:wrap"><div class="lbl" style="margin-bottom:8px" id="caltitle">Calendar (ICT)</div><div class="mono mut" style="font-size:11px">hover a chip for time + consensus</div></div><div id="calendar"></div></div>
+  <div class="card strip" style="border-left-color:var(--navy)"><div><span class="lbl">Key risk 24h</span> <span id="risk">—</span></div></div>
+</section>
+<section id="macro" class="sec">
+  <div class="card"><div class="h">Macro</div><div class="empty" id="macro-body">Nowcasts and central-bank member stances appear here once <span class="mono">macro/</span> publishes. Nothing published yet.</div></div>
+</section>
+<section id="assets" class="sec">
+  <div class="grid2" id="assets-cards"></div>
+</section>
+<section id="tradingview" class="sec">
+  <div class="card"><div class="h">TradingView</div><div class="empty" id="tv-body">Pine catalogue, backtest stats and alerts appear here once <span class="mono">tradingview/</span> publishes. Nothing published yet.</div></div>
+</section>
+<section id="journal" class="sec">
+  <div class="card strip"><div><span class="lbl">Hit rate</span> <span class="mono" id="jhit">—</span></div><div class="mono mut" id="jn" style="font-size:12px"></div></div>
+  <div class="card"><div class="lbl" style="margin-bottom:6px">Calls log</div><div style="overflow-x:auto"><table id="jtab"><thead><tr><th>Date</th><th>Asset</th><th>Bias</th><th>Entry</th><th>Stop</th><th>Target</th><th>At call</th><th>Outcome</th><th>P&amp;L %</th><th style="text-align:left">Note</th></tr></thead><tbody></tbody></table></div></div>
+</section>
+<div class="foot" id="foot"></div>
+</main>
+<script>
+const $=s=>document.querySelector(s), fmt=(v,dp=2)=>v==null||isNaN(v)?'—':Number(v).toLocaleString('en-US',{minimumFractionDigits:dp,maximumFractionDigits:dp});
+const pct=v=>v==null?'—':(v>=0?'+':'')+Number(v).toFixed(2)+'%', cls=v=>v==null?'mut':v>=0?'up':'dn';
+const bust='?v='+Date.now();
+async function J(p){try{const r=await fetch(p+bust,{cache:'no-store'});if(!r.ok)return null;return await r.json()}catch(e){return null}}
+async function T(p){try{const r=await fetch(p+bust,{cache:'no-store'});if(!r.ok)return null;return await r.text()}catch(e){return null}}
+function csv(t){if(!t)return[];const L=t.trim().split(/\r?\n/);const H=L.shift().split(',');return L.map(l=>{const o={},c=[];let cur='',q=false;for(const ch of l){if(ch=='"'){q=!q}else if(ch==','&&!q){c.push(cur);cur=''}else cur+=ch}c.push(cur);H.forEach((h,i)=>o[h]=c[i]??'');return o})}
+function spark(s,lv,h=70){if(!s||!s.close||s.close.length<2)return'';const W=400,n=s.close.length,c=s.close;let lo=Math.min(...c),hi=Math.max(...c);
+ const extra=[...(lv?.resistance||[]),...(lv?.support||[])].filter(v=>v>lo*0.9&&v<hi*1.1);lo=Math.min(lo,...extra);hi=Math.max(hi,...extra);const pad=(hi-lo)*0.08||1;lo-=pad;hi+=pad;
+ const X=i=>i/(n-1)*W,Y=v=>h-(v-lo)/(hi-lo)*h;const pts=c.map((v,i)=>X(i).toFixed(1)+','+Y(v).toFixed(1)).join(' ');
+ const ma=(k)=>{if(n<k)return'';const a=[];for(let i=k-1;i<n;i++){let s=0;for(let j=i-k+1;j<=i;j++)s+=c[j];a.push(X(i).toFixed(1)+','+Y(s/k).toFixed(1))}return a.join(' ')};
+ let out=`<svg width="100%" height="${h}" viewBox="0 0 ${W} ${h}" preserveAspectRatio="none" style="display:block">`;
+ (lv?.resistance||[]).forEach(v=>out+=`<line x1="0" x2="${W}" y1="${Y(v).toFixed(1)}" y2="${Y(v).toFixed(1)}" stroke="#8B2E2E" stroke-width=".8" stroke-dasharray="3 3"/>`);
+ (lv?.support||[]).forEach(v=>out+=`<line x1="0" x2="${W}" y1="${Y(v).toFixed(1)}" y2="${Y(v).toFixed(1)}" stroke="#2E6B4A" stroke-width=".8" stroke-dasharray="3 3"/>`);
+ if(lv?.kind==='ta'){out+=`<polyline fill="none" stroke="#C9A227" stroke-width="1" points="${ma(20)}"/><polyline fill="none" stroke="#2E4A6B" stroke-width="1" points="${ma(50)}"/>`}
+ out+=`<polyline fill="none" stroke="#0B1F3A" stroke-width="1.5" points="${pts}"/></svg>`;return out}
+function card(lv,s,call,nar,big){const dp=lv.dp??(s?.dp??2),u=lv.name.includes('%')?'%':'';
+ const rs=lv.kind==='ta'?`<div class="mono mut" style="font-size:11px">R <span class="dn">${(lv.resistance||[]).map(v=>fmt(v,dp)).join(' / ')||'—'}</span> · S <span class="up">${(lv.support||[]).map(v=>fmt(v,dp)).join(' / ')||'—'}</span></div>
+ <div class="mono mut" style="font-size:11px">20/50/100 ${fmt(lv.ma?.[20],dp)} / ${fmt(lv.ma?.[50],dp)} / ${fmt(lv.ma?.[100],dp)} · RSI ${lv.rsi14?.toFixed(0)??'—'} · ATR ${fmt(lv.atr14,dp)} · ${lv.trend||''}</div>`
+ :`<div class="mono mut" style="font-size:11px">1w ${pct(lv.chg_1w_pct)} · 1m ${pct(lv.chg_1m_pct)} · 6m ${fmt(lv.lo_6m,dp)}–${fmt(lv.hi_6m,dp)}</div>`;
+ const tr=call?(call.bias==='no trade'||call.bias==='neutral'?`<b>${call.bias}</b> — ${call.note||''}`:`<b>${call.bias}</b> · entry ${fmt(call.entry,dp)} · stop ${fmt(call.invalidation,dp)} · target ${fmt(call.target,dp)}<span class="mut"> — ${call.note||''}</span>`):'';
+ const news=nar?.assets?.[lv.name]?.news;
+ return `<div class="card"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><span class="h">${lv.name}</span><span class="mono">${fmt(lv.last,dp)}${u} <span class="${cls(lv.chg_pct)}">${pct(lv.chg_pct)}</span></span></div>
+ <div style="margin:8px 0;border-bottom:1px solid var(--rule)">${spark(s,lv,big?160:70)}</div>${rs}${news?`<div style="font-size:12.5px;margin-top:6px"><span class="lbl">News</span> ${news}</div>`:''}${tr?`<div style="font-size:12.5px;margin-top:6px"><span class="lbl">Trade</span> ${tr}</div>`:''}</div>`}
+function nowcastBox(n,label){if(!n||!n.data){return`<div><div class="h" style="font-size:16px">${label}</div><div class="mono mut" style="font-size:12px">not yet published</div></div>`}
+ const d=n.data,ins=d.status==='insufficient_data';return`<div><div class="h" style="font-size:16px">${label} · ${d.series||''}</div>${ins?`<div class="mono mut" style="font-size:12px">insufficient data</div><div class="mut" style="font-size:11px">missing: ${(d.inputs_missing||[]).join(', ')||'—'}</div>`:
+ `<div class="mono" style="font-size:12px">ours <b>${fmt(d.ours,2)}</b> · cons ${fmt(d.consensus,2)} · prior ${fmt(d.prior,2)}</div><div class="mono" style="font-size:11px"><span class="${cls(d.delta_1d)}">Δ1d ${d.delta_1d==null?'—':(d.delta_1d>=0?'+':'')+Number(d.delta_1d).toFixed(2)}</span> <span class="mut">${d.driver||''}</span></div>`}</div>`}
+function calendar(c){if(!c||!c.data||!c.data.length){return`<div class="empty">Calendar not yet published by the morning run.</div>`}
+ const ev=c.data;const days={};ev.forEach(e=>{(days[e.date]=days[e.date]||[]).push(e)});const dates=Object.keys(days).sort();
+ const first=new Date(dates[0]+'T00:00:00'),last=new Date(dates[dates.length-1]+'T00:00:00');
+ let d=new Date(first);d.setDate(d.getDate()-((d.getDay()+6)%7));let rows=[];
+ while(d<=last){let cells='';for(let i=0;i<5;i++){const k=d.toISOString().slice(0,10),ds=days[k]||[];cells+=`<td><div class="mut">${d.getDate()}${d.getDate()===1||(i===0&&rows.length===0)?' '+d.toLocaleString('en',{month:'short'}):''}</div>${ds.map(e=>`<span class="chip ${e.impact>=2?'hi':''}">${e.name}${e.ict?' '+e.ict.slice(11):''}<span class="tip"><b>${e.name}</b><br>${e.ict||''} ICT${e.consensus!=null?`<br>cons ${e.consensus} · prior ${e.prior??'—'}`:''}${e.rate?`<br>rate ${e.rate}`:''}${e.confirmed===false?'<br>(unconfirmed)':''}</span></span>`).join('')}</td>`;d.setDate(d.getDate()+1)}d.setDate(d.getDate()+2);rows.push(`<tr>${cells}</tr>`)}
+ return`<div style="overflow-x:auto"><table class="cal"><thead><tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr></thead><tbody>${rows.join('')}</tbody></table></div>`}
+async function main(){
+ const [lv,se,gr,calls,nar,cal,nUS,nTH,nJP,ccsv,idx]=await Promise.all([J('outputs/assets/levels.json'),J('outputs/assets/series.json'),J('outputs/journal/grades.json'),J('brief/calls.json'),J('brief/narrative.json'),J('outputs/macro/calendar.json'),J('outputs/macro/nowcast_us.json'),J('outputs/macro/nowcast_th.json'),J('outputs/macro/nowcast_jp.json'),T('journal/calls.csv'),J('index.json')]);
+ const levels=lv?.data||[],series=Object.fromEntries((se?.data||[]).map(s=>[s.name,s])),cmap=Object.fromEntries((calls?.calls||[]).map(c=>[c.asset,c]));
+ const asof=lv?.asof||'—';$('#hdr').textContent=`${asof} · ${nar?.header_note||'levels as of US close / Asia close'} · published ${idx?.published?.slice(0,16).replace('T',' ')||'—'} ICT`;
+ const g=gr?.data;if(g){$('#ystr').innerHTML=g.yesterday?.length?g.yesterday.map(y=>`${y.asset} ${y.bias} → <span class="${y.outcome==='win'?'up':y.outcome==='loss'?'dn':'mut'}">${y.outcome}${y.pnl_pct?' '+(Number(y.pnl_pct)>=0?'+':'')+Number(y.pnl_pct).toFixed(2)+'%':''}</span>`).join(' · '):'nothing to grade';
+  $('#hit').innerHTML=`hit 20d <b>${g.hit_rate_20==null?'n/a':g.hit_rate_20.toFixed(0)+'%'}</b> · all ${g.hit_rate_all==null?'n/a':g.hit_rate_all.toFixed(0)+'%'} (${g.n_scored} scored)`}
+ $('#snap tbody').innerHTML=levels.map(l=>{const dp=l.name.includes('%')?3:(series[l.name]?.dp??2),b=cmap[l.name]?.bias;return`<tr><td>${l.name}</td><td>${fmt(l.last,dp)}</td><td class="${cls(l.chg_pct)}">${pct(l.chg_pct)}</td><td class="${cls(l.chg_1w_pct)}">${pct(l.chg_1w_pct)}</td><td class="${cls(l.chg_1m_pct)}">${pct(l.chg_1m_pct)}</td><td>${l.rsi14?l.rsi14.toFixed(0):'—'}</td><td class="mut">${l.trend||'—'}</td><td class="${b==='bullish'?'up':b==='bearish'?'dn':'mut'}">${l.kind==='ta'?(b||'—'):'–'}</td></tr>`}).join('');
+ $('#cards').innerHTML=levels.filter(l=>l.kind==='ta').map(l=>card(l,series[l.name],cmap[l.name],nar,false)).join('');
+ $('#assets-cards').innerHTML=levels.map(l=>card(l,series[l.name],cmap[l.name],nar,true)).join('')||'<div class="empty">No levels published yet.</div>';
+ $('#nowcast').innerHTML=nowcastBox(nUS,'US')+nowcastBox(nTH,'TH')+nowcastBox(nJP,'JP');
+ $('#calendar').innerHTML=calendar(cal);if(cal?.asof)$('#caltitle').textContent=`Calendar (ICT) · as of ${cal.asof}`;
+ $('#risk').textContent=nar?.key_risk||'not yet published by the morning run';
+ const rows=csv(ccsv).reverse();$('#jtab tbody').innerHTML=rows.map(r=>`<tr><td>${r.date}</td><td>${r.asset}</td><td class="${r.bias==='bullish'?'up':r.bias==='bearish'?'dn':'mut'}">${r.bias}</td><td>${r.entry||'—'}</td><td>${r.invalidation||'—'}</td><td>${r.target||'—'}</td><td>${r.last_at_call||'—'}</td><td class="${r.outcome==='win'?'up':r.outcome==='loss'?'dn':'mut'}">${r.outcome||'open'}</td><td>${r.pnl_pct||'—'}</td><td style="text-align:left;white-space:normal;font-family:var(--sans)">${r.note||''}</td></tr>`).join('')||'<tr><td colspan="10" class="mut">no calls logged yet</td></tr>';
+ if(g){$('#jhit').innerHTML=`20d <b>${g.hit_rate_20==null?'n/a':g.hit_rate_20.toFixed(0)+'%'}</b> · all-time ${g.hit_rate_all==null?'n/a':g.hit_rate_all.toFixed(0)+'%'}`;$('#jn').textContent=`${g.n_scored} graded · ${rows.filter(r=>!r.outcome).length} open · grading rule v0: direction vs next close`}
+ $('#foot').textContent=`source: outputs/ published by the 06:37 run · Srivanich`;
+}
+function route(){const t=(location.hash||'#brief').slice(1);document.querySelectorAll('.sec').forEach(s=>s.classList.toggle('on',s.id===t));document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.dataset.t===t));if(!document.getElementById(t))location.hash='#brief'}
+window.addEventListener('hashchange',route);route();main();
+</script>
+</body>
+</html>

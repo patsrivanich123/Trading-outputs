@@ -1,0 +1,5 @@
+date,asset,bias,entry,invalidation,target,last_at_call,graded_on,outcome,pnl_pct,note
+2026-10-31,USDJPY,bearish,158.8,160.0,156.5,157.56,,,,"Sell rallies 158.8; 160 intervention zone, BoJ Dec"
+2026-10-31,UST 10Y (%),no trade,,,,4.929,,,,Hike pricing vs safe-haven bid; midterms Tuesday
+2026-10-31,DXY (ICE fut),no trade,,,,101.745,,,,Mid-range under 102.38; event risk binary
+2026-10-31,Brent CO1,no trade,,,,113.43,,,,RSI 73 at highs; post-midterm Iran binary
