@@ -1,0 +1,293 @@
+{
+ "asof": "2026-11-01",
+ "source": "macro.jp.member_agents",
+ "data": {
+  "committee": "BOJ",
+  "meeting_date": "2026-12-18",
+  "current_rate": "1.25% (uncollateralized overnight call rate, effective 2026-09-24)",
+  "last_decision": {
+   "date": "2026-10-30",
+   "decision": "hold at 1.25%; Outlook Report: underlying inflation 'generally consistent with' 2% target; core CPI FY26 2.5 / FY27 2.6 (up from 2.4) / FY28 2.0; GDP FY26 0.7 / FY27 0.7 / FY28 0.8; further hikes appropriate if projections realised; price risks skewed up; ETF sales raised to ~JPY860bn/yr from Jan 2027 (unanimous)",
+   "vote": "8-1",
+   "dissents": [
+    {
+     "slug": "takata",
+     "direction": "hawkish (proposed 1.50%)"
+    }
+   ]
+  },
+  "predicted": {
+   "decision": "hike25",
+   "tally": {
+    "hike25": 7,
+    "hold": 2
+   },
+   "vote_string": "7-2",
+   "n_voters": 9,
+   "expected_dissents": 1.98,
+   "non_unanimous_prob": 0.94
+  },
+  "path_median": {
+   "2026-12": 1.5,
+   "2027-02": 1.5,
+   "2027-04": 1.75
+  },
+  "dots": {
+   "2026-12": [
+    1.25,
+    1.25,
+    1.5,
+    1.5,
+    1.5,
+    1.5,
+    1.5,
+    1.5,
+    1.5
+   ],
+   "2027-02": [
+    1.25,
+    1.25,
+    1.5,
+    1.5,
+    1.5,
+    1.5,
+    1.5,
+    1.5,
+    1.5
+   ],
+   "2027-04": [
+    1.25,
+    1.5,
+    1.75,
+    1.75,
+    1.75,
+    1.75,
+    1.75,
+    1.75,
+    1.75
+   ]
+  },
+  "committee_lean": 0.3,
+  "dissent_base_rate_pct": 56.5,
+  "n_members_run": 9,
+  "members": [
+   {
+    "slug": "takata",
+    "name": "Hajime Takata",
+    "role": "Board member",
+    "voter": true,
+    "stance": "hawk",
+    "score": 0.9,
+    "vote": "hike25",
+    "path": {
+     "2026-12": 1.5,
+     "2027-02": 1.5,
+     "2027-04": 1.75
+    },
+    "confidence": 0.93,
+    "dissent_risk": 0.25,
+    "drivers": [
+     "Underlying inflation at 2%; Outlook raised FY27 core CPI to 2.6",
+     "Real policy rate deeply negative at 1.25%; neutral likely higher",
+     "Brent 113 and yen near 158 add upside cost-push risk"
+    ],
+    "would_change_if": "A sharp global financial shock impairing Japanese funding markets, or a clear downturn in wage-setting signals ahead of shunto.",
+    "last_signal": "2026-10-30 MPM vote (statement): Dissented, proposing 1.50%: underlying inflation has reached the 2% target so BOJ should move faster toward neutral.",
+    "rationale": "I proposed 1.50% in October because underlying inflation has reached the target; nothing since weakens that case. The Outlook itself now says so and lifted FY27 prices. Yen weakness and energy raise upside risks. Waiting on a market-anticipated schedule is the error I have warned against. I vote to raise to 1.50% in December and keep moving nimbly toward neutral, which I judge above market estimates."
+   },
+   {
+    "slug": "tamura",
+    "name": "Naoki Tamura",
+    "role": "Board member",
+    "voter": true,
+    "stance": "hawk",
+    "score": 0.8,
+    "vote": "hike25",
+    "path": {
+     "2026-12": 1.5,
+     "2027-02": 1.5,
+     "2027-04": 1.75
+    },
+    "confidence": 0.85,
+    "dissent_risk": 0.2,
+    "drivers": [
+     "Outlook now concedes underlying inflation at 2%; FY27 core CPI raised to 2.6",
+     "Yen 157.6 and Brent 113 mean faster, broader import-cost pass-through",
+     "Three months since September hike fits my every-few-months baseline"
+    ],
+    "would_change_if": "A sharp global financial shock that visibly tightens domestic conditions, or wage-setting signals for Shunto collapsing below 4%; soft Tokyo CPI alone would not.",
+    "last_signal": "2026-09-18 MPM (statement attachment): Voted for hike to 1.25% but objected to price-outlook text, saying underlying inflation had already generally reached 2%.",
+    "rationale": "In October the Board finally wrote what I said in June: underlying inflation has reached 2%. With FY27 prices revised up, risks skewed upward, oil above 110 and the yen near 158, there is no reason to wait. The policy rate at 1.25% is far from neutral around 2%; I would raise to 1.50% in December and keep moving every few months, accelerating without hesitation if upside risks heighten. Equity volatility abroad does not change Japan's price picture."
+   },
+   {
+    "slug": "koeda",
+    "name": "Junko Koeda",
+    "role": "Board member",
+    "voter": true,
+    "stance": "lean-hawk",
+    "score": 0.55,
+    "vote": "hike25",
+    "path": {
+     "2026-12": 1.5,
+     "2027-02": 1.5,
+     "2027-04": 1.75
+    },
+    "confidence": 0.7,
+    "dissent_risk": 0.08,
+    "drivers": [
+     "Outlook Report: underlying inflation now consistent with 2% target",
+     "FY27 core CPI raised to 2.6; Brent 113 adds cost-push",
+     "Policy rate 1.25 still well below my neutral estimate"
+    ],
+    "would_change_if": "Sharp global risk-off tightening Japanese financial conditions, or clear evidence shunto 2027 momentum and CPI breadth are fading.",
+    "last_signal": "2026-10-15 Speech to local leaders, Kumamoto: BOJ should not be overly cautious on hikes; neutral rate likely well above 1%, one estimate above 2%; over 70% of CPI items rising.",
+    "rationale": "Underlying inflation is anchoring at around 2% and over 70% of CPI items are rising; the Outlook Report now says so explicitly and raised FY27. With the policy rate at 1.25%, real rates remain deeply negative while energy prices are elevated. We should not be overly cautious: a further step to 1.5% in December is appropriate, then continue gradually toward neutral, data-dependent, while reducing the balance sheet."
+   },
+   {
+    "slug": "himino",
+    "name": "Ryozo Himino",
+    "role": "Deputy Governor",
+    "voter": true,
+    "stance": "lean-hawk",
+    "score": 0.5,
+    "vote": "hike25",
+    "path": {
+     "2026-12": 1.5,
+     "2027-02": 1.5,
+     "2027-04": 1.75
+    },
+    "confidence": 0.72,
+    "dissent_risk": 0.08,
+    "drivers": [
+     "Outlook now says underlying inflation consistent with 2%; FY27 raised",
+     "Yen 157.6 near intervention line; faster pass-through to prices",
+     "Brent 113 cost-push adds to upside risk; real rates still deeply negative"
+    ],
+    "would_change_if": "Sharp yen rally below 150, equity sell-off turning into credit stress, or Shunto signals clearly below last year.",
+    "last_signal": "2026-10-21 Speech (venue not confirmed): Underlying inflation quite close to 2%; expectations still rising; real rates low; delay in adjusting could let inflation risks materialise.",
+    "rationale": "Underlying inflation has reached a level generally consistent with the target and the risks remain on the upside. Real interest rates are still very low and the weak yen and energy prices raise the risk that inflation overshoots. Delaying adjustment only raises the cost of acting later. If the data through December confirm the Outlook, it is appropriate to raise the policy rate in a timely manner, then assess before the next step."
+   },
+   {
+    "slug": "masu",
+    "name": "Kazuyuki Masu",
+    "role": "Board member",
+    "voter": true,
+    "stance": "lean-hawk",
+    "score": 0.5,
+    "vote": "hike25",
+    "path": {
+     "2026-12": 1.5,
+     "2027-02": 1.5,
+     "2027-04": 1.75
+    },
+    "confidence": 0.75,
+    "dissent_risk": 0.1,
+    "drivers": [
+     "Outlook now says underlying inflation consistent with 2%; FY27 raised to 2.6",
+     "Yen 157.6 and Brent 113 add cost-push pass-through I weight heavily",
+     "Real rates still negative at 1.25%; overshoot avoidance is my priority"
+    ],
+    "would_change_if": "Clear domestic downturn: Tankan/GDP slump, shunto momentum breaking, or disorderly global risk-off tightening Japanese financial conditions sharply.",
+    "last_signal": "2026-09-09 Speech (venue not confirmed; reported 10 Sep): Underlying inflation quite close to 2%; top priority is avoiding a sharp overshoot; Japan no longer in deflation, lift real rates out of negative soon.",
+    "rationale": "The October Outlook confirmed what I have argued: underlying inflation is at 2% and the risk is a sharp overshoot, not a shortfall. A weak yen and oil above 110 pass through faster than before, and real rates remain negative. Having supported the October hold to confirm the data, I see no reason to wait further in December; a 25bp step keeps us ahead of the overshoot while staying gradual. Global market stress bears watching but has not reached our domestic economy."
+   },
+   {
+    "slug": "ueda",
+    "name": "Kazuo Ueda",
+    "role": "Governor",
+    "voter": true,
+    "stance": "lean-hawk",
+    "score": 0.4,
+    "vote": "hike25",
+    "path": {
+     "2026-12": 1.5,
+     "2027-02": 1.5,
+     "2027-04": 1.75
+    },
+    "confidence": 0.7,
+    "dissent_risk": 0.05,
+    "drivers": [
+     "Underlying inflation at target; task is anchoring, preventing overshoot",
+     "Yen 157.6 and Brent 113 raise pass-through, upside price risk",
+     "Financial conditions still accommodative at 1.25%; outlook on track"
+    ],
+    "would_change_if": "Sharp global risk-off tightening domestic financial conditions, winter shunto signals turning soft, or Tokyo/national core CPI undershooting by 0.3pp or more",
+    "last_signal": "2026-10-30 Post-MPM press conference, Tokyo: Underlying inflation has reached levels consistent with target; focus now on whether expectations are anchored; pace of hikes depends on data.",
+    "rationale": "Underlying inflation has reached levels consistent with our target, so the question is no longer whether to adjust but at what pace. The yen and energy prices add upside risk, and conditions remain accommodative after September. If December data confirm the Outlook, a further adjustment is appropriate. I have no fixed interval in mind; market turbulence or weaker price momentum would argue for waiting, but not for reversing course."
+   },
+   {
+    "slug": "uchida",
+    "name": "Shinichi Uchida",
+    "role": "Deputy Governor",
+    "voter": true,
+    "stance": "lean-hawk",
+    "score": 0.3,
+    "vote": "hike25",
+    "path": {
+     "2026-12": 1.5,
+     "2027-02": 1.5,
+     "2027-04": 1.75
+    },
+    "confidence": 0.7,
+    "dissent_risk": 0.08,
+    "drivers": [
+     "Outlook: underlying inflation now consistent with 2%, FY27 raised to 2.6",
+     "Yen 157.6 with larger pass-through; Brent 113 adds cost-push",
+     "Quarterly cadence (Jun, Sep) points to December; markets 74% priced"
+    ],
+    "would_change_if": "Disorderly equity sell-off or JGB/FX dysfunction into mid-December, or Fed pause that lifts yen sharply; then I hold and wait.",
+    "last_signal": "2026-10-05 Academic conference on AI and big data: AI is a significant positive demand shock lifting activity and prices; equity gains have eased financial conditions; correction risk if profits disappoint.",
+    "rationale": "The October Outlook was the signal: underlying inflation is generally consistent with the target and price risks are skewed up. A weak yen now passes through faster, and oil at 113 adds to that. Falling behind the curve is the larger risk. I would raise to 1.50% in December if markets remain orderly, then assess. I will not hike into unstable markets; the current correction is not that, yet."
+   },
+   {
+    "slug": "sato",
+    "name": "Ayano Sato",
+    "role": "Board member",
+    "voter": true,
+    "stance": "lean-dove",
+    "score": -0.45,
+    "vote": "hold",
+    "path": {
+     "2026-12": 1.25,
+     "2027-02": 1.25,
+     "2027-04": 1.5
+    },
+    "confidence": 0.52,
+    "dissent_risk": 0.42,
+    "drivers": [
+     "Consumption and real income still soft; no substantial acceleration yet",
+     "Brent 113 is cost-push: squeezes households, not demand-led inflation",
+     "Global risk-off and tighter financial conditions argue for patience"
+    ],
+    "would_change_if": "Clear pickup in real consumption and wage data, plus early Shunto signals of 5%+ settlements, before December.",
+    "last_signal": "2026-10-07 Kyodo News interview: Supports adjusting rates in stages as conditions are accommodative; timing depends on consumption and income; no preset pace.",
+    "rationale": "I still favour adjusting rates in stages, and I voted to hold in October with the majority. But the Outlook upgrade is driven by oil and import costs, not by income and consumption gaining momentum. A supply shock that cuts real wages, alongside a global risk-off, is not the acceleration I asked for in September. I would wait and reassess after Shunto indications; a further step in spring remains appropriate if conditions firm."
+   },
+   {
+    "slug": "asada",
+    "name": "Toichiro Asada",
+    "role": "Board member",
+    "voter": true,
+    "stance": "dove",
+    "score": -0.8,
+    "vote": "hold",
+    "path": {
+     "2026-12": 1.25,
+     "2027-02": 1.25,
+     "2027-04": 1.25
+    },
+    "confidence": 0.85,
+    "dissent_risk": 0.72,
+    "drivers": [
+     "Inflation upgrade is oil and import-cost driven, not demand",
+     "Brent 113 and Hormuz shock threaten production and employment",
+     "Global risk-off; Sep hike effects not yet observed"
+    ],
+    "would_change_if": "Shunto 2027 tally and real wages, plus consumption and production, confirm demand-driven inflation above 2% ex energy pass-through.",
+    "last_signal": "2026-09-18 MPM vote (statement): Dissented against hike to 1.25%: CPI ex-fresh food still below 2% and economy not clearly strong; preferred keeping the guideline.",
+    "rationale": "The Outlook raised FY27 prices, but the lift comes from energy and a weak yen, not from endogenous demand. Oil at 113 with Hormuz disruption is a terms-of-trade loss that weighs on production and employment, as I argued in June. Markets are in risk-off and the September hike has barely transmitted. Demand-driven inflation remains unconfirmed; I would keep the guideline at 1.25% and wait for the spring wage round before considering any further step."
+   }
+  ],
+  "run_at": "2026-11-01T00:10"
+ }
+}

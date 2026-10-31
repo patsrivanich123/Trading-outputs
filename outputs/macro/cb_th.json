@@ -1,0 +1,242 @@
+{
+ "asof": "2026-11-01",
+ "source": "macro.th.member_agents",
+ "data": {
+  "committee": "BOT",
+  "meeting_date": "2026-12-23",
+  "current_rate": "1.00",
+  "last_decision": {
+   "date": "2026-10-28",
+   "decision": "hold 1.00",
+   "vote": "unanimous (6-0, one member absent, unnamed)",
+   "dissents": [],
+   "forecasts": {
+    "gdp_2026": 2.4,
+    "gdp_2027": 2.1,
+    "headline_cpi_2026": 2.1,
+    "headline_cpi_2027": 1.3,
+    "core_cpi_2026": 1.2,
+    "core_cpi_2027": 1.3
+   },
+   "secretary": "Don Nakornthab (AG Monetary Policy)"
+  },
+  "predicted": {
+   "decision": "hold",
+   "tally": {
+    "hold": 7
+   },
+   "vote_string": "7-0",
+   "n_voters": 7,
+   "expected_dissents": 0.57,
+   "non_unanimous_prob": 0.45
+  },
+  "path_median": {
+   "2026-12": 1.0,
+   "2027-02": 1.0,
+   "2027-04": 1.0
+  },
+  "dots": {
+   "2026-12": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "2027-02": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "2027-04": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "committee_lean": 0.05,
+  "dissent_base_rate_pct": 58.8,
+  "n_members_run": 7,
+  "members": [
+   {
+    "slug": "piti",
+    "name": "Piti Disyatat",
+    "role": "Vice Chair (Deputy Governor, Monetary Stability)",
+    "voter": true,
+    "stance": "centre",
+    "score": 0.2,
+    "vote": "hold",
+    "path": {
+     "2026-12": 1.0,
+     "2027-02": 1.0,
+     "2027-04": 1.0
+    },
+    "confidence": 0.75,
+    "dissent_risk": 0.08,
+    "drivers": [
+     "Oil supply shock lifts headline; look through, watch expectations",
+     "Household debt and low-for-long costs argue against more easing",
+     "Rate cuts do little for structurally weak growth and SME credit"
+    ],
+    "would_change_if": "Growth falls clearly below 2% trajectory with SME credit contraction deepening and oil shock fading; or second-round inflation effects surface, warranting a hike.",
+    "last_signal": "2026-10-14 BoT-Danmarks Nationalbank bilateral: Led exchange of views on economic and financial matters; no policy content published.",
+    "rationale": "Since October the oil shock has shifted inflation risks to the upside while the Fed turns toward hiking. Neither moves me. A supply shock should be looked through unless expectations drift; the baht is not a target. Our space is limited and the real constraints on growth are structural; cutting further would add little and raise the financial-stability cost of low rates with household debt where it is. Hold at 1.00 and watch minutes, SME credit and second-round effects."
+   },
+   {
+    "slug": "mathee",
+    "name": "Mathee Supapongse",
+    "role": "External member (from 2026-11-01)",
+    "voter": true,
+    "stance": "centre",
+    "score": 0.15,
+    "vote": "hold",
+    "path": {
+     "2026-12": 1.0,
+     "2027-02": 1.0,
+     "2027-04": 1.0
+    },
+    "confidence": 0.7,
+    "dissent_risk": 0.1,
+    "drivers": [
+     "Brent 113 lifts headline CPI risk; core still 1.2",
+     "Fed hike pricing widens USD-THB differential, baht weaker",
+     "Low-for-long carries financial-stability cost; policy space thin at 1.00"
+    ],
+    "would_change_if": "Q4 GDP and credit data show broad-based deterioration with core CPI below 1 and baht stable; then one more cut.",
+    "last_signal": null,
+    "rationale": "I join a committee that just held unanimously at 1.00%, and nothing since changes that. Oil at 113 adds headline risk but core is 1.2 and the pass-through is contained. The widening differential against a Fed that may hike, plus SME credit still contracting, argues against spending our limited space now. Financial stability costs of prolonged low rates deserve more weight. Hold, preserve optionality, watch oil, baht and credit quality into Q1."
+   },
+   {
+    "slug": "suwannee",
+    "name": "Suwannee Jatsadasak",
+    "role": "Deputy Governor (Financial Institutions Stability)",
+    "voter": true,
+    "stance": "centre",
+    "score": 0.1,
+    "vote": "hold",
+    "path": {
+     "2026-12": 1.0,
+     "2027-02": 1.0,
+     "2027-04": 1.0
+    },
+    "confidence": 0.7,
+    "dissent_risk": 0.08,
+    "drivers": [
+     "Oil at 113 lifts headline CPI risk; no room to ease",
+     "SME credit contracting; low-for-long carries financial-stability cost",
+     "Fed hike pricing, weaker baht argue against widening differential"
+    ],
+    "would_change_if": "SME NPL formation and credit contraction worsen sharply with growth undershooting 2%; or oil shock fades and core CPI prints below 1% persistently.",
+    "last_signal": null,
+    "rationale": "Since October, the oil shock and firmer Fed pricing have tilted inflation and baht risks upward, while the credit side I watch most closely has not improved: SME lending is still contracting and asset quality is fragile. Cutting further would buy little growth and add to the long-run cost of low rates on financial stability; hiking into a weak credit cycle is unwarranted. I hold at 1.00% and keep the policy space for a genuine downturn, not a cost-push shock."
+   },
+   {
+    "slug": "charl",
+    "name": "Charl Kengchon",
+    "role": "External member",
+    "voter": true,
+    "stance": "centre",
+    "score": 0.05,
+    "vote": "hold",
+    "path": {
+     "2026-12": 1.0,
+     "2027-02": 1.0,
+     "2027-04": 1.0
+    },
+    "confidence": 0.72,
+    "dissent_risk": 0.08,
+    "drivers": [
+     "Brent 113 lifts headline CPI risk; core still ~1.2",
+     "Fed hike pricing widens USD-THB differential, baht weaker",
+     "Growth 2.4/2.1 soft but no new downside shock since Oct"
+    ],
+    "would_change_if": "Q4 GDP or exports/tourism clearly undershoot 2026 forecast with core CPI below 1 and baht stable; then I back a 25bp cut.",
+    "last_signal": null,
+    "rationale": "Nothing since 28 Oct argues for moving. Oil at 113 and a hawkish Fed add upside to headline inflation and pressure the baht, which removes any case for easing now; but core at 1.2 and a 2.1 growth outlook for 2027 give no reason to tighten. At 1.00 we have little room left, so I would keep it for a genuine growth shock, not spend it pre-emptively. Hold, and reassess with Q4 data in February."
+   },
+   {
+    "slug": "sauwanee",
+    "name": "Sauwanee Thairungroj",
+    "role": "External member",
+    "voter": true,
+    "stance": "centre",
+    "score": 0.0,
+    "vote": "hold",
+    "path": {
+     "2026-12": 1.0,
+     "2027-02": 1.0,
+     "2027-04": 1.0
+    },
+    "confidence": 0.7,
+    "dissent_risk": 0.08,
+    "drivers": [
+     "Four unanimous holds since joining; no record of independent dissent",
+     "Brent 113 and El Nino lift headline CPI risk; cut hard to justify",
+     "Growth 2.4/2.1 soft but not collapsing; SME credit the growth worry"
+    ],
+    "would_change_if": "Q3/Q4 GDP tracking well below 2% with SME credit contraction deepening and oil retreating below 90 would open a 25bp cut.",
+    "last_signal": null,
+    "rationale": "Since October nothing has moved me. Oil at 113 and a hawkish Fed widen the rate differential and pressure the baht, so easing now would buy little growth and cost us on inflation and stability. Growth is weak, and SME credit contraction worries me most, but a 25bp cut will not fix a credit-allocation problem. I keep the accommodative stance at 1.00% and wait for Q4 data and the fiscal picture."
+   },
+   {
+    "slug": "vitai",
+    "name": "Vitai Ratanakorn",
+    "role": "Chair (Governor)",
+    "voter": true,
+    "stance": "centre",
+    "score": -0.05,
+    "vote": "hold",
+    "path": {
+     "2026-12": 1.0,
+     "2027-02": 1.0,
+     "2027-04": 1.0
+    },
+    "confidence": 0.85,
+    "dissent_risk": 0.05,
+    "drivers": [
+     "Brent 113 on Hormuz: oil shock I look through, not hike into",
+     "Fed Dec hike priced, baht weaker; rate differential argues against cutting",
+     "Growth 2.4 fine; low-rate costs to savers and stability bind further cuts"
+    ],
+    "would_change_if": "Q3/Q4 GDP tracking well below 2% with SME credit contraction deepening and core CPI near zero; or demand-driven inflation, not oil.",
+    "last_signal": "2026-08-27 Bloomberg interview (first foreign media): Not committed to any hold duration; next move could be hike or cut; further cuts would have limited effect, very low rates have costs (savers, misallocation, policy room).",
+    "rationale": "Nothing has changed enough. Oil at 113 is a supply shock; I said in June I look through those and I still do, so no hike. A cut buys little at 1% and costs savers and policy room, and with the Fed hiking and the baht soft the timing is wrong. We stay accommodative at 1.00% and work household debt through BNPL rules and the social AMC. I have not committed to a hold duration; the data decide."
+   },
+   {
+    "slug": "somchai",
+    "name": "Somchai Harnhirun",
+    "role": "External member",
+    "voter": true,
+    "stance": "centre",
+    "score": -0.1,
+    "vote": "hold",
+    "path": {
+     "2026-12": 1.0,
+     "2027-02": 1.0,
+     "2027-04": 1.0
+    },
+    "confidence": 0.7,
+    "dissent_risk": 0.1,
+    "drivers": [
+     "Brent 113 lifts headline CPI risk; Thailand net energy importer",
+     "Fed December hike priced; baht weak, differential widening",
+     "SME credit still contracting; growth 2.1% in 2027 is weak"
+    ],
+    "would_change_if": "Q3 GDP and Oct-Nov manufacturing/export prints clearly undershoot and oil retreats below 90, I would support a 25bp cut.",
+    "last_signal": null,
+    "rationale": "I have voted with a unanimous committee at every meeting since joining and nothing since 28 October justifies breaking that. Oil at 113 and an imminent Fed hike argue against cutting now; the baht and import costs matter to industry. But growth of 2.1% next year and contracting SME credit mean I will not tighten either. Hold at 1.00%, keep room to ease if the real economy weakens into early 2027."
+   }
+  ],
+  "run_at": "2026-11-01T00:11"
+ }
+}
