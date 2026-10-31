@@ -1,0 +1,568 @@
+{
+ "asof": "2026-11-01",
+ "source": "macro.us.member_agents",
+ "data": {
+  "committee": "FOMC",
+  "meeting_date": "2026-12-09",
+  "current_rate": "3.75-4.00",
+  "last_decision": {
+   "date": "2026-10-28",
+   "decision": "hold 3.75-4.00",
+   "vote": "10-2",
+   "statement_notes": "Activity 'expanding at a strong pace' (upgraded from 'solid'); inflation 'remains elevated'; ample-reserves policy continues. Warsh: no forward guidance, will not prejudge December; one strategy-only FOMC meeting planned in 2027.",
+   "dissents": [
+    {
+     "slug": "cook",
+     "direction": "hike"
+    },
+    {
+     "slug": "hammack",
+     "direction": "hike"
+    }
+   ]
+  },
+  "predicted": {
+   "decision": "hike25",
+   "tally": {
+    "hike25": 11,
+    "hold": 1
+   },
+   "vote_string": "11-1",
+   "n_voters": 12,
+   "expected_dissents": 1.44,
+   "non_unanimous_prob": 0.8
+  },
+  "path_median": {
+   "2026-12": 4.125,
+   "2027-02": 4.125,
+   "2027-04": 4.375
+  },
+  "dots": {
+   "2026-12": [
+    3.875,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.125
+   ],
+   "2027-02": [
+    3.875,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.375,
+    4.375,
+    4.375,
+    4.375,
+    4.375,
+    4.375
+   ],
+   "2027-04": [
+    3.875,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.125,
+    4.375,
+    4.375,
+    4.375,
+    4.375,
+    4.375,
+    4.375,
+    4.375,
+    4.375,
+    4.375,
+    4.375,
+    4.375
+   ]
+  },
+  "committee_lean": 0.42,
+  "dissent_base_rate_pct": 52.2,
+  "n_members_run": 19,
+  "members": [
+   {
+    "slug": "hammack",
+    "name": "Beth Hammack",
+    "role": "Regional president (Cleveland)",
+    "voter": true,
+    "stance": "hawk",
+    "score": 0.9,
+    "vote": "hike25",
+    "path": {
+     "2026-12": 4.125,
+     "2027-02": 4.375,
+     "2027-04": 4.375
+    },
+    "confidence": 0.9,
+    "dissent_risk": 0.2,
+    "drivers": [
+     "Core PCE 3.0%, headline CPI 3.7% and re-accelerating; well above 2%",
+     "Brent 113 and AI investment demand keep upside inflation risks live",
+     "Labour market solid at 4.1%; policy still not restrictive enough"
+    ],
+    "would_change_if": "Core PCE running sub-0.2% m/m for several months with clear labour softening, or a disorderly financial-conditions tightening that does the Fed's work.",
+    "last_signal": "2026-10-28 FOMC vote (dissent): Dissented with Cook, preferring a 25bp hike to 4.00-4.25.",
+    "rationale": "I preferred a hike in October and nothing since has changed my view. Inflation is broad-based, headline is re-accelerating on energy, and core PCE sits at 3%, where it has been all year. One soft core CPI print and an equity drawdown do not make policy restrictive. Growth is strong, the labour market is solid, and the cost of waiting is an inflationary mindset taking hold. We should move to a restrictive stance relatively quickly in small steps, then hold there."
+   },
+   {
+    "slug": "logan",
+    "name": "Lorie Logan",
+    "role": "Regional president (Dallas)",
+    "voter": true,
+    "stance": "hawk",
+    "score": 0.8,
+    "vote": "hike25",
+    "path": {
+     "2026-12": 4.125,
+     "2027-02": 4.375,
+     "2027-04": 4.375
+    },
+    "confidence": 0.8,
+    "dissent_risk": 0.12,
+    "drivers": [
+     "Core PCE ~3.1%, headline 3.4%; trending to mid-2s, not 2%",
+     "Activity upgraded to strong; Brent 113 adds upside inflation risk",
+     "Policy still 50bp+ below modestly restrictive; labour balanced at 4.1%"
+    ],
+    "would_change_if": "Two consecutive core PCE prints at or below 0.15% m/m with unemployment rising past 4.4%, or a disorderly tightening in financial conditions.",
+    "last_signal": "2026-10-30 Davidson College remarks: Voted to hold this week; core PCE ~3.1%; expects at least two more 25bp hikes then pause; policy rate 50bp+ below modestly restrictive.",
+    "rationale": "I voted to hold in October to see the delayed data, but nothing since has changed my assessment: inflation has been too high for too long, activity is strong, and the labour market is balanced. With energy prices adding pressure, policy must become restrictive. I favour a 25bp increase in December and another early next year, then a pause to assess. Modest action now reduces the likelihood of needing sharper action later. We must restore price stability."
+   },
+   {
+    "slug": "cook",
+    "name": "Lisa Cook",
+    "role": "Governor",
+    "voter": true,
+    "stance": "hawk",
+    "score": 0.65,
+    "vote": "hike25",
+    "path": {
+     "2026-12": 4.125,
+     "2027-02": 4.375,
+     "2027-04": 4.375
+    },
+    "confidence": 0.85,
+    "dissent_risk": 0.2,
+    "drivers": [
+     "Headline CPI 3.7, core PCE 3.0 \u2014 no resumed disinflation",
+     "Brent 113 on Hormuz risk; energy passthrough threatens expectations",
+     "Activity strong, unemployment 4.1 \u2014 labour gives room to firm"
+    ],
+    "would_change_if": "Sep PCE and Oct CPI both print core m/m near 0.2 with Brent retreating, and payrolls turn clearly negative.",
+    "last_signal": "2026-10-28 FOMC vote (dissent): Dissented with Hammack, preferring a 25bp hike to 4.00-4.25; first dissent since joining the Board in 2022.",
+    "rationale": "I said in August I was prepared to act if disinflation did not resume. It has not: headline inflation is drifting up, core PCE is stuck at 3 percent, and a renewed energy shock risks entrenching expectations. The labor market is solid and activity is strong. I preferred a quarter-point increase in October and the data since have only confirmed that view. I would raise the range to 4.00-4.25 in December and reassess; one soft core CPI month does not change my judgment."
+   },
+   {
+    "slug": "kashkari",
+    "name": "Neel Kashkari",
+    "role": "Regional president (Minneapolis)",
+    "voter": true,
+    "stance": "hawk",
+    "score": 0.65,
+    "vote": "hike25",
+    "path": {
+     "2026-12": 4.125,
+     "2027-02": 4.125,
+     "2027-04": 4.375
+    },
+    "confidence": 0.75,
+    "dissent_risk": 0.2,
+    "drivers": [
+     "Headline CPI 3.7, core PCE 3.0: inflation frustratingly persistent",
+     "Brent 113 on Hormuz attacks; another supply shock I cannot look through",
+     "Activity upgraded to strong; labour market healthy at 4.1% unemployment"
+    ],
+    "would_change_if": "Sept core PCE and Oct payrolls both soft, oil retraces below 100, or equity selloff morphs into bank-funding stress.",
+    "last_signal": "2026-10-28 FOMC vote: Voted with majority to hold at 3.75-4.00.",
+    "rationale": "I pencilled in one more hike this year and said policy may need to go higher than I expected. Since October: headline CPI up to 3.7, core PCE stuck at 3.0, oil at 113 on a fresh shock, and the Committee itself upgraded activity to strong. I was open-minded in October and held; the data since have not given me a reason to wait again. Policy is not very restrictive. I would raise 25bp in December and expect one more in 2027, timing data-dependent."
+   },
+   {
+    "slug": "warsh",
+    "name": "Kevin Warsh",
+    "role": "Chair",
+    "voter": true,
+    "stance": "lean-hawk",
+    "score": 0.55,
+    "vote": "hike25",
+    "path": {
+     "2026-12": 4.125,
+     "2027-02": 4.125,
+     "2027-04": 4.375
+    },
+    "confidence": 0.6,
+    "dissent_risk": 0.03,
+    "drivers": [
+     "Headline CPI 3.7 and PCE 3.4 moving away from target",
+     "Brent 113 after Hormuz attacks: energy upside risk broadening",
+     "Two hike dissents and 80% market pricing lower hold cost"
+    ],
+    "would_change_if": "Core PCE prints at or below 0.2 m/m for Sep/Oct, payrolls under 50k, or a disorderly equity-credit selloff before 9 Dec.",
+    "last_signal": "2026-10-28 FOMC press conference: Held 3.75-4.00; activity 'strong', inflation elevated near six years; energy prices higher again; refuses to prejudge December; no forward guidance absent crisis.",
+    "rationale": "I do not prejudge meetings, and I meant it. But the facts have not improved: inflation is elevated near six-year highs, energy is pushing higher again, activity is strong. In October we waited to let the medicine work. If September PCE and the October jobs report confirm what we see, some further firming is warranted and consistent with the statement. We will deliver price stability. No ifs, ands, or buts."
+   },
+   {
+    "slug": "barr",
+    "name": "Michael Barr",
+    "role": "Governor",
+    "voter": true,
+    "stance": "lean-hawk",
+    "score": 0.45,
+    "vote": "hike25",
+    "path": {
+     "2026-12": 4.125,
+     "2027-02": 4.375,
+     "2027-04": 4.375
+    },
+    "confidence": 0.72,
+    "dissent_risk": 0.08,
+    "drivers": [
+     "Headline CPI 3.7 and core PCE 3.0, both above target for years",
+     "Brent 113 on Hormuz attacks renews upside inflation risk",
+     "Activity 'strong', unemployment 4.1: no slack to wait for"
+    ],
+    "would_change_if": "Sep core PCE at or below 0.2 m/m, Oct payrolls well under 100k with unemployment rising, or a disorderly equity selloff tightening financial conditions.",
+    "last_signal": "2026-10-28 FOMC vote: Voted with majority to hold at 3.75-4.00.",
+    "rationale": "Inflation has been above our objective for more than five years, and the September data did not change that picture: headline moved up, core PCE is sitting at 3 percent, and energy is pushing the wrong way again. With the economy expanding at a strong pace and the labor market stable, my base case remains that further policy adjustments are needed. I supported waiting in October to see more data; absent a clear downside surprise in PCE and payrolls, I would support a 25 basis point increase in December."
+   },
+   {
+    "slug": "waller",
+    "name": "Christopher Waller",
+    "role": "Governor",
+    "voter": true,
+    "stance": "lean-hawk",
+    "score": 0.45,
+    "vote": "hike25",
+    "path": {
+     "2026-12": 4.125,
+     "2027-02": 4.125,
+     "2027-04": 4.375
+    },
+    "confidence": 0.72,
+    "dissent_risk": 0.08,
+    "drivers": [
+     "Headline CPI 3.7, core PCE 3.0: no progress toward 2%",
+     "Brent 113 and AI capex demand keep upside risks live",
+     "October skip done; non-consecutive hike pattern points to December"
+    ],
+    "would_change_if": "Core PCE m/m at or below 0.2 for Sep and Oct plus payrolls under 50k with unemployment rising toward 4.4%.",
+    "last_signal": "2026-10-28 FOMC vote: Voted with majority to hold at 3.75-4.00.",
+    "rationale": "I said in October that additional hikes are needed but need not come at consecutive meetings. We skipped in October; the data since have not earned a second skip. Headline inflation reaccelerated to 3.7, core PCE is stuck at 3, and the energy shock is intensifying. One soft core CPI print is not a trend. Labor is steady at 4.1. I vote to raise 25bp in December, pause to assess, and expect one more move in the spring if inflation does not turn."
+   },
+   {
+    "slug": "paulson",
+    "name": "Anna Paulson",
+    "role": "Regional president (Philadelphia)",
+    "voter": true,
+    "stance": "lean-hawk",
+    "score": 0.35,
+    "vote": "hike25",
+    "path": {
+     "2026-12": 4.125,
+     "2027-02": 4.125,
+     "2027-04": 4.125
+    },
+    "confidence": 0.7,
+    "dissent_risk": 0.08,
+    "drivers": [
+     "Headline CPI 3.7, core PCE stuck at 3.0; no disinflation progress",
+     "Brent 113 energy shock plus AI capex demand keep upside risks live",
+     "Labour stable at 4.1 unemployment; activity strong, room to firm"
+    ],
+    "would_change_if": "Sept core PCE at or below 0.2 m/m with Oct payrolls well under 100k and unemployment rising toward 4.3-4.4.",
+    "last_signal": "2026-10-28 FOMC vote: Voted with majority to hold at 3.75-4.00.",
+    "rationale": "In September I said another increase may be needed, and the data since have not argued otherwise. Underlying inflation remains stubbornly high, the energy shock is broadening, and investment demand is adding to price pressure while the labour market holds up. A further modest firming in December puts policy where it needs to be; after that I would want to hold and watch, not keep tightening on autopilot. I would not dissent either way."
+   },
+   {
+    "slug": "jefferson",
+    "name": "Philip Jefferson",
+    "role": "Vice Chair",
+    "voter": true,
+    "stance": "lean-hawk",
+    "score": 0.3,
+    "vote": "hike25",
+    "path": {
+     "2026-12": 4.125,
+     "2027-02": 4.125,
+     "2027-04": 4.125
+    },
+    "confidence": 0.7,
+    "dissent_risk": 0.05,
+    "drivers": [
+     "Headline CPI 3.7, core PCE 3.0; above target over five years",
+     "Brent 113 and strong investment demand keep upside inflation risks live",
+     "Labour solid at 4.1; statement already signals further firming"
+    ],
+    "would_change_if": "Sept core PCE at or below 0.2 m/m plus Oct payrolls well under 100k with unemployment rising; or Chair signals hold.",
+    "last_signal": "2026-10-28 FOMC vote: Voted with majority to hold at 3.75-4.00.",
+    "rationale": "Inflation has run above our objective for over five years and I continue to see upside risks, now reinforced by energy and strong investment demand. The labor market remains solid, so policy can afford to firm somewhat further to secure a return to 2 percent. I expect to support the Chair; if the incoming PCE and employment data soften materially, holding at the current well-positioned setting remains a reasonable option."
+   },
+   {
+    "slug": "williams",
+    "name": "John Williams",
+    "role": "Regional president (New York), FOMC Vice Chair",
+    "voter": true,
+    "stance": "centre",
+    "score": 0.2,
+    "vote": "hike25",
+    "path": {
+     "2026-12": 4.125,
+     "2027-02": 4.125,
+     "2027-04": 4.125
+    },
+    "confidence": 0.7,
+    "dissent_risk": 0.05,
+    "drivers": [
+     "Headline CPI 3.7% and Brent 113 keep inflation elevated",
+     "Activity upgraded to strong; labour market solid at 4.1%",
+     "Own guidance: one further adjustment late 2026, none 2027"
+    ],
+    "would_change_if": "Soft Sept core PCE plus a weak October payrolls and tightening financial conditions from the equity correction would make me hold in December.",
+    "last_signal": "2026-10-28 FOMC vote: Voted with majority to hold at 3.75-4.00.",
+    "rationale": "Inflation remains well above our 2 percent goal, with energy and strong investment demand adding pressure. The economy is not overheating, but it is expanding at a strong pace and the labor market is solid. I have said one further upward adjustment may be appropriate late this year; the data since then support that, so I would raise the target range 25 basis points in December. After that, I see no need for further increases in 2027 as tariff effects fade and disinflation resumes."
+   },
+   {
+    "slug": "powell",
+    "name": "Jerome Powell",
+    "role": "Governor",
+    "voter": true,
+    "stance": "centre",
+    "score": 0.15,
+    "vote": "hike25",
+    "path": {
+     "2026-12": 4.125,
+     "2027-02": 4.125,
+     "2027-04": 4.375
+    },
+    "confidence": 0.6,
+    "dissent_risk": 0.05,
+    "drivers": [
+     "Headline CPI 3.7, core PCE 3.0, both drifting away from target",
+     "Brent 113 and strong capex demand keep upside inflation risk alive",
+     "Statement already signals further firming; labour market still solid at 4.1%"
+    ],
+    "would_change_if": "Oct payrolls well below 100k with unemployment rising, or Sep core PCE at or below 0.2 m/m alongside a disorderly equity drawdown.",
+    "last_signal": "2026-10-28 FOMC vote: Voted with majority to hold at 3.75-4.00.",
+    "rationale": "I voted for the September hike and the October hold, and I have said I would keep a low profile. Inflation is moving the wrong way, energy is adding to it, and activity is strong. The soft September core CPI and the equity correction argue for care, not inaction. Unless the next payroll and PCE prints surprise clearly to the downside, I would support a further 25 basis points in December and then let the data speak."
+   },
+   {
+    "slug": "bowman",
+    "name": "Michelle Bowman",
+    "role": "Vice Chair for Supervision",
+    "voter": true,
+    "stance": "lean-dove",
+    "score": -0.3,
+    "vote": "hold",
+    "path": {
+     "2026-12": 3.875,
+     "2027-02": 3.875,
+     "2027-04": 3.875
+    },
+    "confidence": 0.6,
+    "dissent_risk": 0.3,
+    "drivers": [
+     "Core CPI m/m 0.23 soft; core y/y 2.6 is not alarming",
+     "Brent 113 is energy shock I look through, not core pressure",
+     "Equity correction, risk-off; September hike still working through"
+    ],
+    "would_change_if": "Core PCE re-accelerates above 0.3 m/m for two prints, or energy pass-through broadens into services and wages with unemployment still 4.1.",
+    "last_signal": "2026-10-28 FOMC vote: Voted with majority to hold at 3.75-4.00.",
+    "rationale": "I supported September's hike and the October hold; I see no urgency to act again. The soft core CPI print and a 2.6 percent core rate tell me underlying inflation is contained, while headline is driven by energy that policy cannot fix. Markets are repricing risk and financial conditions have tightened on their own. I prefer to hold in December and watch how the economy and bank balance sheets absorb what we have already done."
+   },
+   {
+    "slug": "schmid",
+    "name": "Jeffrey Schmid",
+    "role": "Regional president (Kansas City)",
+    "voter": false,
+    "stance": "hawk",
+    "score": 0.7,
+    "vote": "hike25",
+    "path": {
+     "2026-12": 4.125,
+     "2027-02": 4.375,
+     "2027-04": 4.375
+    },
+    "confidence": 0.8,
+    "dissent_risk": 0.15,
+    "drivers": [
+     "Headline CPI 3.7%, core PCE 3.0%: inflation still stubborn and sticky",
+     "Brent 113 and strong investment demand add upside inflation risk",
+     "Activity 'strong', unemployment 4.1%: policy is not restricting anything"
+    ],
+    "would_change_if": "Two consecutive soft core PCE prints near 0.15% m/m with unemployment rising above 4.4% and energy prices retreating.",
+    "last_signal": "2026-10-06 Panel discussion (venue not stated): Labour force in a good place; Fed credibility at stake in inflation fight; still a way to go on inflation; backed September hike.",
+    "rationale": "Inflation is still stubborn and sticky at 3% core and 3.7% headline, energy is adding to it, and the economy is expanding at a strong pace. I said in August I don't know what we're restricting at this rate, and nothing since has changed that. Our credibility is at stake. I backed September's hike and would have hiked in October; I would raise 25bp in December and lean toward one more early next year before assessing."
+   },
+   {
+    "slug": "musalem",
+    "name": "Alberto Musalem",
+    "role": "Regional president (St. Louis)",
+    "voter": false,
+    "stance": "hawk",
+    "score": 0.65,
+    "vote": "hike25",
+    "path": {
+     "2026-12": 4.125,
+     "2027-02": 4.375,
+     "2027-04": 4.375
+    },
+    "confidence": 0.85,
+    "dissent_risk": 0.08,
+    "drivers": [
+     "Headline CPI 3.7, core PCE 3.0: inflation moving away from target",
+     "Brent 113 and strong investment demand keep upside risks live",
+     "Activity strong, unemployment 4.1: policy still not restrictive"
+    ],
+    "would_change_if": "Core PCE prints 0.15 or below for two months with payrolls turning negative and unemployment rising toward 4.5.",
+    "last_signal": "2026-10-08 Bloomberg event, New York: Rates ought to rise further within six to nine months to hit target in ~18 months; financial conditions accommodative; stable labour; fiscal path unsustainable.",
+    "rationale": "I said in October that more firming would be required within six to nine months. Since then headline inflation rose to 3.7, core PCE sits at 3.0, oil is above 110 and the Committee itself upgraded activity to strong. Financial conditions remain accommodative. A 25bp move in December is the gradual, pre-emptive path I have argued for; moving now reduces the odds of sharper action later. I would favour a further step early in 2027 toward 4.25-4.50, then assess."
+   },
+   {
+    "slug": "collins",
+    "name": "Susan Collins",
+    "role": "Regional president (Boston)",
+    "voter": false,
+    "stance": "lean-hawk",
+    "score": 0.45,
+    "vote": "hike25",
+    "path": {
+     "2026-12": 4.125,
+     "2027-02": 4.125,
+     "2027-04": 4.125
+    },
+    "confidence": 0.78,
+    "dissent_risk": 0.1,
+    "drivers": [
+     "Headline CPI 3.7%, core PCE 3.0%: inflation notably above 2%",
+     "Brent 113 and strong investment demand widen price pressures",
+     "Labour at full employment lets policy focus on price stability"
+    ],
+    "would_change_if": "Core PCE prints at or below 0.2% m/m into December with payrolls stalling and unemployment rising toward 4.4%.",
+    "last_signal": "2026-10-13 Banking conference, Boston Fed: Appropriate to raise rates a bit further before year-end; expects headline and core inflation above 2% in coming months; labour near full employment.",
+    "rationale": "I said in October that it would be appropriate to raise rates a bit further before year-end, and the data since then has not argued otherwise. Headline inflation is rising, core PCE is at 3 percent, and energy pressures risk broadening. The labour market remains near full employment. A modestly more restrictive stance helps ensure inflation durably returns to 2 percent. After December, I would hold and assess; uncertainty is elevated and further moves should be data dependent."
+   },
+   {
+    "slug": "barkin",
+    "name": "Thomas Barkin",
+    "role": "Regional president (Richmond)",
+    "voter": false,
+    "stance": "lean-hawk",
+    "score": 0.35,
+    "vote": "hike25",
+    "path": {
+     "2026-12": 4.125,
+     "2027-02": 4.125,
+     "2027-04": 4.375
+    },
+    "confidence": 0.65,
+    "dissent_risk": 0.1,
+    "drivers": [
+     "Headline CPI 3.7, core PCE 3.0: shocks not fading, embedding",
+     "Brent 113 on Hormuz; energy is the live upside risk",
+     "Activity strong, unemployment steady 4.1: no labour offset to inflation"
+    ],
+    "would_change_if": "Oct payrolls well under 100k with unemployment rising toward 4.4, plus Sept core PCE at or below 0.2 m/m and oil retreating.",
+    "last_signal": "2026-09-22 Wire-reported remarks and Q&A (venue not stated): Inflation risks outweighed employment risks in September hike; tariff and energy shocks not fading; further hikes possible if prices do not stabilise; labour not tight.",
+    "rationale": "I said in September that inflation risks outweighed employment risks, and nothing since has changed that. Headline CPI moved up to 3.7, core PCE sits at 3.0, oil is at 113, and the economy is expanding at a strong pace with unemployment flat at 4.1. The shocks I hoped would pass are taking longer, and five years above target risks expectations. I would support another quarter point in December, then wait and see how prices respond before deciding on more."
+   },
+   {
+    "slug": "daly",
+    "name": "Mary Daly",
+    "role": "Regional president (San Francisco)",
+    "voter": false,
+    "stance": "lean-hawk",
+    "score": 0.3,
+    "vote": "hike25",
+    "path": {
+     "2026-12": 4.125,
+     "2027-02": 4.125,
+     "2027-04": 4.125
+    },
+    "confidence": 0.65,
+    "dissent_risk": 0.08,
+    "drivers": [
+     "Headline CPI 3.7, core PCE 3.0, Brent 113: inflation risk becoming reality",
+     "Activity upgraded to strong; labour stable at 4.1% gives room to act",
+     "Gradualist: one adjustment then assess, no urgency for a sequence"
+    ],
+    "would_change_if": "Sept core PCE 0.2 or below plus Oct payrolls well under 100k and unemployment rising; then I hold and wait.",
+    "last_signal": "2026-10-15 Reuters interview: More likely than not Fed needs further hikes but no urgency for October; inflation risk up, not yet reality; stable labour permits focus on prices.",
+    "rationale": "In October I said more adjustments were more likely than not, but there was no need to force urgency. Since then headline inflation has moved the wrong way, energy is pushing on expectations, and growth is strong rather than solid. The labour market is stable enough to absorb a measured step. I would support 25 basis points in December as the adjustment I signalled, then pause to see whether it is enough. Progress is not victory, but neither is overdoing it."
+   },
+   {
+    "slug": "goolsbee",
+    "name": "Austan Goolsbee",
+    "role": "Regional president (Chicago)",
+    "voter": false,
+    "stance": "lean-hawk",
+    "score": 0.3,
+    "vote": "hike25",
+    "path": {
+     "2026-12": 4.125,
+     "2027-02": 4.125,
+     "2027-04": 4.125
+    },
+    "confidence": 0.6,
+    "dissent_risk": 0.25,
+    "drivers": [
+     "Core PCE stuck at 3.0% three months; activity upgraded to strong",
+     "AI capex demand pressure is the non-transitory part I said we must address",
+     "Soft Sep core CPI and energy-driven headline argue for one hike, then steady hand"
+    ],
+    "would_change_if": "Sep core PCE at or below 0.2% m/m plus Oct payrolls under 75k with unemployment rising would flip me to hold.",
+    "last_signal": "2026-10-15 CNN interview: September CPI/PPI 'discouraging'; benign if drivers (tariffs, war, supply) are transitory; demand-driven inflation from AI data-centre build would have to be addressed.",
+    "rationale": "I said in October that more bad inflation months would be unacceptable, and that demand-driven pressure from the AI build-out is the part we would have to address. Core PCE has sat at 3% for three months with the economy expanding at a strong pace; that is not the golden path. Energy and tariffs I can look through, so I would take one more 25bp and then stop signalling and watch. If September PCE and October jobs come in soft, I can wait. I will not decide before the data."
+   },
+   {
+    "slug": "venable",
+    "name": "Cheryl Venable",
+    "role": "Regional president (Atlanta, interim)",
+    "voter": false,
+    "stance": "lean-hawk",
+    "score": 0.15,
+    "vote": "hike25",
+    "path": {
+     "2026-12": 4.125,
+     "2027-02": 4.125,
+     "2027-04": 4.125
+    },
+    "confidence": 0.55,
+    "dissent_risk": 0.05,
+    "drivers": [
+     "Inflation too high for five years; Sep CPI 3.7 beat consensus",
+     "Middle East escalation, Brent 113 removes my precondition for easing",
+     "Labour market stable; no counterweight to the inflation side"
+    ],
+    "would_change_if": "Soft Sep core PCE plus Oct payrolls under 100k with unemployment rising, or a credible US-Iran settlement pulling Brent well below 100.",
+    "last_signal": "None Reported remarks (date/venue not confirmed; page could not be retrieved): Reported as saying inflation remains too high and any easing hinges on Middle East developments.",
+    "rationale": "I am a non-voter with a thin policy record, so weight my view lightly. I have said inflation is too high and that any easing hinges on the Middle East. Since then the conflict has worsened, energy is pushing headline higher, and Southeast contacts still report persistent price pressures while employment holds up. Through that lens the balance of risks favours one more modest firming in December, then a pause to assess. I would not break from the Chair."
+   }
+  ],
+  "run_at": "2026-11-01T00:07"
+ }
+}
