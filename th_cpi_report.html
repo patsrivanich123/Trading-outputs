@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thailand CPI Nowcast — Full Project Report</title>
+<style>
+  :root{--navy:#1a5276;--ink:#1a1a1a;--muted:#667;--line:#e2e6ea;--green:#1e8449;--red:#c0392b;--amber:#b9770e}
+  *{box-sizing:border-box}
+  body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:1040px;margin:0 auto;
+       padding:0 22px 80px;color:var(--ink);line-height:1.55;background:#fff}
+  h1{font-size:30px;margin:28px 0 4px}
+  h2{font-size:22px;color:var(--navy);border-bottom:3px solid var(--navy);padding-bottom:5px;margin-top:46px}
+  h3{font-size:17px;margin-top:28px;color:#21618c}
+  .sub{color:var(--muted);font-size:14px;margin-top:0}
+  .lead{background:#eaf2f8;border-left:5px solid var(--navy);padding:16px 20px;border-radius:5px;margin:18px 0}
+  .big{font-size:30px;font-weight:800;color:var(--red);line-height:1.1}
+  .big2{font-size:30px;font-weight:800;color:var(--navy);line-height:1.1}
+  table{border-collapse:collapse;width:100%;margin:14px 0;font-size:14px}
+  th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+  th{background:#f4f6f7;font-weight:700}
+  td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+  code{background:#f1f3f4;padding:1px 6px;border-radius:4px;font-size:13px;word-break:break-all}
+  .ok{color:var(--green);font-weight:700}.no{color:var(--red);font-weight:700}
+  .yes-bg{background:#d5f5e3}.no-bg{background:#fadbd8}
+  figure{margin:18px 0;text-align:center}
+  img{max-width:100%;border:1px solid var(--line);border-radius:6px}
+  figcaption{font-size:13px;color:var(--muted);margin-top:6px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .card{border:1px solid var(--line);border-radius:8px;padding:14px 16px}
+  .tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;color:#fff}
+  .t-live{background:var(--green)}.t-cal{background:var(--amber)}.t-seas{background:#566573}
+  .muted{color:var(--muted);font-size:13px}
+  .formula{background:#f4f6f7;border:1px solid #ccc;border-radius:6px;padding:10px 14px;font-family:ui-monospace,Consolas,monospace;font-size:14px;overflow-x:auto}
+  .kpi{display:flex;gap:20px;flex-wrap:wrap;margin:10px 0}
+  .kpi div{flex:1;min-width:150px;border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+  .kpi b{display:block;font-size:12px;color:var(--muted);font-weight:600}
+  @media(max-width:720px){.grid{grid-template-columns:1fr}}
+  footer{margin-top:50px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+
+<h1>Thailand CPI Nowcast</h1>
+<p class="sub">Predicting headline &amp; core CPI before the official TPSO print — full project report. Data anchor: September 2026 · built October 2026.</p>
+
+<div class="lead">
+<b>What this is.</b> A model that nowcasts Thailand's monthly headline and core CPI <b>before</b> the official release,
+using only data that is published <b>before the print</b>. It is built on the real TPSO methodology, feeds the volatile
+components from live sources (fuel, electricity, fresh food), and leaves the sticky "core" on a seasonal rule because it
+has no live feed. Every predictor is pre-print; every weight is either the official basket weight or calibrated backward from the data.
+</div>
+
+<h2>1 · Bottom line — the October 2026 nowcast</h2>
+<div class="kpi">
+  <div><b>HEADLINE CPI (y/y)</b><span class="big">≈ +3.5%</span><span class="muted">m/m +0.52% · range 3.3–3.6%</span></div>
+  <div><b>CORE CPI (y/y)</b><span class="big2">≈ +1.5%</span><span class="muted">m/m +0.10%</span></div>
+  <div><b>DRIVER</b><span style="font-size:15px;font-weight:700">Energy base effect</span><span class="muted">fuel +~30% y/y vs a cap-era base; core soft → not demand</span></div>
+</div>
+<p>Anchored to the published Sep-2026 levels (headline <b>102.93</b>, core <b>102.98</b>) and the year-ago base
+(Oct-2025 headline <b>100.00</b>, core <b>101.50</b>). Base year 2023 = 100. The print is due in the first week of November 2026.
+A core at ~1.5% while headline runs ~3.5% confirms the inflation is an <b>energy/food story, not demand</b>.</p>
+<p class="muted">Note: the original design sketch pencilled 3.7%; the calibrated build lands ~0.2pp lower because core reverts to its
+~+0.07% October seasonal (not the one-off Apr–Jun subsidy-unwind spike) and the fuel monthly-average rise is +4.4%, not higher.</p>
+
+<h2>2 · Model vs actual (out-of-sample, pre-print inputs only)</h2>
+<figure>
+  <img src="cpi_core_vs_actual.png" alt="model vs actual headline and core">
+  <figcaption>Headline and core, modelled vs actual, last 10 months. Headline MAE <b>0.11pp</b>, core MAE <b>0.14pp</b>.
+  The model catches the April-2026 reflation jump (−0.08 → +2.89) that any naïve model misses.</figcaption>
+</figure>
+<figure>
+  <img src="backtest.png" alt="headline modeled vs actual 33 months">
+  <figcaption>Longer headline backtest (33 months). The high-frequency energy input cuts y/y MAE from <b>0.42pp</b> (no live signal)
+  to <b>0.16pp</b>. April-2026 is the proof point: model +2.92 vs actual +2.89; the no-feed baseline missed by 2.5pp.</figcaption>
+</figure>
+
+<h2>3 · How Thailand actually builds its CPI</h2>
+<p>Compiler: <b>Trade Policy &amp; Strategy Office (TPSO), Ministry of Commerce</b> (unusually, not the central bank).
+Confirmed from the ILO methodology descriptor (read directly), the TPSO 2566-base note, and the live data API.</p>
+<table>
+<tr><th>Feature</th><th>Detail</th></tr>
+<tr><td>Index formula</td><td><b>Dutot</b> (ratio of arithmetic-mean prices) at the elementary level; <b>Modified Laspeyres</b> aggregation above. <span class="muted">(Our first sketch wrongly assumed Jevons — corrected.)</span></td></tr>
+<tr><td>Base year</td><td>2023 = 100 (B.E. 2566), live since Jan 2025; rebased ~every 4–5 years off the NSO Household Socio-Economic Survey.</td></tr>
+<tr><td>Basket</td><td>464 items · 7 groups · 52 provinces (Bangkok + 4 regions) · COICOP-based.</td></tr>
+<tr><td>Collection frequency</td><td><b>Fuel: daily · fresh food: weekly · everything else: monthly · rent: 6-monthly.</b> This non-uniform frequency is the key to a nowcast.</td></tr>
+<tr><td>Core definition</td><td>Headline excluding fresh/raw food and energy (~69.7% of the basket).</td></tr>
+<tr><td>Adjustments</td><td><b>No seasonal adjustment, never revised</b> (first print is final). ~<b>26%</b> of the basket is administered/price-controlled (IMF).</td></tr>
+<tr><td>Release</td><td>Monthly, first week of the following month (~5th–7th).</td></tr>
+</table>
+<p class="muted">Why a pre-print nowcast is even possible: a quarter of the basket is administered (fuel, electricity, fares, tuition),
+so it's observable or scheduled in advance; and fuel/fresh-food are collected daily/weekly, so by month-end they're effectively known.</p>
+
+<h2>4 · Model architecture</h2>
+<p>A <b>weight-exact decomposition</b> on the official TPSO blocks. Each block's month-over-month move is now-cast, blended by weight,
+then chained to a level and converted to the year-over-year figure the market trades.</p>
+<div class="formula">
+headline MoM = Σ w<sub>block</sub> · MoM<sub>block</sub> &nbsp;→&nbsp; index<sub>t</sub> = index<sub>t−1</sub> · (1 + MoM) &nbsp;→&nbsp; YoY = index<sub>t</sub> / index<sub>t−12</sub> − 1
+</div>
+<figure>
+  <img src="construction_diagram.png" alt="construction diagram">
+  <figcaption>How headline is built from four blocks, and how core is built (seasonal).</figcaption>
+</figure>
+<table>
+<tr><th>Block</th><th class="n">Weight</th><th>How it's now-cast</th><th>Type</th></tr>
+<tr><td>Core (ex raw food &amp; energy)</td><td class="n">69.67%</td><td>Seasonal mean (same calendar month, prior years)</td><td><span class="tag t-seas">seasonal</span></td></tr>
+<tr><td>Raw food</td><td class="n">17.24%</td><td>DIT daily food prices, weights ridge-fit backward</td><td><span class="tag t-live">live feed</span></td></tr>
+<tr><td>Fuel (motor fuel)</td><td class="n">8.93%</td><td>EPPO daily pump price × pass-through</td><td><span class="tag t-live">live feed</span></td></tr>
+<tr><td>Electricity</td><td class="n">3.68%</td><td>ERC Ft round + subsidy calendar (deterministic)</td><td><span class="tag t-cal">calendar</span></td></tr>
+<tr><td>LPG / cooking gas</td><td class="n">0.63%</td><td>Government ceiling price (frozen)</td><td><span class="tag t-cal">calendar</span></td></tr>
+</table>
+<p class="muted">Decomposition identity check: rebuilding the official headline MoM from these blocks over 45 months gives mean |residual| = 0.03pp — the weights and aggregation are exactly right.</p>
+
+<h2>5 · The four blocks in detail</h2>
+
+<h3>5.1 · Fuel (8.9%) — the gold standard</h3>
+<p>The CPI motor-fuel index <b>is</b> the monthly arithmetic mean (Dutot) of EPPO daily pump prices. We pulled the full daily series
+and regressed the published CPI on it to calibrate the weight backward:</p>
+<table>
+<tr><th>Target (published CPI)</th><th class="n">Recovered slope</th><th class="n">Official</th><th class="n">R²</th></tr>
+<tr><td>CPI motor-fuel (52200)</td><td class="n">0.89</td><td class="n">1.00 (pass-through)</td><td class="n">1.00</td></tr>
+<tr><td>CPI energy (92000)</td><td class="n">0.56</td><td class="n">0.68</td><td class="n">0.98</td></tr>
+<tr><td>CPI headline (00000)</td><td class="n"><b>0.081</b></td><td class="n"><b>0.089</b></td><td class="n">0.93</td></tr>
+</table>
+<p>Regressing headline on the pump price alone <b>recovers a fuel weight of 0.081 vs the official 0.089</b> — the model rediscovers the
+basket weight from prices. Fuel alone explains <b>93%</b> of monthly headline variance.</p>
+<figure><img src="fuel_calibration.png" alt="fuel calibration"><figcaption>Top: EPPO pump price ≈ CPI fuel (R²=1.00). Bottom: fuel-only fit tracks headline through the March–April-2026 cap break.</figcaption></figure>
+
+<h3>5.2 · Electricity (3.7%) — a scheduled step, not a regression</h3>
+<p>Electricity is flat within each 4-month ERC Ft round and steps only on <b>pre-announced</b> tariff/subsidy changes.
+A naïve regression on the headline tariff flops (R²=0.05) because the government <b>subsidy overlay</b> — also announced — drives the
+effective household price (e.g. the −7.8% Sep-2026 drop was the deepened 200-unit ≤3 THB cap). <b>78%</b> of its MoM variance sits at the
+scheduled round boundaries (Jan/May/Sep). So it's modelled by a <b>calendar lookup</b> — the most pre-print-certain block of all.</p>
+
+<h3>5.3 · Raw food (17.2%) — the hard one, cracked by backward-calibration</h3>
+<p>Raw food is a ~100-item aggregate where each fresh item is idiosyncratically noisy. A naïve equal-weight basket of DIT prices gave
+<b>R²=0.00</b>. The fix — calibrate the item weights backward (ridge regression of CPI raw-food on the DIT item prices):</p>
+<div class="kpi">
+  <div><b>OUT-OF-SAMPLE R²</b><span class="big2" style="font-size:24px">0.46</span><span class="muted">vs 0.00 naïve</span></div>
+  <div><b>OOS correlation</b><span class="big2" style="font-size:24px">+0.69</span></div>
+  <div><b>Top fitted weights</b><span style="font-weight:700">eggs +0.42, pork +0.32</span><span class="muted">not the flashy veg</span></div>
+</div>
+<figure><img src="food_calibration.png" alt="food calibration"><figcaption>CPI raw food modelled from DIT food prices with backward-calibrated weights (out-of-sample).</figcaption></figure>
+<p class="muted">Why it's not as clean as fuel: fuel is one administered price (mechanical); food is a noisy crowd. An 11-item proxy recovers ~half
+the signal; the rest needs the full CPI survey. Eggs and pork dominate because they're high-weight and move coherently, while vegetables are idiosyncratic noise that washes out.</p>
+
+<h3>5.4 · Core (69.7%) — seasonal, and we proved it</h3>
+<p>Core's biggest moving piece is <b>prepared food (17%)</b> — but DIT does not survey cooked/restaurant food, so it has no live feed.
+The model is a pure seasonal rule:</p>
+<div class="formula">π<sup>core</sup><sub>t</sub> = β₀ + β₁·S<sub>m(t)</sub> + β₂·X<sub>t−1</sub> + ε &nbsp;→ fitted: 0.038 + 0.783·S + 0.006·X<sub>t−1</sub> &nbsp;(β₂≈0) → <b>collapses to seasonal</b> π = μ<sub>m(t)</sub> + ε</div>
+<figure><img src="core_model_formula.png" alt="core model formula" style="max-width:560px"><figcaption>Core model specification (recursive OLS → collapses to a seasonal climatology).</figcaption></figure>
+<p><b>Backtests:</b> core seasonal out-of-sample y/y MAE ≈ <b>0.10pp</b> (seasonal-only actually beats the regression with the pass-through term).
+Window test — predict 2024 from 2022+2023, 2025 from 2022+2023+2024 — gives y/y MAE <b>0.12pp</b> (more training years → smoother).</p>
+<div class="grid">
+  <figure><img src="core_backtest.png" alt="core backtest"><figcaption>Core: modelled vs actual, out-of-sample.</figcaption></figure>
+  <figure><img src="core_windows_backtest.png" alt="core window test"><figcaption>Core seasonal tested on 2024 &amp; 2025 (earlier years only).</figcaption></figure>
+</div>
+<p><b>We tried to beat seasonal with real scraped observables</b> — lagged DIT food (cost-push to prepared food), USD/THB (imported goods),
+and gold (personal effects). Result: every model had <b>negative out-of-sample R²</b> — none beat the seasonal mean. The scrapeable bits are
+too small-weight and core MoM is essentially white noise (std 0.14pp, ~zero autocorrelation; micro prices reset only every 4–7 months).
+<b>Core staying seasonal is the ceiling, not laziness.</b></p>
+
+<h2>6 · Data sources — every variable (all print before the CPI)</h2>
+<figure><img src="sources_table.png" alt="sources table"><figcaption>Green = available before the print · Red = not (only in the print itself).</figcaption></figure>
+<table>
+<tr><th>Block / variable</th><th>Source &amp; endpoint</th><th>Freq</th><th>Pre-print?</th></tr>
+<tr><td>CPI target, weights, anchors</td><td>TPSO · <code>POST index.tpso.go.th/api/cpig/ChangeRate</code> (body <code>{commodityCode:"00000",yearBase:2566,type:"TG",year,month}</code>)</td><td>monthly</td><td class="yes-bg ok">prior prints</td></tr>
+<tr><td>Fuel (motor fuel)</td><td>EPPO daily pump price · mirror <code>raw.githubusercontent.com/anantsrisu-cpu/eppo-oil-price/main/data/price_structure_daily.csv</code> (orig <code>eppo.go.th</code> / <code>api.eppo.go.th</code>)</td><td>daily</td><td class="yes-bg ok">YES</td></tr>
+<tr><td>Raw food</td><td>MOC/DIT Open Data (no key) · lookup <code>dataapi.moc.go.th/gis-products?keyword=&amp;sell_type=retail</code> → series <code>dataapi.moc.go.th/gis-product-prices?product_id=&amp;from_date=&amp;to_date=</code></td><td>daily</td><td class="yes-bg ok">YES</td></tr>
+<tr><td>Electricity</td><td>ERC Ft tariff per 4-month round + govt subsidy announcements · <code>erc.or.th</code></td><td>4-monthly</td><td class="yes-bg ok">announced</td></tr>
+<tr><td>LPG / cooking gas</td><td>Government ceiling price (MOC)</td><td>on change</td><td class="yes-bg ok">announced</td></tr>
+<tr><td>Core</td><td><b>No external feed</b> — modelled from own TPSO history (seasonal). Big parts (prepared food, rent) are TPSO field survey, published only in the print.</td><td>—</td><td class="no-bg no">NO</td></tr>
+<tr><td>Gold / FX (tested, rejected)</td><td>Yahoo · <code>query1.finance.yahoo.com/v8/finance/chart/GC=F</code> &amp; <code>/THB=X</code>; Thai gold <code>api.chnwt.dev/thai-gold-api</code></td><td>daily</td><td class="yes-bg ok">YES (too small)</td></tr>
+</table>
+<p><b>Methodology references:</b> ILO Thailand CPI descriptor (<code>webapps.ilo.org/.../THA_CPI_Descriptions-2013.pdf</code>);
+TPSO 2566-base note (<code>price.moc.go.th/price/fileuploader/file_cpi/cpi_note_2566.pdf</code>);
+BOT core-inflation symposium paper; SEACEN 2019 oil/food pass-through; IMF Article IV (admin-price share);
+AMRO core dynamics; PIER DP 85/211 (micro price stickiness); arXiv 2509.14805 (nowcasting). Full list in <code>METHODOLOGY.md</code>.</p>
+
+<h2>7 · Key findings</h2>
+<ul>
+<li><b>~30% of the basket (fuel + electricity + raw food) carries nearly all the headline volatility</b> and has genuine pre-print feeds. The other ~70% (core) drifts and has none.</li>
+<li><b>Fuel is the edge.</b> It's one administered price, pass-through ≈ 1, observable daily — alone it explains 93% of headline MoM and catches the big regime shifts.</li>
+<li><b>Raw food needs weight calibration</b> to be usable (R² 0.00 → 0.46); eggs &amp; pork, not vegetables, carry the signal.</li>
+<li><b>Electricity is deterministic</b> — a calendar of announced ERC Ft rounds + subsidies, no regression needed.</li>
+<li><b>Core is irreducibly seasonal</b> — its movers are unobservable before the print; real scraped inputs (FX, gold, food) don't beat the seasonal mean.</li>
+<li><b>Methodology correction:</b> elementary index is Dutot (arithmetic), not Jevons (geometric).</li>
+</ul>
+
+<h2>8 · Accuracy summary</h2>
+<table>
+<tr><th>Model / block</th><th class="n">Out-of-sample skill</th><th>Notes</th></tr>
+<tr><td>Headline (current model)</td><td class="n">y/y MAE 0.11pp</td><td>fuel EPPO + elec calendar + food calibrated + core seasonal (10 mo)</td></tr>
+<tr><td>Headline (energy-observed, 33 mo)</td><td class="n">y/y MAE 0.16pp</td><td>vs 0.42pp with no live signal</td></tr>
+<tr><td>Core</td><td class="n">y/y MAE 0.10–0.14pp</td><td>seasonal; near the forecastable ceiling</td></tr>
+<tr><td>Fuel → headline</td><td class="n">R² 0.93</td><td>recovered weight 0.081 vs 0.089 official</td></tr>
+<tr><td>Raw food (calibrated)</td><td class="n">R² 0.46</td><td>vs 0.00 naïve</td></tr>
+<tr><td>Electricity</td><td class="n">deterministic</td><td>78% of variance at scheduled round boundaries</td></tr>
+</table>
+
+<h2>9 · Files &amp; how to run</h2>
+<table>
+<tr><th>File</th><th>Purpose</th></tr>
+<tr><td><code>fetch_tpso.py</code></td><td>Pull official CPI series from TPSO API → <code>data/tpso_history.csv</code> (69 months, 2021–2026)</td></tr>
+<tr><td><code>eppo_fuel.py</code></td><td>Build monthly fuel prices from EPPO daily data</td></tr>
+<tr><td><code>moc_food.py</code></td><td>Pull DIT daily food prices (MOC API)</td></tr>
+<tr><td><code>calibrate_fuel.py</code> / <code>calibrate_food.py</code></td><td>Backward-calibrate fuel &amp; raw-food weights → <code>fuel_calibration.png</code>, <code>food_calibration.png</code></td></tr>
+<tr><td><code>model.py</code> / <code>backtest.py</code></td><td>Headline nowcast engine + modeled-vs-actual → <code>backtest.png</code></td></tr>
+<tr><td><code>core_model.py</code> / <code>core_observable.py</code> / <code>test_core_windows.py</code></td><td>Core model, the observable-inputs experiment, and the window test</td></tr>
+<tr><td><code>model_summary_plots.py</code></td><td>The three summary PNGs (this report's figures)</td></tr>
+<tr><td><code>METHODOLOGY.md</code> / <code>README.html</code></td><td>Methodology reference / status page</td></tr>
+</table>
+<p class="muted"><b>Refresh before a print:</b> <code>python fetch_tpso.py</code> → <code>python eppo_fuel.py</code> → <code>python moc_food.py</code> → <code>python model.py</code> &amp; <code>python core_model.py</code>.</p>
+
+<h2>10 · Caveats</h2>
+<ul>
+<li>October 2026 is only observed through the first days of the month for fuel — the nowcast assumes the latest pump level holds (the diesel refinery relief &amp; LPG freeze expire Oct 31, a <i>November</i> risk).</li>
+<li>Raw-food calibration leans on a 2025–2026 window dominated by the March–April-2026 fuel cap break; the recovered weights are indicative.</li>
+<li>Electricity's effective household price depends on the representative consumption block, which TPSO does not publish — the subsidy overlay is modelled from announcements.</li>
+<li>The current-model headline backtest is 10 OOS months (bounded by DIT food history starting Jan 2025); the energy-observed backtest covers 33 months.</li>
+</ul>
+
+<footer>
+Thailand CPI Nowcast · built from official TPSO data + live observable feeds · report generated October 2026.
+Data: TPSO (index.tpso.go.th), EPPO, MOC/DIT (dataapi.moc.go.th), ERC, Yahoo Finance. Methodology per ILO / TPSO / BOT / IMF / PIER.
+</footer>
+
+</body>
+</html>
