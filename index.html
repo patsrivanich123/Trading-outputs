@@ -8,44 +8,45 @@
 <style>
 :root{--navy:#0B1F3A;--navy2:#2E4A6B;--grey:#6B7280;--grey2:#B8BEC7;--gold:#C9A227;--ink:#111418;--paper:#F7F7F5;--white:#FFFFFF;--rule:#D9DDE3;--rule2:#E6E8EB;--up:#2E6B4A;--dn:#8B2E2E;
 --serif:"Cormorant Garamond",Georgia,serif;--sans:"Source Sans 3",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.45}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15.5px;line-height:1.5}
 a{color:var(--navy)}
 .serif{font-family:var(--serif)}.mono{font-family:var(--mono)}
 header{background:var(--navy);color:var(--paper);padding:14px 20px;border-bottom:3px solid var(--gold);display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
 header .t{font-family:var(--serif);font-size:26px;font-weight:600}header .t span{color:var(--grey2);font-family:var(--sans);font-size:14px;margin-left:10px;font-weight:400}
-header .m{font-family:var(--mono);font-size:12px;color:var(--grey2)}
+header .m{font-family:var(--mono);font-size:13px;color:var(--grey2)}
 nav{display:flex;background:var(--white);border-bottom:1px solid var(--rule);padding:0 10px;overflow-x:auto}
 nav a{padding:11px 14px;color:var(--grey);text-decoration:none;border-bottom:2px solid transparent;white-space:nowrap}
 nav a.on{color:var(--navy);border-bottom-color:var(--gold);font-weight:600}
-main{padding:14px 16px;max-width:1180px;margin:0 auto;display:grid;gap:12px}
+main{padding:14px 16px;max-width:1180px;margin:0 auto;display:grid;gap:12px;grid-template-columns:minmax(0,1fr)}
+main>*,.sec>*,.sec{min-width:0}
 .card{background:var(--white);border:1px solid var(--rule);padding:12px 14px}
-.lbl{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--grey)}
-.h{font-family:var(--serif);font-size:19px;font-weight:600;color:var(--navy)}
-table{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:12.5px}
-th,td{padding:6px 8px;border-bottom:1px solid var(--rule2);text-align:right;white-space:nowrap}
-th{font-family:var(--sans);font-weight:600;color:var(--grey);font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+.lbl{font-size:13.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--grey)}
+.h{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--navy)}
+table{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:14px}
+th,td{padding:7px 9px;border-bottom:1px solid var(--rule2);text-align:right;white-space:nowrap}
+th{font-family:var(--sans);font-weight:600;color:var(--grey);font-size:13.5px;text-transform:uppercase;letter-spacing:.05em}
 td:first-child,th:first-child{text-align:left}
 .up{color:var(--up)}.dn{color:var(--dn)}.mut{color:var(--grey)}
 .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
 .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
 .strip{border-left:4px solid var(--gold);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
-.chip{display:inline-block;font-size:10.5px;padding:1px 5px;border:1px solid var(--navy2);color:var(--navy);background:#EEF1F5;margin:1px 2px 1px 0;font-family:var(--mono);cursor:default;position:relative}
+.chip{display:inline-block;font-size:13.5px;padding:1px 5px;border:1px solid var(--navy2);color:var(--navy);background:#EEF1F5;margin:1px 2px 1px 0;font-family:var(--mono);cursor:default;position:relative}
 .chip.hi{background:var(--navy);color:var(--paper);border-color:var(--navy)}
-.chip .tip{display:none;position:absolute;left:0;top:120%;z-index:5;background:var(--navy);color:var(--paper);padding:8px 10px;width:220px;border-top:2px solid var(--gold);font-size:11px;white-space:normal;text-align:left}
+.chip .tip{display:none;position:absolute;left:0;top:120%;z-index:5;background:var(--navy);color:var(--paper);padding:8px 10px;width:220px;border-top:2px solid var(--gold);font-size:12.5px;white-space:normal;text-align:left}
 .chip:hover .tip{display:block}
-.cal td{height:52px;vertical-align:top;text-align:left;font-size:11px;color:var(--grey);border:1px solid var(--rule2);padding:3px 4px;white-space:normal}
+.cal td{height:56px;vertical-align:top;text-align:left;font-size:12.5px;color:var(--grey);border:1px solid var(--rule2);padding:3px 4px;white-space:normal}
 .cal th{text-align:left}
-.empty{color:var(--grey);font-size:12.5px;padding:6px 0}
+.empty{color:var(--grey);font-size:14px;padding:6px 0}
 .foot{font-family:var(--mono);font-size:10.5px;color:var(--grey);text-align:right}
 .sub{padding:6px 12px;border:1px solid var(--rule);color:var(--grey);cursor:pointer;background:var(--white);font-size:13px}.sub.on{background:var(--navy);color:var(--paper);border-color:var(--navy)}
 .dot{display:inline-block;width:11px;height:11px;border:1px solid var(--navy);margin:0 1px;vertical-align:middle}.dot.hawk{background:var(--dn);border-color:var(--dn)}.dot.dove{background:var(--up);border-color:var(--up)}.dot.mid{background:var(--grey2);border-color:var(--grey2)}
 .sec{display:none}.sec.on{display:grid;gap:12px}
 svg text{font-family:var(--mono)}
-@media (max-width:600px){main{padding:10px}header .t{font-size:22px}th,td{padding:5px 6px;font-size:12px}}
+@media (max-width:600px){main{padding:10px}header .t{font-size:22px}th,td{padding:5px 6px;font-size:13.5px}}
 </style>
 </head>
 <body>
-<header><div class="t">Trading<span>hub</span></div><div class="m" id="hdr">loading…</div><div class="m" style="cursor:pointer;border:1px solid var(--grey2);padding:2px 8px" onclick="location.reload()">reload</div></header>
+<header><div class="t">Trading<span>hub</span></div><div class="m" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><span id="hdr">loading…</span><span style="cursor:pointer;border:1px solid var(--grey2);padding:2px 8px" onclick="location.reload()">reload</span></div></header>
 <nav id="nav">
 <a href="#brief" data-t="brief">Brief</a><a href="#macro" data-t="macro">Macro</a><a href="#assets" data-t="assets">Assets</a><a href="#tradingview" data-t="tradingview">TradingView</a><a href="#journal" data-t="journal">Journal</a>
 </nav>
@@ -55,11 +56,11 @@ svg text{font-family:var(--mono)}
   <div class="card"><div class="lbl" style="margin-bottom:6px">Snapshot</div><div style="overflow-x:auto"><table id="snap"><thead><tr><th>Asset</th><th>06:37</th><th>Live</th><th>Δ live</th><th>1d</th><th>1w</th><th>1m</th><th>RSI</th><th>Trend</th><th>Bias</th></tr></thead><tbody></tbody></table></div></div>
   <div class="grid2" id="cards"></div>
   <div class="card"><div class="lbl" style="margin-bottom:8px">Macro nowcast</div><div class="grid3" id="nowcast"></div></div>
-  <div class="card"><div style="display:flex;justify-content:space-between;flex-wrap:wrap"><div class="lbl" style="margin-bottom:8px" id="caltitle">Calendar (ICT)</div><div class="mono mut" style="font-size:11px">hover a chip for time + consensus</div></div><div id="calendar"></div></div>
+  <div class="card"><div style="display:flex;justify-content:space-between;flex-wrap:wrap"><div class="lbl" style="margin-bottom:8px" id="caltitle">Calendar (ICT)</div><div class="mono mut" style="font-size:13.5px">hover a chip for time + consensus</div></div><div id="calendar"></div></div>
   <div class="card strip" style="border-left-color:var(--navy)"><div><span class="lbl">Key risk 24h</span> <span id="risk">—</span></div></div>
 </section>
 <section id="macro" class="sec">
-  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px"><div id="subtabs" style="display:flex"></div><div class="mono mut" id="nextmtg" style="font-size:12px"></div></div>
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px"><div id="subtabs" style="display:flex"></div><div class="mono mut" id="nextmtg" style="font-size:13.5px"></div></div>
   <div class="card" id="m-nowcast"></div>
   <div class="card" id="m-cb"></div>
 </section>
@@ -70,7 +71,7 @@ svg text{font-family:var(--mono)}
   <div class="card"><div class="h">TradingView</div><div class="empty" id="tv-body">Pine catalogue, backtest stats and alerts appear here once <span class="mono">tradingview/</span> publishes. Nothing published yet.</div></div>
 </section>
 <section id="journal" class="sec">
-  <div class="card strip"><div><span class="lbl">Hit rate</span> <span class="mono" id="jhit">—</span></div><div class="mono mut" id="jn" style="font-size:12px"></div></div>
+  <div class="card strip"><div><span class="lbl">Hit rate</span> <span class="mono" id="jhit">—</span></div><div class="mono mut" id="jn" style="font-size:13.5px"></div></div>
   <div class="card"><div class="lbl" style="margin-bottom:6px">Calls log</div><div style="overflow-x:auto"><table id="jtab"><thead><tr><th>Date</th><th>Asset</th><th>Bias</th><th>Entry</th><th>Stop</th><th>Target</th><th>At call</th><th>Outcome</th><th>P&amp;L %</th><th style="text-align:left">Note</th></tr></thead><tbody></tbody></table></div></div>
 </section>
 <div class="foot" id="foot"></div>
@@ -92,16 +93,16 @@ function spark(s,lv,h=70){if(!s||!s.close||s.close.length<2)return'';const W=400
  if(lv?.kind==='ta'){out+=`<polyline fill="none" stroke="#C9A227" stroke-width="1" points="${ma(20)}"/><polyline fill="none" stroke="#2E4A6B" stroke-width="1" points="${ma(50)}"/>`}
  out+=`<polyline fill="none" stroke="#0B1F3A" stroke-width="1.5" points="${pts}"/></svg>`;return out}
 function card(lv,s,call,nar,big){const dp=lv.dp??(s?.dp??2),u=lv.name.includes('%')?'%':'';
- const rs=lv.kind==='ta'?`<div class="mono mut" style="font-size:11px">R <span class="dn">${(lv.resistance||[]).map(v=>fmt(v,dp)).join(' / ')||'—'}</span> · S <span class="up">${(lv.support||[]).map(v=>fmt(v,dp)).join(' / ')||'—'}</span></div>
- <div class="mono mut" style="font-size:11px">20/50/100 ${fmt(lv.ma?.[20],dp)} / ${fmt(lv.ma?.[50],dp)} / ${fmt(lv.ma?.[100],dp)} · RSI ${lv.rsi14?.toFixed(0)??'—'} · ATR ${fmt(lv.atr14,dp)} · ${lv.trend||''}</div>`
- :`<div class="mono mut" style="font-size:11px">1w ${pct(lv.chg_1w_pct)} · 1m ${pct(lv.chg_1m_pct)} · 6m ${fmt(lv.lo_6m,dp)}–${fmt(lv.hi_6m,dp)}</div>`;
+ const rs=lv.kind==='ta'?`<div class="mono mut" style="font-size:13.5px">R <span class="dn">${(lv.resistance||[]).map(v=>fmt(v,dp)).join(' / ')||'—'}</span> · S <span class="up">${(lv.support||[]).map(v=>fmt(v,dp)).join(' / ')||'—'}</span></div>
+ <div class="mono mut" style="font-size:13.5px">20/50/100 ${fmt(lv.ma?.[20],dp)} / ${fmt(lv.ma?.[50],dp)} / ${fmt(lv.ma?.[100],dp)} · RSI ${lv.rsi14?.toFixed(0)??'—'} · ATR ${fmt(lv.atr14,dp)} · ${lv.trend||''}</div>`
+ :`<div class="mono mut" style="font-size:13.5px">1w ${pct(lv.chg_1w_pct)} · 1m ${pct(lv.chg_1m_pct)} · 6m ${fmt(lv.lo_6m,dp)}–${fmt(lv.hi_6m,dp)}</div>`;
  const tr=call?(call.bias==='no trade'||call.bias==='neutral'?`<b>${call.bias}</b> — ${call.note||''}`:`<b>${call.bias}</b> · entry ${fmt(call.entry,dp)} · stop ${fmt(call.invalidation,dp)} · target ${fmt(call.target,dp)}<span class="mut"> — ${call.note||''}</span>`):'';
  const news=nar?.assets?.[lv.name]?.news;
  return `<div class="card"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><span class="h">${lv.name}</span><span class="mono">${fmt(lv.last,dp)}${u} <span class="${cls(lv.chg_pct)}">${pct(lv.chg_pct)}</span></span></div>
- <div style="margin:8px 0;border-bottom:1px solid var(--rule)">${spark(s,lv,big?160:70)}</div>${(window.LIVE_MAP||{})[lv.name]?`<div class="mono" style="font-size:11px"><span class="lbl">Live</span> ${fmt(window.LIVE_MAP[lv.name].last,dp)} <span class="${cls((window.LIVE_MAP[lv.name].last/lv.last-1)*100)}">${((window.LIVE_MAP[lv.name].last/lv.last-1)*100>=0?'+':'')+((window.LIVE_MAP[lv.name].last/lv.last-1)*100).toFixed(2)}% vs 06:37</span> <span class="mut">· R ${(window.LIVE_MAP[lv.name].resistance||[]).map(v=>fmt(v,dp)).join('/')||'—'} S ${(window.LIVE_MAP[lv.name].support||[]).map(v=>fmt(v,dp)).join('/')||'—'}</span></div>`:''}${rs}${news?`<div style="font-size:12.5px;margin-top:6px"><span class="lbl">News</span> ${news}</div>`:''}${tr?`<div style="font-size:12.5px;margin-top:6px"><span class="lbl">Trade</span> ${tr}</div>`:''}</div>`}
-function nowcastBox(n,label){if(!n||!n.data){return`<div><div class="h" style="font-size:16px">${label}</div><div class="mono mut" style="font-size:12px">not yet published</div></div>`}
- const d=n.data,ins=d.status==='insufficient_data';return`<div><div class="h" style="font-size:16px">${label} · ${d.series||''}</div>${ins?`<div class="mono mut" style="font-size:12px">insufficient data</div><div class="mut" style="font-size:11px">missing: ${(d.inputs_missing||[]).join(', ')||'—'}</div>`:
- `<div class="mono" style="font-size:12px">ours <b>${fmt(d.ours,2)}</b> · cons ${fmt(d.consensus,2)} · prior ${fmt(d.prior,2)}</div><div class="mono" style="font-size:11px"><span class="${cls(d.delta_1d)}">Δ1d ${d.delta_1d==null?'—':(d.delta_1d>=0?'+':'')+Number(d.delta_1d).toFixed(2)}</span> <span class="mut">${d.driver||''}</span></div>`}</div>`}
+ <div style="margin:8px 0;border-bottom:1px solid var(--rule)">${spark(s,lv,big?160:70)}</div>${(window.LIVE_MAP||{})[lv.name]?`<div class="mono" style="font-size:13.5px"><span class="lbl">Live</span> ${fmt(window.LIVE_MAP[lv.name].last,dp)} <span class="${cls((window.LIVE_MAP[lv.name].last/lv.last-1)*100)}">${((window.LIVE_MAP[lv.name].last/lv.last-1)*100>=0?'+':'')+((window.LIVE_MAP[lv.name].last/lv.last-1)*100).toFixed(2)}% vs 06:37</span> <span class="mut">· R ${(window.LIVE_MAP[lv.name].resistance||[]).map(v=>fmt(v,dp)).join('/')||'—'} S ${(window.LIVE_MAP[lv.name].support||[]).map(v=>fmt(v,dp)).join('/')||'—'}</span></div>`:''}${rs}${news?`<div style="font-size:13.5px;margin-top:6px"><span class="lbl">News</span> ${news}</div>`:''}${tr?`<div style="font-size:13.5px;margin-top:6px"><span class="lbl">Trade</span> ${tr}</div>`:''}</div>`}
+function nowcastBox(n,label){if(!n||!n.data){return`<div><div class="h" style="font-size:16px">${label}</div><div class="mono mut" style="font-size:13.5px">not yet published</div></div>`}
+ const d=n.data,ins=d.status==='insufficient_data';return`<div><div class="h" style="font-size:16px">${label} · ${d.series||''}</div>${ins?`<div class="mono mut" style="font-size:13.5px">insufficient data</div><div class="mut" style="font-size:13.5px">missing: ${(d.inputs_missing||[]).join(', ')||'—'}</div>`:
+ `<div class="mono" style="font-size:13.5px">ours <b>${fmt(d.ours,2)}</b> · cons ${fmt(d.consensus,2)} · prior ${fmt(d.prior,2)}</div><div class="mono" style="font-size:13.5px"><span class="${cls(d.delta_1d)}">Δ1d ${d.delta_1d==null?'—':(d.delta_1d>=0?'+':'')+Number(d.delta_1d).toFixed(2)}</span> <span class="mut">${d.driver||''}</span></div>`}</div>`}
 function calendar(c){if(!c||!c.data||!c.data.length){return`<div class="empty">Calendar not yet published by the morning run.</div>`}
  const ev=c.data;const days={};ev.forEach(e=>{(days[e.date]=days[e.date]||[]).push(e)});const dates=Object.keys(days).sort();
  const first=new Date(dates[0]+'T00:00:00'),last=new Date(dates[dates.length-1]+'T00:00:00');
@@ -128,17 +129,17 @@ async function main(){
 const CBS={us:{label:'US · Fed',cb:'FOMC'},th:{label:'TH · BoT',cb:'MPC'},jp:{label:'JP · BOJ',cb:'BOJ'}};let MACRO={},NOW={};
 function stanceCls(l){return /hawk/.test(l||'')?'dn':/dove/.test(l||'')?'up':'mut'}
 function nowcastPanel(n,cc){if(!n||!n.data)return`<div class="h">Nowcast</div><div class="empty">Not yet published for ${CBS[cc].label}.</div>`;const d=n.data;
- return`<div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap"><span class="h">${d.series||'Nowcast'}</span><span class="mono mut" style="font-size:11px">${d.print_date?'print '+d.print_date:''}</span></div>
- ${d.status==='insufficient_data'?`<div class="mono mut">insufficient data — missing: ${(d.inputs_missing||[]).join(', ')}</div>`:`<div class="grid3" style="margin:8px 0"><div><div class="lbl">Ours</div><div class="mono" style="font-size:22px;color:var(--navy)">${fmt(d.ours,2)}</div></div><div><div class="lbl">Consensus</div><div class="mono mut" style="font-size:22px">${fmt(d.consensus,2)}</div></div><div><div class="lbl">Prior</div><div class="mono mut" style="font-size:22px">${fmt(d.prior,2)}</div></div></div><div class="mono" style="font-size:12px"><span class="${cls(d.delta_1d)}">Δ1d ${d.delta_1d==null?'—':(d.delta_1d>=0?'+':'')+Number(d.delta_1d).toFixed(2)}</span> <span class="mut">${d.driver||''}</span></div>`}
+ return`<div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap"><span class="h">${d.series||'Nowcast'}</span><span class="mono mut" style="font-size:13.5px">${d.print_date?'print '+d.print_date:''}</span></div>
+ ${d.status==='insufficient_data'?`<div class="mono mut">insufficient data — missing: ${(d.inputs_missing||[]).join(', ')}</div>`:`<div class="grid3" style="margin:8px 0"><div><div class="lbl">Ours</div><div class="mono" style="font-size:26px;color:var(--navy)">${fmt(d.ours,2)}</div></div><div><div class="lbl">Consensus</div><div class="mono mut" style="font-size:26px">${fmt(d.consensus,2)}</div></div><div><div class="lbl">Prior</div><div class="mono mut" style="font-size:26px">${fmt(d.prior,2)}</div></div></div><div class="mono" style="font-size:13.5px"><span class="${cls(d.delta_1d)}">Δ1d ${d.delta_1d==null?'—':(d.delta_1d>=0?'+':'')+Number(d.delta_1d).toFixed(2)}</span> <span class="mut">${d.driver||''}</span></div>`}
  ${d.components?`<div style="overflow-x:auto;margin-top:8px"><table><thead><tr><th>Component</th><th>Weight</th><th>Ours m/m</th><th>Contrib</th><th style="text-align:left">Status</th></tr></thead><tbody>${d.components.map(c=>`<tr><td>${c.name}</td><td>${fmt(c.weight,1)}%</td><td class="${cls(c.mm)}">${c.mm==null?'—':(c.mm>=0?'+':'')+Number(c.mm).toFixed(2)}</td><td class="${cls(c.contrib_bp)}">${c.contrib_bp==null?'—':(c.contrib_bp>=0?'+':'')+Number(c.contrib_bp).toFixed(0)+'bp'}</td><td style="text-align:left" class="${c.status==='ok'?'up':c.status==='missing'?'dn':'mut'}">${c.status||''}${c.note?' · '+c.note:''}</td></tr>`).join('')}</tbody></table></div>`:''}`}
 function cbPanel(c,cc){if(!c||!c.data)return`<div class="h">${CBS[cc].cb} · member agents</div><div class="empty">No member-agent run published yet for ${CBS[cc].label}.</div>`;const d=c.data,p=d.predicted||{};
  const dots=(d.members||[]).map(m=>`<span class="dot ${/hawk/.test(m.stance)?'hawk':/dove/.test(m.stance)?'dove':'mid'}" title="${m.name}: ${m.stance}"></span>`).join('');
  const pathTxt=d.path_median?Object.entries(d.path_median).map(([k,v])=>`${k} ${fmt(v,3)}`).join(' · '):'—';
  return`<div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px"><span class="h">${d.committee} · ${d.meeting_date} · member agents</span><span class="mono">predicted <b>${p.decision||'—'}</b> · ${p.vote_string||''} · exp. dissents ${p.expected_dissents??'—'} · P(non-unanimous) ${p.non_unanimous_prob!=null?(p.non_unanimous_prob*100).toFixed(0)+'%':'—'}</span></div>
- <div style="display:flex;gap:14px;align-items:center;margin:10px 0 6px;flex-wrap:wrap"><span class="lbl">Committee lean</span><span>${dots}</span><span class="mono mut" style="font-size:11px">red hawk · grey centre · green dove · mean score ${d.committee_lean??'—'}</span></div>
- <div class="mono mut" style="font-size:11px;margin-bottom:8px">median preferred path: ${pathTxt} · current ${d.current_rate||''} · last: ${d.last_decision?.decision||''} (${d.last_decision?.vote||''})</div>
- <div style="overflow-x:auto"><table><thead><tr><th>Member</th><th>Role</th><th>Stance</th><th>Vote</th><th>Path</th><th>Conf.</th><th>Dissent</th><th style="text-align:left">Drivers / last signal</th></tr></thead><tbody>${(d.members||[]).map(m=>`<tr><td>${m.name}${m.voter?'':' <span class="mut">(nv)</span>'}</td><td class="mut" style="white-space:normal">${m.role||''}</td><td class="${stanceCls(m.stance)}">${m.stance} ${m.score!=null?'('+(m.score>=0?'+':'')+Number(m.score).toFixed(2)+')':''}</td><td class="${/cut/.test(m.vote)?'up':/hike/.test(m.vote)?'dn':''}">${m.vote}</td><td class="mut">${m.path?Object.values(m.path).map(v=>fmt(v,3)).join(' / '):'—'}</td><td>${m.confidence!=null?Number(m.confidence).toFixed(2):'—'}</td><td class="${(m.dissent_risk||0)>=0.4?'dn':''}">${m.dissent_risk!=null?Number(m.dissent_risk).toFixed(2):'—'}</td><td style="text-align:left;white-space:normal;font-family:var(--sans)">${(m.drivers||[]).join(' · ')}${m.last_signal?`<div class="mut" style="font-size:11px">${m.last_signal}</div>`:''}</td></tr>`).join('')}</tbody></table></div>
- <div class="mono mut" style="font-size:11px;margin-top:8px">Dissent base rate since Jan 2024: ${d.dissent_base_rate_pct!=null?d.dissent_base_rate_pct+'% of meetings':'n/a'}. The model adds value only when it predicts a non-unanimous outcome or a path away from market pricing. Run ${d.run_at||''}.</div>`}
+ <div style="display:flex;gap:14px;align-items:center;margin:10px 0 6px;flex-wrap:wrap"><span class="lbl">Committee lean</span><span>${dots}</span><span class="mono mut" style="font-size:13.5px">red hawk · grey centre · green dove · mean score ${d.committee_lean??'—'}</span></div>
+ <div class="mono mut" style="font-size:13.5px;margin-bottom:8px">median preferred path: ${pathTxt} · current ${d.current_rate||''} · last: ${d.last_decision?.decision||''} (${d.last_decision?.vote||''})</div>
+ <div style="overflow-x:auto"><table style="font-size:13px"><thead><tr><th>Member</th><th>Role</th><th>Stance</th><th>Vote</th><th>Path</th><th>Conf.</th><th>Dissent</th><th style="text-align:left;min-width:240px">Drivers / last signal</th></tr></thead><tbody>${(d.members||[]).map(m=>`<tr><td>${m.name}${m.voter?'':' <span class="mut">(nv)</span>'}</td><td class="mut" style="white-space:normal;max-width:120px">${(m.role||'').replace('Regional president','Pres.')}</td><td class="${stanceCls(m.stance)}">${m.stance} ${m.score!=null?'('+(m.score>=0?'+':'')+Number(m.score).toFixed(2)+')':''}</td><td class="${/cut/.test(m.vote)?'up':/hike/.test(m.vote)?'dn':''}">${m.vote}</td><td class="mut">${m.path?Object.values(m.path).map(v=>fmt(v,3)).join('→'):'—'}</td><td>${m.confidence!=null?Number(m.confidence).toFixed(2):'—'}</td><td class="${(m.dissent_risk||0)>=0.4?'dn':''}">${m.dissent_risk!=null?Number(m.dissent_risk).toFixed(2):'—'}</td><td style="text-align:left;white-space:normal;font-family:var(--sans)">${(m.drivers||[]).join(' · ')}${m.last_signal?`<div class="mut" style="font-size:13.5px">${m.last_signal}</div>`:''}</td></tr>`).join('')}</tbody></table></div>
+ <div class="mono mut" style="font-size:13.5px;margin-top:8px">Dissent base rate since Jan 2024: ${d.dissent_base_rate_pct!=null?d.dissent_base_rate_pct+'% of meetings':'n/a'}. The model adds value only when it predicts a non-unanimous outcome or a path away from market pricing. Run ${d.run_at||''}.</div>`}
 function renderMacro(cc){document.querySelectorAll('.sub').forEach(b=>b.classList.toggle('on',b.dataset.cc===cc));$('#m-nowcast').innerHTML=nowcastPanel(NOW[cc],cc);$('#m-cb').innerHTML=cbPanel(MACRO[cc],cc);const d=MACRO[cc]?.data;$('#nextmtg').textContent=d?`next ${d.committee} ${d.meeting_date}`:''}
 function route(){const t=(location.hash||'#brief').slice(1);document.querySelectorAll('.sec').forEach(s=>s.classList.toggle('on',s.id===t));document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.dataset.t===t));if(!document.getElementById(t))location.hash='#brief'}
 window.addEventListener('hashchange',route);route();main();
