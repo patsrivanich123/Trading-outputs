@@ -1,0 +1,16 @@
+{"date": "2026-11-02",
+ "header_note": "levels as of Fri US close (S&P, UST 10Y) / Mon Asia morning, delayed-live (USDJPY, DXY, Brent, KOSPI 200, Hang Seng)",
+ "key_risk": "US midterm result (lands Wed morning ICT) plus the post-election Iran/Hormuz call set oil, inflation and the Dec Fed hike (72% priced) for UST 10Y (4.93%, R 5.01/5.09) and THB, with refunding (4 Nov) and NFP (6 Nov) behind it.",
+ "assets": {
+  "USDJPY": {"news": "BoJ held at 1.25% Fri but kept hiking bias; MoF's Katayama says joint US-Japan FX line stands (Jul 31 yen buy), yet pair bid at 157.88 on rate gap. Tokyo shut Tue (Culture Day).", "trade": "Bearish: sell rally 158.78, stop 160.20, target 156.50; intervention risk builds into 160"},
+  "UST 10Y (%)": {"news": "4.93% Fri (-6bp), off the 5.36% Oct high; Asia ~4.95%. Fed held 3.75-4.00% 10-2 (two dissents for a hike), Dec hike ~72% priced, total tightening priced ~55bp vs 70bp+ a month ago. Refunding Wed, NFP Fri. FRED 10Y 4.98 on 29 Oct vs IBKR 4.989: scale OK.", "trade": "no trade"},
+  "DXY (ICE fut)": {"news": "101.69, drifting lower on Iran-diplomacy hopes and pre-election caution; capped by 102.27-102.38 Oct highs.", "trade": "no trade"},
+  "Brent CO1": {"news": "110.04, -3.0% on Trump saying no Iran strikes pre-election, Qatar-mediated talks, OPEC+ holding Dec targets; Hormuz tanker attacks persist. Analysts flag $120 risk after Tuesday. (Dec contract rolled out; front is Jan 27 on IBKR.)", "trade": "no trade"}
+ },
+ "equities": [
+  {"name": "S&P 500", "line": "7,580 (-1.82% Fri), worst day since June, third weekly loss; AI-capex worries after Alphabet/Amazon, Intel -29%; broke 100-DMA. Futures up ~1% Asia."},
+  {"name": "Nasdaq 100", "line": "28,384.85 (-3.46% Fri) [web level, no IBKR feed, no chart; FRED 29,402.51 on 29 Oct consistent]; SOX -7.2%; futures +~1% Monday."},
+  {"name": "KOSPI 200", "line": "924.15 (+2.99%, IBKR delayed, intraday); KOSPI comp ~5,860-5,890 (+2.3-2.8%) on strong Oct exports and SK Hynix; still -16% in a month."},
+  {"name": "Hang Seng", "line": "23,418 (+0.53%, IBKR delayed, intraday); PBoC/CSRC reportedly meeting on market support; China Oct factory PMI back in contraction."},
+  {"name": "Bitcoin", "line": "~78,100 [web: CoinGecko 06:26Z, flagged, no chart]; Fri ~76,650 per Business Insider."}
+ ]}

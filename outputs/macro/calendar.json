@@ -1,0 +1,162 @@
+{
+ "asof": "2026-11-02",
+ "source": "brief.calendar",
+ "data": [
+  {
+   "name": "Apple, Palantir earnings (after US close)",
+   "country": "US",
+   "kind": "earnings",
+   "ict": "2026-11-03 04:30",
+   "date": "2026-11-03",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": true,
+   "impact": 1
+  },
+  {
+   "name": "Japan market holiday (Culture Day)",
+   "country": "JP",
+   "kind": "holiday",
+   "ict": "2026-11-03 07:00",
+   "date": "2026-11-03",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": true,
+   "impact": 1
+  },
+  {
+   "name": "US midterm elections (polls close ~8pm ET)",
+   "country": "US",
+   "kind": "election",
+   "ict": "2026-11-04 08:00",
+   "date": "2026-11-04",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": true,
+   "impact": 2
+  },
+  {
+   "name": "US Treasury quarterly refunding announcement",
+   "country": "US",
+   "kind": "supply",
+   "ict": "2026-11-04 20:30",
+   "date": "2026-11-04",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": true,
+   "impact": 1
+  },
+  {
+   "name": "Euro area flash HICP (Oct)",
+   "country": "EA",
+   "kind": "data",
+   "ict": "2026-11-04 17:00",
+   "date": "2026-11-04",
+   "consensus": "4.0% y/y",
+   "prior": "3.8%",
+   "rate": null,
+   "confirmed": false,
+   "impact": 1
+  },
+  {
+   "name": "BoE MPC decision + Monetary Policy Report",
+   "country": "UK",
+   "kind": "cb",
+   "ict": "2026-11-05 19:00",
+   "date": "2026-11-05",
+   "consensus": "split: hike 25bp to 4.00% vs hold (Sep survey 60% hold)",
+   "prior": null,
+   "rate": "3.75%",
+   "confirmed": true,
+   "impact": 2
+  },
+  {
+   "name": "Thai CPI (Oct) - MoC/TPSO, date TBC",
+   "country": "TH",
+   "kind": "data",
+   "ict": "2026-11-06 09:30",
+   "date": "2026-11-06",
+   "consensus": null,
+   "prior": "2.82% y/y headline (Sep)",
+   "rate": null,
+   "confirmed": false,
+   "impact": 1
+  },
+  {
+   "name": "US Employment Situation (Oct NFP)",
+   "country": "US",
+   "kind": "data",
+   "ict": "2026-11-06 20:30",
+   "date": "2026-11-06",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": true,
+   "impact": 2
+  },
+  {
+   "name": "US CPI / core CPI (Oct)",
+   "country": "US",
+   "kind": "data",
+   "ict": "2026-11-10 20:30",
+   "date": "2026-11-10",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": false,
+   "impact": 2
+  },
+  {
+   "name": "UST refunding auctions 3y/10y/30y (dates TBC at QRA)",
+   "country": "US",
+   "kind": "supply",
+   "ict": "2026-11-11 01:00",
+   "date": "2026-11-11",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": false,
+   "impact": 1
+  },
+  {
+   "name": "US Veterans Day - bond market closed",
+   "country": "US",
+   "kind": "holiday",
+   "ict": "2026-11-11 20:00",
+   "date": "2026-11-11",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": true,
+   "impact": 1
+  },
+  {
+   "name": "Japan Q3 GDP prelim (date TBC)",
+   "country": "JP",
+   "kind": "data",
+   "ict": "2026-11-16 06:50",
+   "date": "2026-11-16",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": false,
+   "impact": 1
+  },
+  {
+   "name": "Thai Q3 GDP (NESDC, date TBC)",
+   "country": "TH",
+   "kind": "data",
+   "ict": "2026-11-16 09:30",
+   "date": "2026-11-16",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": false,
+   "impact": 1
+  }
+ ]
+}

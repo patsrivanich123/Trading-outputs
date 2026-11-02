@@ -1,9 +1,9 @@
 {
- "asof": "2026-11-01",
+ "asof": "2026-11-02",
  "source": "journal.grade",
  "data": {
   "graded_today": 4,
-  "n_scored": 1,
+  "n_scored": 2,
   "hit_rate_all": 0.0,
   "hit_rate_20": 0.0,
   "yesterday": [
@@ -11,7 +11,7 @@
     "asset": "USDJPY",
     "bias": "bearish",
     "outcome": "loss",
-    "pnl_pct": "-0.000"
+    "pnl_pct": "-0.200"
    },
    {
     "asset": "UST 10Y (%)",
