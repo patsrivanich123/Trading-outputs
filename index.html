@@ -40,6 +40,7 @@ td:first-child,th:first-child{text-align:left}
 .foot{font-family:var(--mono);font-size:10.5px;color:var(--grey);text-align:right}
 .sub{padding:6px 12px;border:1px solid var(--rule);color:var(--grey);cursor:pointer;background:var(--white);font-size:13px}.sub.on{background:var(--navy);color:var(--paper);border-color:var(--navy)}
 .dot{display:inline-block;width:11px;height:11px;border:1px solid var(--navy);margin:0 1px;vertical-align:middle}.dot.hawk{background:var(--dn);border-color:var(--dn)}.dot.dove{background:var(--up);border-color:var(--up)}.dot.mid{background:var(--grey2);border-color:var(--grey2)}
+.doc{max-width:860px}.doc h3{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--navy);margin:18px 0 6px;border-bottom:1px solid var(--rule);padding-bottom:4px}.doc h4{font-size:15px;margin:14px 0 4px;color:var(--navy2)}.doc p{margin:6px 0}.doc .f{font-family:var(--mono);font-size:13.5px;background:#F0F1F3;border:1px solid var(--rule);padding:8px 12px;margin:6px 0;overflow-x:auto}.doc table{margin:6px 0}.doc li{margin:3px 0}
 .sec{display:none}.sec.on{display:grid;gap:12px}
 svg text{font-family:var(--mono)}
 @media (max-width:600px){main{padding:10px}header .t{font-size:22px}th,td{padding:5px 6px;font-size:13.5px}}
@@ -48,7 +49,7 @@ svg text{font-family:var(--mono)}
 <body>
 <header><div class="t">Trading<span>hub</span></div><div class="m" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><span id="hdr">loading…</span><span style="cursor:pointer;border:1px solid var(--grey2);padding:2px 8px" onclick="location.reload()">reload</span></div></header>
 <nav id="nav">
-<a href="#brief" data-t="brief">Brief</a><a href="#macro" data-t="macro">Macro</a><a href="#assets" data-t="assets">Assets</a><a href="#tradingview" data-t="tradingview">TradingView</a><a href="#journal" data-t="journal">Journal</a>
+<a href="#brief" data-t="brief">Brief</a><a href="#macro" data-t="macro">Macro</a><a href="#assets" data-t="assets">Assets</a><a href="#tradingview" data-t="tradingview">TradingView</a><a href="#journal" data-t="journal">Journal</a><a href="#appendix" data-t="appendix">Appendix</a>
 </nav>
 <main>
 <section id="brief" class="sec">
@@ -73,6 +74,64 @@ svg text{font-family:var(--mono)}
 <section id="journal" class="sec">
   <div class="card strip"><div><span class="lbl">Hit rate</span> <span class="mono" id="jhit">—</span></div><div class="mono mut" id="jn" style="font-size:13.5px"></div></div>
   <div class="card"><div class="lbl" style="margin-bottom:6px">Calls log</div><div style="overflow-x:auto"><table id="jtab"><thead><tr><th>Date</th><th>Asset</th><th>Bias</th><th>Entry</th><th>Stop</th><th>Target</th><th>At call</th><th>Outcome</th><th>P&amp;L %</th><th style="text-align:left">Note</th></tr></thead><tbody></tbody></table></div></div>
+</section>
+<section id="appendix" class="sec">
+<div class="card doc">
+<div class="h" style="font-size:24px">Appendix — theory and model backbone</div>
+<p class="mut">Static reference. Numbers here are design parameters and calibration results, not today's forecast. Code: <span class="mono">macro/</span>, <span class="mono">tools/</span>, <span class="mono">journal/</span> in the Trading repo.</p>
+
+<h3>A1 · Thailand CPI nowcast</h3>
+<h4>How TPSO builds the index</h4>
+<p>Compiler: Trade Policy & Strategy Office (TPSO), Ministry of Commerce — not the central bank. Elementary aggregates use a <b>Dutot</b> index (ratio of arithmetic-mean prices); aggregation above that is <b>modified Laspeyres</b> with fixed weights. Base 2023 = 100 (B.E. 2566), live since January 2025. Basket of 464 items, 7 groups, 52 provinces. Collection frequency is the key to a nowcast: fuel daily, fresh food weekly, everything else monthly, rent six-monthly. No seasonal adjustment, never revised — the first print is final. Roughly 26% of the basket is administered or price-controlled. Core = headline excluding raw food and energy (≈69.7% of the basket).</p>
+<h4>Model</h4>
+<div class="f">headline m/m = Σ<sub>b</sub> w<sub>b</sub> · m/m<sub>b</sub> &nbsp;→&nbsp; index<sub>t</sub> = index<sub>t−1</sub> · (1 + m/m) &nbsp;→&nbsp; y/y = index<sub>t</sub> / index<sub>t−12</sub> − 1</div>
+<table><thead><tr><th style="text-align:left">Block</th><th>Weight</th><th style="text-align:left">Nowcast rule</th><th style="text-align:left">Type</th></tr></thead><tbody>
+<tr><td>Core (ex raw food & energy)</td><td>69.67%</td><td style="text-align:left;white-space:normal">Seasonal climatology: mean m/m for the same calendar month in prior years (2022+)</td><td style="text-align:left">seasonal</td></tr>
+<tr><td>Raw food</td><td>17.24%</td><td style="text-align:left;white-space:normal">MOC/DIT daily retail prices (eggs, pork, chicken, rice, kale, morning glory, cabbage, lime, chillies, shallots, garlic, tomato, cucumber, spring onion, coriander, banana, mandarin, tilapia, mackerel, shrimp) → monthly means → item weights ridge-calibrated backward to the TPSO raw-food index. Fallback: seasonal mean, then last report prior</td><td style="text-align:left">live feed</td></tr>
+<tr><td>Motor fuel</td><td>8.93%</td><td style="text-align:left;white-space:normal">EPPO daily pump prices, forward-filled to a daily calendar, volume-weighted (diesel 0.60, gasohol 95 0.20, E20 0.09, gasohol 91 0.07, E85 0.02, premium 0.02), monthly arithmetic mean, × pass-through 0.90</td><td style="text-align:left">live feed</td></tr>
+<tr><td>Electricity</td><td>3.68%</td><td style="text-align:left;white-space:normal">Calendar lookup: ERC Ft round (Jan / May / Sep) plus announced subsidy overlays; 0 within a round</td><td style="text-align:left">calendar</td></tr>
+<tr><td>LPG / cooking gas</td><td>0.63%</td><td style="text-align:left;white-space:normal">Government ceiling price; 0 unless the ceiling changes</td><td style="text-align:left">calendar</td></tr>
+</tbody></table>
+<p>Core m/m specification tested: π<sup>core</sup><sub>t</sub> = β₀ + β₁·S<sub>m(t)</sub> + β₂·X<sub>t−1</sub> + ε, fitted 0.038 + 0.783·S + 0.006·X — β₂ ≈ 0, so it collapses to the seasonal mean. Scraped observables (lagged food, USD/THB, gold) all had negative out-of-sample R²: core is irreducibly seasonal with the data that exists before the print.</p>
+<h4>Calibration results (from the method report, out-of-sample, pre-print inputs only)</h4>
+<table><thead><tr><th style="text-align:left">Test</th><th>Result</th><th style="text-align:left">Note</th></tr></thead><tbody>
+<tr><td>Headline y/y, current model (10 months)</td><td>MAE 0.11pp</td><td style="text-align:left">catches the Apr-2026 jump −0.08 → +2.89</td></tr>
+<tr><td>Headline y/y, energy-observed (33 months)</td><td>MAE 0.16pp</td><td style="text-align:left">vs 0.42pp with no live signal</td></tr>
+<tr><td>Core y/y, seasonal</td><td>MAE 0.10–0.14pp</td><td style="text-align:left">window test 2024 & 2025 from earlier years: 0.12pp</td></tr>
+<tr><td>Fuel → headline</td><td>R² 0.93</td><td style="text-align:left">recovered weight 0.081 vs official 0.089</td></tr>
+<tr><td>Raw food, calibrated</td><td>R² 0.46</td><td style="text-align:left">vs 0.00 equal-weight; eggs +0.42, pork +0.32 dominate</td></tr>
+<tr><td>Electricity</td><td>deterministic</td><td style="text-align:left">78% of variance at scheduled round boundaries</td></tr>
+<tr><td>Decomposition identity</td><td>|resid| 0.03pp</td><td style="text-align:left">blocks rebuild official headline over 45 months</td></tr>
+</tbody></table>
+<h4>Data sources (all before the print)</h4>
+<ul><li>TPSO CPI API — <span class="mono">POST index.tpso.go.th/api/cpig/ChangeRate</span> (targets, weights, anchors)</li><li>EPPO daily price structure — mirror <span class="mono">github.com/anantsrisu-cpu/eppo-oil-price</span> (orig eppo.go.th)</li><li>MOC/DIT open data — <span class="mono">dataapi.moc.go.th/gis-products</span>, <span class="mono">/gis-product-prices</span></li><li>ERC Ft tariff rounds and government subsidy announcements; MOC LPG ceiling</li><li>Methodology: ILO Thailand CPI descriptor; TPSO 2566-base note; BOT core-inflation symposium; SEACEN pass-through; IMF Article IV; PIER DP 85/211</li></ul>
+<h4>Known limits</h4>
+<ul><li>Fuel is the edge; food recovers ~half the signal; core cannot be beaten with pre-print data.</li><li>Electricity's effective household price depends on the consumption block TPSO does not publish — subsidies modelled from announcements.</li><li>Consensus is sourced from public calendars unless refreshed from the Bloomberg ECO survey.</li></ul>
+
+<h3>A2 · US CPI / PCE nowcast (v0)</h3>
+<p>Bottom-up by CPI component on approximate Dec-2025 relative importances. Energy = gasoline share (3.4% of headline) × month-to-date weekly retail gasoline change vs prior-month average (≈1:1 pass-through) plus the rest of energy at persistence; every other component = 3-month average m/m (persistence). Headline m/m = Σ w·m/m normalised to covered weight; y/y from the index base effect. Core PCE m/m ≈ 0.80 × core CPI m/m + 0.02 (crude mapping; PPI not wired). Status is "insufficient data" until at least two weeks of target-month gasoline exist. Not yet wired: Cleveland Fed nowcast, Manheim used cars, PPI, a consensus feed. Expect it to track consensus except when energy moves a lot.</p>
+
+<h3>A3 · Central-bank member agents (Fed, BOJ, BoT)</h3>
+<h4>Idea</h4>
+<p>One agent per committee member, deciding independently from (i) a sourced dossier — role, term, stance score from the last six months of statements and votes, stated reaction function, recent statements with URLs, voting record; (ii) a shared datapack — market pricing, recent prints, nowcasts, news, the last statement; (iii) at most three searches for the member's own remarks since the dossier date. No agent sees another's answer. Output per member: vote, preferred path at the next three meetings, stance, confidence, dissent risk, drivers, what would change its mind, rationale in the member's register.</p>
+<h4>Aggregation</h4>
+<div class="f">decision = modal vote among voters · split = tally · E[dissents] = Σ<sub>voters</sub> dissent_risk<sub>i</sub> · P(non-unanimous) = 1 − Π<sub>voters</sub>(1 − dissent_risk<sub>i</sub>)<br>path = median of preferred paths (all members, dots-style) · committee lean = mean stance score · dissent base rate = share of meetings since Jan 2024 with ≥1 dissent</div>
+<p>Calibration rules baked into the prompt: a member who has voted with the majority for a year has dissent risk ≤ 0.1 unless something specific changed; confidence above 0.9 only when the member's own words leave no doubt; no invented statements — fresh evidence must carry real URLs or be empty.</p>
+<h4>Honesty rule</h4>
+<p>The model earns its keep only when it predicts a non-unanimous outcome or a path away from market pricing. The dissent base rate is printed next to every call for that reason. Scoring against actual votes after each meeting is the next build.</p>
+<h4>Known limits</h4>
+<ul><li>BoT MPC minutes are anonymised and external members rarely speak — stances are near zero with wide uncertainty by construction.</li><li>Some dossier facts rest on secondary sources where central-bank sites were unreachable; flagged in the dossiers.</li><li>Each run is a snapshot; it decays without the scheduled refresh.</li></ul>
+
+<h3>A4 · Price levels and technicals</h3>
+<p>Reference levels come from the 06:37 IBKR pull (6 months daily). Per asset: 20/50/100-day simple MAs; RSI-14 (Wilder smoothing); ATR-14 from high/low/close; classic pivots (P, R1, R2, S1, S2) from the last bar; swing levels = local 3-bar highs/lows over the last 120 bars, merged when within 0.6×ATR, nearest two above/below the last price (excluding anything within 0.3×ATR); trend = up if price &gt; 50DMA &gt; 100DMA, down if the reverse, else range/mixed. The live column is a separate 10-minute job on free delayed quotes (~15 min, unofficial) and recomputes the same levels; it is for glancing, not for pricing a trade.</p>
+
+<h3>A5 · Journal and grading</h3>
+<p>Every morning call is logged with bias, entry, stop, target and the price at the call. Grading rule v0, applied at the next run: bullish wins if the next close is higher, bearish if lower, |move| &lt; 0.05% is flat and unscored; "no trade" and "neutral" are logged but not scored. Hit rate is shown all-time and 20-day. Entry/stop/target-aware grading and holding periods are the next build.</p>
+
+<h3>A6 · Calendar</h3>
+<p>The morning run builds a 14-day calendar from official sources and converts every time to ICT. A required-events validator in code then checks for Thai CPI, BoT MPC, FOMC, BOJ, US CPI, NFP, PCE, Japan national and Tokyo CPI: matches are forced to high impact; misses are inserted as dashed "expected, unconfirmed" placeholders and flagged. Confirmed dates in <span class="mono">macro/calendar/fixed.json</span> (e.g. TPSO's published annual CPI calendar) override whatever the run guessed.</p>
+<div class="foot" style="text-align:left;margin-top:14px">Sources for A1: Pat's "Thailand CPI Nowcast — Full Project Report" (Oct 2026). Design parameters change only by commit.</div>
+</div>
 </section>
 <div class="foot" id="foot"></div>
 </main>
