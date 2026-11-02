@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""15-minute live price layer. Runs in GitHub Actions inside Trading-outputs (NOT in the Trading repo, NOT via Claude).
+"""10-minute live price layer. Runs in GitHub Actions inside Trading-outputs (NOT in the Trading repo, NOT via Claude).
 Pulls free delayed quotes (Yahoo Finance via yfinance), recomputes levels with ta.py, writes live/levels_live.json.
 Reference levels remain the 06:37 IBKR run; this is for glancing + reload. ~15 min delayed, unofficial feed."""
 import json, datetime as dt, warnings, sys, os
