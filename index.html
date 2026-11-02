@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Trading · hub</title>
+<title>Macro Lab</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{--navy:#0B1F3A;--navy2:#2E4A6B;--grey:#6B7280;--grey2:#B8BEC7;--gold:#C9A227;--ink:#111418;--paper:#F7F7F5;--white:#FFFFFF;--rule:#D9DDE3;--rule2:#E6E8EB;--up:#2E6B4A;--dn:#8B2E2E;
@@ -44,10 +44,19 @@ td:first-child,th:first-child{text-align:left}
 .sec{display:none}.sec.on{display:grid;gap:12px}
 svg text{font-family:var(--mono)}
 @media (max-width:600px){main{padding:10px}header .t{font-size:22px}th,td{padding:5px 6px;font-size:13.5px}}
+
+@media (prefers-reduced-motion:no-preference){
+.sec.on .card,.sec.on .doc>h3,.sec.on .doc>h4,.sec.on .fig,.sec.on table,.sec.on .grid2>div,.sec.on .grid3>div{animation:rise .55s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0)*70ms)}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+polyline[pathLength]{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.2s ease-out forwards;animation-delay:calc(var(--i,0)*70ms + .15s)}
+@keyframes draw{to{stroke-dashoffset:0}}
+#modal .box{animation:rise .3s ease-out both}
+header .t{animation:rise .6s ease-out both}
+}
 </style>
 </head>
 <body>
-<header><div class="t">Trading<span>hub</span></div><div class="m" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><span id="hdr">loading…</span><span style="cursor:pointer;border:1px solid var(--grey2);padding:2px 8px" onclick="location.reload()">reload</span></div></header>
+<header><div class="t">Macro Lab<span>Srivanich</span></div><div class="m" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><span id="hdr">loading…</span><span style="cursor:pointer;border:1px solid var(--grey2);padding:2px 8px" onclick="location.reload()">reload</span></div></header>
 <nav id="nav">
 <a href="#brief" data-t="brief">Brief</a><a href="#macro" data-t="macro">Macro</a><a href="#assets" data-t="assets">Assets</a><a href="#tradingview" data-t="tradingview">TradingView</a><a href="#journal" data-t="journal">Journal</a><a href="#appendix" data-t="appendix">Appendix</a>
 </nav>
@@ -126,7 +135,7 @@ function spark(s,lv,h=70){if(!s||!s.close||s.close.length<2)return'';const W=400
  (lv?.resistance||[]).forEach(v=>out+=`<line x1="0" x2="${W}" y1="${Y(v).toFixed(1)}" y2="${Y(v).toFixed(1)}" stroke="#8B2E2E" stroke-width=".8" stroke-dasharray="3 3"/>`);
  (lv?.support||[]).forEach(v=>out+=`<line x1="0" x2="${W}" y1="${Y(v).toFixed(1)}" y2="${Y(v).toFixed(1)}" stroke="#2E6B4A" stroke-width=".8" stroke-dasharray="3 3"/>`);
  if(lv?.kind==='ta'){out+=`<polyline fill="none" stroke="#C9A227" stroke-width="1" points="${ma(20)}"/><polyline fill="none" stroke="#2E4A6B" stroke-width="1" points="${ma(50)}"/>`}
- out+=`<polyline fill="none" stroke="#0B1F3A" stroke-width="1.5" points="${pts}"/></svg>`;return out}
+ out+=`<polyline pathLength="1" fill="none" stroke="#0B1F3A" stroke-width="1.5" points="${pts}"/></svg>`;return out}
 function card(lv,s,call,nar,big){const dp=lv.dp??(s?.dp??2),u=lv.name.includes('%')?'%':'';
  const rs=lv.kind==='ta'?`<div class="mono mut" style="font-size:13.5px">R <span class="dn">${(lv.resistance||[]).map(v=>fmt(v,dp)).join(' / ')||'—'}</span> · S <span class="up">${(lv.support||[]).map(v=>fmt(v,dp)).join(' / ')||'—'}</span></div>
  <div class="mono mut" style="font-size:13.5px">20/50/100 ${fmt(lv.ma?.[20],dp)} / ${fmt(lv.ma?.[50],dp)} / ${fmt(lv.ma?.[100],dp)} · RSI ${lv.rsi14?.toFixed(0)??'—'} · ATR ${fmt(lv.atr14,dp)} · ${lv.trend||''}</div>`
@@ -175,7 +184,7 @@ function trackChart(track,key,title,cons){const W=420,H=150,L=40,R=58,T=18,B=24;
  const fc=pts.map((t,i)=>t.is_forecast&&t['predicted_'+key]!=null?`<circle cx="${X(i).toFixed(1)}" cy="${Y(t['predicted_'+key]).toFixed(1)}" r="4.5" fill="#C9A227" stroke="#0B1F3A" stroke-width="1"/><text x="${(X(i)-8).toFixed(1)}" y="${(Y(t['predicted_'+key])-9).toFixed(1)}" text-anchor="end" fill="#0B1F3A" font-size="11" font-weight="600">${t['predicted_'+key].toFixed(2)}</text>`:'').join('');
  const ci=pts.findIndex(t=>t.is_forecast);const consM=(cons!=null&&ci>=0)?`<line x1="${(X(ci)-7).toFixed(1)}" x2="${(X(ci)+7).toFixed(1)}" y1="${Y(cons).toFixed(1)}" y2="${Y(cons).toFixed(1)}" stroke="#6B7280" stroke-width="2"/><text x="${(X(ci)+9).toFixed(1)}" y="${Y(cons).toFixed(1)}" dominant-baseline="central" fill="#6B7280" font-size="10">cons ${cons}</text>`:'';
  const prDots=pts.map((t,i)=>!t.is_forecast&&t['predicted_'+key]!=null?`<circle cx="${X(i).toFixed(1)}" cy="${Y(t['predicted_'+key]).toFixed(1)}" r="2.5" fill="#C9A227"/>`:'').join('');
- const tid='t'+(window.TRACKS=window.TRACKS||[]).length;window.TRACKS.push({track,key,title,cons});return`<div class="zoom" title="click to expand" onclick="zoomTrack('${tid}')"><div class="lbl" style="margin-bottom:2px">${title}</div><svg width="100%" viewBox="0 0 ${W} ${H}" style="display:block;max-width:${W}px">${ticks}${zero}<polyline fill="none" stroke="#0B1F3A" stroke-width="1.8" points="${act}"/>${bt?`<polyline fill="none" stroke="#8A6D1F" stroke-width="1.3" stroke-dasharray="2 3" points="${bt}"/>`:''}${pr?`<polyline fill="none" stroke="#C9A227" stroke-width="1.4" stroke-dasharray="4 3" points="${pr}"/>`:''}${prDots}${consM}${fc}${labels}</svg><div class="mono mut" style="font-size:11.5px">navy actual · dark-gold dotted = pseudo-OOS backtest (pre-print inputs only) · gold dashed = live model · ◉ forecast · grey tick consensus</div></div>`}
+ const tid='t'+(window.TRACKS=window.TRACKS||[]).length;window.TRACKS.push({track,key,title,cons});return`<div class="zoom" title="click to expand" onclick="zoomTrack('${tid}')"><div class="lbl" style="margin-bottom:2px">${title}</div><svg width="100%" viewBox="0 0 ${W} ${H}" style="display:block;max-width:${W}px">${ticks}${zero}<polyline pathLength="1" fill="none" stroke="#0B1F3A" stroke-width="1.8" points="${act}"/>${bt?`<polyline fill="none" stroke="#8A6D1F" stroke-width="1.3" stroke-dasharray="2 3" points="${bt}"/>`:''}${pr?`<polyline fill="none" stroke="#C9A227" stroke-width="1.4" stroke-dasharray="4 3" points="${pr}"/>`:''}${prDots}${consM}${fc}${labels}</svg><div class="mono mut" style="font-size:11.5px">navy actual · dark-gold dotted = pseudo-OOS backtest (pre-print inputs only) · gold dashed = live model · ◉ forecast · grey tick consensus</div></div>`}
 function nowcastPanel(n,cc){if(!n||!n.data)return`<div class="h">Nowcast</div><div class="empty">Not yet published for ${CBS[cc].label}.</div>`;const d=n.data;
  return`<div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap"><span class="h">${d.series||'Nowcast'}</span><span class="mono mut" style="font-size:13.5px">${d.print_date?'print '+d.print_date:''}</span></div>
  ${d.status==='insufficient_data'?`<div class="mono mut">insufficient data — missing: ${(d.inputs_missing||[]).join(', ')}</div>`:`<div class="grid3" style="margin:8px 0"><div><div class="lbl">Ours</div><div class="mono" style="font-size:26px;color:var(--navy)">${fmt(d.ours,2)}</div></div><div><div class="lbl">Consensus</div><div class="mono mut" style="font-size:26px">${fmt(d.consensus,2)}</div></div><div><div class="lbl">Prior</div><div class="mono mut" style="font-size:26px">${fmt(d.prior,2)}</div></div></div><div class="mono" style="font-size:13.5px"><span class="${cls(d.delta_1d)}">Δ1d ${d.delta_1d==null?'—':(d.delta_1d>=0?'+':'')+Number(d.delta_1d).toFixed(2)}</span> <span class="mut">${d.driver||''}</span></div>${d.core?`<div class="mono" style="font-size:13.5px;margin-top:4px">core: ours <b>${fmt(d.core.ours,2)}</b> · cons ${fmt(d.core.consensus,2)} · prior ${fmt(d.core.prior,2)}${d.ours_mm!=null?` · headline m/m ${(d.ours_mm>=0?'+':'')+d.ours_mm}`:''}${d.range?` · range ${fmt(d.range.low,2)}–${fmt(d.range.high,2)}`:d.sensitivity?` · range ${Math.min(...Object.values(d.sensitivity)).toFixed(2)}–${Math.max(...Object.values(d.sensitivity)).toFixed(2)}`:''}${d.report?` · <a href="${d.report}" target="_blank">full report ↗</a>`:''}</div>`:''}`}
@@ -284,7 +293,7 @@ ${fig('contributions',`Weight × block m/m stacked against the printed headline 
 <li>Electricity's effective household price depends on the consumption block TPSO prices, which it does not publish; subsidy overlays are modelled from announcements.</li>
 <li>TPSO's API is reachable from the laptop and GitHub runners, not from the Claude container; MOC's API 500s on long date ranges and is pulled per calendar year.</li></ul>
 <p class="mut">Full write-up: <a href="th_cpi_report.html" target="_blank">CPI Nowcast Report ↗</a> · method notes: <span class="mono">predictor/METHODOLOGY.md</span>.</p>`}
-function renderApx(k){document.querySelectorAll('#apx-tabs .sub').forEach(b=>b.classList.toggle('on',b.dataset.ap===k));$('#apx-th').style.display=k==='th'?'':'none';$('#apx-bb').style.display=k==='bb'?'':'none'}
+function renderApx(k){document.querySelectorAll('#apx-tabs .sub').forEach(b=>b.classList.toggle('on',b.dataset.ap===k));$('#apx-th').style.display=k==='th'?'':'none';$('#apx-bb').style.display=k==='bb'?'':'none';stagger()}
 
 function openModal(h){$('#modal-body').innerHTML=h;$('#modal').classList.add('on')}function closeModal(){$('#modal').classList.remove('on');$('#tip').style.display='none'}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
@@ -320,9 +329,10 @@ function bigTrack(o){const{track,key,title,cons}=o,W=1000,H=440,L=50,R=120,T=28,
 function bigTrackHover(e){const b=window._BIGT;if(!b)return;const r=e.currentTarget.getBoundingClientRect(),x=(e.clientX-r.left)/r.width*b.W;let i=Math.round((x-b.L)/(b.W-b.L-b.R)*(b.n-1));i=Math.max(0,Math.min(b.n-1,i));const t=b.pts[i];document.getElementById('xh').style.display='';const l=document.getElementById('xhl');l.setAttribute('x1',b.X(i));l.setAttribute('x2',b.X(i));
  tipShow(e,`<b>${t.month}</b>`+b.ser.map(([k,col,lab])=>t[k]!=null?`<br><span style="color:${col==='#0B1F3A'?'#fff':col}">${lab}</span> ${t[k].toFixed(2)}`:'').join('')+(t.actual_headline!=null&&t['backtest_'+(b.ser[0][0].includes('headline')?'headline':'core')]!=null?'':''))}
 function zoomTrack(id){const o=(window.TRACKS||[])[+id.slice(1)];if(o)openModal(bigTrack(o))}
-function renderMacro(cc){document.querySelectorAll('.sub').forEach(b=>b.classList.toggle('on',b.dataset.cc===cc));$('#m-nowcast').innerHTML=nowcastPanel(NOW[cc],cc);$('#m-cb').innerHTML=cbPanel(MACRO[cc],cc);const d=MACRO[cc]?.data;$('#nextmtg').textContent=d?`next ${d.committee} ${d.meeting_date}`:''}
-function route(){const t=(location.hash||'#brief').slice(1);document.querySelectorAll('.sec').forEach(s=>s.classList.toggle('on',s.id===t));document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.dataset.t===t));if(!document.getElementById(t))location.hash='#brief'}
-window.addEventListener('hashchange',route);route();main();
+function renderMacro(cc){document.querySelectorAll('.sub').forEach(b=>b.classList.toggle('on',b.dataset.cc===cc));$('#m-nowcast').innerHTML=nowcastPanel(NOW[cc],cc);$('#m-cb').innerHTML=cbPanel(MACRO[cc],cc);stagger();const d=MACRO[cc]?.data;$('#nextmtg').textContent=d?`next ${d.committee} ${d.meeting_date}`:''}
+function stagger(root){let i=0;(root||document).querySelectorAll('.sec.on .card,.sec.on .doc>h3,.sec.on .doc>h4,.sec.on .fig,.sec.on table,.sec.on .grid2>div,.sec.on .grid3>div,.sec.on polyline[pathLength]').forEach(el=>{el.style.setProperty('--i',Math.min(i++,18));el.style.animation='none';void el.offsetWidth;el.style.animation=''})}
+function route(){const t=(location.hash||'#brief').slice(1);document.querySelectorAll('.sec').forEach(s=>s.classList.toggle('on',s.id===t));stagger();document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.dataset.t===t));if(!document.getElementById(t))location.hash='#brief'}
+window.addEventListener('hashchange',route);route();main().then(()=>stagger());
 </script>
 <div id="modal" onclick="if(event.target.id==='modal')closeModal()"><div class="box"><span class="x" onclick="closeModal()">close ✕</span><div id="modal-body"></div></div></div><div class="tip" id="tip"></div>
 </body>
