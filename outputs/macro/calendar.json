@@ -74,7 +74,7 @@
    "confirmed": true,
    "impact": 2,
    "required": "th_cpi",
-   "pinned_source": "Pat, 2 Nov 2026 (TPSO)"
+   "pinned_source": "TPSO annual CPI release calendar 2569 (in the Jan-2026 CPI press document, uploads.tpso.go.th/editor/pdf/1770267421_9730fb584f591c6af957.pdf); time 10:30 per TPSO press header; dates can slip by a day — each monthly release restates the next date"
   },
   {
    "name": "BoE MPC decision + Monetary Policy Report",
