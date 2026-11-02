@@ -63,6 +63,20 @@
    "impact": 1
   },
   {
+   "name": "Thai CPI (Oct) - MoC/TPSO,",
+   "country": "TH",
+   "kind": "data",
+   "ict": "2026-11-05 10:30",
+   "date": "2026-11-05",
+   "consensus": null,
+   "prior": "2.82% y/y headline (Sep)",
+   "rate": null,
+   "confirmed": true,
+   "impact": 2,
+   "required": "th_cpi",
+   "pinned_source": "Pat, 2 Nov 2026 (TPSO)"
+  },
+  {
    "name": "BoE MPC decision + Monetary Policy Report",
    "country": "UK",
    "kind": "cb",
@@ -73,19 +87,6 @@
    "rate": "3.75%",
    "confirmed": true,
    "impact": 2
-  },
-  {
-   "name": "Thai CPI (Oct) - MoC/TPSO, date TBC",
-   "country": "TH",
-   "kind": "data",
-   "ict": "2026-11-06 09:30",
-   "date": "2026-11-06",
-   "consensus": null,
-   "prior": "2.82% y/y headline (Sep)",
-   "rate": null,
-   "confirmed": false,
-   "impact": 2,
-   "required": "th_cpi"
   },
   {
    "name": "US Employment Situation (Oct NFP)",
@@ -165,10 +166,13 @@
  "validation": {
   "missing": [],
   "matched": [
-   "th_cpi 2026-11-06",
+   "th_cpi 2026-11-05",
    "us_cpi 2026-11-10",
    "us_nfp 2026-11-06"
   ],
-  "inserted": []
+  "inserted": [],
+  "pinned": [
+   "th_cpi → 2026-11-05 10:30"
+  ]
  }
 }
