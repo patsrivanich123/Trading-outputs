@@ -4,12 +4,12 @@
  "data": {
   "series": "TH CPI headline y/y Oct 2026",
   "target_month": "2026-10",
-  "ours": 3.62,
+  "ours": 3.51,
   "consensus": 2.9,
   "consensus_source": "TradingEconomics forecast page, 2 Nov 2026 \u2014 treat as weak; refresh from Bloomberg ECO survey on the desk",
   "prior": 2.82,
-  "ours_mm": 0.67,
-  "level": 103.62,
+  "ours_mm": 0.56,
+  "level": 103.51,
   "level_prev": 102.93,
   "level_year_ago": 100.0,
   "delta_1d": null,
@@ -23,10 +23,10 @@
   ],
   "core": {
    "series": "TH core CPI y/y Oct 2026",
-   "ours": 1.53,
+   "ours": 1.52,
    "consensus": null,
    "prior": 1.5,
-   "ours_mm": 0.07
+   "ours_mm": 0.06
   },
   "components": [
    {
@@ -40,18 +40,18 @@
    {
     "name": "Raw food",
     "weight": 17.24,
-    "mm": 0.7,
-    "contrib_bp": 12.1,
+    "mm": 0.097,
+    "contrib_bp": 1.7,
     "status": "partial",
-    "note": "report prior 0.7% \u2014 implied by the Oct-2026 report nowcast (MOC data to early Oct): headline +0.52 m/m with fuel +4.4% (MOC unreachable)"
+    "note": "seasonal climatology for month 10 (MOC unreachable: HTTPSConnectionPool(host='dataapi.moc.go.th', port=443): Max)"
    },
    {
     "name": "Core (ex raw food & energy)",
     "weight": 69.67,
-    "mm": 0.07,
-    "contrib_bp": 4.9,
+    "mm": 0.06,
+    "contrib_bp": 4.2,
     "status": "ok",
-    "note": "seasonal m/m for month 10 (report Oct-2026 (October seasonal \u2248 +0.07))"
+    "note": "seasonal m/m for month 10 (TPSO history 2022+ (69 months))"
    },
    {
     "name": "Electricity",
@@ -71,46 +71,153 @@
    }
   ],
   "sensitivity": {
-   "raw_food_-1pp": 3.44,
-   "raw_food_+1pp": 3.8,
-   "fuel_passthrough_0.8": 3.56,
-   "fuel_passthrough_1.0": 3.68
+   "raw_food_-1pp": 3.33,
+   "raw_food_+1pp": 3.68,
+   "fuel_passthrough_0.8": 3.45,
+   "fuel_passthrough_1.0": 3.56
   },
   "track": [
    {
-    "month": "2025-08",
-    "actual_headline": -0.79,
-    "actual_core": null,
+    "month": "2024-11",
+    "actual_headline": 0.94,
+    "actual_core": 0.8,
     "predicted_headline": null,
     "predicted_core": null,
     "predicted_on": null,
+    "backtest_headline": 1.22,
+    "backtest_core": 0.8,
+    "is_forecast": false
+   },
+   {
+    "month": "2024-12",
+    "actual_headline": 1.24,
+    "actual_core": 0.8,
+    "predicted_headline": null,
+    "predicted_core": null,
+    "predicted_on": null,
+    "backtest_headline": 1.51,
+    "backtest_core": 0.8,
+    "is_forecast": false
+   },
+   {
+    "month": "2025-01",
+    "actual_headline": 1.32,
+    "actual_core": 0.83,
+    "predicted_headline": null,
+    "predicted_core": null,
+    "predicted_on": null,
+    "backtest_headline": 1.33,
+    "backtest_core": 0.89,
+    "is_forecast": false
+   },
+   {
+    "month": "2025-02",
+    "actual_headline": 1.08,
+    "actual_core": 0.99,
+    "predicted_headline": null,
+    "predicted_core": null,
+    "predicted_on": null,
+    "backtest_headline": 1.33,
+    "backtest_core": 0.88,
+    "is_forecast": false
+   },
+   {
+    "month": "2025-03",
+    "actual_headline": 0.84,
+    "actual_core": 0.86,
+    "predicted_headline": null,
+    "predicted_core": null,
+    "predicted_on": null,
+    "backtest_headline": 1.07,
+    "backtest_core": 1.08,
+    "is_forecast": false
+   },
+   {
+    "month": "2025-04",
+    "actual_headline": -0.22,
+    "actual_core": 0.98,
+    "predicted_headline": null,
+    "predicted_core": null,
+    "predicted_on": null,
+    "backtest_headline": -0.2,
+    "backtest_core": 0.9,
+    "is_forecast": false
+   },
+   {
+    "month": "2025-05",
+    "actual_headline": -0.57,
+    "actual_core": 1.09,
+    "predicted_headline": null,
+    "predicted_core": null,
+    "predicted_on": null,
+    "backtest_headline": -0.79,
+    "backtest_core": 1.0,
+    "is_forecast": false
+   },
+   {
+    "month": "2025-06",
+    "actual_headline": -0.25,
+    "actual_core": 1.06,
+    "predicted_headline": null,
+    "predicted_core": null,
+    "predicted_on": null,
+    "backtest_headline": -0.17,
+    "backtest_core": 1.18,
+    "is_forecast": false
+   },
+   {
+    "month": "2025-07",
+    "actual_headline": -0.7,
+    "actual_core": 0.84,
+    "predicted_headline": null,
+    "predicted_core": null,
+    "predicted_on": null,
+    "backtest_headline": -0.17,
+    "backtest_core": 1.11,
+    "is_forecast": false
+   },
+   {
+    "month": "2025-08",
+    "actual_headline": -0.79,
+    "actual_core": 0.81,
+    "predicted_headline": null,
+    "predicted_core": null,
+    "predicted_on": null,
+    "backtest_headline": -0.7,
+    "backtest_core": 0.79,
     "is_forecast": false
    },
    {
     "month": "2025-09",
     "actual_headline": -0.72,
-    "actual_core": null,
+    "actual_core": 0.65,
     "predicted_headline": null,
     "predicted_core": null,
     "predicted_on": null,
+    "backtest_headline": -0.59,
+    "backtest_core": 0.78,
     "is_forecast": false
    },
    {
     "month": "2025-10",
     "actual_headline": -0.76,
-    "actual_core": null,
+    "actual_core": 0.61,
     "predicted_headline": null,
     "predicted_core": null,
     "predicted_on": null,
+    "backtest_headline": -0.75,
+    "backtest_core": 0.64,
     "is_forecast": false
    },
    {
     "month": "2025-11",
     "actual_headline": -0.49,
-    "actual_core": null,
+    "actual_core": 0.66,
     "predicted_headline": null,
     "predicted_core": null,
     "predicted_on": null,
+    "backtest_headline": -0.62,
+    "backtest_core": 0.62,
     "is_forecast": false
    },
    {
@@ -120,6 +227,8 @@
     "predicted_headline": null,
     "predicted_core": null,
     "predicted_on": null,
+    "backtest_headline": -0.29,
+    "backtest_core": 0.67,
     "is_forecast": false
    },
    {
@@ -129,6 +238,8 @@
     "predicted_headline": null,
     "predicted_core": null,
     "predicted_on": null,
+    "backtest_headline": -0.45,
+    "backtest_core": 0.64,
     "is_forecast": false
    },
    {
@@ -138,6 +249,8 @@
     "predicted_headline": null,
     "predicted_core": null,
     "predicted_on": null,
+    "backtest_headline": -0.43,
+    "backtest_core": 0.53,
     "is_forecast": false
    },
    {
@@ -147,6 +260,8 @@
     "predicted_headline": null,
     "predicted_core": null,
     "predicted_on": null,
+    "backtest_headline": -0.05,
+    "backtest_core": 0.73,
     "is_forecast": false
    },
    {
@@ -156,6 +271,8 @@
     "predicted_headline": null,
     "predicted_core": null,
     "predicted_on": null,
+    "backtest_headline": 2.94,
+    "backtest_core": 0.51,
     "is_forecast": false
    },
    {
@@ -165,6 +282,8 @@
     "predicted_headline": null,
     "predicted_core": null,
     "predicted_on": null,
+    "backtest_headline": 2.45,
+    "backtest_core": 0.76,
     "is_forecast": false
    },
    {
@@ -174,6 +293,8 @@
     "predicted_headline": null,
     "predicted_core": null,
     "predicted_on": null,
+    "backtest_headline": 2.41,
+    "backtest_core": 1.01,
     "is_forecast": false
    },
    {
@@ -183,6 +304,8 @@
     "predicted_headline": null,
     "predicted_core": null,
     "predicted_on": null,
+    "backtest_headline": 2.1,
+    "backtest_core": 1.44,
     "is_forecast": false
    },
    {
@@ -192,6 +315,8 @@
     "predicted_headline": null,
     "predicted_core": null,
     "predicted_on": null,
+    "backtest_headline": 2.34,
+    "backtest_core": 1.32,
     "is_forecast": false
    },
    {
@@ -201,18 +326,30 @@
     "predicted_headline": null,
     "predicted_core": null,
     "predicted_on": null,
+    "backtest_headline": 2.9,
+    "backtest_core": 1.53,
     "is_forecast": false
    },
    {
     "month": "2026-10",
     "actual_headline": null,
     "actual_core": null,
-    "predicted_headline": 3.622,
-    "predicted_core": 1.529,
+    "predicted_headline": 3.507,
+    "predicted_core": 1.519,
     "predicted_on": "2026-11-02",
+    "backtest_headline": null,
+    "backtest_core": null,
     "is_forecast": true
    }
   ],
+  "backtest_stats": {
+   "n": 32,
+   "mae_headline": 0.193,
+   "bias_headline": 0.067,
+   "mae_core": 0.099,
+   "bias_core": 0.016,
+   "status": "ok"
+  },
   "fuel_by_product": {
    "ds": 6.41,
    "gh95": 5.28,
@@ -224,6 +361,6 @@
   "method": "weight-exact TPSO blocks: fuel EPPO\u00d7pass-through, electricity ERC calendar, LPG ceiling, raw food MOC-calibrated\u2192seasonal\u2192report prior, core seasonal; anchored to Oct-2026 method report",
   "print_date": null,
   "last_print": "2026-09",
-  "run_at": "2026-11-02T18:08"
+  "run_at": "2026-11-02T21:12"
  }
 }
