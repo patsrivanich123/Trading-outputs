@@ -40,7 +40,7 @@ td:first-child,th:first-child{text-align:left}
 .foot{font-family:var(--mono);font-size:10.5px;color:var(--grey);text-align:right}
 .sub{padding:6px 12px;border:1px solid var(--rule);color:var(--grey);cursor:pointer;background:var(--white);font-size:13px}.sub.on{background:var(--navy);color:var(--paper);border-color:var(--navy)}
 .dot{display:inline-block;width:11px;height:11px;border:1px solid var(--navy);margin:0 1px;vertical-align:middle}.dot.hawk{background:var(--dn);border-color:var(--dn)}.dot.dove{background:var(--up);border-color:var(--up)}.dot.mid{background:var(--grey2);border-color:var(--grey2)}
-.doc{max-width:860px}.doc h3{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--navy);margin:18px 0 6px;border-bottom:1px solid var(--rule);padding-bottom:4px}.doc h4{font-size:15px;margin:14px 0 4px;color:var(--navy2)}.doc p{margin:6px 0}.doc .f{font-family:var(--mono);font-size:13.5px;background:#F0F1F3;border:1px solid var(--rule);padding:8px 12px;margin:6px 0;overflow-x:auto}.doc table{margin:6px 0}.doc li{margin:3px 0}
+.doc{max-width:980px}.doc table{width:100%}.doc h3{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--navy);margin:18px 0 6px;border-bottom:1px solid var(--rule);padding-bottom:4px}.doc h4{font-size:15px;margin:14px 0 4px;color:var(--navy2)}.doc p{margin:6px 0}.doc .f{font-family:var(--mono);font-size:13.5px;background:#F0F1F3;border:1px solid var(--rule);padding:8px 12px;margin:6px 0;overflow-x:auto}.doc table{margin:6px 0}.doc li{margin:3px 0}.doc .fig{border:1px solid var(--rule);margin:8px 0}.doc .fig img{width:100%;display:block}.doc .cap{font-size:12.5px;color:var(--grey);padding:6px 10px;border-top:1px solid var(--rule)}.ok{color:#2E6B4A;font-weight:600}.no{color:#8B2E2E;font-weight:600}.tag{font-family:var(--mono);font-size:11.5px;color:var(--grey)}
 .sec{display:none}.sec.on{display:grid;gap:12px}
 svg text{font-family:var(--mono)}
 @media (max-width:600px){main{padding:10px}header .t{font-size:22px}th,td{padding:5px 6px;font-size:13.5px}}
@@ -79,34 +79,9 @@ svg text{font-family:var(--mono)}
 <div class="card doc">
 <div class="h" style="font-size:24px">Appendix — theory and model backbone</div>
 <p class="mut">Static reference. Numbers here are design parameters and calibration results, not today's forecast. Code: <span class="mono">macro/</span>, <span class="mono">tools/</span>, <span class="mono">journal/</span> in the Trading repo.</p>
-
-<h3>A1 · Thailand CPI nowcast</h3>
-<h4>How TPSO builds the index</h4>
-<p>Compiler: Trade Policy & Strategy Office (TPSO), Ministry of Commerce — not the central bank. Elementary aggregates use a <b>Dutot</b> index (ratio of arithmetic-mean prices); aggregation above that is <b>modified Laspeyres</b> with fixed weights. Base 2023 = 100 (B.E. 2566), live since January 2025. Basket of 464 items, 7 groups, 52 provinces. Collection frequency is the key to a nowcast: fuel daily, fresh food weekly, everything else monthly, rent six-monthly. No seasonal adjustment, never revised — the first print is final. Roughly 26% of the basket is administered or price-controlled. Core = headline excluding raw food and energy (≈69.7% of the basket).</p>
-<h4>Model</h4>
-<div class="f">headline m/m = Σ<sub>b</sub> w<sub>b</sub> · m/m<sub>b</sub> &nbsp;→&nbsp; index<sub>t</sub> = index<sub>t−1</sub> · (1 + m/m) &nbsp;→&nbsp; y/y = index<sub>t</sub> / index<sub>t−12</sub> − 1</div>
-<table><thead><tr><th style="text-align:left">Block</th><th>Weight</th><th style="text-align:left">Nowcast rule</th><th style="text-align:left">Type</th></tr></thead><tbody>
-<tr><td>Core (ex raw food & energy)</td><td>69.67%</td><td style="text-align:left;white-space:normal">Seasonal climatology: mean m/m for the same calendar month in prior years (2022+)</td><td style="text-align:left">seasonal</td></tr>
-<tr><td>Raw food</td><td>17.24%</td><td style="text-align:left;white-space:normal">MOC/DIT daily retail prices (eggs, pork, chicken, rice, kale, morning glory, cabbage, lime, chillies, shallots, garlic, tomato, cucumber, spring onion, coriander, banana, mandarin, tilapia, mackerel, shrimp) → monthly means → item weights ridge-calibrated backward to the TPSO raw-food index. Fallback: seasonal mean, then last report prior</td><td style="text-align:left">live feed</td></tr>
-<tr><td>Motor fuel</td><td>8.93%</td><td style="text-align:left;white-space:normal">EPPO daily pump prices, forward-filled to a daily calendar, volume-weighted (diesel 0.60, gasohol 95 0.20, E20 0.09, gasohol 91 0.07, E85 0.02, premium 0.02), monthly arithmetic mean, × pass-through 0.90</td><td style="text-align:left">live feed</td></tr>
-<tr><td>Electricity</td><td>3.68%</td><td style="text-align:left;white-space:normal">Calendar lookup: ERC Ft round (Jan / May / Sep) plus announced subsidy overlays; 0 within a round</td><td style="text-align:left">calendar</td></tr>
-<tr><td>LPG / cooking gas</td><td>0.63%</td><td style="text-align:left;white-space:normal">Government ceiling price; 0 unless the ceiling changes</td><td style="text-align:left">calendar</td></tr>
-</tbody></table>
-<p>Core m/m specification tested: π<sup>core</sup><sub>t</sub> = β₀ + β₁·S<sub>m(t)</sub> + β₂·X<sub>t−1</sub> + ε, fitted 0.038 + 0.783·S + 0.006·X — β₂ ≈ 0, so it collapses to the seasonal mean. Scraped observables (lagged food, USD/THB, gold) all had negative out-of-sample R²: core is irreducibly seasonal with the data that exists before the print.</p>
-<h4>Calibration results (from the method report, out-of-sample, pre-print inputs only)</h4>
-<table><thead><tr><th style="text-align:left">Test</th><th>Result</th><th style="text-align:left">Note</th></tr></thead><tbody>
-<tr><td>Headline y/y, current model (10 months)</td><td>MAE 0.11pp</td><td style="text-align:left">catches the Apr-2026 jump −0.08 → +2.89</td></tr>
-<tr><td>Headline y/y, energy-observed (33 months)</td><td>MAE 0.16pp</td><td style="text-align:left">vs 0.42pp with no live signal</td></tr>
-<tr><td>Core y/y, seasonal</td><td>MAE 0.10–0.14pp</td><td style="text-align:left">window test 2024 & 2025 from earlier years: 0.12pp</td></tr>
-<tr><td>Fuel → headline</td><td>R² 0.93</td><td style="text-align:left">recovered weight 0.081 vs official 0.089</td></tr>
-<tr><td>Raw food, calibrated</td><td>R² 0.46</td><td style="text-align:left">vs 0.00 equal-weight; eggs +0.42, pork +0.32 dominate</td></tr>
-<tr><td>Electricity</td><td>deterministic</td><td style="text-align:left">78% of variance at scheduled round boundaries</td></tr>
-<tr><td>Decomposition identity</td><td>|resid| 0.03pp</td><td style="text-align:left">blocks rebuild official headline over 45 months</td></tr>
-</tbody></table>
-<h4>Data sources (all before the print)</h4>
-<ul><li>TPSO CPI API — <span class="mono">POST index.tpso.go.th/api/cpig/ChangeRate</span> (targets, weights, anchors)</li><li>EPPO daily price structure — mirror <span class="mono">github.com/anantsrisu-cpu/eppo-oil-price</span> (orig eppo.go.th)</li><li>MOC/DIT open data — <span class="mono">dataapi.moc.go.th/gis-products</span>, <span class="mono">/gis-product-prices</span></li><li>ERC Ft tariff rounds and government subsidy announcements; MOC LPG ceiling</li><li>Methodology: ILO Thailand CPI descriptor; TPSO 2566-base note; BOT core-inflation symposium; SEACEN pass-through; IMF Article IV; PIER DP 85/211</li></ul>
-<h4>Known limits</h4>
-<ul><li>Fuel is the edge; food recovers ~half the signal; core cannot be beaten with pre-print data.</li><li>Electricity's effective household price depends on the consumption block TPSO does not publish — subsidies modelled from announcements.</li><li>Consensus is sourced from public calendars unless refreshed from the Bloomberg ECO survey.</li></ul>
+<div id="apx-tabs" style="display:flex;gap:6px;margin:10px 0 14px"><span class="sub on" data-ap="th">TH CPI nowcast</span><span class="sub" data-ap="bb">Model backbone (A2–A6)</span></div>
+<div id="apx-th"></div>
+<div id="apx-bb" style="display:none">
 
 <h3>A2 · US CPI / PCE nowcast (v0)</h3>
 <p>Bottom-up by CPI component on approximate Dec-2025 relative importances. Energy = gasoline share (3.4% of headline) × month-to-date weekly retail gasoline change vs prior-month average (≈1:1 pass-through) plus the rest of energy at persistence; every other component = 3-month average m/m (persistence). Headline m/m = Σ w·m/m normalised to covered weight; y/y from the index base effect. Core PCE m/m ≈ 0.80 × core CPI m/m + 0.02 (crude mapping; PPI not wired). Status is "insufficient data" until at least two weeks of target-month gasoline exist. Not yet wired: Cleveland Fed nowcast, Manheim used cars, PPI, a consensus feed. Expect it to track consensus except when energy moves a lot.</p>
@@ -130,7 +105,7 @@ svg text{font-family:var(--mono)}
 
 <h3>A6 · Calendar</h3>
 <p>The morning run builds a 14-day calendar from official sources and converts every time to ICT. A required-events validator in code then checks for Thai CPI, BoT MPC, FOMC, BOJ, US CPI, NFP, PCE, Japan national and Tokyo CPI: matches are forced to high impact; misses are inserted as dashed "expected, unconfirmed" placeholders and flagged. Confirmed dates in <span class="mono">macro/calendar/fixed.json</span> (e.g. TPSO's published annual CPI calendar) override whatever the run guessed.</p>
-<div class="foot" style="text-align:left;margin-top:14px">Sources for A1: Pat's "Thailand CPI Nowcast — Full Project Report" (Oct 2026). Design parameters change only by commit.</div>
+</div><div class="foot" style="text-align:left;margin-top:14px">Sources: Pat's "Thailand CPI Nowcast — Full Project Report" (Oct 2026) and <span class="mono">macro/th/cpi/predictor/METHODOLOGY.md</span>. Design parameters change only by commit.</div>
 </div>
 </section>
 <div class="foot" id="foot"></div>
@@ -169,8 +144,8 @@ function calendar(c){if(!c||!c.data||!c.data.length){return`<div class="empty">C
  const key=x=>x.getFullYear()+'-'+String(x.getMonth()+1).padStart(2,'0')+'-'+String(x.getDate()).padStart(2,'0');while(d<=last){let cells='';for(let i=0;i<5;i++){const k=key(d),ds=days[k]||[];cells+=`<td><div class="mut">${d.getDate()}${d.getDate()===1||(i===0&&rows.length===0)?' '+d.toLocaleString('en',{month:'short'}):''}</div>${ds.map(e=>`<span class="chip ${e.impact>=2?'hi':''}" style="${e.placeholder?'border-style:dashed;opacity:.8':''}">${e.placeholder?'? ':''}${e.name}${e.ict?' '+e.ict.slice(11):''}<span class="tip"><b>${e.name}</b><br>${e.ict||''} ICT${e.consensus!=null?`<br>cons ${e.consensus} · prior ${e.prior??'—'}`:''}${e.rate?`<br>rate ${e.rate}`:''}${e.confirmed===false?'<br>(unconfirmed)':''}</span></span>`).join('')}</td>`;d.setDate(d.getDate()+1)}d.setDate(d.getDate()+2);rows.push(`<tr>${cells}</tr>`)}
  return`<div style="overflow-x:auto"><table class="cal"><thead><tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr></thead><tbody>${rows.join('')}</tbody></table></div>`}
 async function main(){
- const [lv,se,gr,calls,nar,cal,nUS,nTH,nJP,ccsv,idx,cUS,cTH,cJP,live]=await Promise.all([J('outputs/assets/levels.json'),J('outputs/assets/series.json'),J('outputs/journal/grades.json'),J('brief/calls.json'),J('brief/narrative.json'),J('outputs/macro/calendar.json'),J('outputs/macro/nowcast_us.json'),J('outputs/macro/nowcast_th.json'),J('outputs/macro/nowcast_jp.json'),T('journal/calls.csv'),J('index.json'),J('outputs/macro/cb_us.json'),J('outputs/macro/cb_th.json'),J('outputs/macro/cb_jp.json'),J('live/levels_live.json')]);
- MACRO={us:cUS,th:cTH,jp:cJP};NOW={us:nUS,th:nTH,jp:nJP};$('#subtabs').innerHTML=Object.entries(CBS).map(([k,v])=>`<span class="sub" data-cc="${k}">${v.label}</span>`).join('');document.querySelectorAll('.sub').forEach(b=>b.onclick=()=>renderMacro(b.dataset.cc));renderMacro('us');
+ const [lv,se,gr,calls,nar,cal,nUS,nTH,nJP,ccsv,idx,cUS,cTH,cJP,live,apx]=await Promise.all([J('outputs/assets/levels.json'),J('outputs/assets/series.json'),J('outputs/journal/grades.json'),J('brief/calls.json'),J('brief/narrative.json'),J('outputs/macro/calendar.json'),J('outputs/macro/nowcast_us.json'),J('outputs/macro/nowcast_th.json'),J('outputs/macro/nowcast_jp.json'),T('journal/calls.csv'),J('index.json'),J('outputs/macro/cb_us.json'),J('outputs/macro/cb_th.json'),J('outputs/macro/cb_jp.json'),J('live/levels_live.json'),J('appendix/th_cpi.json')]);
+ MACRO={us:cUS,th:cTH,jp:cJP};NOW={us:nUS,th:nTH,jp:nJP};$('#subtabs').innerHTML=Object.entries(CBS).map(([k,v])=>`<span class="sub" data-cc="${k}">${v.label}</span>`).join('');document.querySelectorAll('.sub').forEach(b=>b.onclick=()=>renderMacro(b.dataset.cc));renderMacro('us');$('#apx-th').innerHTML=apxTH(apx);document.querySelectorAll('#apx-tabs .sub').forEach(b=>b.onclick=()=>renderApx(b.dataset.ap));
  const levels=lv?.data||[],series=Object.fromEntries((se?.data||[]).map(s=>[s.name,s])),cmap=Object.fromEntries((calls?.calls||[]).map(c=>[c.asset,c]));
  const asof=lv?.asof||'—';window.LIVE_MAP=Object.fromEntries((live?.assets||[]).map(a=>[a.name,a]));const LIVE=Object.fromEntries((live?.assets||[]).map(a=>[a.name,a]));$('#hdr').textContent=`${asof} · ${nar?.header_note||'levels as of US close / Asia close'} · published ${idx?.published?.slice(0,16).replace('T',' ')||'—'} ICT${live?.asof_ict?' · live '+live.asof_ict.slice(11)+' ICT (10-min job, ~15m delayed feed)':''}`;
  const g=gr?.data;if(g){$('#ystr').innerHTML=g.yesterday?.length?g.yesterday.map(y=>`${y.asset} ${y.bias} → <span class="${y.outcome==='win'?'up':y.outcome==='loss'?'dn':'mut'}">${y.outcome}${y.pnl_pct?' '+(Number(y.pnl_pct)>=0?'+':'')+Number(y.pnl_pct).toFixed(2)+'%':''}</span>`).join(' · '):'nothing to grade';
@@ -213,6 +188,97 @@ function cbPanel(c,cc){if(!c||!c.data)return`<div class="h">${CBS[cc].cb} · mem
  <div class="mono mut" style="font-size:13.5px;margin-bottom:8px">median preferred path: ${pathTxt} · current ${d.current_rate||''} · last: ${d.last_decision?.decision||''} (${d.last_decision?.vote||''})</div>
  <div style="overflow-x:auto"><table style="font-size:13px"><thead><tr><th>Member</th><th>Role</th><th>Stance</th><th>Vote</th><th>Path</th><th>Conf.</th><th>Dissent</th><th style="text-align:left;min-width:240px">Drivers / last signal</th></tr></thead><tbody>${(d.members||[]).map(m=>`<tr><td>${m.name}${m.voter?'':' <span class="mut">(nv)</span>'}</td><td class="mut" style="white-space:normal;max-width:120px">${(m.role||'').replace('Regional president','Pres.')}</td><td class="${stanceCls(m.stance)}">${m.stance} ${m.score!=null?'('+(m.score>=0?'+':'')+Number(m.score).toFixed(2)+')':''}</td><td class="${/cut/.test(m.vote)?'up':/hike/.test(m.vote)?'dn':''}">${m.vote}</td><td class="mut">${m.path?Object.values(m.path).map(v=>fmt(v,3)).join('→'):'—'}</td><td>${m.confidence!=null?Number(m.confidence).toFixed(2):'—'}</td><td class="${(m.dissent_risk||0)>=0.4?'dn':''}">${m.dissent_risk!=null?Number(m.dissent_risk).toFixed(2):'—'}</td><td style="text-align:left;white-space:normal;font-family:var(--sans)">${(m.drivers||[]).join(' · ')}${m.last_signal?`<div class="mut" style="font-size:13.5px">${m.last_signal}</div>`:''}</td></tr>`).join('')}</tbody></table></div>
  <div class="mono mut" style="font-size:13.5px;margin-top:8px">Dissent base rate since Jan 2024: ${d.dissent_base_rate_pct!=null?d.dissent_base_rate_pct+'% of meetings':'n/a'}. The model adds value only when it predicts a non-unanimous outcome or a path away from market pricing. Run ${d.run_at||''}.</div>`}
+
+function apxTH(a){if(!a)return'<div class="empty">appendix/th_cpi.json not published yet — run python -m macro.th.cpi.appendix</div>';const S=a.stats,N=a.nowcast,W=a.weights,P='appendix/th_cpi/';const f=(v,d=2)=>v==null?'—':Number(v).toFixed(d);const fig=(k,cap)=>`<div class="fig"><img src="${P}${a.files[k]}" alt="${k}"><div class="cap">${cap}</div></div>`;
+const rw=S.rawfood_ridge||{};const fwRows=Object.entries(rw.weights||{}).map(([k,v])=>`<tr><td style="text-align:left">${k.replace('_',' ')}</td><td class="${v>=0?'':'dn'}">${(v>=0?'+':'')+f(v,3)}</td></tr>`).join('');
+return `
+<h3>A1 · Thailand CPI nowcast — the model, block by block</h3>
+<p>Model: <span class="mono">macro/th/cpi/predictor/</span> (Pat's CPI predictor, verbatim). Official history: TPSO, ${a.history_months} months ${a.history_range[0]} → ${a.history_range[1]}, base 2023 = 100, full commodity tree with current weights. Every number on this page is recomputed from that history by <span class="mono">macro/th/cpi/appendix.py</span>; charts are out-of-sample with pre-print information only. Last build ${a.asof}.</p>
+
+<h4>1 · Design</h4>
+<div class="f">headline m/m = w<sub>core</sub>·m/m<sub>core</sub> + w<sub>energy</sub>·m/m<sub>energy</sub> + w<sub>raw food</sub>·m/m<sub>raw food</sub> &nbsp;·&nbsp; energy = motor fuel + electricity + LPG (bottom-up)<br>index<sub>t</sub> = index<sub>t−1</sub>·(1 + m/m) &nbsp;→&nbsp; y/y = index<sub>t</sub> / index<sub>t−12</sub> − 1 &nbsp;(Dutot elementary, modified Laspeyres above; no SA, no revisions)</div>
+<table><thead><tr><th style="text-align:left">Block / variable</th><th>wt</th><th style="text-align:left">Data source &amp; endpoint</th><th>freq</th><th style="text-align:left">Prints before CPI?</th></tr></thead><tbody>
+<tr><td style="text-align:left">CPI target, weights, anchors</td><td></td><td style="text-align:left;white-space:normal">TPSO · <span class="mono">POST index.tpso.go.th/api/cpig/ChangeRate</span> {commodityCode, yearBase 2566, type TG, year, month}</td><td>monthly</td><td class="ok" style="text-align:left">prior prints</td></tr>
+<tr><td style="text-align:left">Motor fuel</td><td>${f(W.motor_fuel)}%</td><td style="text-align:left;white-space:normal">EPPO daily pump price · mirror <span class="mono">github.com/anantsrisu-cpu/eppo-oil-price</span> → monthly mean (= Dutot) · basket diesel .47 / G95 .35 / E20 .18</td><td>daily</td><td class="ok" style="text-align:left">YES — daily, real time</td></tr>
+<tr><td style="text-align:left">Electricity</td><td>${f(W.elec)}%</td><td style="text-align:left;white-space:normal">ERC Ft tariff per 4-month round (Jan / May / Sep) + government subsidy announcements · <span class="mono">erc.or.th</span></td><td>4-monthly</td><td class="ok" style="text-align:left">YES — announced ahead</td></tr>
+<tr><td style="text-align:left">LPG / cooking gas</td><td>${f(W.cookfuel)}%</td><td style="text-align:left;white-space:normal">Government ceiling price (MOC)</td><td>on change</td><td class="ok" style="text-align:left">YES — announced</td></tr>
+<tr><td style="text-align:left">Raw food</td><td>${f(W.rawfood)}%</td><td style="text-align:left;white-space:normal">MOC/DIT open data (no key) · <span class="mono">dataapi.moc.go.th/gis-products</span> → <span class="mono">/gis-product-prices?product_id&amp;from_date&amp;to_date</span> · eggs, pork, chicken, mackerel, rice, kale, morning glory, tomato, cabbage, banana, orange</td><td>daily</td><td class="ok" style="text-align:left">YES — daily, real time</td></tr>
+<tr><td style="text-align:left">Core (ex raw food &amp; energy)</td><td>${f(W.core)}%</td><td style="text-align:left;white-space:normal"><b>No external feed.</b> Prepared food (${f(S.core_components.w_prepared)}%) and house rent (${f(S.core_components.w_rent)}%) are TPSO field surveys, published only in the print → modelled from own history (same-month seasonal mean)</td><td>—</td><td class="no" style="text-align:left">NO</td></tr>
+<tr><td style="text-align:left">Gold / FX (tested, rejected)</td><td>~2%</td><td style="text-align:left;white-space:normal">Yahoo GC=F, THB=X; Thai gold api.chnwt.dev — observable but too small to move core</td><td>daily</td><td style="text-align:left" class="ok">YES (too small)</td></tr>
+</tbody></table>
+
+<h4>2 · Headline — modeled vs actual</h4>
+${fig('headline',`Pre-print rule: energy observed (EPPO/ERC/LPG), core and raw food from prior-year seasonal means, chained from the published t−1 level. Grey dotted = same rule with energy also seasonal, i.e. what you lose without the EPPO feed.`)}
+<table><thead><tr><th style="text-align:left">Test</th><th>Result</th><th style="text-align:left">Note</th></tr></thead><tbody>
+<tr><td style="text-align:left">Headline y/y, energy observed — since 2024 (chart)</td><td>MAE ${f(S.headline.mae_2024,3)}pp</td><td style="text-align:left">${S.headline.n_2024} OOS months · baseline without EPPO ${f(S.headline.baseline_mae_2024,3)}pp</td></tr>
+<tr><td style="text-align:left">Headline y/y, energy observed — full history</td><td>MAE ${f(S.headline.mae,3)}pp</td><td style="text-align:left">${S.headline.n} OOS months · bias ${(S.headline.bias>=0?'+':'')+f(S.headline.bias,3)} · worst ${f(S.headline.worst,2)} (2022 energy shock) · within ±0.15pp ${S.headline.within_015}%</td></tr>
+<tr><td style="text-align:left">Baseline, no live energy — full history</td><td>MAE ${f(S.headline.baseline_mae,3)}pp</td><td style="text-align:left">the fuel feed is worth ${f(S.headline.baseline_mae-S.headline.mae,2)}pp of MAE</td></tr>
+<tr><td style="text-align:left">Decomposition identity</td><td>|resid| ${f(S.headline.agg_identity,3)}pp</td><td style="text-align:left">weights × block m/m rebuild the official headline every month</td></tr>
+</tbody></table>
+
+<h4>3 · Core — modeled vs actual</h4>
+${fig('core',`Model: core m/m = β₀ + β₁·seasonal + β₂·(energy + raw food)<sub>t−1</sub>, refit each month on prior data only. Grey dotted = seasonal mean alone.`)}
+<div class="f">core m/m = ${f(S.core.beta[0],3)} + ${f(S.core.beta[1],3)}·S<sub>m(t)</sub> + ${f(S.core.beta[2],3)}·X<sub>t−1</sub> &nbsp;(full-sample fit)</div>
+<table><thead><tr><th style="text-align:left">Rule</th><th>MAE y/y</th><th>within ±0.15pp</th><th style="text-align:left">Note</th></tr></thead><tbody>
+<tr><td style="text-align:left">Calibrated seasonal + lagged cost pass-through</td><td>${f(S.core.mae,3)}pp</td><td>${S.core.within_015}%</td><td style="text-align:left">${S.core.n} OOS months · bias ${(S.core.bias>=0?'+':'')+f(S.core.bias,3)} · since 2024 (chart): ${f(S.core.mae_2024,3)}pp vs seasonal ${f(S.core.seasonal_mae_2024,3)}pp</td></tr>
+<tr><td style="text-align:left">Seasonal mean only</td><td>${f(S.core.seasonal_mae,3)}pp</td><td>${S.core.seasonal_within_015}%</td><td style="text-align:left">${S.core.seasonal_mae<=S.core.mae?'<b>beats the calibrated model on the full history</b> — the pass-through term adds noise, not skill':'calibrated model wins'}</td></tr>
+<tr><td style="text-align:left">Long-run mean</td><td>${f(S.core.flat_mae,3)}pp</td><td>—</td><td style="text-align:left">no seasonality</td></tr>
+</tbody></table>
+${fig('core_components',`Core m/m and its two largest pieces. Autocorrelation(1) of core m/m ${(S.core_components.autocorr1>=0?'+':'')+f(S.core_components.autocorr1,2)}, std ${f(S.core_components.std,2)}pp: nothing to extrapolate, so core is irreducibly seasonal with pre-print data.`)}
+
+<h4>4 · Motor fuel — the edge</h4>
+${fig('fuel',`CPI motor fuel m/m against the EPPO monthly-mean pump basket. One administered price, pass-through ≈ 1, observable daily.`)}
+<p>Pass-through <b>${f(S.fuel.pass_through,2)}</b>, R² <b>${f(S.fuel.r2,2)}</b> over ${S.fuel.n} months, residual MAE ${f(S.fuel.mae,2)}pp on the fuel index. Backward calibration (predictor/calibrate_fuel.py) recovers the headline weight 0.081 vs 0.089 official with no knowledge of the basket.</p>
+
+<h4>5 · Electricity — deterministic</h4>
+${fig('electricity',`CPI electricity m/m. Gold bars are ERC Ft round months. ${S.electricity.round_share_pct}% of squared variation sits on round months; the rest is subsidy overlays (200-unit caps, relief rounds), which are also announced before the month.`)}
+
+<h4>6 · Raw food — weights must be calibrated</h4>
+${fig('rawfood',`Printed raw-food m/m vs the seasonal mean and vs a ridge-calibrated basket of ${rw.items||11} MOC/DIT items, expanding-window out-of-sample (${rw.n_oos||'—'} predictions, R² ${f(rw.oos_r2,2)}).`)}
+<div class="grid2"><div><table><thead><tr><th style="text-align:left">Rule</th><th>MAE m/m</th></tr></thead><tbody><tr><td style="text-align:left">Seasonal mean</td><td>${f(S.rawfood.seasonal_mae,2)}pp</td></tr><tr><td style="text-align:left">MOC calibrated (2025+)</td><td>${f(S.rawfood.moc_mae,2)}pp</td></tr><tr><td style="text-align:left">raw-food m/m std</td><td>${f(S.rawfood.std,2)}pp</td></tr></tbody></table></div>
+<div><table><thead><tr><th style="text-align:left">Item (ridge weight, standardized)</th><th>w</th></tr></thead><tbody>${fwRows}</tbody></table></div></div>
+<p>Eggs and pork carry the signal; vegetables are idiosyncratically noisy. Equal-weight basket R² ≈ 0.00 → calibration is what unlocks it. Calibration window is 2025–2026 (DIT history starts Jan 2025) and leans on the Mar–Apr 2026 fuel-cap break — weights are indicative.</p>
+
+<h4>7 · Block contributions (identity)</h4>
+${fig('contributions',`Weight × block m/m stacked against the printed headline m/m. Fuel and raw food carry nearly all the volatility; core drifts.`)}
+
+<h4>8 · Current nowcast — ${N.target}</h4>
+<table><thead><tr><th style="text-align:left">Block</th><th>wt</th><th>m/m</th><th>contrib</th><th style="text-align:left">Input</th></tr></thead><tbody>
+<tr><td style="text-align:left">Motor fuel</td><td>${f(W.motor_fuel)}%</td><td>${(N.blocks.motor_fuel>=0?'+':'')+f(N.blocks.motor_fuel)}%</td><td>${f(W.motor_fuel/100*N.blocks.motor_fuel*100,0)}bp</td><td style="text-align:left;white-space:normal">${Object.entries(N.fuel_detail).map(([k,[a_,b_,c_]])=>`${k} ${a_}→${b_} (${c_>=0?'+':''}${c_}%)`).join(' · ')}</td></tr>
+<tr><td style="text-align:left">Electricity</td><td>${f(W.elec)}%</td><td>${f(N.blocks.electricity)}%</td><td>0bp</td><td style="text-align:left">Ft fixed within round</td></tr>
+<tr><td style="text-align:left">LPG</td><td>${f(W.cookfuel)}%</td><td>${f(N.blocks.lpg)}%</td><td>0bp</td><td style="text-align:left">ceiling frozen</td></tr>
+<tr><td style="text-align:left">Raw food</td><td>${f(W.rawfood)}%</td><td>+${f(N.blocks.raw_food)}%</td><td>${f(N.contrib_pp.rawfood*100,0)}bp</td><td style="text-align:left">seasonal +${f(N.blocks.raw_food_seasonal)} + flood overlay +${f(N.blocks.flood_overlay)}pp (judgment)</td></tr>
+<tr><td style="text-align:left">Core</td><td>${f(W.core)}%</td><td>+${f(N.blocks.core)}%</td><td>${f(N.contrib_pp.core*100,0)}bp</td><td style="text-align:left">same-month seasonal mean</td></tr>
+<tr><td style="text-align:left"><b>Headline</b></td><td>100%</td><td><b>${(N.headline_mm>=0?'+':'')+f(N.headline_mm)}%</b></td><td></td><td style="text-align:left"><b>y/y ${f(N.headline_yoy)}</b> · core y/y ${f(N.core_yoy)} (m/m +${f(N.core_mm)})</td></tr>
+</tbody></table>
+
+<h4>9 · Key findings</h4>
+<ul><li><b>~30% of the basket (fuel + electricity + raw food) carries nearly all the headline volatility</b> and has genuine pre-print feeds; the other ~70% (core) drifts and has none.</li>
+<li><b>Fuel is the edge</b> — one administered price, pass-through ≈ 1, observable daily; it alone explains most of headline m/m and catches the regime shifts (Apr-2026 cap break).</li>
+<li><b>Raw food needs weight calibration</b> to be usable (R² 0.00 → ${f(rw.oos_r2,2)}); eggs and pork, not vegetables, carry the signal.</li>
+<li><b>Electricity is deterministic</b> — a calendar of ERC Ft rounds plus announced subsidies; no regression.</li>
+<li><b>Core is irreducibly seasonal</b> — its movers are unobservable before the print; FX, gold and food inputs do not beat the seasonal mean, and on ${S.core.n} months the seasonal mean alone is at least as good as the calibrated rule.</li>
+<li><b>Methodology:</b> elementary index is Dutot (arithmetic), not Jevons — so monthly means of daily prices are the right fuel input.</li></ul>
+
+<h4>10 · Files &amp; how to run</h4>
+<table><thead><tr><th style="text-align:left">File</th><th style="text-align:left">Purpose</th></tr></thead><tbody>
+<tr><td class="mono" style="text-align:left">predictor/fetch_tpso.py</td><td style="text-align:left">official CPI tree → data/tpso_history.csv</td></tr>
+<tr><td class="mono" style="text-align:left">predictor/eppo_fuel.py · fuel_inputs.py</td><td style="text-align:left">EPPO daily → monthly means → motor-fuel m/m (hand segments as fallback)</td></tr>
+<tr><td class="mono" style="text-align:left">predictor/moc_food.py · calibrate_food.py</td><td style="text-align:left">DIT daily food prices → ridge-calibrated raw-food basket</td></tr>
+<tr><td class="mono" style="text-align:left">predictor/calibrate_fuel.py</td><td style="text-align:left">backward-recover the fuel weight from prices vs CPI</td></tr>
+<tr><td class="mono" style="text-align:left">predictor/model.py · backtest.py</td><td style="text-align:left">headline engine + out-of-sample modeled-vs-actual</td></tr>
+<tr><td class="mono" style="text-align:left">predictor/core_model.py · core_observable.py · test_core_windows.py</td><td style="text-align:left">core rule, observable-inputs experiment, 2024/2025 window test</td></tr>
+<tr><td class="mono" style="text-align:left">macro/th/cpi/nowcast.py · appendix.py</td><td style="text-align:left">publish to the hub (Macro › TH) and build this page</td></tr>
+</tbody></table>
+<div class="f">cd macro/th/cpi/predictor && python fetch_tpso.py && python eppo_fuel.py && python moc_food.py → bump LAST_YM/TARGET_YM/BASE_YM, set flood overlay → python -m macro.th.cpi.nowcast && python -m macro.th.cpi.appendix</div>
+
+<h4>11 · Caveats</h4>
+<ul><li>Fuel for the target month is observed through the last EPPO row; before month-end the nowcast assumes the latest pump level holds. Diesel refinery relief and the LPG freeze expiring Oct 31 are a <i>November</i> step.</li>
+<li>Raw-food calibration rests on 2025–2026 only; the flood overlay (+${f(N.blocks.flood_overlay)}pp) is judgment, not data.</li>
+<li>Electricity's effective household price depends on the consumption block TPSO prices, which it does not publish; subsidy overlays are modelled from announcements.</li>
+<li>TPSO's API is reachable from the laptop and GitHub runners, not from the Claude container; MOC's API 500s on long date ranges and is pulled per calendar year.</li></ul>
+<p class="mut">Full write-up: <a href="th_cpi_report.html" target="_blank">CPI Nowcast Report ↗</a> · method notes: <span class="mono">predictor/METHODOLOGY.md</span>.</p>`}
+function renderApx(k){document.querySelectorAll('#apx-tabs .sub').forEach(b=>b.classList.toggle('on',b.dataset.ap===k));$('#apx-th').style.display=k==='th'?'':'none';$('#apx-bb').style.display=k==='bb'?'':'none'}
 function renderMacro(cc){document.querySelectorAll('.sub').forEach(b=>b.classList.toggle('on',b.dataset.cc===cc));$('#m-nowcast').innerHTML=nowcastPanel(NOW[cc],cc);$('#m-cb').innerHTML=cbPanel(MACRO[cc],cc);const d=MACRO[cc]?.data;$('#nextmtg').textContent=d?`next ${d.committee} ${d.meeting_date}`:''}
 function route(){const t=(location.hash||'#brief').slice(1);document.querySelectorAll('.sec').forEach(s=>s.classList.toggle('on',s.id===t));document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.dataset.t===t));if(!document.getElementById(t))location.hash='#brief'}
 window.addEventListener('hashchange',route);route();main();

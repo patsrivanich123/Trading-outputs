@@ -1,0 +1,154 @@
+{
+ "asof": "2026-11-02",
+ "source": "macro.th.cpi.appendix (predictor on TPSO history)",
+ "history_months": 69,
+ "history_range": [
+  "2021-01",
+  "2026-09"
+ ],
+ "weights": {
+  "core": 69.67,
+  "energy": 13.09,
+  "rawfood": 17.24,
+  "motor_fuel": 8.93,
+  "elec": 3.68,
+  "cookfuel": 0.63
+ },
+ "files": {
+  "headline": "headline_backtest.png",
+  "core": "core_backtest.png",
+  "fuel": "fuel.png",
+  "electricity": "electricity.png",
+  "rawfood": "rawfood.png",
+  "core_components": "core_components.png",
+  "contributions": "contributions.png"
+ },
+ "stats": {
+  "headline": {
+   "n": 57,
+   "mae": 0.212,
+   "bias": 0.002,
+   "worst": 0.979,
+   "baseline_mae": 0.535,
+   "mae_2024": 0.151,
+   "n_2024": 33,
+   "baseline_mae_2024": 0.409,
+   "within_015": 46,
+   "agg_identity": 0.033
+  },
+  "core": {
+   "n": 42,
+   "mae": 0.126,
+   "bias": 0.045,
+   "seasonal_mae": 0.105,
+   "mae_2024": 0.127,
+   "n_2024": 33,
+   "seasonal_mae_2024": 0.111,
+   "flat_mae": 0.114,
+   "beta": [
+    0.144,
+    -0.379,
+    0.017
+   ],
+   "within_015": 52,
+   "seasonal_within_015": 71
+  },
+  "fuel": {
+   "pass_through": 0.89,
+   "r2": 0.997,
+   "n": 20,
+   "mae": 0.271,
+   "basket_weights": {
+    "diesel_b7": 0.47,
+    "g95": 0.35,
+    "e20": 0.18
+   }
+  },
+  "electricity": {
+   "round_share_pct": 52,
+   "intra_round_abs_mean": 0.744,
+   "n": 45
+  },
+  "rawfood_ridge": {
+   "oos_r2": 0.463,
+   "n_oos": 10,
+   "items": 11,
+   "weights": {
+    "eggs": 0.424,
+    "pork": 0.322,
+    "morning_glory": 0.167,
+    "rice": 0.136,
+    "kale": 0.113,
+    "tomato": -0.085,
+    "cabbage": 0.075,
+    "mackerel": 0.057,
+    "banana": -0.017,
+    "orange": -0.016,
+    "chicken": 0.005
+   }
+  },
+  "rawfood": {
+   "seasonal_mae": 0.787,
+   "moc_mae": 0.611,
+   "std": 1.012,
+   "n": 33
+  },
+  "core_components": {
+   "autocorr1": 0.212,
+   "std": 0.184,
+   "w_prepared": 16.95,
+   "w_rent": 15.12
+  }
+ },
+ "nowcast": {
+  "target": "2026-10",
+  "headline_yoy": 3.67,
+  "headline_mm": 0.72,
+  "core_yoy": 1.62,
+  "core_mm": 0.15,
+  "blocks": {
+   "motor_fuel": 5.43,
+   "electricity": 0.0,
+   "lpg": 0.0,
+   "raw_food": 1.14,
+   "raw_food_seasonal": 0.59,
+   "flood_overlay": 0.55,
+   "core": 0.05
+  },
+  "contrib_pp": {
+   "core": 0.035,
+   "energy": 0.485,
+   "rawfood": 0.197
+  },
+  "fuel_detail": {
+   "diesel": [
+    40.26,
+    42.84,
+    6.41
+   ],
+   "g95": [
+    39.31,
+    41.39,
+    5.28
+   ],
+   "e20": [
+    34.31,
+    35.38,
+    3.13
+   ]
+  }
+ },
+ "food_weights": {
+  "eggs": 0.424,
+  "pork": 0.322,
+  "morning_glory": 0.167,
+  "rice": 0.136,
+  "kale": 0.113,
+  "tomato": -0.085,
+  "cabbage": 0.075,
+  "mackerel": 0.057,
+  "banana": -0.017,
+  "orange": -0.016,
+  "chicken": 0.005
+ }
+}
