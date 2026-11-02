@@ -1,5 +1,5 @@
 {
- "published": "2026-11-01T00:11+07:00",
+ "published": "2026-11-02T13:24+07:00",
  "files": [
   "outputs/assets/levels.json",
   "outputs/assets/series.json",
@@ -9,6 +9,7 @@
   "outputs/macro/cb_us.json"
  ],
  "briefs": [
-  "2026-10-31"
+  "2026-10-31",
+  "2026-11-01"
  ]
 }

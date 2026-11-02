@@ -1,0 +1,24 @@
+name: live prices
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: live-prices
+  cancel-in-progress: false
+jobs:
+  quotes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q yfinance pandas numpy
+      - run: python live/quotes.py live/levels_live.json
+      - name: commit
+        run: |
+          git config user.name "live-bot"; git config user.email "live-bot@users.noreply.github.com"
+          git add live/levels_live.json
+          git diff --cached --quiet && echo "no change" || (git commit -q -m "live: $(date -u +%Y-%m-%dT%H:%MZ)" && git pull -q --rebase && git push -q)
