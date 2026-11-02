@@ -39,18 +39,6 @@
    "impact": 2
   },
   {
-   "name": "US Treasury quarterly refunding announcement",
-   "country": "US",
-   "kind": "supply",
-   "ict": "2026-11-04 20:30",
-   "date": "2026-11-04",
-   "consensus": null,
-   "prior": null,
-   "rate": null,
-   "confirmed": true,
-   "impact": 1
-  },
-  {
    "name": "Euro area flash HICP (Oct)",
    "country": "EA",
    "kind": "data",
@@ -60,6 +48,18 @@
    "prior": "3.8%",
    "rate": null,
    "confirmed": false,
+   "impact": 1
+  },
+  {
+   "name": "US Treasury quarterly refunding announcement",
+   "country": "US",
+   "kind": "supply",
+   "ict": "2026-11-04 20:30",
+   "date": "2026-11-04",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": true,
    "impact": 1
   },
   {
@@ -84,7 +84,8 @@
    "prior": "2.82% y/y headline (Sep)",
    "rate": null,
    "confirmed": false,
-   "impact": 1
+   "impact": 2,
+   "required": "th_cpi"
   },
   {
    "name": "US Employment Situation (Oct NFP)",
@@ -96,7 +97,8 @@
    "prior": null,
    "rate": null,
    "confirmed": true,
-   "impact": 2
+   "impact": 2,
+   "required": "us_nfp"
   },
   {
    "name": "US CPI / core CPI (Oct)",
@@ -108,7 +110,8 @@
    "prior": null,
    "rate": null,
    "confirmed": false,
-   "impact": 2
+   "impact": 2,
+   "required": "us_cpi"
   },
   {
    "name": "UST refunding auctions 3y/10y/30y (dates TBC at QRA)",
@@ -158,5 +161,14 @@
    "confirmed": false,
    "impact": 1
   }
- ]
+ ],
+ "validation": {
+  "missing": [],
+  "matched": [
+   "th_cpi 2026-11-06",
+   "us_cpi 2026-11-10",
+   "us_nfp 2026-11-06"
+  ],
+  "inserted": []
+ }
 }
