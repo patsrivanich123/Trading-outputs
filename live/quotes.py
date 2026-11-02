@@ -12,8 +12,8 @@ ICT = dt.timezone(dt.timedelta(hours=7))
 # registry name -> (yahoo symbol, kind, scale, dp, note)
 SYMBOLS = [
     ("USDJPY",        "JPY=X",   "ta", 1.0, 2, "spot"),
-    ("UST 10Y (%)",   "^TNX",    "ta", 0.1, 3, "CBOE TNX /10"),
-    ("DXY (ICE fut)", "DX=F",    "ta", 1.0, 2, "continuous front"),
+    ("UST 10Y (%)",   "^TNX",    "ta", 1.0, 3, "CBOE TNX, already in %"),
+    ("DXY (ICE fut)", "DX-Y.NYB","ta", 1.0, 2, "ICE spot index (fut proxy; small basis)"),
     ("Brent CO1",     "BZ=F",    "ta", 1.0, 2, "continuous front"),
     ("Bitcoin",       "BTC-USD", "ta", 1.0, 0, "spot"),
     ("S&P 500",       "^GSPC",   "eq", 1.0, 0, ""),
