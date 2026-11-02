@@ -1,35 +1,24 @@
 name: live prices
-# GitHub cron on this repo never fired (0 scheduled runs), so the job chains itself:
-# loop quotes every 10 min for ~5h, then dispatch the next run. Cron is only a backstop.
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "*/10 * * * *"
   workflow_dispatch:
 permissions:
   contents: write
-  actions: write
 concurrency:
   group: live-prices
   cancel-in-progress: false
 jobs:
   quotes:
     runs-on: ubuntu-latest
-    timeout-minutes: 340
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install -q yfinance pandas numpy
-      - name: loop (10-min refresh, ~5h)
+      - run: python live/quotes.py live/levels_live.json
+      - name: commit
         run: |
           git config user.name "live-bot"; git config user.email "live-bot@users.noreply.github.com"
-          for i in $(seq 1 31); do
-            python live/quotes.py live/levels_live.json || echo "quotes failed"
-            git add live/levels_live.json
-            if ! git diff --cached --quiet; then git commit -q -m "live: $(date -u +%Y-%m-%dT%H:%MZ)"; git pull -q --rebase -X theirs origin main || true; git push -q || true; fi
-            [ "$i" -lt 31 ] && sleep 600
-          done
-      - name: chain next run
-        if: always()
-        env: { GH_TOKEN: "${{ github.token }}" }
-        run: gh workflow run live.yml --ref main || echo "dispatch failed"
+          git add live/levels_live.json
+          git diff --cached --quiet && echo "no change" || (git commit -q -m "live: $(date -u +%Y-%m-%dT%H:%MZ)" && git pull -q --rebase && git push -q)
