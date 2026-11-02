@@ -13,7 +13,7 @@
   "level_prev": 102.93,
   "level_year_ago": 100.0,
   "delta_1d": null,
-  "driver": "fuel +6.3% m/m (EPPO)",
+  "driver": "fuel +5.63% m/m to CPI (EPPO \u00d7 pass-through)",
   "status": "ok",
   "inputs_available": [
    "EPPO fuel (31/31 days)"
@@ -76,6 +76,143 @@
    "fuel_passthrough_0.8": 3.56,
    "fuel_passthrough_1.0": 3.68
   },
+  "track": [
+   {
+    "month": "2025-08",
+    "actual_headline": -0.79,
+    "actual_core": null,
+    "predicted_headline": null,
+    "predicted_core": null,
+    "predicted_on": null,
+    "is_forecast": false
+   },
+   {
+    "month": "2025-09",
+    "actual_headline": -0.72,
+    "actual_core": null,
+    "predicted_headline": null,
+    "predicted_core": null,
+    "predicted_on": null,
+    "is_forecast": false
+   },
+   {
+    "month": "2025-10",
+    "actual_headline": -0.76,
+    "actual_core": null,
+    "predicted_headline": null,
+    "predicted_core": null,
+    "predicted_on": null,
+    "is_forecast": false
+   },
+   {
+    "month": "2025-11",
+    "actual_headline": -0.49,
+    "actual_core": null,
+    "predicted_headline": null,
+    "predicted_core": null,
+    "predicted_on": null,
+    "is_forecast": false
+   },
+   {
+    "month": "2025-12",
+    "actual_headline": -0.28,
+    "actual_core": 0.59,
+    "predicted_headline": null,
+    "predicted_core": null,
+    "predicted_on": null,
+    "is_forecast": false
+   },
+   {
+    "month": "2026-01",
+    "actual_headline": -0.66,
+    "actual_core": 0.6,
+    "predicted_headline": null,
+    "predicted_core": null,
+    "predicted_on": null,
+    "is_forecast": false
+   },
+   {
+    "month": "2026-02",
+    "actual_headline": -0.88,
+    "actual_core": 0.56,
+    "predicted_headline": null,
+    "predicted_core": null,
+    "predicted_on": null,
+    "is_forecast": false
+   },
+   {
+    "month": "2026-03",
+    "actual_headline": -0.08,
+    "actual_core": 0.57,
+    "predicted_headline": null,
+    "predicted_core": null,
+    "predicted_on": null,
+    "is_forecast": false
+   },
+   {
+    "month": "2026-04",
+    "actual_headline": 2.89,
+    "actual_core": 0.83,
+    "predicted_headline": null,
+    "predicted_core": null,
+    "predicted_on": null,
+    "is_forecast": false
+   },
+   {
+    "month": "2026-05",
+    "actual_headline": 2.79,
+    "actual_core": 0.92,
+    "predicted_headline": null,
+    "predicted_core": null,
+    "predicted_on": null,
+    "is_forecast": false
+   },
+   {
+    "month": "2026-06",
+    "actual_headline": 2.42,
+    "actual_core": 1.23,
+    "predicted_headline": null,
+    "predicted_core": null,
+    "predicted_on": null,
+    "is_forecast": false
+   },
+   {
+    "month": "2026-07",
+    "actual_headline": 1.95,
+    "actual_core": 1.34,
+    "predicted_headline": null,
+    "predicted_core": null,
+    "predicted_on": null,
+    "is_forecast": false
+   },
+   {
+    "month": "2026-08",
+    "actual_headline": 2.53,
+    "actual_core": 1.44,
+    "predicted_headline": null,
+    "predicted_core": null,
+    "predicted_on": null,
+    "is_forecast": false
+   },
+   {
+    "month": "2026-09",
+    "actual_headline": 2.82,
+    "actual_core": 1.5,
+    "predicted_headline": null,
+    "predicted_core": null,
+    "predicted_on": null,
+    "is_forecast": false
+   },
+   {
+    "month": "2026-10",
+    "actual_headline": null,
+    "actual_core": null,
+    "predicted_headline": 3.622,
+    "predicted_core": 1.529,
+    "predicted_on": "2026-11-02",
+    "is_forecast": true
+   }
+  ],
   "fuel_by_product": {
    "ds": 6.41,
    "gh95": 5.28,
@@ -87,6 +224,6 @@
   "method": "weight-exact TPSO blocks: fuel EPPO\u00d7pass-through, electricity ERC calendar, LPG ceiling, raw food MOC-calibrated\u2192seasonal\u2192report prior, core seasonal; anchored to Oct-2026 method report",
   "print_date": null,
   "last_print": "2026-09",
-  "run_at": "2026-11-02T15:36"
+  "run_at": "2026-11-02T18:08"
  }
 }
