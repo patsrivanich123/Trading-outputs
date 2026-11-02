@@ -11,3 +11,7 @@ date,asset,bias,entry,invalidation,target,last_at_call,graded_on,outcome,pnl_pct
 2026-11-02,UST 10Y (%),no trade,,,,4.929,,,,"Midterms, refunding, NFP binary; mid-range, no edge"
 2026-11-02,DXY (ICE fut),no trade,,,,101.69,,,,"Capped 102.27-102.38, supported 101.52; no edge"
 2026-11-02,Brent CO1,no trade,,,,110.04,,,,Post-election Iran binary both ways; stand aside
+2026-11-03,USDJPY,bearish,158.78,160.2,156.5,157.9425,,,,"Sell rally 158.78; MoF 160 line, joint-intervention risk"
+2026-11-03,UST 10Y (%),no trade,,,,4.894,,,,"Midterms, refunding, NFP, CPI stacked; no edge"
+2026-11-03,DXY (ICE fut),no trade,,,,101.645,,,,"Between 101.03 and 102.27-102.38; event-driven, no edge"
+2026-11-03,Brent CO1,no trade,,,,104.77,,,,Headline-driven 7% swings on Iran; stand aside

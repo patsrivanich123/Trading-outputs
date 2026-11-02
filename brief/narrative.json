@@ -1,16 +1,45 @@
-{"date": "2026-11-02",
- "header_note": "levels as of Fri US close (S&P, UST 10Y) / Mon Asia morning, delayed-live (USDJPY, DXY, Brent, KOSPI 200, Hang Seng)",
- "key_risk": "US midterm result (lands Wed morning ICT) plus the post-election Iran/Hormuz call set oil, inflation and the Dec Fed hike (72% priced) for UST 10Y (4.93%, R 5.01/5.09) and THB, with refunding (4 Nov) and NFP (6 Nov) behind it.",
+{
+ "date": "2026-11-03",
+ "header_note": "levels as of Mon 2 Nov US close (IBKR; S&P, UST 10Y, USDJPY, DXY, Brent) / Mon Asia close (KOSPI 200, Hang Seng)",
+ "key_risk": "US midterm result (polls close 08:00 ICT Wed) plus the post-election Iran/Hormuz call drive oil, inflation and the Dec Fed hike (74% priced) for UST 10Y (4.894%, S 4.80/4.73, R 4.95/5.03) and THB, with Treasury refunding Wed 20:30 ICT and NFP Fri 20:30 ICT right behind.",
  "assets": {
-  "USDJPY": {"news": "BoJ held at 1.25% Fri but kept hiking bias; MoF's Katayama says joint US-Japan FX line stands (Jul 31 yen buy), yet pair bid at 157.88 on rate gap. Tokyo shut Tue (Culture Day).", "trade": "Bearish: sell rally 158.78, stop 160.20, target 156.50; intervention risk builds into 160"},
-  "UST 10Y (%)": {"news": "4.93% Fri (-6bp), off the 5.36% Oct high; Asia ~4.95%. Fed held 3.75-4.00% 10-2 (two dissents for a hike), Dec hike ~72% priced, total tightening priced ~55bp vs 70bp+ a month ago. Refunding Wed, NFP Fri. FRED 10Y 4.98 on 29 Oct vs IBKR 4.989: scale OK.", "trade": "no trade"},
-  "DXY (ICE fut)": {"news": "101.69, drifting lower on Iran-diplomacy hopes and pre-election caution; capped by 102.27-102.38 Oct highs.", "trade": "no trade"},
-  "Brent CO1": {"news": "110.04, -3.0% on Trump saying no Iran strikes pre-election, Qatar-mediated talks, OPEC+ holding Dec targets; Hormuz tanker attacks persist. Analysts flag $120 risk after Tuesday. (Dec contract rolled out; front is Jan 27 on IBKR.)", "trade": "no trade"}
+  "USDJPY": {
+   "news": "157.94 (+0.24%). Katayama: joint US-Japan FX framework stands (Jul 30-31 yen purchases), midterm result won't change it; BoJ held 1.25% Oct 30 (8-1, Takata for 1.50%). Fed funds 3.75-4.00% vs BoJ 1.25% keeps the pair bid. Tokyo closed today (Culture Day).",
+   "trade": "Bearish: sell rally 158.78, stop 160.20, target 156.50; no fill yet, intervention risk builds into 160"
+  },
+  "UST 10Y (%)": {
+   "news": "4.894% (-3.5bp), fifth lower close from the 5.31% peak; oil -7.6% and tech selloff = bid. Fed held 10-2 with two hike dissents, Dec hike 74% priced (CME FedWatch via FXStreet). ISM mfg 55.5 but prices paid 75.2 (from 77.9). Treasury refunding Wed, JOLTS today, NFP Fri, CPI Tue 10 Nov. IBKR TNX 48.94 vs web 4.894: scale OK.",
+   "trade": "no trade"
+  },
+  "DXY (ICE fut)": {
+   "news": "101.645 (-0.10%), Dec contract. Lower yields and oil relief cap the dollar; 102.27-102.38 Oct highs overhead; midterm/refunding pending.",
+   "trade": "no trade"
+  },
+  "Brent CO1": {
+   "news": "104.77 (-7.6%), steepest drop in months: Trump 'no rush' on resuming Iran strikes, Qatar-mediated draft proposal, Iran open to talks; tanker attacks continue (18+ since Oct 6). Goldman Dec Brent 105, tail $140 in 2027. Front = Jan27 (Dec expired Oct 30).",
+   "trade": "no trade"
+  },
+  "Bitcoin": {
+   "news": "~76,700 (-1.8% 24h) [web: CoinGecko, flagged, no chart]; below 77k on midterm, rate-hike and tech-selloff pressure.",
+   "trade": "no trade"
+  }
  },
  "equities": [
-  {"name": "S&P 500", "line": "7,580 (-1.82% Fri), worst day since June, third weekly loss; AI-capex worries after Alphabet/Amazon, Intel -29%; broke 100-DMA. Futures up ~1% Asia."},
-  {"name": "Nasdaq 100", "line": "28,384.85 (-3.46% Fri) [web level, no IBKR feed, no chart; FRED 29,402.51 on 29 Oct consistent]; SOX -7.2%; futures +~1% Monday."},
-  {"name": "KOSPI 200", "line": "924.15 (+2.99%, IBKR delayed, intraday); KOSPI comp ~5,860-5,890 (+2.3-2.8%) on strong Oct exports and SK Hynix; still -16% in a month."},
-  {"name": "Hang Seng", "line": "23,418 (+0.53%, IBKR delayed, intraday); PBoC/CSRC reportedly meeting on market support; China Oct factory PMI back in contraction."},
-  {"name": "Bitcoin", "line": "~78,100 [web: CoinGecko 06:26Z, flagged, no chart]; Fri ~76,650 per Business Insider."}
- ]}
+  {
+   "name": "S&P 500",
+   "line": "7,542 (-0.50%), 3-month closing low; rally of +1.1% faded, Nasdaq comp -1.1% on AI-capex worries while Dow +0.4% on oil relief; Apple beat after the close."
+  },
+  {
+   "name": "Nasdaq 100",
+   "line": "27,990 (about -1.4% vs 28,385 Fri) [web: Yahoo ^NDX, flagged, no IBKR feed, no chart]; Nasdaq comp -1.1% to 25,164."
+  },
+  {
+   "name": "KOSPI 200",
+   "line": "922.79 (+2.84%); KOSPI comp 5,859 (+2.2%) on dip-buying in SK Hynix/Samsung, institutions net buyers; still -12.9% in a month. IBKR has a data gap 17 Sep-2 Oct."
+  },
+  {
+   "name": "Hang Seng",
+   "line": "23,393 (+0.42%); HS Tech +2.3%, brokers led on reports Beijing weighs equity support; PBoC ~100bn yuan facility; China Oct mfg PMI 52.0."
+  }
+ ]
+}
