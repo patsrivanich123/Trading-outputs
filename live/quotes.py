@@ -18,7 +18,7 @@ SYMBOLS = [
     ("Bitcoin",       "BTC-USD", "ta", 1.0, 0, "spot"),
     ("S&P 500",       "^GSPC",   "eq", 1.0, 0, ""),
     ("Nasdaq 100",    "^NDX",    "eq", 1.0, 0, ""),
-    ("KOSPI 200",     "^KS200",  "eq", 1.0, 2, ""),
+    ("KOSPI 200",     "^KS11",   "eq", 1.0, 2, "KOSPI composite (live proxy; 200 not on feed)"),
     ("Hang Seng",     "^HSI",    "eq", 1.0, 0, ""),
 ]
 
