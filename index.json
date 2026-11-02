@@ -1,5 +1,5 @@
 {
- "published": "2026-11-02T14:54+07:00",
+ "published": "2026-11-02T15:37+07:00",
  "files": [
   "outputs/assets/levels.json",
   "outputs/assets/series.json",
@@ -7,7 +7,8 @@
   "outputs/macro/calendar.json",
   "outputs/macro/cb_jp.json",
   "outputs/macro/cb_th.json",
-  "outputs/macro/cb_us.json"
+  "outputs/macro/cb_us.json",
+  "outputs/macro/nowcast_th.json"
  ],
  "briefs": [
   "2026-10-31",

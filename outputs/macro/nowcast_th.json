@@ -1,0 +1,92 @@
+{
+ "asof": "2026-11-02",
+ "source": "macro.th.cpi.nowcast",
+ "data": {
+  "series": "TH CPI headline y/y Oct 2026",
+  "target_month": "2026-10",
+  "ours": 3.62,
+  "consensus": 2.9,
+  "consensus_source": "TradingEconomics forecast page, 2 Nov 2026 \u2014 treat as weak; refresh from Bloomberg ECO survey on the desk",
+  "prior": 2.82,
+  "ours_mm": 0.67,
+  "level": 103.62,
+  "level_prev": 102.93,
+  "level_year_ago": 100.0,
+  "delta_1d": null,
+  "driver": "fuel +6.3% m/m (EPPO)",
+  "status": "ok",
+  "inputs_available": [
+   "EPPO fuel (31/31 days)"
+  ],
+  "inputs_missing": [
+   "MOC/DIT food (live)"
+  ],
+  "core": {
+   "series": "TH core CPI y/y Oct 2026",
+   "ours": 1.53,
+   "consensus": null,
+   "prior": 1.5,
+   "ours_mm": 0.07
+  },
+  "components": [
+   {
+    "name": "Motor fuel",
+    "weight": 8.93,
+    "mm": 5.626,
+    "contrib_bp": 50.2,
+    "status": "ok",
+    "note": "EPPO volume-weighted pump price 39.22\u219241.68 THB/l (31/31 days)"
+   },
+   {
+    "name": "Raw food",
+    "weight": 17.24,
+    "mm": 0.7,
+    "contrib_bp": 12.1,
+    "status": "partial",
+    "note": "report prior 0.7% \u2014 implied by the Oct-2026 report nowcast (MOC data to early Oct): headline +0.52 m/m with fuel +4.4% (MOC unreachable)"
+   },
+   {
+    "name": "Core (ex raw food & energy)",
+    "weight": 69.67,
+    "mm": 0.07,
+    "contrib_bp": 4.9,
+    "status": "ok",
+    "note": "seasonal m/m for month 10 (report Oct-2026 (October seasonal \u2248 +0.07))"
+   },
+   {
+    "name": "Electricity",
+    "weight": 3.68,
+    "mm": 0.0,
+    "contrib_bp": 0.0,
+    "status": "ok",
+    "note": "ERC Ft calendar: flat within round; next round 2027-01"
+   },
+   {
+    "name": "LPG",
+    "weight": 0.63,
+    "mm": 0.0,
+    "contrib_bp": 0.0,
+    "status": "ok",
+    "note": "ceiling price unchanged; freeze until 2026-10-31"
+   }
+  ],
+  "sensitivity": {
+   "raw_food_-1pp": 3.44,
+   "raw_food_+1pp": 3.8,
+   "fuel_passthrough_0.8": 3.56,
+   "fuel_passthrough_1.0": 3.68
+  },
+  "fuel_by_product": {
+   "ds": 6.41,
+   "gh95": 5.28,
+   "gh91": 5.33,
+   "e20": 3.13,
+   "e85": 4.48,
+   "ulg95_premium": 3.06
+  },
+  "method": "weight-exact TPSO blocks: fuel EPPO\u00d7pass-through, electricity ERC calendar, LPG ceiling, raw food MOC-calibrated\u2192seasonal\u2192report prior, core seasonal; anchored to Oct-2026 method report",
+  "print_date": null,
+  "last_print": "2026-09",
+  "run_at": "2026-11-02T15:36"
+ }
+}
