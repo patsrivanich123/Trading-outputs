@@ -431,22 +431,22 @@
  "stats": {
   "headline": {
    "n": 57,
-   "mae": 0.212,
-   "bias": 0.002,
+   "mae": 0.21,
+   "bias": -0.012,
    "worst": 0.979,
-   "baseline_mae": 0.535,
-   "mae_2024": 0.151,
+   "baseline_mae": 0.531,
+   "mae_2024": 0.148,
    "n_2024": 33,
-   "baseline_mae_2024": 0.409,
-   "within_015": 46,
+   "baseline_mae_2024": 0.403,
+   "within_015": 47,
    "agg_identity": 0.033
   },
   "core": {
    "n": 42,
-   "mae": 0.126,
-   "bias": 0.045,
+   "mae": 0.087,
+   "bias": 0.007,
    "seasonal_mae": 0.105,
-   "mae_2024": 0.127,
+   "mae_2024": 0.088,
    "n_2024": 33,
    "seasonal_mae_2024": 0.111,
    "flat_mae": 0.114,
@@ -455,8 +455,11 @@
     -0.379,
     0.017
    ],
-   "within_015": 52,
-   "seasonal_within_015": 71
+   "within_015": 81,
+   "seasonal_within_015": 71,
+   "pt_mae": 0.126,
+   "pt_within_015": 52,
+   "pt_mae_2024": 0.127
   },
   "fuel": {
    "pass_through": 0.89,
@@ -736,8 +739,8 @@
   "target": "2026-10",
   "headline_yoy": 3.55,
   "headline_mm": 0.61,
-  "core_yoy": 1.62,
-  "core_mm": 0.15,
+  "core_yoy": 1.51,
+  "core_mm": 0.05,
   "blocks": {
    "motor_fuel": 5.43,
    "electricity": 0.0,

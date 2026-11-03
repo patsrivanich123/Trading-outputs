@@ -214,7 +214,7 @@ return `
 <tr><td style="text-align:left">Electricity</td><td>${f(W.elec)}%</td><td style="text-align:left;white-space:normal">ERC Ft tariff per 4-month round (Jan / May / Sep) + government subsidy announcements · <span class="mono">erc.or.th</span></td><td>4-monthly</td><td class="ok" style="text-align:left">YES — announced ahead</td>${SRC("Electricity")}</tr>
 <tr><td style="text-align:left">LPG / cooking gas</td><td>${f(W.cookfuel)}%</td><td style="text-align:left;white-space:normal">Government ceiling price (MOC)</td><td>on change</td><td class="ok" style="text-align:left">YES — announced</td>${SRC("LPG / cooking gas")}</tr>
 <tr><td style="text-align:left">Raw food</td><td>${f(W.rawfood)}%</td><td style="text-align:left;white-space:normal">MOC/DIT open data (no key) · <span class="mono">dataapi.moc.go.th/gis-product-prices?product_id&amp;from_date&amp;to_date</span>, one call per item per calendar year, product IDs pinned (the <span class="mono">/gis-products</span> lookup 500s) · eggs, pork, chicken, mackerel, rice, kale, morning glory, tomato, cabbage, banana, orange</td><td>daily</td><td class="ok" style="text-align:left">YES — daily, real time</td>${SRC("Raw food")}</tr>
-<tr><td style="text-align:left">Core (ex raw food &amp; energy)</td><td>${f(W.core)}%</td><td style="text-align:left;white-space:normal"><b>No external feed.</b> Prepared food (${f(S.core_components.w_prepared)}%) and house rent (${f(S.core_components.w_rent)}%) are TPSO field surveys, published only in the print → modelled from own history (same-month seasonal mean)</td><td>—</td><td class="no" style="text-align:left">NO</td>${SRC("Core (ex raw food & energy)")}</tr>
+<tr><td style="text-align:left">Core (ex raw food &amp; energy)</td><td>${f(W.core)}%</td><td style="text-align:left;white-space:normal"><b>No external feed.</b> Prepared food (${f(S.core_components.w_prepared)}%) and house rent (${f(S.core_components.w_rent)}%) are TPSO field surveys, published only in the print → modelled from own history (same-month seasonal median)</td><td>—</td><td class="no" style="text-align:left">NO</td>${SRC("Core (ex raw food & energy)")}</tr>
 <tr><td style="text-align:left">Gold / FX (tested, rejected)</td><td>~2%</td><td style="text-align:left;white-space:normal">Yahoo GC=F, THB=X; Thai gold api.chnwt.dev — observable but too small to move core</td><td>daily</td><td style="text-align:left" class="ok">YES (too small)</td><td class="mut" style="text-align:left">not used</td></tr>
 <tr><td style="text-align:left">Consensus</td><td></td><td style="text-align:left;white-space:normal">Bloomberg ECO survey (<span class="mono">THCPIYOY</span> / <span class="mono">THCPCYOY</span>) → <span class="mono">macro/th/cpi/config.json</span></td><td>per print</td><td class="ok" style="text-align:left">YES</td>${SRC("Consensus")}</tr>
 </tbody></table>
@@ -234,13 +234,15 @@ ${fig('headline',`Pre-print rule: energy observed (EPPO/ERC/LPG), core and raw f
 </tbody></table>
 
 <h4>3 · Core — modeled vs actual</h4>
-${fig('core',`Model: core m/m = β₀ + β₁·seasonal + β₂·(energy + raw food)<sub>t−1</sub>, refit each month on prior data only. Grey dotted = seasonal mean alone.`)}
-<div class="f">core m/m = ${f(S.core.beta[0],3)} + ${f(S.core.beta[1],3)}·S<sub>m(t)</sub> + ${f(S.core.beta[2],3)}·X<sub>t−1</sub> &nbsp;(full-sample fit)</div>
+${fig('core',`Live rule: core m/m = same-month seasonal MEDIAN over prior years (a single outlier year — e.g. Feb-2022 prepared food — no longer drags the forecast). Grey dotted = seasonal mean (old rule). Out-of-sample, prior data only.`)}
+<div class="f">core m/m<sub>t</sub> = median{ core m/m in the same calendar month, all prior years } &nbsp;·&nbsp; y/y chained from the published t−1 core index</div>
 <table><thead><tr><th style="text-align:left">Rule</th><th>MAE y/y</th><th>within ±0.15pp</th><th style="text-align:left">Note</th></tr></thead><tbody>
-<tr><td style="text-align:left">Calibrated seasonal + lagged cost pass-through</td><td>${f(S.core.mae,3)}pp</td><td>${S.core.within_015}%</td><td style="text-align:left">${S.core.n} OOS months · bias ${(S.core.bias>=0?'+':'')+f(S.core.bias,3)} · since 2024 (chart): ${f(S.core.mae_2024,3)}pp vs seasonal ${f(S.core.seasonal_mae_2024,3)}pp</td></tr>
-<tr><td style="text-align:left">Seasonal mean only</td><td>${f(S.core.seasonal_mae,3)}pp</td><td>${S.core.seasonal_within_015}%</td><td style="text-align:left">${S.core.seasonal_mae<=S.core.mae?'<b>beats the calibrated model on the full history</b> — the pass-through term adds noise, not skill':'calibrated model wins'}</td></tr>
+<tr><td style="text-align:left"><b>Seasonal median (live, since 3 Nov 2026)</b></td><td><b>${f(S.core.mae,3)}pp</b></td><td>${S.core.within_015}%</td><td style="text-align:left">${S.core.n} OOS months · bias ${(S.core.bias>=0?'+':'')+f(S.core.bias,3)} · since 2024 (chart): ${f(S.core.mae_2024,3)}pp</td></tr>
+<tr><td style="text-align:left">Seasonal mean (previous rule)</td><td>${f(S.core.seasonal_mae,3)}pp</td><td>${S.core.seasonal_within_015}%</td><td style="text-align:left">since 2024: ${f(S.core.seasonal_mae_2024,3)}pp</td></tr>
+<tr><td style="text-align:left">Seasonal + lagged cost pass-through (dropped)</td><td>${f(S.core.pt_mae,3)}pp</td><td>${S.core.pt_within_015}%</td><td style="text-align:left">core m/m = ${f(S.core.beta[0],3)} + ${f(S.core.beta[1],3)}·S + ${f(S.core.beta[2],3)}·(energy+raw food)<sub>t−1</sub> — adds noise, not skill</td></tr>
 <tr><td style="text-align:left">Long-run mean</td><td>${f(S.core.flat_mae,3)}pp</td><td>—</td><td style="text-align:left">no seasonality</td></tr>
 </tbody></table>
+<p>Also tested and rejected (<span class="mono">predictor/test_core_ideas.py</span>, 45 OOS months): bottom-up seasonals over 8 core sub-blocks (0.118), last-3-years seasonal (0.108), momentum on the last 3 months' deviation (0.112–0.117), prepared food on concurrent + lagged raw food (0.151; since 2024 0.102, unstable). Median vs mean: better in 3 of 4 years, t ≈ 1.9 — modest, consistent, and the principled choice for a short sample with outlier years.</p>
 ${fig('core_components',`Core m/m and its two largest pieces. Autocorrelation(1) of core m/m ${(S.core_components.autocorr1>=0?'+':'')+f(S.core_components.autocorr1,2)}, std ${f(S.core_components.std,2)}pp: nothing to extrapolate, so core is irreducibly seasonal with pre-print data.`)}
 
 <h4>4 · Motor fuel — the edge</h4>
@@ -265,7 +267,7 @@ ${fig('contributions',`Weight × block m/m stacked against the printed headline 
 <tr><td style="text-align:left">Electricity</td><td>${f(W.elec)}%</td><td>${f(N.blocks.electricity)}%</td><td>0bp</td><td style="text-align:left">Ft fixed within round</td></tr>
 <tr><td style="text-align:left">LPG</td><td>${f(W.cookfuel)}%</td><td>${f(N.blocks.lpg)}%</td><td>0bp</td><td style="text-align:left">ceiling frozen</td></tr>
 <tr><td style="text-align:left">Raw food</td><td>${f(W.rawfood)}%</td><td>${(N.blocks.raw_food>=0?'+':'')+f(N.blocks.raw_food)}%</td><td>${f(N.contrib_pp.rawfood*100,0)}bp</td><td style="text-align:left;white-space:normal">${N.blocks.raw_food_observed!=null?`observed DIT feed, ridge on ${rw.items||11} items (seasonal would be +${f(N.blocks.raw_food_seasonal)})`:`seasonal +${f(N.blocks.raw_food_seasonal)} + flood overlay +${f(N.blocks.flood_overlay)}pp (judgment)`}</td></tr>
-<tr><td style="text-align:left">Core</td><td>${f(W.core)}%</td><td>+${f(N.blocks.core)}%</td><td>${f(N.contrib_pp.core*100,0)}bp</td><td style="text-align:left">same-month seasonal mean</td></tr>
+<tr><td style="text-align:left">Core</td><td>${f(W.core)}%</td><td>+${f(N.blocks.core)}%</td><td>${f(N.contrib_pp.core*100,0)}bp</td><td style="text-align:left">same-month seasonal median</td></tr>
 <tr><td style="text-align:left"><b>Headline</b></td><td>100%</td><td><b>${(N.headline_mm>=0?'+':'')+f(N.headline_mm)}%</b></td><td></td><td style="text-align:left"><b>y/y ${f(N.headline_yoy)}</b> · core y/y ${f(N.core_yoy)} (m/m +${f(N.core_mm)})</td></tr>
 </tbody></table>
 
@@ -274,7 +276,7 @@ ${fig('contributions',`Weight × block m/m stacked against the printed headline 
 <li><b>Fuel is the edge</b> — one administered price, pass-through ≈ 1, observable daily; it alone explains most of headline m/m and catches the regime shifts (Apr-2026 cap break).</li>
 <li><b>Raw food needs weight calibration</b> to be usable (R² 0.00 → ${f(rw.oos_r2,2)}); eggs and pork, not vegetables, carry the signal.</li>
 <li><b>Electricity is deterministic</b> — a calendar of ERC Ft rounds plus announced subsidies; no regression.</li>
-<li><b>Core is irreducibly seasonal</b> — its movers are unobservable before the print; FX, gold and food inputs do not beat the seasonal mean, and on ${S.core.n} months the seasonal mean alone is at least as good as the calibrated rule.</li>
+<li><b>Core is irreducibly seasonal</b> — its movers are unobservable before the print; FX, gold, food cost-push, momentum and sub-block seasonals do not beat it; the only gain is robustness — the seasonal <i>median</i> cuts core MAE to ${f(S.core.mae,3)}pp vs ${f(S.core.seasonal_mae,3)}pp for the mean.</li>
 <li><b>Methodology:</b> elementary index is Dutot (arithmetic), not Jevons — so monthly means of daily prices are the right fuel input.</li></ul>
 
 <h4>10 · Files &amp; how to run</h4>
