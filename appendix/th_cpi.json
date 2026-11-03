@@ -371,6 +371,52 @@
    "2026-09": 0.63
   }
  },
+ "sources": [
+  {
+   "block": "CPI target, weights, anchors",
+   "last": "2026-09",
+   "rows": 12321,
+   "months": 69,
+   "status": "ok",
+   "note": "TPSO tree through 2026-09 (69 months, 12,321 rows); next print fills 2026-10"
+  },
+  {
+   "block": "Motor fuel",
+   "last": "2026-11-02",
+   "status": "ok",
+   "note": "EPPO daily to 2026-11-02; 2026-10 covered 31/31 days (calendar-day ffill \u2192 monthly mean)"
+  },
+  {
+   "block": "Electricity",
+   "last": "2026-11-03",
+   "status": "ok",
+   "note": "ERC Ft 16.23 satang Sep-Dec 2026 round, avg 3.86 THB/unit (5 Aug resolution); erc.or.th times out from cloud -> confirmed via Thairath / capsolar"
+  },
+  {
+   "block": "LPG / cooking gas",
+   "last": "2026-11-03",
+   "status": "ok",
+   "note": "423 THB/15kg held to 31 Oct (Nation); EPPO LPG retail flat to 2 Nov; November extension not yet announced"
+  },
+  {
+   "block": "Raw food",
+   "last": "2026-10-30",
+   "status": "ok",
+   "note": "DIT daily, 11 items, monthly through 2026-10; all items to 2026-10-30; nowcast uses the observed feed (+0.50% m/m)"
+  },
+  {
+   "block": "Core (ex raw food & energy)",
+   "last": "2026-09",
+   "status": "model",
+   "note": "no external feed; same-month seasonal mean from TPSO history"
+  },
+  {
+   "block": "Consensus",
+   "last": "2026-11-03",
+   "status": "ok",
+   "note": "Bloomberg ECO survey (Pat, desk screenshot 3 Nov 2026): headline 3.25 \u00b7 core 1.6"
+  }
+ ],
  "files": {
   "headline": "headline_backtest.png",
   "core": "core_backtest.png",
@@ -699,6 +745,7 @@
    "raw_food": 0.5,
    "raw_food_seasonal": 0.59,
    "flood_overlay": 0.55,
+   "raw_food_observed": 0.5,
    "core": 0.05
   },
   "contrib_pp": {
