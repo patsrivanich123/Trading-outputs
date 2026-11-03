@@ -15,3 +15,4 @@ date,asset,bias,entry,invalidation,target,last_at_call,graded_on,outcome,pnl_pct
 2026-11-03,UST 10Y (%),no trade,,,,4.894,,,,"Midterms, refunding, NFP, CPI stacked; no edge"
 2026-11-03,DXY (ICE fut),no trade,,,,101.645,,,,"Between 101.03 and 102.27-102.38; event-driven, no edge"
 2026-11-03,Brent CO1,no trade,,,,104.77,,,,Headline-driven 7% swings on Iran; stand aside
+2026-11-03,TH CPI Oct-26 y/y,bullish,,,3.67,2.82,,,,"Nowcast headline 3.67% (range 3.43-3.90), core 1.62% (seasonal-only 1.51). Weak cons 2.9 (TE). Grade vs TPSO print 5 Nov 10:30 ICT"
