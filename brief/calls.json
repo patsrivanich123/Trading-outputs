@@ -1,6 +1,6 @@
-{"date": "2026-11-03", "calls": [
-{"asset": "USDJPY", "bias": "bearish", "entry": 158.78, "invalidation": 160.2, "target": 156.5, "last_at_call": 157.9425, "note": "Sell rally 158.78; MoF 160 line, joint-intervention risk"},
-{"asset": "UST 10Y (%)", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 4.894, "note": "Midterms, refunding, NFP, CPI stacked; no edge"},
-{"asset": "DXY (ICE fut)", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 101.645, "note": "Between 101.03 and 102.27-102.38; event-driven, no edge"},
-{"asset": "Brent CO1", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 104.77, "note": "Headline-driven 7% swings on Iran; stand aside"}
+{"date": "2026-11-04", "calls": [
+{"asset": "USDJPY", "bias": "bearish", "entry": 159.5, "invalidation": 160.3, "target": 157.1, "last_at_call": 158.6875, "note": "Sell 159.5 into MoF 160 line; no chase here"},
+{"asset": "UST 10Y (%)", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 4.952, "note": "Midterm result, refunding, NFP, CPI stacked; no edge"},
+{"asset": "DXY (ICE fut)", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 101.72, "note": "Mid-range 101.5-102.4; event-driven, no edge"},
+{"asset": "Brent CO1", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 103.6, "note": "Iran headline swings 100.8-107.2 intraday; stand aside"}
 ]}

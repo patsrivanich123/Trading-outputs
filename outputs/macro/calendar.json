@@ -1,33 +1,9 @@
 {
- "asof": "2026-11-02",
+ "asof": "2026-11-04",
  "source": "brief.calendar",
  "data": [
   {
-   "name": "Japan market holiday (Culture Day)",
-   "country": "JP",
-   "kind": "holiday",
-   "ict": "2026-11-03 07:00",
-   "date": "2026-11-03",
-   "consensus": null,
-   "prior": null,
-   "rate": null,
-   "confirmed": true,
-   "impact": 1
-  },
-  {
-   "name": "US JOLTS job openings (Sep)",
-   "country": "US",
-   "kind": "labour",
-   "ict": "2026-11-03 22:00",
-   "date": "2026-11-03",
-   "consensus": null,
-   "prior": "7.079m",
-   "rate": null,
-   "confirmed": true,
-   "impact": 1
-  },
-  {
-   "name": "US midterm elections (polls close ~8pm ET)",
+   "name": "US midterm elections — results (polls close 8pm ET)",
    "country": "US",
    "kind": "election",
    "ict": "2026-11-04 08:00",
@@ -39,13 +15,25 @@
    "impact": 2
   },
   {
+   "name": "EZ HICP flash (Oct)",
+   "country": "EA",
+   "kind": "inflation",
+   "ict": "2026-11-04 17:00",
+   "date": "2026-11-04",
+   "consensus": "4.0% y/y; core 2.5%",
+   "prior": "3.8% y/y; core 2.5%",
+   "rate": null,
+   "confirmed": false,
+   "impact": 1
+  },
+  {
    "name": "US ADP employment (Oct)",
    "country": "US",
    "kind": "labour",
    "ict": "2026-11-04 20:15",
    "date": "2026-11-04",
-   "consensus": null,
-   "prior": null,
+   "consensus": "69k",
+   "prior": "90k",
    "rate": null,
    "confirmed": true,
    "impact": 1
@@ -59,8 +47,8 @@
    "consensus": null,
    "prior": null,
    "rate": null,
-   "confirmed": true,
-   "impact": 2
+   "confirmed": false,
+   "impact": 1
   },
   {
    "name": "US ISM services PMI (Oct)",
@@ -68,10 +56,10 @@
    "kind": "activity",
    "ict": "2026-11-04 22:00",
    "date": "2026-11-04",
-   "consensus": null,
-   "prior": null,
+   "consensus": "54.8",
+   "prior": "54.9",
    "rate": null,
-   "confirmed": false,
+   "confirmed": true,
    "impact": 1
   },
   {
@@ -80,7 +68,7 @@
    "kind": "inflation",
    "ict": "2026-11-05 10:30",
    "date": "2026-11-05",
-   "consensus": "2.9% y/y",
+   "consensus": "2.9% y/y (ours 3.67)",
    "prior": "2.82% y/y",
    "rate": null,
    "confirmed": true,
@@ -89,19 +77,31 @@
    "pinned_source": "TPSO annual CPI release calendar 2569 (in the Jan-2026 CPI press document, uploads.tpso.go.th/editor/pdf/1770267421_9730fb584f591c6af957.pdf); time 10:30 per TPSO press header; dates can slip by a day — each monthly release restates the next date"
   },
   {
-   "name": "BoE decision + Monetary Policy Report (Bailey 12:30 GMT)",
+   "name": "BoE decision + Monetary Policy Report",
    "country": "UK",
    "kind": "cb",
    "ict": "2026-11-05 19:00",
    "date": "2026-11-05",
-   "consensus": "4.00% (+25bp, fully priced)",
+   "consensus": "4.00% (hike +25bp); vote 7 hike / 2 hold",
    "prior": null,
    "rate": "3.75%",
    "confirmed": true,
    "impact": 2
   },
   {
-   "name": "US jobless claims + Q3 productivity",
+   "name": "BoE Bailey press conference",
+   "country": "UK",
+   "kind": "cb",
+   "ict": "2026-11-05 19:30",
+   "date": "2026-11-05",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": false,
+   "impact": 1
+  },
+  {
+   "name": "US jobless claims",
    "country": "US",
    "kind": "labour",
    "ict": "2026-11-05 20:30",
@@ -109,7 +109,7 @@
    "consensus": null,
    "prior": null,
    "rate": null,
-   "confirmed": true,
+   "confirmed": false,
    "impact": 1
   },
   {
@@ -118,12 +118,36 @@
    "kind": "labour",
    "ict": "2026-11-06 20:30",
    "date": "2026-11-06",
-   "consensus": null,
-   "prior": null,
+   "consensus": "65k; AHE +0.3% m/m, 2.9% y/y",
+   "prior": "29k",
    "rate": null,
    "confirmed": true,
    "impact": 2,
    "required": "us_nfp"
+  },
+  {
+   "name": "US UMich sentiment (Nov prelim)",
+   "country": "US",
+   "kind": "activity",
+   "ict": "2026-11-06 22:00",
+   "date": "2026-11-06",
+   "consensus": "48",
+   "prior": "48",
+   "rate": null,
+   "confirmed": true,
+   "impact": 1
+  },
+  {
+   "name": "BoJ Governor Ueda speech",
+   "country": "JP",
+   "kind": "cb",
+   "ict": "2026-11-06 23:00",
+   "date": "2026-11-06",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": false,
+   "impact": 1
   },
   {
    "name": "US CPI / core CPI (Oct)",
@@ -132,7 +156,7 @@
    "ict": "2026-11-10 20:30",
    "date": "2026-11-10",
    "consensus": null,
-   "prior": null,
+   "prior": "3.7% y/y, +0.6% m/m; core 2.6% y/y, +0.3% m/m",
    "rate": null,
    "confirmed": true,
    "impact": 2,
@@ -166,7 +190,7 @@
    "name": "US Veterans Day (bond market closed)",
    "country": "US",
    "kind": "holiday",
-   "ict": "2026-11-11 21:00",
+   "ict": "2026-11-11 20:00",
    "date": "2026-11-11",
    "consensus": null,
    "prior": null,
@@ -187,13 +211,25 @@
    "impact": 1
   },
   {
+   "name": "US PPI (Oct)",
+   "country": "US",
+   "kind": "inflation",
+   "ict": "2026-11-13 20:30",
+   "date": "2026-11-13",
+   "consensus": null,
+   "prior": "core 5.0% y/y",
+   "rate": null,
+   "confirmed": false,
+   "impact": 1
+  },
+  {
    "name": "Japan Q3 GDP (prelim)",
    "country": "JP",
    "kind": "activity",
    "ict": "2026-11-16 06:50",
    "date": "2026-11-16",
    "consensus": null,
-   "prior": null,
+   "prior": "+0.4% q/q",
    "rate": null,
    "confirmed": false,
    "impact": 1
@@ -209,6 +245,56 @@
    "rate": null,
    "confirmed": false,
    "impact": 1
+  },
+  {
+   "name": "US retail sales (Oct)",
+   "country": "US",
+   "kind": "consumption",
+   "ict": "2026-11-17 20:30",
+   "date": "2026-11-17",
+   "consensus": null,
+   "prior": "+0.8% m/m",
+   "rate": null,
+   "confirmed": false,
+   "impact": 1
+  },
+  {
+   "name": "Japan national CPI (expected 18–24 Nov, unconfirmed)",
+   "country": "JP",
+   "kind": "inflation",
+   "ict": "2026-11-18 06:30",
+   "date": "2026-11-18",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": false,
+   "impact": 1,
+   "required": "jp_cpi",
+   "placeholder": true
+  },
+  {
+   "name": "UK CPI (Oct)",
+   "country": "UK",
+   "kind": "inflation",
+   "ict": "2026-11-18 14:00",
+   "date": "2026-11-18",
+   "consensus": null,
+   "prior": "3.5% y/y; core 2.8%",
+   "rate": null,
+   "confirmed": false,
+   "impact": 1
+  },
+  {
+   "name": "FOMC minutes (Oct 27-28)",
+   "country": "US",
+   "kind": "cb",
+   "ict": "2026-11-19 02:00",
+   "date": "2026-11-19",
+   "consensus": null,
+   "prior": null,
+   "rate": "3.75-4.00%",
+   "confirmed": false,
+   "impact": 1
   }
  ],
  "validation": {
@@ -216,7 +302,8 @@
   "matched": [
    "th_cpi 2026-11-05",
    "us_cpi 2026-11-10",
-   "us_nfp 2026-11-06"
+   "us_nfp 2026-11-06",
+   "jp_cpi 2026-11-18"
   ],
   "inserted": [],
   "pinned": [

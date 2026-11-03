@@ -15,3 +15,7 @@ date,asset,bias,entry,invalidation,target,last_at_call,graded_on,outcome,pnl_pct
 2026-11-03,UST 10Y (%),no trade,,,,4.894,,,,"Midterms, refunding, NFP, CPI stacked; no edge"
 2026-11-03,DXY (ICE fut),no trade,,,,101.645,,,,"Between 101.03 and 102.27-102.38; event-driven, no edge"
 2026-11-03,Brent CO1,no trade,,,,104.77,,,,Headline-driven 7% swings on Iran; stand aside
+2026-11-04,USDJPY,bearish,159.5,160.3,157.1,158.6875,,,,Sell 159.5 into MoF 160 line; no chase here
+2026-11-04,UST 10Y (%),no trade,,,,4.952,,,,"Midterm result, refunding, NFP, CPI stacked; no edge"
+2026-11-04,DXY (ICE fut),no trade,,,,101.72,,,,"Mid-range 101.5-102.4; event-driven, no edge"
+2026-11-04,Brent CO1,no trade,,,,103.6,,,,Iran headline swings 100.8-107.2 intraday; stand aside
