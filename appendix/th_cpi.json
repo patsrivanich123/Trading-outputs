@@ -688,15 +688,15 @@
  },
  "nowcast": {
   "target": "2026-10",
-  "headline_yoy": 3.67,
-  "headline_mm": 0.72,
+  "headline_yoy": 3.55,
+  "headline_mm": 0.61,
   "core_yoy": 1.62,
   "core_mm": 0.15,
   "blocks": {
    "motor_fuel": 5.43,
    "electricity": 0.0,
    "lpg": 0.0,
-   "raw_food": 1.14,
+   "raw_food": 0.5,
    "raw_food_seasonal": 0.59,
    "flood_overlay": 0.55,
    "core": 0.05
@@ -704,7 +704,7 @@
   "contrib_pp": {
    "core": 0.035,
    "energy": 0.485,
-   "rawfood": 0.197
+   "rawfood": 0.086
   },
   "fuel_detail": {
    "diesel": [

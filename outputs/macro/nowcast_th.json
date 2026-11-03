@@ -4,25 +4,26 @@
  "data": {
   "series": "TH CPI headline y/y Oct 2026",
   "target_month": "2026-10",
-  "ours": 3.67,
+  "ours": 3.55,
   "consensus": 3.25,
   "consensus_source": "Bloomberg ECO survey (Pat, desk screenshot 3 Nov 2026)",
   "prior": 2.82,
-  "ours_mm": 0.72,
-  "level": 103.67,
+  "ours_mm": 0.61,
+  "level": 103.55,
   "level_prev": 102.93,
   "level_year_ago": 100.0,
   "delta_1d": null,
-  "driver": "energy +48bp (fuel +5.43% m/m) \u00b7 raw food +20bp \u00b7 core +3bp",
+  "driver": "energy +48bp (fuel +5.43% m/m) \u00b7 raw food +9bp \u00b7 core +3bp",
   "status": "ok",
   "range": {
-   "low": 3.43,
-   "high": 3.9,
-   "note": "low: fuel \u22121.5pp & no flood \u00b7 high: fuel +1.5pp & double flood"
+   "low": 3.31,
+   "high": 3.8,
+   "note": "low: fuel -1.5pp & raw food -0.6pp | high: fuel +1.5pp & raw food +0.6pp (ridge OOS MAE)"
   },
   "inputs_available": [
    "TPSO history (predictor/data/tpso_history.csv)",
    "EPPO fuel daily mirror",
+   "MOC/DIT daily food prices (11 items)",
    "ERC Ft calendar",
    "LPG ceiling"
   ],
@@ -47,10 +48,10 @@
    {
     "name": "Raw food",
     "weight": 17.24,
-    "mm": 1.14,
-    "contrib_bp": 19.7,
+    "mm": 0.5,
+    "contrib_bp": 8.6,
     "status": "partial",
-    "note": "seasonal +0.59% + flood overlay +0.55pp"
+    "note": "observed DIT feed (ridge, 11 items) +0.50%; seasonal was +0.59%"
    },
    {
     "name": "Core (ex raw food & energy)",
@@ -78,8 +79,8 @@
    }
   ],
   "sensitivity": {
-   "low": 3.43,
-   "high": 3.9
+   "low": 3.31,
+   "high": 3.8
   },
   "track": [
    {
@@ -485,7 +486,7 @@
     "backtest_headline": null,
     "backtest_core": null,
     "baseline_headline": null,
-    "predicted_headline": 3.67,
+    "predicted_headline": 3.55,
     "predicted_core": 1.62,
     "predicted_on": "2026-11-03",
     "is_forecast": true
@@ -505,6 +506,6 @@
   "report": "th_cpi_report.html",
   "print_date": null,
   "last_print": "2026-09",
-  "run_at": "2026-11-03T02:47"
+  "run_at": "2026-11-03T04:26"
  }
 }
