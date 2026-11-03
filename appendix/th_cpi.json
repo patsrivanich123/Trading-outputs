@@ -439,7 +439,9 @@
    "n_2024": 33,
    "baseline_mae_2024": 0.403,
    "within_015": 47,
-   "agg_identity": 0.033
+   "agg_identity": 0.033,
+   "naive_mae": 0.582,
+   "naive_mae_2024": 0.461
   },
   "core": {
    "n": 42,
@@ -459,7 +461,10 @@
    "seasonal_within_015": 71,
    "pt_mae": 0.126,
    "pt_within_015": 52,
-   "pt_mae_2024": 0.127
+   "pt_mae_2024": 0.127,
+   "naive_mae": 0.098,
+   "naive_mae_2024": 0.087,
+   "beats_naive_pct": 46
   },
   "fuel": {
    "pass_through": 0.89,
