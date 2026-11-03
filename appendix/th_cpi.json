@@ -408,7 +408,7 @@
    "block": "Core (ex raw food & energy)",
    "last": "2026-09",
    "status": "model",
-   "note": "no external feed; same-month seasonal mean from TPSO history"
+   "note": "no external feed; same-month seasonal median from TPSO history"
   },
   {
    "block": "Consensus",
