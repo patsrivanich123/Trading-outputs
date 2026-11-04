@@ -5,8 +5,8 @@
   "series": "TH CPI headline y/y Oct 2026",
   "target_month": "2026-10",
   "ours": 3.55,
-  "consensus": 3.25,
-  "consensus_source": "Bloomberg ECO survey (Pat, desk screenshot 3 Nov 2026)",
+  "consensus": 3.33,
+  "consensus_source": "Bloomberg ECO survey (Pat, desk screenshot 4 Nov 2026; headline revised up from 3.25 on 3 Nov)",
   "prior": 2.82,
   "ours_mm": 0.61,
   "level": 103.55,
@@ -577,6 +577,6 @@
   "report": "th_cpi_report.html",
   "print_date": null,
   "last_print": "2026-09",
-  "run_at": "2026-11-04T01:10"
+  "run_at": "2026-11-04T02:36"
  }
 }

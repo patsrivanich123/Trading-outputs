@@ -63,20 +63,6 @@
    "impact": 1
   },
   {
-   "name": "Thai CPI headline/core (Oct)",
-   "country": "TH",
-   "kind": "inflation",
-   "ict": "2026-11-05 10:30",
-   "date": "2026-11-05",
-   "consensus": "2.9% y/y (ours 3.67)",
-   "prior": "2.82% y/y",
-   "rate": null,
-   "confirmed": true,
-   "impact": 2,
-   "required": "th_cpi",
-   "pinned_source": "TPSO annual CPI release calendar 2569 (in the Jan-2026 CPI press document, uploads.tpso.go.th/editor/pdf/1770267421_9730fb584f591c6af957.pdf); time 10:30 per TPSO press header; dates can slip by a day — each monthly release restates the next date"
-  },
-  {
    "name": "BoE decision + Monetary Policy Report",
    "country": "UK",
    "kind": "cb",
@@ -111,6 +97,20 @@
    "rate": null,
    "confirmed": false,
    "impact": 1
+  },
+  {
+   "name": "Thai CPI headline/core (Oct)",
+   "country": "TH",
+   "kind": "inflation",
+   "ict": "2026-11-06 09:30",
+   "date": "2026-11-06",
+   "consensus": "2.9% y/y (ours 3.67)",
+   "prior": "2.82% y/y",
+   "rate": null,
+   "confirmed": true,
+   "impact": 2,
+   "required": "th_cpi",
+   "pinned_source": "Bloomberg ECO (Pat screenshot 4 Nov 2026) moved release to Fri 6 Nov 09:30 ICT from TPSO calendar Thu 5 Nov 10:30; not yet confirmed on tpso.go.th"
   },
   {
    "name": "US NFP / Employment Situation (Oct)",
@@ -300,14 +300,14 @@
  "validation": {
   "missing": [],
   "matched": [
-   "th_cpi 2026-11-05",
+   "th_cpi 2026-11-06",
    "us_cpi 2026-11-10",
    "us_nfp 2026-11-06",
    "jp_cpi 2026-11-18"
   ],
   "inserted": [],
   "pinned": [
-   "th_cpi → 2026-11-05 10:30"
+   "th_cpi → 2026-11-06 09:30"
   ]
  }
 }
