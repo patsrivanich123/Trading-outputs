@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-02",
+ "asof": "2026-11-04",
  "source": "macro.th.cpi.appendix (predictor on TPSO history)",
  "history_months": 69,
  "history_range": [
@@ -371,6 +371,52 @@
    "2026-09": 0.63
   }
  },
+ "sources": [
+  {
+   "block": "CPI target, weights, anchors",
+   "last": "2026-09",
+   "rows": 12321,
+   "months": 69,
+   "status": "ok",
+   "note": "TPSO tree through 2026-09 (69 months, 12,321 rows); next print fills 2026-10"
+  },
+  {
+   "block": "Motor fuel",
+   "last": "2026-11-02",
+   "status": "ok",
+   "note": "EPPO daily to 2026-11-02; 2026-10 covered 31/31 days (calendar-day ffill \u2192 monthly mean)"
+  },
+  {
+   "block": "Electricity",
+   "last": "2026-11-03",
+   "status": "ok",
+   "note": "ERC Ft 16.23 satang Sep-Dec 2026 round, avg 3.86 THB/unit (5 Aug resolution); erc.or.th times out from cloud -> confirmed via Thairath / capsolar"
+  },
+  {
+   "block": "LPG / cooking gas",
+   "last": "2026-11-03",
+   "status": "ok",
+   "note": "423 THB/15kg held to 31 Oct (Nation); EPPO LPG retail flat to 2 Nov; November extension not yet announced"
+  },
+  {
+   "block": "Raw food",
+   "last": "2026-10-30",
+   "status": "ok",
+   "note": "DIT daily, 11 items, monthly through 2026-10; all items to 2026-10-30; nowcast uses the observed feed (+0.50% m/m)"
+  },
+  {
+   "block": "Core (ex raw food & energy)",
+   "last": "2026-09",
+   "status": "model",
+   "note": "no external feed; same-month seasonal median from TPSO history"
+  },
+  {
+   "block": "Consensus",
+   "last": "2026-11-03",
+   "status": "ok",
+   "note": "Bloomberg ECO survey (Pat, desk screenshot 3 Nov 2026): headline 3.25 \u00b7 core 1.6"
+  }
+ ],
  "files": {
   "headline": "headline_backtest.png",
   "core": "core_backtest.png",
@@ -385,22 +431,24 @@
  "stats": {
   "headline": {
    "n": 57,
-   "mae": 0.212,
-   "bias": 0.002,
+   "mae": 0.21,
+   "bias": -0.012,
    "worst": 0.979,
-   "baseline_mae": 0.535,
-   "mae_2024": 0.151,
+   "baseline_mae": 0.531,
+   "mae_2024": 0.148,
    "n_2024": 33,
-   "baseline_mae_2024": 0.409,
-   "within_015": 46,
-   "agg_identity": 0.033
+   "baseline_mae_2024": 0.403,
+   "within_015": 47,
+   "agg_identity": 0.033,
+   "naive_mae": 0.582,
+   "naive_mae_2024": 0.461
   },
   "core": {
    "n": 42,
-   "mae": 0.126,
-   "bias": 0.045,
+   "mae": 0.087,
+   "bias": 0.007,
    "seasonal_mae": 0.105,
-   "mae_2024": 0.127,
+   "mae_2024": 0.088,
    "n_2024": 33,
    "seasonal_mae_2024": 0.111,
    "flat_mae": 0.114,
@@ -409,8 +457,14 @@
     -0.379,
     0.017
    ],
-   "within_015": 52,
-   "seasonal_within_015": 71
+   "within_015": 81,
+   "seasonal_within_015": 71,
+   "pt_mae": 0.126,
+   "pt_within_015": 52,
+   "pt_mae_2024": 0.127,
+   "naive_mae": 0.098,
+   "naive_mae_2024": 0.087,
+   "beats_naive_pct": 46
   },
   "fuel": {
    "pass_through": 0.89,
@@ -688,23 +742,24 @@
  },
  "nowcast": {
   "target": "2026-10",
-  "headline_yoy": 3.67,
-  "headline_mm": 0.72,
-  "core_yoy": 1.62,
-  "core_mm": 0.15,
+  "headline_yoy": 3.55,
+  "headline_mm": 0.61,
+  "core_yoy": 1.51,
+  "core_mm": 0.05,
   "blocks": {
    "motor_fuel": 5.43,
    "electricity": 0.0,
    "lpg": 0.0,
-   "raw_food": 1.14,
+   "raw_food": 0.5,
    "raw_food_seasonal": 0.59,
    "flood_overlay": 0.55,
+   "raw_food_observed": 0.5,
    "core": 0.05
   },
   "contrib_pp": {
    "core": 0.035,
    "energy": 0.485,
-   "rawfood": 0.197
+   "rawfood": 0.086
   },
   "fuel_detail": {
    "diesel": [
