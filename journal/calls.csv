@@ -22,3 +22,4 @@ date,asset,bias,entry,invalidation,target,last_at_call,graded_on,outcome,pnl_pct
 2026-11-04,DXY (ICE fut),no trade,,,,101.72,,,,"Mid-range 101.5-102.4; event-driven, no edge"
 2026-11-04,Brent CO1,no trade,,,,103.6,,,,Iran headline swings 100.8-107.2 intraday; stand aside
 2026-11-04,US NFP Oct-26 (k),no trade,,,95,29,,,,"No edge: NFP model OOS MAE 87k vs 3m-avg 92k (since 2023 worse: 87 vs 79). Model +95k vs cons +65k, range +8..+182k. Pre-ADP; print Fri 6 Nov 20:30 ICT"
+2026-11-04,US UR Oct-26 (%),no trade,,,4.2,4.2,,,,"No edge: UR model ~ no change OOS (MAE 0.103 vs 0.104, n=130). Nowcast 4.17 unrounded; P(4.1/4.2/4.3)=26/30/18%. Print Fri 6 Nov 20:30 ICT"

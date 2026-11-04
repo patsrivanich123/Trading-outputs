@@ -1,0 +1,60 @@
+{
+ "asof": "2026-11-04",
+ "source": "macro.us.ur.nowcast (FRED/ALFRED)",
+ "data": {
+  "series": "US unemployment rate Oct 2026",
+  "target_month": "2026-10",
+  "ours": 4.17,
+  "ours_rounded": 4.2,
+  "consensus": null,
+  "prior": 4.2,
+  "prior_unrounded": 4.175,
+  "probs": {
+   "3.9": 0.038,
+   "4.0": 0.133,
+   "4.1": 0.264,
+   "4.2": 0.295,
+   "4.3": 0.184,
+   "4.4": 0.065,
+   "4.5": 0.013
+  },
+  "call": "no trade",
+  "delta_1d": null,
+  "status": "ok",
+  "driver": "d_cc -11.000 \u00b7 d_iur +0.000 \u00b7 d_ic4 -6.000 \u00b7 eps -0.043 \u00b7 d_lfpr +0.200",
+  "coefs": {
+   "d_cc": 0.00054,
+   "d_iur": -0.24885,
+   "d_ic4": 0.00072,
+   "eps": -0.06117,
+   "d_lfpr": 0.00846
+  },
+  "intercept": 0.0,
+  "backtest": {
+   "n": 130,
+   "mae": 0.103,
+   "mae_nochange": 0.104,
+   "sigma": 0.128,
+   "hit_rounded": 31,
+   "hit_rounded_nochange": 29,
+   "mae_2023": 0.101,
+   "mae_nochange_2023": 0.102,
+   "beats_nochange_pct": 51
+  },
+  "has_skill": false,
+  "inputs_used": [
+   "d_cc",
+   "d_iur",
+   "d_ic4",
+   "eps",
+   "d_lfpr"
+  ],
+  "inputs_missing": [
+   "d_ld",
+   "consensus"
+  ],
+  "chart": "appendix/us_ur/backtest.png",
+  "run_at": "2026-11-04T06:57",
+  "caveat": "claims series are current vintage (seasonal factors revised annually); u and LFPR are true first prints (ALFRED)"
+ }
+}
