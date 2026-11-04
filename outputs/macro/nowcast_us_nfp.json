@@ -1,0 +1,196 @@
+{
+ "asof": "2026-11-04",
+ "source": "macro.us.nfp.nowcast (FRED)",
+ "data": {
+  "series": "US nonfarm payrolls Oct 2026 (k, m/m)",
+  "target_month": "2026-10",
+  "ours": 95.0,
+  "consensus": 65,
+  "consensus_source": "calendar run 4 Nov (65k; AHE +0.3% m/m) \u2014 confirm vs BBG ECO",
+  "prior": 29.0,
+  "mom3": 51.0,
+  "delta_1d": null,
+  "driver": "d_ic -3k \u00b7 d_cc -11k \u00b7 mom3 +51k",
+  "status": "ok",
+  "inputs_used": [
+   "d_ic",
+   "d_cc",
+   "mom3"
+  ],
+  "inputs_missing": [
+   "adp"
+  ],
+  "range": {
+   "low": 8.0,
+   "high": 182.0
+  },
+  "backtest": {
+   "with_adp": {
+    "n": 95,
+    "mae_model": 87.5,
+    "mae_mom3": 91.6,
+    "mae_last": 120.8,
+    "mae_model_2023": 88.8,
+    "mae_mom3_2023": 79.2
+   },
+   "no_adp": {
+    "n": 95,
+    "mae_model": 87.2,
+    "mae_mom3": 91.6,
+    "mae_last": 120.8,
+    "mae_model_2023": 87.0,
+    "mae_mom3_2023": 79.2
+   }
+  },
+  "has_skill": false,
+  "verdict": "NO SKILL: model does not beat 3m-avg persistence OOS \u2014 treat as no edge",
+  "caveat": "FRED = revised payrolls/ADP, not first prints; real-time skill is lower. Consensus from BBG ECO (desk).",
+  "track": [
+   {
+    "month": "2024-10",
+    "actual": 33.0,
+    "model": 67.0,
+    "mom3": 72.0
+   },
+   {
+    "month": "2024-11",
+    "actual": 134.0,
+    "model": 176.0,
+    "mom3": 66.0
+   },
+   {
+    "month": "2024-12",
+    "actual": 237.0,
+    "model": 158.0,
+    "mom3": 107.0
+   },
+   {
+    "month": "2025-01",
+    "actual": -48.0,
+    "model": 179.0,
+    "mom3": 135.0
+   },
+   {
+    "month": "2025-02",
+    "actual": 42.0,
+    "model": 126.0,
+    "mom3": 108.0
+   },
+   {
+    "month": "2025-03",
+    "actual": 67.0,
+    "model": 90.0,
+    "mom3": 77.0
+   },
+   {
+    "month": "2025-04",
+    "actual": 108.0,
+    "model": 100.0,
+    "mom3": 20.0
+   },
+   {
+    "month": "2025-05",
+    "actual": 13.0,
+    "model": 63.0,
+    "mom3": 72.0
+   },
+   {
+    "month": "2025-06",
+    "actual": -20.0,
+    "model": 60.0,
+    "mom3": 63.0
+   },
+   {
+    "month": "2025-07",
+    "actual": 64.0,
+    "model": 154.0,
+    "mom3": 34.0
+   },
+   {
+    "month": "2025-08",
+    "actual": -70.0,
+    "model": 77.0,
+    "mom3": 19.0
+   },
+   {
+    "month": "2025-09",
+    "actual": 76.0,
+    "model": 98.0,
+    "mom3": -9.0
+   },
+   {
+    "month": "2025-10",
+    "actual": -140.0,
+    "model": 74.0,
+    "mom3": 23.0
+   },
+   {
+    "month": "2025-11",
+    "actual": 41.0,
+    "model": 80.0,
+    "mom3": -45.0
+   },
+   {
+    "month": "2025-12",
+    "actual": -17.0,
+    "model": 74.0,
+    "mom3": -8.0
+   },
+   {
+    "month": "2026-01",
+    "actual": 160.0,
+    "model": 94.0,
+    "mom3": -39.0
+   },
+   {
+    "month": "2026-02",
+    "actual": -156.0,
+    "model": 104.0,
+    "mom3": 61.0
+   },
+   {
+    "month": "2026-03",
+    "actual": 214.0,
+    "model": 74.0,
+    "mom3": -4.0
+   },
+   {
+    "month": "2026-04",
+    "actual": 148.0,
+    "model": 113.0,
+    "mom3": 73.0
+   },
+   {
+    "month": "2026-05",
+    "actual": 63.0,
+    "model": 123.0,
+    "mom3": 69.0
+   },
+   {
+    "month": "2026-06",
+    "actual": 31.0,
+    "model": 104.0,
+    "mom3": 142.0
+   },
+   {
+    "month": "2026-07",
+    "actual": -10.0,
+    "model": 179.0,
+    "mom3": 81.0
+   },
+   {
+    "month": "2026-08",
+    "actual": 133.0,
+    "model": 51.0,
+    "mom3": 28.0
+   },
+   {
+    "month": "2026-09",
+    "actual": 29.0,
+    "model": 136.0,
+    "mom3": 51.0
+   }
+  ],
+  "run_at": "2026-11-04T02:57"
+ }
+}
