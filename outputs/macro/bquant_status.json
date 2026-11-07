@@ -1,0 +1,54 @@
+{
+ "asof": "2026-11-05",
+ "source": "tools.bquant",
+ "data": {
+  "jobs": [
+   {
+    "job": "us_ur_inputs",
+    "consumer": "macro.us.ur.nowcast",
+    "cadence": "monthly, before the Employment Situation",
+    "why": "UR consensus history (score vs consensus) + Conference Board labour differential (the one input that may beat no-change)",
+    "asof": null,
+    "age_days": null,
+    "last_month": null,
+    "columns": [],
+    "missing_columns": [
+     "consensus",
+     "cb_plentiful",
+     "cb_hard"
+    ],
+    "status": "missing"
+   },
+   {
+    "job": "us_nfp_consensus",
+    "consumer": "macro.us.nfp.nowcast",
+    "cadence": "monthly, before NFP",
+    "why": "NFP survey median history -> v1 model targets the miss vs consensus",
+    "asof": null,
+    "age_days": null,
+    "last_month": null,
+    "columns": [],
+    "missing_columns": [
+     "consensus"
+    ],
+    "status": "missing"
+   },
+   {
+    "job": "th_cpi_consensus",
+    "consumer": "macro.th.cpi.nowcast",
+    "cadence": "monthly, before the TPSO print",
+    "why": "Thai CPI consensus history -> grade our nowcast vs the street, not just vs actual",
+    "asof": null,
+    "age_days": null,
+    "last_month": null,
+    "columns": [],
+    "missing_columns": [
+     "headline",
+     "core"
+    ],
+    "status": "missing"
+   }
+  ],
+  "how": "BQuant: import bquant_lab as ml; ml.run_all() -> upload CSVs to data/bquant/"
+ }
+}

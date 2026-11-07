@@ -1,17 +1,17 @@
 {
- "asof": "2026-11-04",
+ "asof": "2026-11-07",
  "source": "macro.th.cpi.appendix (predictor on TPSO history)",
- "history_months": 69,
+ "history_months": 70,
  "history_range": [
   "2021-01",
-  "2026-09"
+  "2026-10"
  ],
  "weights": {
-  "core": 69.67,
-  "energy": 13.09,
-  "rawfood": 17.24,
-  "motor_fuel": 8.93,
-  "elec": 3.68,
+  "core": 69.1,
+  "energy": 13.42,
+  "rawfood": 17.48,
+  "motor_fuel": 9.3,
+  "elec": 3.65,
   "cookfuel": 0.63
  },
  "weights_history": {
@@ -84,7 +84,8 @@
    "2026-06": 69.52,
    "2026-07": 70.09,
    "2026-08": 69.83,
-   "2026-09": 69.67
+   "2026-09": 69.67,
+   "2026-10": 69.1
   },
   "raw_food": {
    "2021-01": 20.83,
@@ -155,7 +156,8 @@
    "2026-06": 16.94,
    "2026-07": 17.15,
    "2026-08": 17.23,
-   "2026-09": 17.24
+   "2026-09": 17.24,
+   "2026-10": 17.48
   },
   "motor_fuel": {
    "2021-01": 7.46,
@@ -226,7 +228,8 @@
    "2026-06": 9.07,
    "2026-07": 8.25,
    "2026-08": 8.45,
-   "2026-09": 8.93
+   "2026-09": 8.93,
+   "2026-10": 9.3
   },
   "electricity": {
    "2021-01": 3.82,
@@ -297,7 +300,8 @@
    "2026-06": 3.99,
    "2026-07": 4.02,
    "2026-08": 4.0,
-   "2026-09": 3.68
+   "2026-09": 3.68,
+   "2026-10": 3.65
   },
   "lpg": {
    "2021-01": 0.56,
@@ -368,53 +372,54 @@
    "2026-06": 0.63,
    "2026-07": 0.63,
    "2026-08": 0.63,
-   "2026-09": 0.63
+   "2026-09": 0.63,
+   "2026-10": 0.63
   }
  },
  "sources": [
   {
    "block": "CPI target, weights, anchors",
-   "last": "2026-09",
-   "rows": 12321,
-   "months": 69,
+   "last": "2026-10",
+   "rows": 12496,
+   "months": 70,
    "status": "ok",
-   "note": "TPSO tree through 2026-09 (69 months, 12,321 rows); next print fills 2026-10"
+   "note": "TPSO tree through 2026-10 (70 months, 12,496 rows); next print fills 2026-11"
   },
   {
    "block": "Motor fuel",
-   "last": "2026-11-02",
-   "status": "ok",
-   "note": "EPPO daily to 2026-11-02; 2026-10 covered 31/31 days (calendar-day ffill \u2192 monthly mean)"
+   "last": "2026-11-06",
+   "status": "partial",
+   "note": "EPPO daily to 2026-11-06; 2026-11 covered 6 days (calendar-day ffill \u2192 monthly mean)"
   },
   {
    "block": "Electricity",
-   "last": "2026-11-03",
+   "last": "2026-11-07",
    "status": "ok",
    "note": "ERC Ft 16.23 satang Sep-Dec 2026 round, avg 3.86 THB/unit (5 Aug resolution); erc.or.th times out from cloud -> confirmed via Thairath / capsolar"
   },
   {
    "block": "LPG / cooking gas",
-   "last": "2026-11-03",
+   "last": "2026-11-07",
    "status": "ok",
-   "note": "423 THB/15kg held to 31 Oct (Nation); EPPO LPG retail flat to 2 Nov; November extension not yet announced"
+   "note": "Oct CPI LPG +0.24% m/m (not 0 as assumed). Nov: ceiling status after 31 Oct UNCONFIRMED; EPPO retail used when available"
   },
   {
    "block": "Raw food",
    "last": "2026-10-30",
-   "status": "ok",
-   "note": "DIT daily, 11 items, monthly through 2026-10; all items to 2026-10-30; nowcast uses the observed feed (+0.50% m/m)"
+   "status": "partial",
+   "note": "DIT daily, 11 items, monthly through 2026-10; all items to 2026-10-30; nowcast uses seasonal + flood overlay"
   },
   {
    "block": "Core (ex raw food & energy)",
-   "last": "2026-09",
+   "last": "2026-10",
    "status": "model",
    "note": "no external feed; same-month seasonal median from TPSO history"
   },
   {
    "block": "Consensus",
-   "last": "2026-11-04",
-   "status": "ok",
-   "note": "Bloomberg ECO survey (Pat, desk screenshot 4 Nov 2026; headline revised up from 3.25 on 3 Nov): headline 3.33 \u00b7 core 1.6"
+   "last": "\u2014",
+   "status": "weak",
+   "note": "pending: BBG ECO: headline None \u00b7 core None"
   }
  ],
  "files": {
@@ -430,47 +435,47 @@
  },
  "stats": {
   "headline": {
-   "n": 57,
-   "mae": 0.21,
-   "bias": -0.012,
+   "n": 58,
+   "mae": 0.212,
+   "bias": -0.017,
    "worst": 0.979,
-   "baseline_mae": 0.531,
-   "mae_2024": 0.148,
-   "n_2024": 33,
-   "baseline_mae_2024": 0.403,
+   "baseline_mae": 0.537,
+   "mae_2024": 0.154,
+   "n_2024": 34,
+   "baseline_mae_2024": 0.416,
    "within_015": 47,
    "agg_identity": 0.033,
-   "naive_mae": 0.582,
-   "naive_mae_2024": 0.461
+   "naive_mae": 0.591,
+   "naive_mae_2024": 0.48
   },
   "core": {
-   "n": 42,
+   "n": 43,
    "mae": 0.087,
-   "bias": 0.007,
-   "seasonal_mae": 0.105,
+   "bias": 0.005,
+   "seasonal_mae": 0.104,
    "mae_2024": 0.088,
-   "n_2024": 33,
-   "seasonal_mae_2024": 0.111,
-   "flat_mae": 0.114,
+   "n_2024": 34,
+   "seasonal_mae_2024": 0.11,
+   "flat_mae": 0.112,
    "beta": [
-    0.144,
-    -0.379,
+    0.143,
+    -0.376,
     0.017
    ],
    "within_015": 81,
-   "seasonal_within_015": 71,
-   "pt_mae": 0.126,
-   "pt_within_015": 52,
-   "pt_mae_2024": 0.127,
-   "naive_mae": 0.098,
-   "naive_mae_2024": 0.087,
-   "beats_naive_pct": 46
+   "seasonal_within_015": 72,
+   "pt_mae": 0.124,
+   "pt_within_015": 53,
+   "pt_mae_2024": 0.124,
+   "naive_mae": 0.097,
+   "naive_mae_2024": 0.086,
+   "beats_naive_pct": 48
   },
   "fuel": {
-   "pass_through": 0.89,
+   "pass_through": 0.891,
    "r2": 0.997,
-   "n": 20,
-   "mae": 0.271,
+   "n": 21,
+   "mae": 0.27,
    "basket_weights": {
     "diesel_b7": 0.47,
     "g95": 0.35,
@@ -479,38 +484,38 @@
   },
   "electricity": {
    "round_share_pct": 52,
-   "intra_round_abs_mean": 0.744,
-   "n": 45
+   "intra_round_abs_mean": 0.722,
+   "n": 46
   },
   "rawfood_ridge": {
-   "oos_r2": 0.463,
-   "n_oos": 10,
+   "oos_r2": 0.331,
+   "n_oos": 11,
    "items": 11,
    "weights": {
-    "eggs": 0.424,
-    "pork": 0.322,
-    "morning_glory": 0.167,
-    "rice": 0.136,
-    "kale": 0.113,
-    "tomato": -0.085,
-    "cabbage": 0.075,
-    "mackerel": 0.057,
-    "banana": -0.017,
-    "orange": -0.016,
-    "chicken": 0.005
+    "eggs": 0.512,
+    "morning_glory": 0.33,
+    "kale": 0.275,
+    "pork": 0.215,
+    "tomato": -0.151,
+    "rice": 0.133,
+    "orange": -0.098,
+    "chicken": 0.048,
+    "banana": 0.023,
+    "mackerel": 0.023,
+    "cabbage": 0.018
    }
   },
   "rawfood": {
-   "seasonal_mae": 0.787,
-   "moc_mae": 0.611,
-   "std": 1.012,
-   "n": 33
+   "seasonal_mae": 0.815,
+   "moc_mae": 0.734,
+   "std": 1.069,
+   "n": 34
   },
   "core_components": {
-   "autocorr1": 0.212,
-   "std": 0.184,
-   "w_prepared": 16.95,
-   "w_rent": 15.12
+   "autocorr1": 0.211,
+   "std": 0.183,
+   "w_prepared": 16.80390826233406,
+   "w_rent": 14.980693481276004
   },
   "weights_model": {
    "fuel": [
@@ -591,205 +596,224 @@
      "pass_through": 0.89,
      "r2": 0.997,
      "headline_weight": 0.0811
+    },
+    {
+     "ym": "2026-10",
+     "pass_through": 0.891,
+     "r2": 0.997,
+     "headline_weight": 0.0826
     }
    ],
    "food": {
     "2025-11": {
-     "pork": 0.099,
-     "mackerel": 0.097,
+     "pork": 0.111,
+     "mackerel": 0.113,
      "chicken": -0.001,
-     "eggs": 0.137,
-     "rice": 0.191,
-     "kale": 0.046,
-     "morning_glory": 0.129,
-     "tomato": -0.12,
-     "cabbage": -0.001,
-     "banana": -0.059,
-     "orange": -0.032
+     "eggs": 0.118,
+     "rice": 0.186,
+     "kale": 0.033,
+     "morning_glory": 0.142,
+     "tomato": -0.122,
+     "cabbage": 0.006,
+     "banana": -0.072,
+     "orange": -0.03
     },
     "2025-12": {
-     "pork": 0.138,
-     "mackerel": 0.08,
+     "pork": 0.146,
+     "mackerel": 0.088,
      "chicken": -0.001,
-     "eggs": 0.183,
-     "rice": 0.201,
-     "kale": 0.023,
-     "morning_glory": 0.116,
-     "tomato": -0.118,
-     "cabbage": 0.049,
-     "banana": -0.066,
-     "orange": -0.034
+     "eggs": 0.168,
+     "rice": 0.198,
+     "kale": 0.016,
+     "morning_glory": 0.129,
+     "tomato": -0.12,
+     "cabbage": 0.05,
+     "banana": -0.075,
+     "orange": -0.036
     },
     "2026-01": {
-     "pork": 0.196,
-     "mackerel": 0.087,
+     "pork": 0.212,
+     "mackerel": 0.094,
      "chicken": -0.001,
-     "eggs": 0.214,
-     "rice": 0.162,
-     "kale": 0.028,
-     "morning_glory": 0.113,
+     "eggs": 0.195,
+     "rice": 0.163,
+     "kale": 0.014,
+     "morning_glory": 0.123,
      "tomato": -0.168,
-     "cabbage": 0.217,
-     "banana": -0.042,
-     "orange": -0.046
+     "cabbage": 0.219,
+     "banana": -0.052,
+     "orange": -0.045
     },
     "2026-02": {
-     "pork": 0.247,
-     "mackerel": 0.216,
+     "pork": 0.279,
+     "mackerel": 0.222,
      "chicken": -0.002,
-     "eggs": 0.244,
-     "rice": 0.124,
-     "kale": -0.019,
-     "morning_glory": 0.154,
-     "tomato": -0.181,
-     "cabbage": 0.183,
-     "banana": -0.079,
-     "orange": -0.04
+     "eggs": 0.228,
+     "rice": 0.123,
+     "kale": -0.041,
+     "morning_glory": 0.165,
+     "tomato": -0.176,
+     "cabbage": 0.184,
+     "banana": -0.09,
+     "orange": -0.034
     },
     "2026-03": {
-     "pork": 0.282,
-     "mackerel": 0.166,
-     "chicken": 0.138,
-     "eggs": 0.306,
-     "rice": 0.121,
-     "kale": 0.043,
-     "morning_glory": 0.166,
-     "tomato": -0.159,
-     "cabbage": 0.153,
-     "banana": -0.051,
-     "orange": -0.035
+     "pork": 0.314,
+     "mackerel": 0.176,
+     "chicken": 0.154,
+     "eggs": 0.286,
+     "rice": 0.123,
+     "kale": 0.026,
+     "morning_glory": 0.182,
+     "tomato": -0.155,
+     "cabbage": 0.154,
+     "banana": -0.065,
+     "orange": -0.03
     },
     "2026-04": {
-     "pork": 0.315,
-     "mackerel": 0.132,
-     "chicken": 0.209,
-     "eggs": 0.343,
-     "rice": 0.14,
-     "kale": 0.041,
-     "morning_glory": 0.165,
-     "tomato": -0.142,
-     "cabbage": 0.187,
-     "banana": -0.028,
-     "orange": -0.009
-    },
-    "2026-05": {
-     "pork": 0.292,
-     "mackerel": 0.108,
-     "chicken": 0.034,
-     "eggs": 0.395,
-     "rice": 0.165,
-     "kale": 0.046,
-     "morning_glory": 0.174,
-     "tomato": -0.15,
-     "cabbage": 0.186,
-     "banana": -0.01,
+     "pork": 0.33,
+     "mackerel": 0.133,
+     "chicken": 0.218,
+     "eggs": 0.332,
+     "rice": 0.142,
+     "kale": 0.039,
+     "morning_glory": 0.191,
+     "tomato": -0.143,
+     "cabbage": 0.185,
+     "banana": -0.037,
      "orange": -0.018
     },
+    "2026-05": {
+     "pork": 0.324,
+     "mackerel": 0.117,
+     "chicken": 0.035,
+     "eggs": 0.375,
+     "rice": 0.167,
+     "kale": 0.03,
+     "morning_glory": 0.191,
+     "tomato": -0.146,
+     "cabbage": 0.187,
+     "banana": -0.024,
+     "orange": -0.012
+    },
     "2026-06": {
-     "pork": 0.325,
-     "mackerel": 0.149,
-     "chicken": 0.018,
-     "eggs": 0.388,
-     "rice": 0.144,
-     "kale": 0.063,
-     "morning_glory": 0.177,
-     "tomato": -0.141,
+     "pork": 0.357,
+     "mackerel": 0.157,
+     "chicken": 0.02,
+     "eggs": 0.368,
+     "rice": 0.147,
+     "kale": 0.051,
+     "morning_glory": 0.198,
+     "tomato": -0.136,
      "cabbage": 0.093,
-     "banana": -0.035,
-     "orange": 0.02
+     "banana": -0.048,
+     "orange": 0.025
     },
     "2026-07": {
-     "pork": 0.336,
-     "mackerel": 0.064,
-     "chicken": -0.0,
-     "eggs": 0.423,
-     "rice": 0.141,
-     "kale": 0.107,
-     "morning_glory": 0.172,
-     "tomato": -0.085,
-     "cabbage": 0.079,
-     "banana": -0.014,
-     "orange": 0.001
+     "pork": 0.369,
+     "mackerel": 0.067,
+     "chicken": 0.003,
+     "eggs": 0.403,
+     "rice": 0.147,
+     "kale": 0.099,
+     "morning_glory": 0.193,
+     "tomato": -0.075,
+     "cabbage": 0.08,
+     "banana": -0.027,
+     "orange": 0.005
     },
     "2026-08": {
-     "pork": 0.329,
-     "mackerel": 0.068,
-     "chicken": 0.003,
-     "eggs": 0.42,
-     "rice": 0.14,
-     "kale": 0.107,
-     "morning_glory": 0.167,
-     "tomato": -0.085,
-     "cabbage": 0.074,
-     "banana": -0.018,
-     "orange": -0.004
+     "pork": 0.355,
+     "mackerel": 0.067,
+     "chicken": 0.007,
+     "eggs": 0.408,
+     "rice": 0.146,
+     "kale": 0.111,
+     "morning_glory": 0.2,
+     "tomato": -0.081,
+     "cabbage": 0.073,
+     "banana": -0.025,
+     "orange": -0.003
     },
     "2026-09": {
-     "pork": 0.322,
-     "mackerel": 0.057,
-     "chicken": 0.005,
-     "eggs": 0.424,
-     "rice": 0.136,
-     "kale": 0.113,
-     "morning_glory": 0.167,
-     "tomato": -0.085,
-     "cabbage": 0.075,
-     "banana": -0.017,
+     "pork": 0.346,
+     "mackerel": 0.056,
+     "chicken": 0.01,
+     "eggs": 0.413,
+     "rice": 0.143,
+     "kale": 0.12,
+     "morning_glory": 0.202,
+     "tomato": -0.081,
+     "cabbage": 0.074,
+     "banana": -0.023,
      "orange": -0.016
+    },
+    "2026-10": {
+     "pork": 0.215,
+     "mackerel": 0.023,
+     "chicken": 0.048,
+     "eggs": 0.512,
+     "rice": 0.133,
+     "kale": 0.275,
+     "morning_glory": 0.33,
+     "tomato": -0.151,
+     "cabbage": 0.018,
+     "banana": 0.023,
+     "orange": -0.098
     }
    }
   }
  },
  "nowcast": {
-  "target": "2026-10",
-  "headline_yoy": 3.55,
-  "headline_mm": 0.61,
-  "core_yoy": 1.51,
-  "core_mm": 0.05,
+  "target": "2026-11",
+  "headline_yoy": 3.6,
+  "headline_mm": -0.14,
+  "core_yoy": 1.54,
+  "core_mm": 0.1,
   "blocks": {
-   "motor_fuel": 5.43,
+   "motor_fuel": -1.83,
    "electricity": 0.0,
    "lpg": 0.0,
-   "raw_food": 0.5,
-   "raw_food_seasonal": 0.59,
-   "flood_overlay": 0.55,
-   "raw_food_observed": 0.5,
-   "core": 0.05
+   "raw_food": -0.2,
+   "raw_food_seasonal": -0.2,
+   "flood_overlay": 0.0,
+   "raw_food_observed": null,
+   "core": 0.1
   },
   "contrib_pp": {
-   "core": 0.035,
-   "energy": 0.485,
-   "rawfood": 0.086
+   "core": 0.069,
+   "energy": -0.171,
+   "rawfood": -0.036
   },
   "fuel_detail": {
    "diesel": [
-    40.26,
     42.84,
-    6.41
+    42.41,
+    -0.99
    ],
    "g95": [
-    39.31,
     41.39,
-    5.28
+    41.14,
+    -0.6
    ],
    "e20": [
-    34.31,
     35.38,
-    3.13
+    33.1,
+    -6.45
    ]
   }
  },
  "food_weights": {
-  "eggs": 0.424,
-  "pork": 0.322,
-  "morning_glory": 0.167,
-  "rice": 0.136,
-  "kale": 0.113,
-  "tomato": -0.085,
-  "cabbage": 0.075,
-  "mackerel": 0.057,
-  "banana": -0.017,
-  "orange": -0.016,
-  "chicken": 0.005
+  "eggs": 0.512,
+  "morning_glory": 0.33,
+  "kale": 0.275,
+  "pork": 0.215,
+  "tomato": -0.151,
+  "rice": 0.133,
+  "orange": -0.098,
+  "chicken": 0.048,
+  "banana": 0.023,
+  "mackerel": 0.023,
+  "cabbage": 0.018
  }
 }

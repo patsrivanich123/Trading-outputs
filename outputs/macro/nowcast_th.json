@@ -1,24 +1,24 @@
 {
- "asof": "2026-11-04",
+ "asof": "2026-11-07",
  "source": "macro.th.cpi.predictor",
  "data": {
-  "series": "TH CPI headline y/y Oct 2026",
-  "target_month": "2026-10",
-  "ours": 3.55,
-  "consensus": 3.33,
-  "consensus_source": "Bloomberg ECO survey (Pat, desk screenshot 4 Nov 2026; headline revised up from 3.25 on 3 Nov)",
-  "prior": 2.82,
-  "ours_mm": 0.61,
-  "level": 103.55,
-  "level_prev": 102.93,
-  "level_year_ago": 100.0,
+  "series": "TH CPI headline y/y Nov 2026",
+  "target_month": "2026-11",
+  "ours": 3.6,
+  "consensus": null,
+  "consensus_source": "pending: BBG ECO",
+  "prior": 3.9,
+  "ours_mm": -0.14,
+  "level": 103.76,
+  "level_prev": 103.9,
+  "level_year_ago": 100.15,
   "delta_1d": null,
-  "driver": "energy +48bp (fuel +5.43% m/m) \u00b7 raw food +9bp \u00b7 core +3bp",
+  "driver": "energy -17bp (fuel -1.83% m/m) \u00b7 raw food -4bp \u00b7 core +7bp",
   "status": "ok",
   "range": {
-   "low": 3.31,
-   "high": 3.8,
-   "note": "low: fuel -1.5pp & raw food -0.6pp | high: fuel +1.5pp & raw food +0.6pp (ridge OOS MAE)"
+   "low": 3.46,
+   "high": 3.95,
+   "note": "low: fuel -1.5pp & no flood | high: fuel +1.5pp & double flood"
   },
   "inputs_available": [
    "TPSO history (predictor/data/tpso_history.csv)",
@@ -29,41 +29,41 @@
   ],
   "inputs_missing": [],
   "core": {
-   "series": "TH core CPI y/y Oct 2026",
-   "ours": 1.51,
-   "consensus": 1.6,
-   "prior": 1.5,
-   "ours_mm": 0.05,
-   "note": "core m/m = same-month seasonal median (OOS MAE 0.087pp y/y); old pass-through rule would give 1.62"
+   "series": "TH core CPI y/y Nov 2026",
+   "ours": 1.54,
+   "consensus": null,
+   "prior": 1.58,
+   "ours_mm": 0.1,
+   "note": "core m/m = same-month seasonal median (OOS MAE 0.087pp y/y); old pass-through rule would give 1.64"
   },
   "components": [
    {
     "name": "Motor fuel",
-    "weight": 8.93,
-    "mm": 5.43,
-    "contrib_bp": 48.5,
+    "weight": 9.3,
+    "mm": -1.83,
+    "contrib_bp": -17.1,
     "status": "ok",
-    "note": "EPPO daily pump prices, monthly mean; diesel 40.26\u219242.84 \u00b7 g95 39.31\u219241.39 \u00b7 e20 34.31\u219235.38"
+    "note": "EPPO daily pump prices, monthly mean; diesel 42.84\u219242.41 \u00b7 g95 41.39\u219241.14 \u00b7 e20 35.38\u219233.10"
    },
    {
     "name": "Raw food",
-    "weight": 17.24,
-    "mm": 0.5,
-    "contrib_bp": 8.6,
+    "weight": 17.48,
+    "mm": -0.2,
+    "contrib_bp": -3.6,
     "status": "partial",
-    "note": "observed DIT feed (ridge, 11 items) +0.50%; seasonal was +0.59%"
+    "note": "seasonal -0.20% + flood overlay +0.00pp"
    },
    {
     "name": "Core (ex raw food & energy)",
-    "weight": 69.67,
-    "mm": 0.05,
-    "contrib_bp": 3.5,
+    "weight": 69.1,
+    "mm": 0.1,
+    "contrib_bp": 6.9,
     "status": "ok",
     "note": "same-month seasonal median"
    },
    {
     "name": "Electricity",
-    "weight": 3.68,
+    "weight": 3.65,
     "mm": 0.0,
     "contrib_bp": 0.0,
     "status": "ok",
@@ -79,8 +79,8 @@
    }
   ],
   "sensitivity": {
-   "low": 3.31,
-   "high": 3.8
+   "low": 3.46,
+   "high": 3.95
   },
   "track": [
    {
@@ -547,28 +547,42 @@
    },
    {
     "month": "2026-10",
-    "actual_headline": null,
-    "actual_core": null,
+    "actual_headline": 3.9,
+    "actual_core": 1.58,
     "naive_headline": 2.82,
     "naive_core": 1.5,
+    "backtest_headline": 3.56,
+    "backtest_core": 1.51,
+    "baseline_headline": 3.05,
+    "predicted_headline": 3.55,
+    "predicted_core": 1.51,
+    "predicted_on": null,
+    "is_forecast": false
+   },
+   {
+    "month": "2026-11",
+    "actual_headline": null,
+    "actual_core": null,
+    "naive_headline": 3.9,
+    "naive_core": 1.58,
     "backtest_headline": null,
     "backtest_core": null,
     "baseline_headline": null,
-    "predicted_headline": 3.55,
-    "predicted_core": 1.51,
-    "predicted_on": "2026-11-04",
+    "predicted_headline": 3.6,
+    "predicted_core": 1.54,
+    "predicted_on": "2026-11-07",
     "is_forecast": true
    }
   ],
   "backtest_stats": {
-   "n": 57,
-   "mae_headline": 0.21,
-   "bias_headline": -0.012,
+   "n": 58,
+   "mae_headline": 0.212,
+   "bias_headline": -0.017,
    "mae_core": 0.087,
-   "bias_core": 0.007,
+   "bias_core": 0.005,
    "status": "ok",
-   "baseline_mae_headline": 0.531,
-   "naive_mae_headline": 0.59,
+   "baseline_mae_headline": 0.537,
+   "naive_mae_headline": 0.599,
    "naive_mae_core": 0.097,
    "core_has_skill": false,
    "agg_identity_mean_abs_resid": 0.033
@@ -576,7 +590,7 @@
   "method": "Pat's CPI predictor (macro/th/cpi/predictor): weight-exact TPSO blocks; energy bottom-up from EPPO/ERC/LPG; core & raw food seasonal; see predictor/METHODOLOGY.md",
   "report": "th_cpi_report.html",
   "print_date": null,
-  "last_print": "2026-09",
-  "run_at": "2026-11-04T02:36"
+  "last_print": "2026-10",
+  "run_at": "2026-11-07T11:28"
  }
 }

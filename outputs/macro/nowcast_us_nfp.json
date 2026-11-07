@@ -1,28 +1,27 @@
 {
- "asof": "2026-11-04",
+ "asof": "2026-11-05",
  "source": "macro.us.nfp.nowcast (FRED)",
  "data": {
   "series": "US nonfarm payrolls Oct 2026 (k, m/m)",
   "target_month": "2026-10",
-  "ours": 95.0,
+  "ours": 105.0,
   "consensus": 65,
   "consensus_source": "calendar run 4 Nov (65k; AHE +0.3% m/m) \u2014 confirm vs BBG ECO",
   "prior": 29.0,
   "mom3": 51.0,
   "delta_1d": null,
-  "driver": "d_ic -3k \u00b7 d_cc -11k \u00b7 mom3 +51k",
+  "driver": "ADP +86k \u00b7 d_ic -3k \u00b7 d_cc -11k \u00b7 mom3 +51k",
   "status": "ok",
   "inputs_used": [
+   "adp",
    "d_ic",
    "d_cc",
    "mom3"
   ],
-  "inputs_missing": [
-   "adp"
-  ],
+  "inputs_missing": [],
   "range": {
-   "low": 8.0,
-   "high": 182.0
+   "low": 18.0,
+   "high": 192.0
   },
   "backtest": {
    "with_adp": {
@@ -187,10 +186,10 @@
    {
     "month": "2026-09",
     "actual": 29.0,
-    "model": 136.0,
+    "model": 134.0,
     "mom3": 51.0
    }
   ],
-  "run_at": "2026-11-04T02:57"
+  "run_at": "2026-11-05T03:52"
  }
 }

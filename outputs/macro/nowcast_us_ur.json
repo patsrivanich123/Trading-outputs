@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-04",
+ "asof": "2026-11-05",
  "source": "macro.us.ur.nowcast (FRED/ALFRED)",
  "data": {
   "series": "US unemployment rate Oct 2026",
@@ -54,7 +54,7 @@
    "consensus"
   ],
   "chart": "appendix/us_ur/backtest.png",
-  "run_at": "2026-11-04T06:57",
+  "run_at": "2026-11-05T03:52",
   "caveat": "claims series are current vintage (seasonal factors revised annually); u and LFPR are true first prints (ALFRED)"
  }
 }
