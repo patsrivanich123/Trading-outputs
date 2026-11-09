@@ -11,15 +11,19 @@ date,asset,bias,entry,invalidation,target,last_at_call,graded_on,outcome,pnl_pct
 2026-11-02,UST 10Y (%),no trade,,,,4.929,2026-11-03,n/a,,"Midterms, refunding, NFP binary; mid-range, no edge"
 2026-11-02,DXY (ICE fut),no trade,,,,101.69,2026-11-03,n/a,,"Capped 102.27-102.38, supported 101.52; no edge"
 2026-11-02,Brent CO1,no trade,,,,110.04,2026-11-03,n/a,,Post-election Iran binary both ways; stand aside
-2026-11-03,USDJPY,bearish,158.78,160.2,156.5,157.9425,,,,"Sell rally 158.78; MoF 160 line, joint-intervention risk"
-2026-11-03,UST 10Y (%),no trade,,,,4.894,,,,"Midterms, refunding, NFP, CPI stacked; no edge"
-2026-11-03,DXY (ICE fut),no trade,,,,101.645,,,,"Between 101.03 and 102.27-102.38; event-driven, no edge"
-2026-11-03,Brent CO1,no trade,,,,104.77,,,,Headline-driven 7% swings on Iran; stand aside
+2026-11-03,USDJPY,bearish,158.78,160.2,156.5,157.9425,2026-11-09,win,0.022,"Sell rally 158.78; MoF 160 line, joint-intervention risk"
+2026-11-03,UST 10Y (%),no trade,,,,4.894,2026-11-09,n/a,,"Midterms, refunding, NFP, CPI stacked; no edge"
+2026-11-03,DXY (ICE fut),no trade,,,,101.645,2026-11-09,n/a,,"Between 101.03 and 102.27-102.38; event-driven, no edge"
+2026-11-03,Brent CO1,no trade,,,,104.77,2026-11-09,n/a,,Headline-driven 7% swings on Iran; stand aside
 2026-11-03,TH CPI Oct-26 y/y,bullish,,,3.55,2.82,2026-11-07,win,,Called ABOVE cons: ours 3.55 vs BBG cons 3.33 -> ACTUAL 3.90 (+0.94% m/m). Right direction; miss -0.35pp vs cons miss -0.57pp. Miss = raw food (+2.35 vs our +0.50; fresh veg +17.8%).
 2026-11-03,TH core CPI Oct-26 y/y,no trade,,,1.51,1.50,2026-11-07,n/a,,"No-trade call. ACTUAL 1.58: cons 1.60 (miss 0.02) beat ours 1.51 (miss 0.07). Core = no edge, confirmed."
-2026-11-04,USDJPY,bearish,159.5,160.3,157.1,158.6875,,,,Sell 159.5 into MoF 160 line; no chase here
-2026-11-04,UST 10Y (%),no trade,,,,4.952,,,,"Midterm result, refunding, NFP, CPI stacked; no edge"
-2026-11-04,DXY (ICE fut),no trade,,,,101.72,,,,"Mid-range 101.5-102.4; event-driven, no edge"
-2026-11-04,Brent CO1,no trade,,,,103.6,,,,Iran headline swings 100.8-107.2 intraday; stand aside
+2026-11-04,USDJPY,bearish,159.5,160.3,157.1,158.6875,2026-11-09,win,0.492,Sell 159.5 into MoF 160 line; no chase here
+2026-11-04,UST 10Y (%),no trade,,,,4.952,2026-11-09,n/a,,"Midterm result, refunding, NFP, CPI stacked; no edge"
+2026-11-04,DXY (ICE fut),no trade,,,,101.72,2026-11-09,n/a,,"Mid-range 101.5-102.4; event-driven, no edge"
+2026-11-04,Brent CO1,no trade,,,,103.6,2026-11-09,n/a,,Iran headline swings 100.8-107.2 intraday; stand aside
 2026-11-04,US NFP Oct-26 (k),no trade,,,95,29,,,,"No edge: NFP model OOS MAE 87k vs 3m-avg 92k (since 2023 worse: 87 vs 79). Model +95k vs cons +65k, range +8..+182k. Pre-ADP; print Fri 6 Nov 20:30 ICT"
 2026-11-04,US UR Oct-26 (%),no trade,,,4.2,4.2,,,,"No edge: UR model ~ no change OOS (MAE 0.103 vs 0.104, n=130). Nowcast 4.17 unrounded; P(4.1/4.2/4.3)=26/30/18%. Print Fri 6 Nov 20:30 ICT"
+2026-11-09,USDJPY,no trade,,,,157.9075,,,,Pinned 157-159 pre-CPI; fade only near 160 (intervention)
+2026-11-09,UST 10Y (%),no trade,,,,4.864,,,,"CPI 20:30 ICT tomorrow; hike priced, no edge pre-print"
+2026-11-09,DXY (ICE fut),no trade,,,,101.565,,,,Mid-range 101.0-102.4; wait for CPI
+2026-11-09,Brent CO1,no trade,,,,92.57,,,,Binary Hormuz-deal headlines after 16% weekly rout

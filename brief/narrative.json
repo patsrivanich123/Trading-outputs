@@ -1,14 +1,15 @@
-{"date": "2026-11-04", "header_note": "levels as of Tue 3 Nov US close / Asia close (Bitcoin, Nasdaq 100: web, no chart)", "key_risk": "US midterm results (Dem sweep not priced) land into ADP/ISM and a hot 4.95% 10Y with a 5.0-5.09 resistance zone; BoE 4.00% hike and Thai CPI (our nowcast 3.67% vs 2.9% cons) follow Thursday, NFP Friday.",
-"assets": {
-"USDJPY": {"news": "158.69, +0.47%, up with US yields; MoF/Katayama says joint US-Japan framework still live after July 31 joint buy, no level named.", "trade": "Sell 159.50, stop 160.30, target 157.10; yesterday's short lost -0.52%."},
-"UST 10Y (%)": {"news": "4.952%, +5.8bp; JOLTS beat, oil swings, midterm day. 6m high 5.31, 20DMA 5.09 is resistance.", "trade": "no trade"},
-"DXY (ICE fut)": {"news": "101.72, +0.09%; small bid pre-midterms, RBA hawkish hold tone; sits under 102.27-102.38 high.", "trade": "no trade"},
-"Brent CO1": {"news": "103.60 (Jan), -1.1% after -7% Monday on US-Iran talk hopes; Tehran denies progress, three tankers reported hitting mines in Hormuz, range 100.80-107.24.", "trade": "no trade"},
-"Bitcoin": {"news": "No verified level: web search unconfirmed for 3 Nov (one unverified item says below $77k). Flagged, no chart.", "trade": "no trade"}
+{"date":"2026-11-09","header_note":"levels as of Mon 9 Nov US midday (IBKR, delayed 10-20 min) / Asia close; S&P/UST/DXY/Brent bars are intraday, not settles",
+"key_risk":"US Oct CPI (Tue 10 Nov 20:30 ICT) with a 25bp Dec 9 Fed hike ~75-80% priced after the 165k NFP: a hot core print pushes 10Y through 4.95-5.03 and pressures THB, a soft one cuts hike odds and hits the dollar.",
+"assets":{
+"USDJPY":{"news":"157.91 (-0.36%). Fed hike odds ~78% vs BoJ at 1.25% (held 30 Oct, Dec 18 live); Katayama says joint US-Japan FX stance stands after the record 30 Jul intervention.","trade":"no trade - range 157-159, intervention risk caps upside near 160"},
+"UST 10Y (%)":{"news":"4.864% (TNX), web 4.86-4.88% - checks out. Five weekly declines on the tech rout; Oct NFP +165k vs ~59-65k pulled Dec hike odds up. Auctions this week, Veterans Day Wed (bond mkt shut).","trade":"no trade - CPI first; R 4.95/5.03, S 4.80/4.74"},
+"DXY (ICE fut)":{"news":"101.57 (Dec contract; thin trading before Aug so early chart is flat). Down 0.6% on the day; hike pricing supports, risk-on and falling oil weigh.","trade":"no trade - 101.0-102.4 range, CPI decides"},
+"Brent CO1":{"news":"92.57 (Jan contract), -5.8%, c.-16% on the week: Trump downplays Iran strikes, Qatar PM carries Iranian interim Hormuz proposal to White House; disputed report Iran dropped toll demand (Qatar denies). Risks: UKMTO tanker incident, Houthi strike claim on Aramco HQ.","trade":"no trade - headline-binary, ATR 5.2"},
+"Bitcoin":{"news":"FLAG: no IBKR series, no Mon quote found. Last verified ~$76.0k (Fortune, Fri 6 Nov 07:15 ET), down 5% in a day on ETF outflows (~$530m). Stale.","trade":"no data - no call"}
 },
-"equities": [
-{"name": "S&P 500", "line": "7,569, +0.36%; tech led (Nasdaq Comp +0.8% to 25,372), Dow -0.4%; midterm day, Dem sweep not priced."},
-{"name": "Nasdaq 100", "line": "No IBKR level; Nasdaq Composite 25,372 +0.8% (MT Newswires) as proxy, flagged."},
-{"name": "KOSPI 200", "line": "881.80, -4.44%; KOSPI comp -3.6% to 5,648.79 on AI capex worries (Oracle $20bn raise), foreigners+institutions sold 2.9tn won."},
-{"name": "Hang Seng", "line": "23,526, +0.57%; 1w +2.1%, 6m low 22,672."}
+"equities":[
+{"name":"S&P 500","line":"7,549 (+2.3% intraday vs Fri close 7,376.86, IBKR delayed). Nasdaq-led AI/Midterm-regulation rout Thu (-4.4%), partial rebound Fri; week -2.7% before today."},
+{"name":"Nasdaq 100","line":"FLAG - no IBKR spec, no verified Mon level. Last verified 26,629.81 (Thu 5 Nov close, -6.36%, worst day since 2020); Fri rebounded with Nasdaq Comp +1.1%."},
+{"name":"KOSPI 200","line":"777.30 (-0.58%, delayed intraday); -15.8% on the week. KOSPI itself hit a circuit breaker Fri, closed 5,059.69 (-6.0%) on foreign selling of Samsung/SK hynix (KRW 10.4tn week); web says KOSPI bounced above 5,100 Mon - IBKR print looks stale."},
+{"name":"Hang Seng","line":"24,449 (-0.13%), +4.5% on the week, holding the post-Thursday gap-up; 6m range 22,672-26,389."}
 ]}

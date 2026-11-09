@@ -1,56 +1,50 @@
 {
- "asof": "2026-11-05",
+ "asof": "2026-11-09",
  "source": "macro.us.nfp.nowcast (FRED)",
  "data": {
-  "series": "US nonfarm payrolls Oct 2026 (k, m/m)",
-  "target_month": "2026-10",
-  "ours": 105.0,
-  "consensus": 65,
-  "consensus_source": "calendar run 4 Nov (65k; AHE +0.3% m/m) \u2014 confirm vs BBG ECO",
-  "prior": 29.0,
-  "mom3": 51.0,
+  "series": "US nonfarm payrolls Nov 2026 (k, m/m)",
+  "target_month": "2026-11",
+  "ours": null,
+  "consensus": null,
+  "consensus_source": null,
+  "prior": 165.0,
+  "mom3": 137.0,
   "delta_1d": null,
-  "driver": "ADP +86k \u00b7 d_ic -3k \u00b7 d_cc -11k \u00b7 mom3 +51k",
-  "status": "ok",
+  "driver": "mom3 +137k",
+  "status": "insufficient_data",
   "inputs_used": [
-   "adp",
    "d_ic",
    "d_cc",
    "mom3"
   ],
-  "inputs_missing": [],
-  "range": {
-   "low": 18.0,
-   "high": 192.0
-  },
+  "inputs_missing": [
+   "adp",
+   "d_ic",
+   "d_cc"
+  ],
+  "range": null,
   "backtest": {
    "with_adp": {
-    "n": 95,
-    "mae_model": 87.5,
-    "mae_mom3": 91.6,
-    "mae_last": 120.8,
-    "mae_model_2023": 88.8,
-    "mae_mom3_2023": 79.2
+    "n": 96,
+    "mae_model": 87.3,
+    "mae_mom3": 91.9,
+    "mae_last": 121.4,
+    "mae_model_2023": 88.5,
+    "mae_mom3_2023": 80.2
    },
    "no_adp": {
-    "n": 95,
+    "n": 96,
     "mae_model": 87.2,
-    "mae_mom3": 91.6,
-    "mae_last": 120.8,
-    "mae_model_2023": 87.0,
-    "mae_mom3_2023": 79.2
+    "mae_mom3": 91.9,
+    "mae_last": 121.4,
+    "mae_model_2023": 86.9,
+    "mae_mom3_2023": 80.2
    }
   },
   "has_skill": false,
   "verdict": "NO SKILL: model does not beat 3m-avg persistence OOS \u2014 treat as no edge",
   "caveat": "FRED = revised payrolls/ADP, not first prints; real-time skill is lower. Consensus from BBG ECO (desk).",
   "track": [
-   {
-    "month": "2024-10",
-    "actual": 33.0,
-    "model": 67.0,
-    "mom3": 72.0
-   },
    {
     "month": "2024-11",
     "actual": 134.0,
@@ -179,17 +173,23 @@
    },
    {
     "month": "2026-08",
-    "actual": 133.0,
+    "actual": 186.0,
     "model": 51.0,
     "mom3": 28.0
    },
    {
     "month": "2026-09",
-    "actual": 29.0,
-    "model": 134.0,
-    "mom3": 51.0
+    "actual": 60.0,
+    "model": 143.0,
+    "mom3": 69.0
+   },
+   {
+    "month": "2026-10",
+    "actual": 165.0,
+    "model": 121.0,
+    "mom3": 79.0
    }
   ],
-  "run_at": "2026-11-05T03:52"
+  "run_at": "2026-11-09T23:37"
  }
 }

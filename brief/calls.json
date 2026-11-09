@@ -1,6 +1,6 @@
-{"date": "2026-11-04", "calls": [
-{"asset": "USDJPY", "bias": "bearish", "entry": 159.5, "invalidation": 160.3, "target": 157.1, "last_at_call": 158.6875, "note": "Sell 159.5 into MoF 160 line; no chase here"},
-{"asset": "UST 10Y (%)", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 4.952, "note": "Midterm result, refunding, NFP, CPI stacked; no edge"},
-{"asset": "DXY (ICE fut)", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 101.72, "note": "Mid-range 101.5-102.4; event-driven, no edge"},
-{"asset": "Brent CO1", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 103.6, "note": "Iran headline swings 100.8-107.2 intraday; stand aside"}
+{"date":"2026-11-09","calls":[
+{"asset":"USDJPY","bias":"no trade","entry":null,"invalidation":null,"target":null,"last_at_call":157.9075,"note":"Pinned 157-159 pre-CPI; fade only near 160 (intervention)"},
+{"asset":"UST 10Y (%)","bias":"no trade","entry":null,"invalidation":null,"target":null,"last_at_call":4.864,"note":"CPI 20:30 ICT tomorrow; hike priced, no edge pre-print"},
+{"asset":"DXY (ICE fut)","bias":"no trade","entry":null,"invalidation":null,"target":null,"last_at_call":101.565,"note":"Mid-range 101.0-102.4; wait for CPI"},
+{"asset":"Brent CO1","bias":"no trade","entry":null,"invalidation":null,"target":null,"last_at_call":92.57,"note":"Binary Hormuz-deal headlines after 16% weekly rout"}
 ]}

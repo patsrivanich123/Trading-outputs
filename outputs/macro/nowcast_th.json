@@ -1,23 +1,23 @@
 {
- "asof": "2026-11-07",
+ "asof": "2026-11-09",
  "source": "macro.th.cpi.predictor",
  "data": {
   "series": "TH CPI headline y/y Nov 2026",
   "target_month": "2026-11",
-  "ours": 3.6,
+  "ours": 3.52,
   "consensus": null,
   "consensus_source": "pending: BBG ECO",
   "prior": 3.9,
-  "ours_mm": -0.14,
-  "level": 103.76,
+  "ours_mm": -0.21,
+  "level": 103.68,
   "level_prev": 103.9,
   "level_year_ago": 100.15,
   "delta_1d": null,
-  "driver": "energy -17bp (fuel -1.83% m/m) \u00b7 raw food -4bp \u00b7 core +7bp",
+  "driver": "energy -25bp (fuel -2.65% m/m) \u00b7 raw food -4bp \u00b7 core +7bp",
   "status": "ok",
   "range": {
-   "low": 3.46,
-   "high": 3.95,
+   "low": 3.38,
+   "high": 3.87,
    "note": "low: fuel -1.5pp & no flood | high: fuel +1.5pp & double flood"
   },
   "inputs_available": [
@@ -40,10 +40,10 @@
    {
     "name": "Motor fuel",
     "weight": 9.3,
-    "mm": -1.83,
-    "contrib_bp": -17.1,
+    "mm": -2.65,
+    "contrib_bp": -24.7,
     "status": "ok",
-    "note": "EPPO daily pump prices, monthly mean; diesel 42.84\u219242.41 \u00b7 g95 41.39\u219241.14 \u00b7 e20 35.38\u219233.10"
+    "note": "EPPO daily pump prices, monthly mean; diesel 42.84\u219242.21 \u00b7 g95 41.39\u219240.71 \u00b7 e20 35.38\u219232.67"
    },
    {
     "name": "Raw food",
@@ -79,8 +79,8 @@
    }
   ],
   "sensitivity": {
-   "low": 3.46,
-   "high": 3.95
+   "low": 3.38,
+   "high": 3.87
   },
   "track": [
    {
@@ -568,9 +568,9 @@
     "backtest_headline": null,
     "backtest_core": null,
     "baseline_headline": null,
-    "predicted_headline": 3.6,
+    "predicted_headline": 3.52,
     "predicted_core": 1.54,
-    "predicted_on": "2026-11-07",
+    "predicted_on": "2026-11-09",
     "is_forecast": true
    }
   ],
@@ -591,6 +591,6 @@
   "report": "th_cpi_report.html",
   "print_date": null,
   "last_print": "2026-10",
-  "run_at": "2026-11-07T11:28"
+  "run_at": "2026-11-09T23:37"
  }
 }
