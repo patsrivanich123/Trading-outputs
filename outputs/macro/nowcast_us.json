@@ -14,6 +14,8 @@
    "sources": "BBG ECO (Pat 4 Nov) / Dow Jones; Cleveland Fed nowcast 9 Nov; MUFG preview 10 Nov"
   },
   "print_basis": "m/m only \u2014 BLS publishes no Oct y/y (Oct-25 data missing)",
+  "weights_source": "Weights: approx. BLS CPI-U relative importance, Dec-2025 (rounded); core \u2248 79.5% of headline",
+  "benchmark_sources": "BBG ECO (Pat 4 Nov) / Dow Jones; Cleveland Fed nowcast 9 Nov; MUFG preview 10 Nov",
   "series": "US CPI headline m/m Oct 2026 (no y/y published)",
   "target_month": "2026-10",
   "ours": 0.26,
@@ -55,7 +57,8 @@
     "mm": 0.427,
     "contrib_bp": 2.9,
     "status": "ok",
-    "note": "gasoline +0.61% SA (pump -1.04% NSA (4 wk avg 4.31 vs 4.35) + seasonal +1.65 = +0.61% SA) \u00b7 utilities 3m +0.25%"
+    "note": "gasoline +0.61% SA (pump -1.04% NSA (4 wk avg 4.31 vs 4.35) + seasonal +1.65 = +0.61% SA) \u00b7 utilities 3m +0.25%",
+    "source": "BLS CPI energy (FRED CPIENGSL) \u00b7 gasoline: EIA weekly retail regular (FRED GASREGW), NSA\u2192SA with BLS gasoline SA/NSA (CUSR0000SETB01/CUUR0000SETB01) \u00b7 utilities: BLS household energy (CUSR0000SAH21)"
    },
    {
     "name": "Food at home",
@@ -63,7 +66,8 @@
     "mm": -0.035,
     "contrib_bp": -0.3,
     "status": "ok",
-    "note": "3m avg (last -0.07)"
+    "note": "3m avg (last -0.07)",
+    "source": "BLS CPI food at home (FRED CUSR0000SAF11)"
    },
    {
     "name": "Food away from home",
@@ -71,7 +75,8 @@
     "mm": 0.265,
     "contrib_bp": 1.5,
     "status": "ok",
-    "note": "3m avg (last +0.23)"
+    "note": "3m avg (last +0.23)",
+    "source": "BLS CPI food away from home (FRED CUSR0000SEFV)"
    },
    {
     "name": "Shelter",
@@ -79,7 +84,8 @@
     "mm": 0.264,
     "contrib_bp": 9.4,
     "status": "ok",
-    "note": "3m avg (last +0.39)"
+    "note": "3m avg (last +0.39)",
+    "source": "BLS CPI shelter (FRED CUSR0000SAH1)"
    },
    {
     "name": "Used cars",
@@ -87,7 +93,8 @@
     "mm": 0.478,
     "contrib_bp": 1.0,
     "status": "ok",
-    "note": "3m avg (last +0.67)"
+    "note": "3m avg (last +0.67)",
+    "source": "BLS CPI used cars & trucks (FRED CUSR0000SETA02)"
    },
    {
     "name": "New vehicles",
@@ -95,7 +102,8 @@
     "mm": 0.176,
     "contrib_bp": 0.6,
     "status": "ok",
-    "note": "3m avg (last +0.20)"
+    "note": "3m avg (last +0.20)",
+    "source": "BLS CPI new vehicles (FRED CUSR0000SETA01)"
    },
    {
     "name": "Apparel",
@@ -103,7 +111,8 @@
     "mm": 0.137,
     "contrib_bp": 0.3,
     "status": "ok",
-    "note": "3m avg (last +0.31)"
+    "note": "3m avg (last +0.31)",
+    "source": "BLS CPI apparel (FRED CPIAPPSL)"
    },
    {
     "name": "Medical care services",
@@ -111,7 +120,8 @@
     "mm": 0.197,
     "contrib_bp": 1.3,
     "status": "ok",
-    "note": "3m avg (last +0.28)"
+    "note": "3m avg (last +0.28)",
+    "source": "BLS CPI medical care services (FRED CUSR0000SAM2)"
    },
    {
     "name": "Transportation services",
@@ -119,7 +129,8 @@
     "mm": 0.441,
     "contrib_bp": 2.8,
     "status": "ok",
-    "note": "3m avg (last +0.59)"
+    "note": "3m avg (last +0.59)",
+    "source": "BLS CPI transportation services (FRED CUSR0000SAS4)"
    },
    {
     "name": "Core goods ex vehicles",
@@ -127,7 +138,8 @@
     "mm": 0.185,
     "contrib_bp": 1.3,
     "status": "ok",
-    "note": "3m avg (last +0.25)"
+    "note": "3m avg (last +0.25)",
+    "source": "BLS CPI commodities less food & energy (FRED CUSR0000SACL1E) \u2014 proxy, overlaps vehicles"
    },
    {
     "name": "Other core services",
@@ -135,7 +147,8 @@
     "mm": 0.308,
     "contrib_bp": 4.9,
     "status": "ok",
-    "note": "3m avg (last +0.37)"
+    "note": "3m avg (last +0.37)",
+    "source": "BLS CPI services less energy (FRED CUSR0000SASLE) \u2014 proxy, overlaps shelter"
    }
   ],
   "method": "v0: persistence (3m avg) by component + gasoline pump\u2192CPI SA (same-month seasonal gap); backtested m/m 2015+",

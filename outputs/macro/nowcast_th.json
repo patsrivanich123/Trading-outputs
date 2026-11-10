@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-09",
+ "asof": "2026-11-10",
  "source": "macro.th.cpi.predictor",
  "data": {
   "series": "TH CPI headline y/y Nov 2026",
@@ -43,6 +43,7 @@
     "mm": -2.65,
     "contrib_bp": -24.7,
     "status": "ok",
+    "source": "EPPO daily retail pump prices (eppo.go.th price structure, via github.com/anantsrisu-cpu/eppo-oil-price mirror)",
     "note": "EPPO daily pump prices, monthly mean; diesel 42.84\u219242.21 \u00b7 g95 41.39\u219240.71 \u00b7 e20 35.38\u219232.67"
    },
    {
@@ -51,6 +52,7 @@
     "mm": -0.2,
     "contrib_bp": -3.6,
     "status": "partial",
+    "source": "MOC/DIT daily retail prices, 11 items (dataapi.moc.go.th gis-product-prices) + TPSO raw-food history",
     "note": "seasonal -0.20% + flood overlay +0.00pp"
    },
    {
@@ -59,6 +61,7 @@
     "mm": 0.1,
     "contrib_bp": 6.9,
     "status": "ok",
+    "source": "TPSO CPI history (index.tpso.go.th API), no external feed",
     "note": "same-month seasonal median"
    },
    {
@@ -67,6 +70,7 @@
     "mm": 0.0,
     "contrib_bp": 0.0,
     "status": "ok",
+    "source": "ERC Ft tariff decision (erc.or.th; confirmed via news when site unreachable)",
     "note": "ERC Ft fixed within round"
    },
    {
@@ -75,6 +79,7 @@
     "mm": 0.0,
     "contrib_bp": 0.0,
     "status": "ok",
+    "source": "Gov. LPG ceiling (Energy Ministry / Oil Fund) + EPPO LPG retail",
     "note": "ceiling frozen"
    }
   ],
@@ -570,7 +575,7 @@
     "baseline_headline": null,
     "predicted_headline": 3.52,
     "predicted_core": 1.54,
-    "predicted_on": "2026-11-09",
+    "predicted_on": "2026-11-10",
     "is_forecast": true
    }
   ],
@@ -591,6 +596,6 @@
   "report": "th_cpi_report.html",
   "print_date": null,
   "last_print": "2026-10",
-  "run_at": "2026-11-09T23:37"
+  "run_at": "2026-11-10T12:58"
  }
 }
