@@ -698,7 +698,7 @@
    }
   ],
   "track_unit": "m/m",
-  "show_naive_headline": true,
+  "show_naive_headline": false,
   "backtest_stats": {
    "n": 130,
    "mae_headline": 0.101,
