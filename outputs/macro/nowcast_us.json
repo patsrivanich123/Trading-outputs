@@ -1,15 +1,27 @@
 {
- "asof": "2026-11-09",
+ "asof": "2026-11-10",
  "source": "macro.us.cpi.nowcast",
  "data": {
+  "benchmarks": {
+   "print_basis": "m/m only \u2014 BLS publishes no Oct y/y (Oct-25 data missing)",
+   "consensus_mm": 0.3,
+   "consensus_core_mm": 0.2,
+   "cleveland_mm": 0.24,
+   "cleveland_core_mm": 0.21,
+   "mufg_mm": 0.29,
+   "mufg_core_mm": 0.23,
+   "asof": "2026-11-10",
+   "sources": "BBG ECO (Pat 4 Nov) / Dow Jones; Cleveland Fed nowcast 9 Nov; MUFG preview 10 Nov"
+  },
+  "print_basis": "m/m only \u2014 BLS publishes no Oct y/y (Oct-25 data missing)",
   "series": "US CPI headline y/y Oct 2026",
   "target_month": "2026-10",
-  "ours": 3.97,
+  "ours": 3.98,
   "consensus": null,
   "prior": 4.02,
-  "ours_mm": 0.25,
-  "delta_1d": -0.0,
-  "driver": null,
+  "ours_mm": 0.26,
+  "delta_1d": 0.013,
+  "driver": "Energy +2.9bp vs last run",
   "status": "ok",
   "inputs_available": [
    "FRED CPI components",
@@ -18,8 +30,7 @@
   "inputs_missing": [
    "Cleveland Fed nowcast",
    "Manheim used cars",
-   "PPI (for PCE mapping)",
-   "CUSR0000SA0E"
+   "PPI (for PCE mapping)"
   ],
   "core": {
    "series": "US core CPI y/y Oct 2026",
@@ -40,10 +51,10 @@
    {
     "name": "Energy",
     "weight": 6.9,
-    "mm": null,
-    "contrib_bp": null,
-    "status": "missing",
-    "note": "400 Client Error: Bad Request for url: https://api.stlouisfe"
+    "mm": 0.427,
+    "contrib_bp": 2.9,
+    "status": "ok",
+    "note": "gasoline +0.61% SA (pump -1.04% NSA (4 wk avg 4.31 vs 4.35) + seasonal +1.65 = +0.61% SA) \u00b7 utilities 3m +0.25%"
    },
    {
     "name": "Food at home",
