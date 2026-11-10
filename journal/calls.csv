@@ -23,10 +23,14 @@ date,asset,bias,entry,invalidation,target,last_at_call,graded_on,outcome,pnl_pct
 2026-11-04,Brent CO1,no trade,,,,103.6,2026-11-09,n/a,,Iran headline swings 100.8-107.2 intraday; stand aside
 2026-11-04,US NFP Oct-26 (k),no trade,,,95,29,,,,"No edge: NFP model OOS MAE 87k vs 3m-avg 92k (since 2023 worse: 87 vs 79). Model +95k vs cons +65k, range +8..+182k. Pre-ADP; print Fri 6 Nov 20:30 ICT"
 2026-11-04,US UR Oct-26 (%),no trade,,,4.2,4.2,,,,"No edge: UR model ~ no change OOS (MAE 0.103 vs 0.104, n=130). Nowcast 4.17 unrounded; P(4.1/4.2/4.3)=26/30/18%. Print Fri 6 Nov 20:30 ICT"
-2026-11-09,USDJPY,no trade,,,,157.9075,,,,Pinned 157-159 pre-CPI; fade only near 160 (intervention)
-2026-11-09,UST 10Y (%),no trade,,,,4.864,,,,"CPI 20:30 ICT tomorrow; hike priced, no edge pre-print"
-2026-11-09,DXY (ICE fut),no trade,,,,101.565,,,,Mid-range 101.0-102.4; wait for CPI
-2026-11-09,Brent CO1,no trade,,,,92.57,,,,Binary Hormuz-deal headlines after 16% weekly rout
+2026-11-09,USDJPY,no trade,,,,157.9075,2026-11-10,n/a,,Pinned 157-159 pre-CPI; fade only near 160 (intervention)
+2026-11-09,UST 10Y (%),no trade,,,,4.864,2026-11-10,n/a,,"CPI 20:30 ICT tomorrow; hike priced, no edge pre-print"
+2026-11-09,DXY (ICE fut),no trade,,,,101.565,2026-11-10,n/a,,Mid-range 101.0-102.4; wait for CPI
+2026-11-09,Brent CO1,no trade,,,,92.57,2026-11-10,n/a,,Binary Hormuz-deal headlines after 16% weekly rout
 2026-11-10,US CPI Oct-26 m/m,no trade,,,0.25,0.6,,,,"Lean 0.2-0.3, slight soft vs cons 0.3: our 0.26 (core persistence 0.27), Cleveland 0.24, MUFG 0.29. Gasoline +0.6% SA (pump -1.0% NSA + Oct seasonal +1.65). No y/y published. Print 10 Nov 20:30 ICT"
 2026-11-10,US core CPI Oct-26 m/m,no trade,,,0.21,0.3,,,,"No edge: cons 0.2, Cleveland 0.21, ours (persistence) 0.27. Swing = OER reversal after Sep 0.35 (soft) vs airfares/tariffed goods (firm). <=0.2 = what FOMC agents (Cook/Powell) cite for a Dec hold"
 2026-11-10,UST 10Y CPI-day follow (shadow),follow,,,,,,,,"Shadow test of 11_event: since 2022 CPI-day 10y/30y moves continued over 3 days (beta 0.25-0.32, t~2). Grade: sign(y(Fri)-y(CPI close)) == sign(CPI-day move)"
+2026-11-11,USDJPY,bearish,159.5,160.3,157.8,158.7475,,,,Sell 159.5 into MoF line; no chase at 158.75
+2026-11-11,UST 10Y (%),no trade,,,,4.983,,,,Cash shut today; 30y auction Thu after 10y tail
+2026-11-11,DXY (ICE fut),no trade,,,,102.165,,,,At 6m high 102.38; no edge buying resistance
+2026-11-11,Brent CO1,no trade,,,,91.49,,,,Oversold at lower band; Iran headlines binary
