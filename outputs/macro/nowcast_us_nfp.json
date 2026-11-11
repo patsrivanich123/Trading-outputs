@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-11",
+ "asof": "2026-11-12",
  "source": "macro.us.nfp.nowcast (FRED)",
  "data": {
   "series": "US nonfarm payrolls Nov 2026 (k, m/m)",
@@ -190,6 +190,6 @@
     "mom3": 79.0
    }
   ],
-  "run_at": "2026-11-11T23:36"
+  "run_at": "2026-11-12T06:37"
  }
 }

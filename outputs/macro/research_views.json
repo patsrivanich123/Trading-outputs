@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-11",
+ "asof": "2026-11-12",
  "source": "macro.research.publish (views.csv)",
  "data": {
   "views": [
@@ -21,7 +21,7 @@
     "live": 159.8,
     "live_asof": "2026-11-11 00:00:00",
     "to_target": 5.2,
-    "age_days": 14,
+    "age_days": 15,
     "stale": false
    },
    {
@@ -41,7 +41,7 @@
     "status": "active",
     "live": 159.8,
     "live_asof": "2026-11-11 00:00:00",
-    "age_days": 92,
+    "age_days": 93,
     "stale": true
    },
    {
@@ -62,7 +62,7 @@
     "live": 4.983,
     "live_asof": "2026-11-10 00:00:00",
     "to_target": -0.283,
-    "age_days": 133,
+    "age_days": 134,
     "stale": true
    },
    {
@@ -80,7 +80,7 @@
     "source_type": "press report",
     "source_url": "https://www.bloomberg.com/news/articles/2026-09-28/jpmorgan-defies-consensus-with-three-thai-rate-hikes-in-2027",
     "status": "active",
-    "age_days": 44,
+    "age_days": 45,
     "stale": false
    },
    {
@@ -98,7 +98,7 @@
     "source_type": "press report",
     "source_url": "https://www.fxstreet.com/news/thai-baht-bot-cautious-on-normalisation-downside-persists-commerzbank-202610301722",
     "status": "active",
-    "age_days": 12,
+    "age_days": 13,
     "stale": false
    },
    {
@@ -116,7 +116,7 @@
     "source_type": "press report",
     "source_url": "https://www.fxstreet.com/news/thai-baht-bot-holds-rates-as-curve-steepening-risks-dbs-202610292054",
     "status": "active",
-    "age_days": 13,
+    "age_days": 14,
     "stale": false
    }
   ],

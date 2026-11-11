@@ -30,7 +30,7 @@ date,asset,bias,entry,invalidation,target,last_at_call,graded_on,outcome,pnl_pct
 2026-11-10,US CPI Oct-26 m/m,no trade,,,0.25,0.6,2026-11-11,n/a,,"No-trade. ACTUAL 0.35: cons 0.3 (miss -0.05) beat ours 0.26 (-0.09) and Cleveland 0.24 (-0.11). Misses: food at home +3.9bp, airfares/transport svcs +2.6, energy +1.9 (gas SA +1.04 vs our +0.61), used cars -3.6."
 2026-11-10,US core CPI Oct-26 m/m,no trade,,,0.21,0.3,2026-11-11,n/a,,"No-trade. ACTUAL 0.30: ours 0.27 (persistence, -0.03) closer than cons 0.2 (-0.10) and Cleveland 0.21 — luck of persistence after hot Sep, not skill."
 2026-11-10,UST 10Y CPI-day follow (shadow),follow,,,,,,,,"Shadow test of 11_event: since 2022 CPI-day 10y/30y moves continued over 3 days (beta 0.25-0.32, t~2). Grade: sign(y(Fri)-y(CPI close)) == sign(CPI-day move)"
-2026-11-11,USDJPY,bearish,159.5,160.3,157.8,158.7475,,,,Sell 159.5 into MoF line; no chase at 158.75
-2026-11-11,UST 10Y (%),no trade,,,,4.983,,,,Cash shut today; 30y auction Thu after 10y tail
-2026-11-11,DXY (ICE fut),no trade,,,,102.165,,,,At 6m high 102.38; no edge buying resistance
-2026-11-11,Brent CO1,no trade,,,,91.49,,,,Oversold at lower band; Iran headlines binary
+2026-11-11,USDJPY,bearish,159.5,160.3,157.8,158.7475,2026-11-12,loss,-0.663,Sell 159.5 into MoF line; no chase at 158.75
+2026-11-11,UST 10Y (%),no trade,,,,4.983,2026-11-12,n/a,,Cash shut today; 30y auction Thu after 10y tail
+2026-11-11,DXY (ICE fut),no trade,,,,102.165,2026-11-12,n/a,,At 6m high 102.38; no edge buying resistance
+2026-11-11,Brent CO1,no trade,,,,91.49,2026-11-12,n/a,,Oversold at lower band; Iran headlines binary
