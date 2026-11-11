@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-10",
+ "asof": "2026-11-11",
  "source": "macro.th.cpi.predictor",
  "data": {
   "series": "TH CPI headline y/y Nov 2026",
@@ -575,7 +575,7 @@
     "baseline_headline": null,
     "predicted_headline": 3.52,
     "predicted_core": 1.54,
-    "predicted_on": "2026-11-10",
+    "predicted_on": "2026-11-11",
     "is_forecast": true
    }
   ],
@@ -596,6 +596,6 @@
   "report": "th_cpi_report.html",
   "print_date": null,
   "last_print": "2026-10",
-  "run_at": "2026-11-10T23:40"
+  "run_at": "2026-11-11T23:36"
  }
 }

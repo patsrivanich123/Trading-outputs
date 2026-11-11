@@ -18,9 +18,9 @@
     "source_type": "press report",
     "source_url": "https://www.exchangerates.org.uk/news/47597/2026-10-28-usd-jpy-forecast-two-major-banks-see-opposite-paths-for-the-yen-in-2027.html",
     "status": "active",
-    "live": 158.7475,
-    "live_asof": "2026-11-10 00:00:00",
-    "to_target": 6.252,
+    "live": 159.8,
+    "live_asof": "2026-11-11 00:00:00",
+    "to_target": 5.2,
     "age_days": 14,
     "stale": false
    },
@@ -39,8 +39,8 @@
     "source_type": "press report",
     "source_url": "https://www.tmgm.com/en/analysis/market-news/article/japanese-yen-wider-range-with-intervention-support-against-us-dollar-hsbc-202608111118",
     "status": "active",
-    "live": 158.7475,
-    "live_asof": "2026-11-10 00:00:00",
+    "live": 159.8,
+    "live_asof": "2026-11-11 00:00:00",
     "age_days": 92,
     "stale": true
    },

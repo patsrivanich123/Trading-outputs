@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-10",
+ "asof": "2026-11-11",
  "source": "macro.us.cpi.nowcast",
  "data": {
   "benchmarks": {},
@@ -12,7 +12,7 @@
   "consensus": null,
   "prior": 4.08,
   "ours_mm": 0.2,
-  "delta_1d": null,
+  "delta_1d": -0.0,
   "driver": null,
   "status": "ok",
   "inputs_available": [
@@ -694,7 +694,7 @@
     "naive_core": 0.3,
     "predicted_headline": 0.2,
     "predicted_core": 0.3,
-    "predicted_on": "2026-11-10",
+    "predicted_on": "2026-11-11",
     "is_forecast": true
    }
   ],
