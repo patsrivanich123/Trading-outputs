@@ -27,8 +27,8 @@ date,asset,bias,entry,invalidation,target,last_at_call,graded_on,outcome,pnl_pct
 2026-11-09,UST 10Y (%),no trade,,,,4.864,2026-11-10,n/a,,"CPI 20:30 ICT tomorrow; hike priced, no edge pre-print"
 2026-11-09,DXY (ICE fut),no trade,,,,101.565,2026-11-10,n/a,,Mid-range 101.0-102.4; wait for CPI
 2026-11-09,Brent CO1,no trade,,,,92.57,2026-11-10,n/a,,Binary Hormuz-deal headlines after 16% weekly rout
-2026-11-10,US CPI Oct-26 m/m,no trade,,,0.25,0.6,,,,"Lean 0.2-0.3, slight soft vs cons 0.3: our 0.26 (core persistence 0.27), Cleveland 0.24, MUFG 0.29. Gasoline +0.6% SA (pump -1.0% NSA + Oct seasonal +1.65). No y/y published. Print 10 Nov 20:30 ICT"
-2026-11-10,US core CPI Oct-26 m/m,no trade,,,0.21,0.3,,,,"No edge: cons 0.2, Cleveland 0.21, ours (persistence) 0.27. Swing = OER reversal after Sep 0.35 (soft) vs airfares/tariffed goods (firm). <=0.2 = what FOMC agents (Cook/Powell) cite for a Dec hold"
+2026-11-10,US CPI Oct-26 m/m,no trade,,,0.25,0.6,2026-11-11,n/a,,"No-trade. ACTUAL 0.35: cons 0.3 (miss -0.05) beat ours 0.26 (-0.09) and Cleveland 0.24 (-0.11). Misses: food at home +3.9bp, airfares/transport svcs +2.6, energy +1.9 (gas SA +1.04 vs our +0.61), used cars -3.6."
+2026-11-10,US core CPI Oct-26 m/m,no trade,,,0.21,0.3,2026-11-11,n/a,,"No-trade. ACTUAL 0.30: ours 0.27 (persistence, -0.03) closer than cons 0.2 (-0.10) and Cleveland 0.21 — luck of persistence after hot Sep, not skill."
 2026-11-10,UST 10Y CPI-day follow (shadow),follow,,,,,,,,"Shadow test of 11_event: since 2022 CPI-day 10y/30y moves continued over 3 days (beta 0.25-0.32, t~2). Grade: sign(y(Fri)-y(CPI close)) == sign(CPI-day move)"
 2026-11-11,USDJPY,bearish,159.5,160.3,157.8,158.7475,,,,Sell 159.5 into MoF line; no chase at 158.75
 2026-11-11,UST 10Y (%),no trade,,,,4.983,,,,Cash shut today; 30y auction Thu after 10y tail

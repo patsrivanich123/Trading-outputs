@@ -1,0 +1,168 @@
+{
+ "asof": "2026-11-11",
+ "source": "macro.research.publish (views.csv)",
+ "data": {
+  "views": [
+   {
+    "id": "bnp_usdjpy_2026q4",
+    "house": "BNP Paribas",
+    "view_date": "2026-10-28",
+    "region": "JP",
+    "product": "USDJPY",
+    "asset": "USDJPY",
+    "direction": "bullish USD (weaker JPY)",
+    "target": "165",
+    "horizon": "Q4-2026 (Jul note); gradual rise into 2027",
+    "level_at_view": "",
+    "rationale": "BoJ stays behind the curve even after hikes (policy rate 2% by end-27); Fed upper bound 4.50% through 2027 keeps the gap wide; bearish-yen view does not need BoJ to abandon normalisation",
+    "source_type": "press report",
+    "source_url": "https://www.exchangerates.org.uk/news/47597/2026-10-28-usd-jpy-forecast-two-major-banks-see-opposite-paths-for-the-yen-in-2027.html",
+    "status": "active",
+    "live": 158.7475,
+    "live_asof": "2026-11-10 00:00:00",
+    "to_target": 6.252,
+    "age_days": 14,
+    "stale": false
+   },
+   {
+    "id": "hsbc_usdjpy_range",
+    "house": "HSBC",
+    "view_date": "2026-08-11",
+    "region": "JP",
+    "product": "USDJPY",
+    "asset": "USDJPY",
+    "direction": "range (wider band)",
+    "target": "",
+    "horizon": "3-6m",
+    "level_at_view": "",
+    "rationale": "After the joint MoF-UST intervention: range-bound with intervention support; wary of a sustained USD downtrend unless BoJ hikes much faster, Tokyo signals stronger-yen preference and fiscal expansion is scaled back",
+    "source_type": "press report",
+    "source_url": "https://www.tmgm.com/en/analysis/market-news/article/japanese-yen-wider-range-with-intervention-support-against-us-dollar-hsbc-202608111118",
+    "status": "active",
+    "live": 158.7475,
+    "live_asof": "2026-11-10 00:00:00",
+    "age_days": 92,
+    "stale": true
+   },
+   {
+    "id": "jpm_ust10_ye26",
+    "house": "JPMorgan",
+    "view_date": "2026-07-01",
+    "region": "US",
+    "product": "UST 10Y",
+    "asset": "UST 10Y (%)",
+    "direction": "higher yields",
+    "target": "4.70",
+    "horizon": "end-2026",
+    "level_at_view": "",
+    "rationale": "Midyear 2026 outlook: 10y ~4.7%, 2y ~4.2% at year-end; a later undated report says the 10y target was raised to 4.85% (30y 5.40%) \u2014 verify on JPM Markets",
+    "source_type": "press report (unverified date)",
+    "source_url": "https://www.jpmorgan.com/insights/markets-and-economy/economy/economic-trends",
+    "status": "stale?",
+    "live": 4.983,
+    "live_asof": "2026-11-10 00:00:00",
+    "to_target": -0.283,
+    "age_days": 133,
+    "stale": true
+   },
+   {
+    "id": "jpm_bot_hikes_2027",
+    "house": "JPMorgan",
+    "view_date": "2026-09-28",
+    "region": "TH",
+    "product": "BoT policy rate",
+    "asset": "",
+    "direction": "3 hikes from Q1-27",
+    "target": "1.75",
+    "horizon": "end-2027",
+    "level_at_view": "1.00",
+    "rationale": "Contrarian: three 25bp BoT hikes starting Q1-27 to 1.75% (consensus: on hold)",
+    "source_type": "press report",
+    "source_url": "https://www.bloomberg.com/news/articles/2026-09-28/jpmorgan-defies-consensus-with-three-thai-rate-hikes-in-2027",
+    "status": "active",
+    "age_days": 44,
+    "stale": false
+   },
+   {
+    "id": "ocbc_bot_usdthb",
+    "house": "OCBC",
+    "view_date": "2026-10-30",
+    "region": "TH",
+    "product": "BoT / USDTHB",
+    "asset": "",
+    "direction": "BoT +50bp 1H27; USDTHB range",
+    "target": "",
+    "horizon": "1H-2027",
+    "level_at_view": "",
+    "rationale": "50bp BoT hike in 1H27; USDTHB support 33.62, resistance 33.85-33.90",
+    "source_type": "press report",
+    "source_url": "https://www.fxstreet.com/news/thai-baht-bot-cautious-on-normalisation-downside-persists-commerzbank-202610301722",
+    "status": "active",
+    "age_days": 12,
+    "stale": false
+   },
+   {
+    "id": "dbs_cbk_bot_hold",
+    "house": "DBS / Commerzbank",
+    "view_date": "2026-10-29",
+    "region": "TH",
+    "product": "BoT policy rate",
+    "asset": "",
+    "direction": "on hold",
+    "target": "1.00",
+    "horizon": "through 2026 (CBK: much of 2027)",
+    "level_at_view": "1.00",
+    "rationale": "BoT held 1% unanimously 28 Oct; statement slightly less dovish but no imminent hike; DBS flags curve-steepening risk; THB -7% YTD, regional underperformer",
+    "source_type": "press report",
+    "source_url": "https://www.fxstreet.com/news/thai-baht-bot-holds-rates-as-curve-steepening-risks-dbs-202610292054",
+    "status": "active",
+    "age_days": 13,
+    "stale": false
+   }
+  ],
+  "products": {
+   "USDJPY": [
+    "bnp_usdjpy_2026q4",
+    "hsbc_usdjpy_range"
+   ],
+   "UST 10Y": [
+    "jpm_ust10_ye26"
+   ],
+   "BoT policy rate": [
+    "jpm_bot_hikes_2027",
+    "dbs_cbk_bot_hold"
+   ],
+   "BoT / USDTHB": [
+    "ocbc_bot_usdthb"
+   ]
+  },
+  "lab": {
+   "USDJPY": {
+    "date": "2026-11-11",
+    "bias": "bearish",
+    "entry": "159.5",
+    "invalidation": "160.3",
+    "target": "157.8",
+    "note": "Sell 159.5 into MoF line; no chase at 158.75"
+   },
+   "UST 10Y": {
+    "date": "2026-11-11",
+    "bias": "no trade",
+    "entry": "",
+    "invalidation": "",
+    "target": "",
+    "note": "Cash shut today; 30y auction Thu after 10y tail"
+   },
+   "BoT policy rate": null,
+   "BoT / USDTHB": null
+  },
+  "how": "Add a row to macro/research/views.csv (or send Claude a screenshot/paste from the research portal). Press reports are second-hand: confirm on the house portal.",
+  "houses": [
+   "BNP Paribas",
+   "DBS / Commerzbank",
+   "HSBC",
+   "JPMorgan",
+   "OCBC"
+  ]
+ }
+}
