@@ -198,7 +198,7 @@ function urPanel(n){if(!n||!n.data)return'';const d=n.data,b=d.backtest||{},pr=d
  <div class="fig" style="margin-top:8px"><img src="${d.chart}" alt="UR backtest" style="max-width:100%"></div><div class="mono mut" style="font-size:12.5px">${d.caveat} · run ${d.run_at}</div></div>`}
 function renderResearch(reg){const r=window.RS;if(!r||!r.data)return;const d=r.data,V=d.views||[];const regs=['all',...new Set(V.map(v=>v.region))];
  $('#rs-meta').textContent=`${V.length} views · ${d.houses.length} houses · updated ${r.asof}`;
- $('#rs-filter').innerHTML=regs.map(x=>`<span class="sub ${x===reg?'on':''}" style="cursor:pointer" onclick="renderResearch('${x}')">${x==='all'?'All':x}</span>`).join(' ');
+ $('#rs-filter').innerHTML=`<div class="mono" style="font-size:13px;margin-bottom:8px">Portals (your login): ${(d.portals||[]).map(x=>x.url?`<a href="${x.url}" target="_blank">${x.house} ↗</a>`:`<span class="mut">${x.house} (link pending)</span>`).join(' · ')}</div>`+regs.map(x=>`<span class="sub ${x===reg?'on':''}" style="cursor:pointer" onclick="renderResearch('${x}')">${x==='all'?'All':x}</span>`).join(' ');
  const prods=[...new Set(V.filter(v=>reg==='all'||v.region===reg).map(v=>v.product))];const f2=v=>v==null||v===''?'—':v;
  $('#rs-body').innerHTML=prods.map(p=>{const vs=V.filter(v=>v.product===p&&(reg==='all'||v.region===reg));const live=vs.find(v=>v.live!=null);const lab=(d.lab||{})[p];
   return`<div style="border-top:2px solid var(--navy);margin-top:14px;padding-top:8px"><div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:baseline"><span class="h" style="font-size:18px">${p} <span class="mut" style="font-size:13px">${vs[0].region}</span></span>

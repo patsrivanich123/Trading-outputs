@@ -156,6 +156,35 @@
    "BoT policy rate": null,
    "BoT / USDTHB": null
   },
+  "portals": [
+   {
+    "house": "Standard Chartered",
+    "url": "https://research.sc.com/research/api/application/static/my-subscriptions",
+    "coverage": "US / JP / TH rates + FX",
+    "added": "2026-11-11"
+   },
+   {
+    "house": "BNP Paribas",
+    "url": null,
+    "coverage": "US / JP / TH",
+    "added": "2026-11-11",
+    "todo": "Pat to send link"
+   },
+   {
+    "house": "HSBC",
+    "url": null,
+    "coverage": "US / JP / TH",
+    "added": "2026-11-11",
+    "todo": "Pat to send link"
+   },
+   {
+    "house": "JPMorgan",
+    "url": null,
+    "coverage": "US / JP / TH",
+    "added": "2026-11-11",
+    "todo": "Pat to send link"
+   }
+  ],
   "how": "Add a row to macro/research/views.csv (or send Claude a screenshot/paste from the research portal). Press reports are second-hand: confirm on the house portal.",
   "houses": [
    "BNP Paribas",
