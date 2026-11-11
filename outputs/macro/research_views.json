@@ -165,24 +165,22 @@
    },
    {
     "house": "BNP Paribas",
-    "url": null,
+    "url": "https://markets360.bnpparibas.com/contentportal/portal-content-service/markets360",
     "coverage": "US / JP / TH",
-    "added": "2026-11-11",
-    "todo": "Pat to send link"
+    "added": "2026-11-11"
    },
    {
     "house": "HSBC",
-    "url": null,
+    "url": "https://www.research.hsbc.com/ibcom/in/ibcom/internal/profile",
     "coverage": "US / JP / TH",
-    "added": "2026-11-11",
-    "todo": "Pat to send link"
+    "added": "2026-11-11"
    },
    {
     "house": "JPMorgan",
-    "url": null,
+    "url": "https://markets.jpmorgan.com/",
     "coverage": "US / JP / TH",
     "added": "2026-11-11",
-    "todo": "Pat to send link"
+    "note": "standard J.P. Morgan Markets research login \u2014 not from Pat; confirm it's the one KTB uses"
    }
   ],
   "how": "Add a row to macro/research/views.csv (or send Claude a screenshot/paste from the research portal). Press reports are second-hand: confirm on the house portal.",
