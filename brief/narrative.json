@@ -1,16 +1,16 @@
-{"date":"2026-11-11",
-"header_note":"levels as of Tue 10 Nov US close / Asia close (IBKR, delayed); Brent = Jan contract settle; Bitcoin/Nasdaq from web (flagged)",
-"key_risk":"Hot Oct CPI (0.4% / core 0.3% vs 0.3/0.2) has a 25bp Dec 9 hike fully priced and Waller floating 50bp (~14% priced): with cash Treasuries shut for Veterans Day, Thursday's $25bn 30y auction after a tailing 10y is the next test of 5% 10y, and a firm USD/higher US front end keeps pressure on THB.",
+{"date":"2026-11-12",
+"header_note":"levels as of Wed 11 Nov US close / Asia close (IBKR, delayed); UST 10Y = Tue 10 Nov close (cash shut Wed, Veterans Day); Brent = Jan contract; Bitcoin/Nasdaq 100 from web (flagged); Bigdata.com out of credits — news from web only",
+"key_risk":"USD/JPY is 20 pips off 160 (the MoF line) with a 25bp Dec 9 Fed hike ~90% priced and DXY at a 6m high; tonight's $25bn 30y auction (01:00 ICT Fri) after Tuesday's tailing 10y decides whether 10y breaks 5%, and a firmer USD/front end keeps THB under pressure.",
 "assets":{
-"USDJPY":{"news":"158.75 (+0.53%) on the CPI-driven 2y jump (+18bp to 4.74%); Fed hiking vs BoJ 1.25% (next MPM 18 Dec) keeps carry bid, MoF/joint US-Japan FX stance caps near 160.","trade":"sell 159.50 limit, stop 160.30, target 157.80 - fade into the intervention zone, don't chase"},
-"UST 10Y (%)":{"news":"4.983% (TNX) vs CNBC 4.992% - checks out. +12bp: CPI 0.4/0.3 hot, 10y auction tailed (dealers 10%, most since May), Waller 'consider 50bp', Logan wants two more hikes. 2y +18bp = bear flattening. Cash market closed Wed (Veterans Day).","trade":"no trade - R 5.03/5.09, S 4.95/4.82; 30y auction Thu 01:00 ICT Fri decides"},
-"DXY (ICE fut)":{"news":"102.17 (Dec, +0.62%), testing 6m high 102.38 on hike repricing; gold -2% toward $4,000.","trade":"no trade - buying resistance after the move has no edge; break >102.40 opens 102.9"},
-"Brent CO1":{"news":"91.49 (Jan, -1.2%), lowest since 31 Aug, -22% from the 30 Oct high: US downplays more Iran strikes; Iran says no talks under way, Rubio cool on breakthrough. RSI 35, at lower Bollinger band.","trade":"no trade - headline-binary, ATR 5.2; S 86.6, R 93.1/98.3"},
-"Bitcoin":{"news":"~$73,640 (-2.2%, web, Yahoo; no IBKR feed) - risk-off on hike odds, broke below $75k.","trade":"no trade"}
+"USDJPY":{"news":"159.80 (+0.66%), high 159.94 — ten-week high on Fed-hike repricing after hot CPI; 160 is intervention territory, no fresh Katayama warning yet. Yesterday's 159.50 short filled, stop 160.30 not hit.","trade":"bearish: add/sell 160.00, stop 160.60, target 158.70 — fade the MoF line, size small; carry is against you"},
+"UST 10Y (%)":{"news":"4.983% (TNX, Tue close; Wed IBKR print 4.998 is a stale holiday bar, dropped). Cash shut for Veterans Day. Tue: 2y +17.5bp, 10y +10.8bp on CPI + 10y tail; FedWatch ~90% 25bp Dec, ~10% 50bp.","trade":"no trade — R 5.03/5.09, S 4.95/4.82; let the 30y auction speak, then PPI Fri 20:30"},
+"DXY (ICE fut)":{"news":"102.845 (Dec, +0.70%), new 6m high through 102.38/102.74 — 19-month high on the index; Fed hiking while BoJ sits at 1.25%.","trade":"bullish: buy 102.40 retest, stop 101.95, target 103.40 — no chase at 102.85"},
+"Brent CO1":{"news":"92.76 (Jan, +1.4%) bounced off 89.15 two-month low as ten Hormuz ship attacks this month cut across Iran truce hopes; US crude stocks +9mb capped it.","trade":"no trade — headline-binary, ATR 5.2; R 94.7/98.3, S 89.2/86.6"},
+"Bitcoin":{"news":"~$74,400 (web, Coinglass snapshot 12 Nov; no IBKR feed) — -7% on the week, ETF outflows $201m; lowest since Aug earlier this week.","trade":"no trade"}
 },
 "equities":[
-{"name":"S&P 500","line":"7,522 (-0.37%): hot CPI + Nvidia -5% (China-shipment scrutiny); 6m range 7,267-7,819"},
-{"name":"Nasdaq","line":"Composite 25,066 (-0.74%, web); Nasdaq 100 level not sourced - flagged"},
-{"name":"KOSPI 200","line":"814.25 (+4.75%) bounce off 777 after -19% month; still -7.7% on the week"},
-{"name":"Hang Seng","line":"24,557 (+0.44%); +4.4% on the week, outperforming tech-heavy peers"}
+{"name":"S&P 500","line":"7,618 (+1.29%): AI rebound on CoreWeave (+25%) guidance beat outweighed hike fears; watch Nvidia -8% after hours on WSJ CEO report"},
+{"name":"Nasdaq 100","line":"28,374 (+2.3%, web/Bloomberg) back above 200DMA — but the Nvidia after-hours drop puts the open at risk"},
+{"name":"KOSPI 200","line":"836.91 (+2.78%), second day of bounce off 777; still -11% on the month"},
+{"name":"Hang Seng","line":"24,316 (-0.98%); +1.7% on the week, giving back part of last week's rally"}
 ]}
