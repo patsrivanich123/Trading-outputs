@@ -46,7 +46,7 @@
    "consensus"
   ],
   "chart": "appendix/us_ur/backtest.png",
-  "run_at": "2026-11-12T06:37",
+  "run_at": "2026-11-12T23:38",
   "caveat": "claims series are current vintage (seasonal factors revised annually); u and LFPR are true first prints (ALFRED)"
  }
 }

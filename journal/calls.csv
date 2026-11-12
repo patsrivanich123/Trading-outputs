@@ -34,7 +34,11 @@ date,asset,bias,entry,invalidation,target,last_at_call,graded_on,outcome,pnl_pct
 2026-11-11,UST 10Y (%),no trade,,,,4.983,2026-11-12,n/a,,Cash shut today; 30y auction Thu after 10y tail
 2026-11-11,DXY (ICE fut),no trade,,,,102.165,2026-11-12,n/a,,At 6m high 102.38; no edge buying resistance
 2026-11-11,Brent CO1,no trade,,,,91.49,2026-11-12,n/a,,Oversold at lower band; Iran headlines binary
-2026-11-12,USDJPY,bearish,160.0,160.6,158.7,159.8,,,,Sell 160 MoF line; 159.5 short from yesterday still open
-2026-11-12,UST 10Y (%),no trade,,,,4.983,,,,Cash shut Wed; 30y auction 01:00 ICT decides
-2026-11-12,DXY (ICE fut),bullish,102.4,101.95,103.4,102.845,,,,Breakout to 6m high; buy retest of 102.40
-2026-11-12,Brent CO1,no trade,,,,92.76,,,,"Hormuz attacks vs truce headlines; binary, ATR 5"
+2026-11-12,USDJPY,bearish,160.0,160.6,158.7,159.8,2026-11-13,loss,-0.025,Sell 160 MoF line; 159.5 short from yesterday still open
+2026-11-12,UST 10Y (%),no trade,,,,4.983,2026-11-13,n/a,,Cash shut Wed; 30y auction 01:00 ICT decides
+2026-11-12,DXY (ICE fut),bullish,102.4,101.95,103.4,102.845,2026-11-13,win,0.248,Breakout to 6m high; buy retest of 102.40
+2026-11-12,Brent CO1,no trade,,,,92.76,2026-11-13,n/a,,"Hormuz attacks vs truce headlines; binary, ATR 5"
+2026-11-13,USDJPY,no trade,,,,159.84,,,,No add: 5.1% UST vs MoF 160; 160 short stop 160.60
+2026-11-13,UST 10Y (%),bullish,5.08,4.98,5.24,5.103,,,,Two tailed auctions; pay dips to 5.08 into PPI
+2026-11-13,DXY (ICE fut),bullish,102.75,102.25,103.8,103.1,,,,New 6m high; buy dip to Thu low 102.75
+2026-11-13,Brent CO1,no trade,,,,95.82,,,,"Houthi/Hormuz vs Trump 'no deal'; binary, ATR 5"

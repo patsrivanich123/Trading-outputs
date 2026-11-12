@@ -1,16 +1,17 @@
-{"date":"2026-11-12",
-"header_note":"levels as of Wed 11 Nov US close / Asia close (IBKR, delayed); UST 10Y = Tue 10 Nov close (cash shut Wed, Veterans Day); Brent = Jan contract; Bitcoin/Nasdaq 100 from web (flagged); Bigdata.com out of credits — news from web only",
-"key_risk":"USD/JPY is 20 pips off 160 (the MoF line) with a 25bp Dec 9 Fed hike ~90% priced and DXY at a 6m high; tonight's $25bn 30y auction (01:00 ICT Fri) after Tuesday's tailing 10y decides whether 10y breaks 5%, and a firmer USD/front end keeps THB under pressure.",
+{"date":"2026-11-13",
+"header_note":"levels as of Thu 12 Nov US close / Asia close (IBKR, delayed); Brent = Jan contract; USDTHB, Bitcoin, Nasdaq 100 from Yahoo live feed (flagged, unofficial); Bigdata.com out of credits — news from web only",
+"key_risk":"US PPI tonight 20:30 ICT (cons 6.6% y/y) lands on a 10y already at 5.10% after two tailed auctions and a ~90%-priced Dec 9 hike — a hot print pushes 10y toward 5.24 and USD/JPY through 160 (MoF risk), keeping USD/THB bid near 33.9.",
 "assets":{
-"USDJPY":{"news":"159.80 (+0.66%), high 159.94 — ten-week high on Fed-hike repricing after hot CPI; 160 is intervention territory, no fresh Katayama warning yet. Yesterday's 159.50 short filled, stop 160.30 not hit.","trade":"bearish: add/sell 160.00, stop 160.60, target 158.70 — fade the MoF line, size small; carry is against you"},
-"UST 10Y (%)":{"news":"4.983% (TNX, Tue close; Wed IBKR print 4.998 is a stale holiday bar, dropped). Cash shut for Veterans Day. Tue: 2y +17.5bp, 10y +10.8bp on CPI + 10y tail; FedWatch ~90% 25bp Dec, ~10% 50bp.","trade":"no trade — R 5.03/5.09, S 4.95/4.82; let the 30y auction speak, then PPI Fri 20:30"},
-"DXY (ICE fut)":{"news":"102.845 (Dec, +0.70%), new 6m high through 102.38/102.74 — 19-month high on the index; Fed hiking while BoJ sits at 1.25%.","trade":"bullish: buy 102.40 retest, stop 101.95, target 103.40 — no chase at 102.85"},
-"Brent CO1":{"news":"92.76 (Jan, +1.4%) bounced off 89.15 two-month low as ten Hormuz ship attacks this month cut across Iran truce hopes; US crude stocks +9mb capped it.","trade":"no trade — headline-binary, ATR 5.2; R 94.7/98.3, S 89.2/86.6"},
-"Bitcoin":{"news":"~$74,400 (web, Coinglass snapshot 12 Nov; no IBKR feed) — -7% on the week, ETF outflows $201m; lowest since Aug earlier this week.","trade":"no trade"}
+"USDJPY":{"news":"159.84 (+0.03%), high 160.045 — tagged the 160 MoF line on the US yield jump; yesterday's 160 sell filled, 160.60 stop untouched. No fresh MoF/Katayama warning found in the last 24h.","trade":"no trade — no new short against 5.1% UST; existing 160 short keeps stop 160.60, target 158.70"},
+"USDTHB":{"news":"33.87 (+0.84%, Yahoo, flagged) — 6m high on broad USD + oil; factor model fair value ~33.90, near fair.","trade":"no call — follows DXY; 34.00 the next round number"},
+"UST 10Y (%)":{"news":"5.103% (TNX; CNBC 5.125%) +12bp — 30y $25bn stopped 5.441%, 0.4bp tail, b/c 2.36 vs 2.54; second weak auction in a row, oil up, Trump says no Iran deal needed.","trade":"bullish yields: pay 5.08, stop 4.98, target 5.24 (below Oct high 5.31)"},
+"DXY (ICE fut)":{"news":"103.10 (Dec, +0.27%), fresh 6m high; no overhead resistance in the window — yesterday's long from 102.845 graded a win.","trade":"bullish: buy dip to 102.75 (Thu low), stop 102.25, target 103.80"},
+"Brent CO1":{"news":"95.82 (Jan, +3.3%) — Houthi attacks on Saudi energy assets and Hormuz tanker strikes, Trump 'we've got their Strait'; still -20% on the month.","trade":"no trade — R 98.3/100, S 93.1; headline-binary with ATR ~5"},
+"Bitcoin":{"news":"71,295 (-3.6%, Yahoo, flagged) — RSI 30, below lower band; hike repricing hits crypto.","trade":"no call"}
 },
 "equities":[
-{"name":"S&P 500","line":"7,618 (+1.29%): AI rebound on CoreWeave (+25%) guidance beat outweighed hike fears; watch Nvidia -8% after hours on WSJ CEO report"},
-{"name":"Nasdaq 100","line":"28,374 (+2.3%, web/Bloomberg) back above 200DMA — but the Nvidia after-hours drop puts the open at risk"},
-{"name":"KOSPI 200","line":"836.91 (+2.78%), second day of bounce off 777; still -11% on the month"},
-{"name":"Hang Seng","line":"24,316 (-0.98%); +1.7% on the week, giving back part of last week's rally"}
+{"name":"S&P 500","line":"7,592 (-0.36%) — gave back part of Wed's +1.3% as 10y broke 5.1%"},
+{"name":"Nasdaq 100","line":"28,287 (-0.31%, Yahoo, flagged) — rates-led drift lower"},
+{"name":"KOSPI 200","line":"837.25 (+0.04%) — flat, still -11% on the month"},
+{"name":"Hang Seng","line":"24,009 (-1.26%) — weak, firm USD/high US yields"}
 ]}

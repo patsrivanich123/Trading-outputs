@@ -18,9 +18,9 @@
     "source_type": "press report",
     "source_url": "https://www.exchangerates.org.uk/news/47597/2026-10-28-usd-jpy-forecast-two-major-banks-see-opposite-paths-for-the-yen-in-2027.html",
     "status": "active",
-    "live": 159.8,
-    "live_asof": "2026-11-11 00:00:00",
-    "to_target": 5.2,
+    "live": 159.84,
+    "live_asof": "2026-11-12 00:00:00",
+    "to_target": 5.16,
     "age_days": 15,
     "stale": false
    },
@@ -39,8 +39,8 @@
     "source_type": "press report",
     "source_url": "https://www.tmgm.com/en/analysis/market-news/article/japanese-yen-wider-range-with-intervention-support-against-us-dollar-hsbc-202608111118",
     "status": "active",
-    "live": 159.8,
-    "live_asof": "2026-11-11 00:00:00",
+    "live": 159.84,
+    "live_asof": "2026-11-12 00:00:00",
     "age_days": 93,
     "stale": true
    },
@@ -59,9 +59,9 @@
     "source_type": "press report (unverified date)",
     "source_url": "https://www.jpmorgan.com/insights/markets-and-economy/economy/economic-trends",
     "status": "stale?",
-    "live": 4.983,
-    "live_asof": "2026-11-10 00:00:00",
-    "to_target": -0.283,
+    "live": 5.103,
+    "live_asof": "2026-11-12 00:00:00",
+    "to_target": -0.403,
     "age_days": 134,
     "stale": true
    },
@@ -138,20 +138,20 @@
   },
   "lab": {
    "USDJPY": {
-    "date": "2026-11-11",
-    "bias": "bearish",
-    "entry": "159.5",
-    "invalidation": "160.3",
-    "target": "157.8",
-    "note": "Sell 159.5 into MoF line; no chase at 158.75"
-   },
-   "UST 10Y": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "bias": "no trade",
     "entry": "",
     "invalidation": "",
     "target": "",
-    "note": "Cash shut today; 30y auction Thu after 10y tail"
+    "note": "No add: 5.1% UST vs MoF 160; 160 short stop 160.60"
+   },
+   "UST 10Y": {
+    "date": "2026-11-13",
+    "bias": "bullish",
+    "entry": "5.08",
+    "invalidation": "4.98",
+    "target": "5.24",
+    "note": "Two tailed auctions; pay dips to 5.08 into PPI"
    },
    "BoT policy rate": null,
    "BoT / USDTHB": null

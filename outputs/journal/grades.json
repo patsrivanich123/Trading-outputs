@@ -3,15 +3,15 @@
  "source": "journal.grade",
  "data": {
   "graded_today": 4,
-  "n_scored": 7,
-  "hit_rate_all": 42.857142857142854,
-  "hit_rate_20": 42.857142857142854,
+  "n_scored": 9,
+  "hit_rate_all": 44.44444444444444,
+  "hit_rate_20": 44.44444444444444,
   "yesterday": [
    {
     "asset": "USDJPY",
     "bias": "bearish",
     "outcome": "loss",
-    "pnl_pct": "-0.663"
+    "pnl_pct": "-0.025"
    },
    {
     "asset": "UST 10Y (%)",
@@ -21,9 +21,9 @@
    },
    {
     "asset": "DXY (ICE fut)",
-    "bias": "no trade",
-    "outcome": "n/a",
-    "pnl_pct": ""
+    "bias": "bullish",
+    "outcome": "win",
+    "pnl_pct": "0.248"
    },
    {
     "asset": "Brent CO1",

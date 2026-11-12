@@ -3,7 +3,7 @@
  "source": "brief.calendar",
  "data": [
   {
-   "name": "US CPI / core CPI (Oct) — RELEASED: +0.4% / core +0.3% m/m (cons 0.3/0.2)",
+   "name": "US CPI / core CPI (Oct) — RELEASED 10 Nov: +0.4% / core +0.3% m/m (cons 0.3/0.2)",
    "country": "US",
    "kind": "inflation",
    "ict": "2026-11-10 20:30",
@@ -16,19 +16,7 @@
    "required": "us_cpi"
   },
   {
-   "name": "UK Q3 GDP (prelim)",
-   "country": "UK",
-   "kind": "activity",
-   "ict": "2026-11-12 14:00",
-   "date": "2026-11-12",
-   "consensus": null,
-   "prior": null,
-   "rate": null,
-   "confirmed": false,
-   "impact": 1
-  },
-  {
-   "name": "US 30y bond auction $25bn (refunding; 10y tailed Tue)",
+   "name": "US 30y bond auction $25bn — RESULT: 5.441%, 0.4bp tail, b/c 2.36 (2.54 prior)",
    "country": "US",
    "kind": "supply",
    "ict": "2026-11-13 01:00",
@@ -37,7 +25,7 @@
    "prior": "5.618% (Oct)",
    "rate": null,
    "confirmed": true,
-   "impact": 2
+   "impact": 1
   },
   {
    "name": "US PPI (Oct)",
@@ -45,8 +33,8 @@
    "kind": "inflation",
    "ict": "2026-11-13 20:30",
    "date": "2026-11-13",
-   "consensus": null,
-   "prior": null,
+   "consensus": "6.6% y/y (Investing.com)",
+   "prior": "6.3% y/y",
    "rate": null,
    "confirmed": true,
    "impact": 2
@@ -107,7 +95,7 @@
    "date": "2026-11-19",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; Dec 9: 25bp hike ~90%, 50bp ~10% (CME FedWatch via Investing.com, 11 Nov)",
+   "rate": "3.75-4.00%; Dec 9: 25bp hike ~85-95% priced (CME FedWatch, 10-11 Nov)",
    "confirmed": false,
    "impact": 2
   },
@@ -159,6 +147,18 @@
    "prior": null,
    "rate": null,
    "confirmed": true,
+   "impact": 1
+  },
+  {
+   "name": "Tokyo CPI (Nov)",
+   "country": "JP",
+   "kind": "inflation",
+   "ict": "2026-11-27 06:30",
+   "date": "2026-11-27",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": false,
    "impact": 1
   }
  ],
