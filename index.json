@@ -1,8 +1,9 @@
 {
- "published": "2026-11-12T06:38+07:00",
+ "published": "2026-11-12T10:04+07:00",
  "files": [
   "outputs/assets/levels.json",
   "outputs/assets/series.json",
+  "outputs/assets/usdthb.json",
   "outputs/journal/grades.json",
   "outputs/macro/bquant_status.json",
   "outputs/macro/calendar.json",
