@@ -1,17 +1,17 @@
-{"date":"2026-11-13",
-"header_note":"levels as of Thu 12 Nov US close / Asia close (IBKR, delayed); Brent = Jan contract; USDTHB, Bitcoin, Nasdaq 100 from Yahoo live feed (flagged, unofficial); Bigdata.com out of credits — news from web only",
-"key_risk":"US PPI tonight 20:30 ICT (cons 6.6% y/y) lands on a 10y already at 5.10% after two tailed auctions and a ~90%-priced Dec 9 hike — a hot print pushes 10y toward 5.24 and USD/JPY through 160 (MoF risk), keeping USD/THB bid near 33.9.",
+{"date":"2026-11-14",
+"header_note":"levels as of Fri 13 Nov US close / Asia close (IBKR, delayed); Brent = Jan contract; USDTHB, Bitcoin, Nasdaq 100 from Yahoo live feed (flagged, unofficial); Bigdata.com out of credits — news from web only",
+"key_risk":"Weekend gap risk on USD/JPY at 160 (Katayama 'respond appropriately'), then Warsh Mon and US retail sales Tue 20:30 ICT into a 10y at 5.15% with a Dec 9 hike ~90% priced — firm data keeps 10y toward 5.24 and USD/THB pressing 34.00.",
 "assets":{
-"USDJPY":{"news":"159.84 (+0.03%), high 160.045 — tagged the 160 MoF line on the US yield jump; yesterday's 160 sell filled, 160.60 stop untouched. No fresh MoF/Katayama warning found in the last 24h.","trade":"no trade — no new short against 5.1% UST; existing 160 short keeps stop 160.60, target 158.70"},
-"USDTHB":{"news":"33.87 (+0.84%, Yahoo, flagged) — 6m high on broad USD + oil; factor model fair value ~33.90, near fair.","trade":"no call — follows DXY; 34.00 the next round number"},
-"UST 10Y (%)":{"news":"5.103% (TNX; CNBC 5.125%) +12bp — 30y $25bn stopped 5.441%, 0.4bp tail, b/c 2.36 vs 2.54; second weak auction in a row, oil up, Trump says no Iran deal needed.","trade":"bullish yields: pay 5.08, stop 4.98, target 5.24 (below Oct high 5.31)"},
-"DXY (ICE fut)":{"news":"103.10 (Dec, +0.27%), fresh 6m high; no overhead resistance in the window — yesterday's long from 102.845 graded a win.","trade":"bullish: buy dip to 102.75 (Thu low), stop 102.25, target 103.80"},
-"Brent CO1":{"news":"95.82 (Jan, +3.3%) — Houthi attacks on Saudi energy assets and Hormuz tanker strikes, Trump 'we've got their Strait'; still -20% on the month.","trade":"no trade — R 98.3/100, S 93.1; headline-binary with ATR ~5"},
-"Bitcoin":{"news":"71,295 (-3.6%, Yahoo, flagged) — RSI 30, below lower band; hike repricing hits crypto.","trade":"no call"}
+"USDJPY":{"news":"159.71 (-0.08%), high 160.19 — tested 160 again on Fed-hike bets; Katayama warned on one-sided moves, no intervention confirmed. MoF spent ¥15.4trn after the July 163.99 low.","trade":"no trade — no new short against 5.15% UST; existing 160 short: stop 160.60, target 158.70"},
+"USDTHB":{"news":"33.84 (+0.31%, Yahoo, flagged) — fresh 6m high on broad USD; range 33.78–34.00 Fri.","trade":"no call — follows DXY; 34.00 the line"},
+"UST 10Y (%)":{"news":"5.154% (TNX; CNBC high 5.17%) +5bp — Oct PPI +0.3% m/m (cons 0.4%) but 6.5% y/y, core 5% y/y; Dec hike ~90%, 50bp ~10%. Yesterday's bullish call graded a win.","trade":"bullish yields: pay 5.12, stop 5.07, target 5.24 (below Oct high 5.31)"},
+"DXY (ICE fut)":{"news":"103.31 (Dec, +0.21%) — new 6m high, best week in two months on hike repricing; RSI 68, above upper band. Yesterday's long graded a win.","trade":"bullish on dips: buy 102.90, stop 102.25, target 103.90 — don't chase"},
+"Brent CO1":{"news":"96.08 (Jan, +0.27%) — IEA sees first surplus since the Iran war vs Houthi claims on Saudi assets; second weekly loss, -20% in Nov.","trade":"no trade — R 98.3/100, S 92.8; headline-binary with ATR ~5"},
+"Bitcoin":{"news":"68,128 (-4.5%, Yahoo, flagged) — below 70k, RSI 25; hike repricing + Nvidia-led tech risk-off.","trade":"no call"}
 },
 "equities":[
-{"name":"S&P 500","line":"7,592 (-0.36%) — gave back part of Wed's +1.3% as 10y broke 5.1%"},
-{"name":"Nasdaq 100","line":"28,287 (-0.31%, Yahoo, flagged) — rates-led drift lower"},
-{"name":"KOSPI 200","line":"837.25 (+0.04%) — flat, still -11% on the month"},
-{"name":"Hang Seng","line":"24,009 (-1.26%) — weak, firm USD/high US yields"}
+{"name":"S&P 500","line":"7,561 (-0.42%) — Nvidia slide after reported Huang resignation, Cisco -6%; +2.5% on the week"},
+{"name":"Nasdaq 100","line":"27,937 (-1.24%, Yahoo, flagged) — Nvidia's 6th straight weekly loss; Nvidia earnings Tue after close"},
+{"name":"KOSPI 200","line":"826.16 (-1.32%) — chip-led, still -4% on the month"},
+{"name":"Hang Seng","line":"23,638 (-1.55%) — firm USD, 5.15% US 10y"}
 ]}

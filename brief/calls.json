@@ -1,6 +1,6 @@
-{"date":"2026-11-13","calls":[
-{"asset":"USDJPY","bias":"no trade","entry":null,"invalidation":null,"target":null,"last_at_call":159.84,"note":"No add: 5.1% UST vs MoF 160; 160 short stop 160.60"},
-{"asset":"UST 10Y (%)","bias":"bullish","entry":5.08,"invalidation":4.98,"target":5.24,"last_at_call":5.103,"note":"Two tailed auctions; pay dips to 5.08 into PPI"},
-{"asset":"DXY (ICE fut)","bias":"bullish","entry":102.75,"invalidation":102.25,"target":103.8,"last_at_call":103.1,"note":"New 6m high; buy dip to Thu low 102.75"},
-{"asset":"Brent CO1","bias":"no trade","entry":null,"invalidation":null,"target":null,"last_at_call":95.82,"note":"Houthi/Hormuz vs Trump 'no deal'; binary, ATR 5"}
+{"date":"2026-11-14","calls":[
+{"asset":"USDJPY","bias":"no trade","entry":null,"invalidation":null,"target":null,"last_at_call":159.7075,"note":"160 = MoF line, Katayama warned; carry vs intervention, no edge"},
+{"asset":"UST 10Y (%)","bias":"bullish","entry":5.12,"invalidation":5.07,"target":5.24,"last_at_call":5.154,"note":"PPI 6.5% y/y, 90% Dec hike; pay dips into retail sales"},
+{"asset":"DXY (ICE fut)","bias":"bullish","entry":102.9,"invalidation":102.25,"target":103.9,"last_at_call":103.31,"note":"6m high but above BB; buy dip, don't chase"},
+{"asset":"Brent CO1","bias":"no trade","entry":null,"invalidation":null,"target":null,"last_at_call":96.08,"note":"IEA surplus vs Houthi/Iran headlines; ATR 5, binary"}
 ]}
