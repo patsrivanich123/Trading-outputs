@@ -19,161 +19,48 @@
     {
      "group": "FX",
      "project": "Macro Lab FX",
-     "name": "USDTHB ensemble fair value",
-     "status": "validated",
+     "name": "USDTHB fair value \u2014 multi-regression",
+     "status": "completed",
      "updated": "2026-11-13",
-     "what": "log USDTHB vs DXY, gold, US 2y, USDJPY; average of 1y/2y/3y no-peek rolling regressions; daily + weekly tabs with residual, variables, betas, significance",
-     "result": "Validation 2025+: price closes 20% of the gap in 10d (t 2.1), model 'chases' 17% (n.s.), half-life ~11d, residual kurtosis 3.1 (\u2248normal). Now: near fair value.",
-     "caveat": "DXY and USDJPY collinear -> individual betas swing between windows; read fair value, not single betas. Fix: orthogonalise or drop JPY.",
+     "what": "log USDTHB regressed on DXY, gold, US 2y, USDJPY; fair value = average of 1y/2y/3y no-peek rolling regressions (ensemble); daily + weekly; views: price vs model, residual, variables, betas, significance",
+     "result": "Validation 2025+: price closes 20% of the gap in 10 days (t 2.1); model does not chase price (17%, n.s.); half-life ~11 days; residual close to normal (kurtosis 3.1).",
+     "caveat": "DXY and USDJPY overlap, so individual betas swing between windows \u2014 read the fair value, not single betas.",
      "file": "assets/fx/bquant/usdthb_ensemble.py",
-     "next": "orthogonalise JPY vs DXY; feed daily fair value to the hub"
+     "next": ""
     },
     {
      "group": "FX",
      "project": "Macro Lab FX",
-     "name": "USDTHB lead/lag ('price follows model')",
-     "status": "research",
-     "updated": "2026-11-12",
-     "what": "Which factor moves lead USDTHB; no-peek fair values chosen on 2019\u201324, validated 2025+",
-     "result": "USDTHB (Asia-stamped) reacts a day late to NY moves: DXY over today+yesterday (0.44), gold yesterday (\u22120.39), US 2y and SOFR\u2013THB swap spread yesterday (+0.3). Simple base model beat spread/CNH versions in validation (hit 70% on |gap|>1.5\u03c3, but slow).",
-     "caveat": "Tradable only if you can deal before USDTHB catches up (check the BBG close time).",
-     "file": "assets/fx/bquant/usdthb_lead.py",
-     "next": "out-of-sample test of the overnight catch-up trade"
-    },
-    {
-     "group": "FX",
-     "project": "Macro Lab FX",
-     "name": "USDTHB divergence trade (backtest)",
-     "status": "building",
+     "name": "NEER / REER basket",
+     "status": "planned",
      "updated": "2026-11-13",
-     "what": "USDTHB up but above model -> long THB (and mirror); exit gap closed / stop 3\u03c3 / 20d; entry next close; 2bp cost + carry",
-     "result": "Not yet run on Bloomberg data (dry run only).",
-     "caveat": "",
-     "file": "assets/fx/bquant/usdthb_bt.py",
-     "next": "run in BQuant; judge on 2025+ validation and trade count"
-    },
-    {
-     "group": "FX",
-     "project": "Macro Lab FX",
-     "name": "USDTHB intraday live fair value",
-     "status": "parked",
-     "updated": "2026-11-13",
-     "what": "Polls latest prices every 15 min (BQL has no intraday bars), live fair value + gap in pips",
-     "result": "Built, not in use.",
-     "caveat": "Proper intraday bars need the laptop Bloomberg API.",
-     "file": "assets/fx/bquant/usdthb_intraday.py",
-     "next": ""
-    },
-    {
-     "group": "FX",
-     "project": "Macro Lab FX",
-     "name": "USDTHB regime betas / Kalman",
-     "status": "rejected",
-     "updated": "2026-11-12",
-     "what": "Separate betas by USD trend, VIX, THB vol, MOVE, Fed cycle; Kalman time-varying betas; Markov 2-state",
-     "result": "All chase price out of sample (model closes 30\u201360% of the gap itself). Ensemble wins. Don't re-test.",
-     "caveat": "",
-     "file": "assets/fx/bquant/usdthb_regimes.py",
-     "next": ""
-    }
-   ],
-   "US Rates": [
-    {
-     "group": "US Rates",
-     "project": "Macro Lab UST",
-     "name": "Auction concession (10y/30y)",
-     "status": "validated",
-     "updated": "2026-11-05",
-     "what": "Yields cheapen into coupon auctions? 797 auctions 2010\u20132026, Bloomberg closes",
-     "result": "Since 2022: 10y/30y cheapen +2.4\u20132.9bp in the 5 days into the auction (t ~1.5\u20131.9, ~0.25\u03c3 of 5-day noise); post-auction richening gone. Use as a timing overlay, not a trade.",
-     "caveat": "Small edge vs noise.",
-     "file": "assets/rates/bquant/ust_auction_signal.py",
-     "next": ""
-    },
-    {
-     "group": "US Rates",
-     "project": "Macro Lab UST",
-     "name": "Event follow/fade (CPI, NFP)",
-     "status": "research",
-     "updated": "2026-11-10",
-     "what": "Does the release-day move continue or reverse over 1\u20133 days?",
-     "result": "Mostly noise. Candidate: CPI-day 10y/30y moves continue over 3 days since 2022 (t ~1.7\u20132.1, 57 events). Shadow call logged for US CPI 10 Nov.",
-     "caveat": "Cloud proof on FRED closes; not yet on Bloomberg intraday.",
-     "file": "assets/rates/bquant/test_event_follow.py",
-     "next": "grade the 10 Nov shadow call; Bloomberg version"
-    },
-    {
-     "group": "US Rates",
-     "project": "Macro Lab UST",
-     "name": "Fed pricing gap vs FOMC member agents",
-     "status": "idea",
-     "updated": "2026-11-05",
-     "what": "SOFR-futures implied path vs our FOMC agents' modal vote \u2014 our unique input",
-     "result": "",
-     "caveat": "",
-     "file": "",
-     "next": "build 12_fedgap before the 9 Dec FOMC"
-    },
-    {
-     "group": "US Rates",
-     "project": "Macro Lab UST",
-     "name": "Overbought/oversold with trend filter + asymmetric exits",
-     "status": "idea",
-     "updated": "2026-11-05",
-     "what": "Mean-revert only when trend is flat; quick exit on fast rallies, hold the grind",
-     "result": "",
-     "caveat": "",
-     "file": "",
-     "next": ""
-    },
-    {
-     "group": "US Rates",
-     "project": "Macro Lab UST",
-     "name": "10y fair value (rich/cheap)",
-     "status": "idea",
-     "updated": "2026-11-05",
-     "what": "10y vs Fed path, inflation expectations, term premium, global yields -> residual z",
+     "what": "THB nominal and real effective exchange rate basket",
      "result": "",
      "caveat": "",
      "file": "",
      "next": ""
     }
    ],
+   "US Rates": [],
    "TH Rates": [
     {
      "group": "TH Rates",
      "project": "\u2014",
-     "name": "TH CPI nowcast -> THB front end",
-     "status": "idea",
+     "name": "THOR \u2014 regime-switching GARCH",
+     "status": "planned",
      "updated": "2026-11-13",
-     "what": "Our TH CPI edge (beat consensus on Oct) mapped to the THB 1\u20132y swap/bond reaction around the print",
+     "what": "Regime-switching GARCH model on THOR (Thai overnight repo rate)",
      "result": "",
      "caveat": "",
      "file": "",
-     "next": "needs TH 2y / THB swap history (TBSWI2 works in BQuant)"
-    },
-    {
-     "group": "TH Rates",
-     "project": "\u2014",
-     "name": "THB 2y swap vs US SOFR 2y spread",
-     "status": "idea",
-     "updated": "2026-11-13",
-     "what": "Spread fair value vs BoT/Fed path; links to the USDTHB model (spread leads USDTHB by a day)",
-     "result": "",
-     "caveat": "",
-     "file": "",
-     "next": "new BQuant project 'Macro Lab TH Rates'"
+     "next": ""
     }
    ]
   },
   "counts": {
-   "validated": 2,
-   "live": 0,
-   "research": 2,
-   "building": 1,
-   "idea": 5,
-   "parked": 1,
-   "rejected": 1
+   "completed": 1,
+   "in progress": 0,
+   "planned": 2
   },
   "repo": "https://github.com/patsrivanich123/Trading/blob/main/"
  }
