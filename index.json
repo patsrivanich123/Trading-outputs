@@ -1,6 +1,7 @@
 {
- "published": "2026-11-13T06:39+07:00",
+ "published": "2026-11-13T10:48+07:00",
  "files": [
+  "outputs/assets/bquant.json",
   "outputs/assets/levels.json",
   "outputs/assets/series.json",
   "outputs/assets/usdthb.json",
