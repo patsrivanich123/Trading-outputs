@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-13",
+ "asof": "2026-11-15",
  "source": "macro.research.publish (views.csv)",
  "data": {
   "views": [
@@ -21,7 +21,7 @@
     "live": 159.7075,
     "live_asof": "2026-11-13 00:00:00",
     "to_target": 5.292,
-    "age_days": 16,
+    "age_days": 18,
     "stale": false
    },
    {
@@ -41,7 +41,7 @@
     "status": "active",
     "live": 159.7075,
     "live_asof": "2026-11-13 00:00:00",
-    "age_days": 94,
+    "age_days": 96,
     "stale": true
    },
    {
@@ -62,7 +62,7 @@
     "live": 5.154,
     "live_asof": "2026-11-13 00:00:00",
     "to_target": -0.454,
-    "age_days": 135,
+    "age_days": 137,
     "stale": true
    },
    {
@@ -80,7 +80,7 @@
     "source_type": "press report",
     "source_url": "https://www.bloomberg.com/news/articles/2026-09-28/jpmorgan-defies-consensus-with-three-thai-rate-hikes-in-2027",
     "status": "active",
-    "age_days": 46,
+    "age_days": 48,
     "stale": false
    },
    {
@@ -98,7 +98,7 @@
     "source_type": "press report",
     "source_url": "https://www.fxstreet.com/news/thai-baht-bot-cautious-on-normalisation-downside-persists-commerzbank-202610301722",
     "status": "active",
-    "age_days": 14,
+    "age_days": 16,
     "stale": false
    },
    {
@@ -116,7 +116,7 @@
     "source_type": "press report",
     "source_url": "https://www.fxstreet.com/news/thai-baht-bot-holds-rates-as-curve-steepening-risks-dbs-202610292054",
     "status": "active",
-    "age_days": 15,
+    "age_days": 17,
     "stale": false
    }
   ],
@@ -138,20 +138,20 @@
   },
   "lab": {
    "USDJPY": {
-    "date": "2026-11-13",
+    "date": "2026-11-14",
     "bias": "no trade",
     "entry": "",
     "invalidation": "",
     "target": "",
-    "note": "No add: 5.1% UST vs MoF 160; 160 short stop 160.60"
+    "note": "160 = MoF line, Katayama warned; carry vs intervention, no edge"
    },
    "UST 10Y": {
-    "date": "2026-11-13",
+    "date": "2026-11-14",
     "bias": "bullish",
-    "entry": "5.08",
-    "invalidation": "4.98",
+    "entry": "5.12",
+    "invalidation": "5.07",
     "target": "5.24",
-    "note": "Two tailed auctions; pay dips to 5.08 into PPI"
+    "note": "PPI 6.5% y/y, 90% Dec hike; pay dips into retail sales"
    },
    "BoT policy rate": null,
    "BoT / USDTHB": null

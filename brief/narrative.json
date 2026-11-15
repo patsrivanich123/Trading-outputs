@@ -1,17 +1,17 @@
-{"date":"2026-11-14",
-"header_note":"levels as of Fri 13 Nov US close / Asia close (IBKR, delayed); Brent = Jan contract; USDTHB, Bitcoin, Nasdaq 100 from Yahoo live feed (flagged, unofficial); Bigdata.com out of credits — news from web only",
-"key_risk":"Weekend gap risk on USD/JPY at 160 (Katayama 'respond appropriately'), then Warsh Mon and US retail sales Tue 20:30 ICT into a 10y at 5.15% with a Dec 9 hike ~90% priced — firm data keeps 10y toward 5.24 and USD/THB pressing 34.00.",
-"assets":{
-"USDJPY":{"news":"159.71 (-0.08%), high 160.19 — tested 160 again on Fed-hike bets; Katayama warned on one-sided moves, no intervention confirmed. MoF spent ¥15.4trn after the July 163.99 low.","trade":"no trade — no new short against 5.15% UST; existing 160 short: stop 160.60, target 158.70"},
-"USDTHB":{"news":"33.84 (+0.31%, Yahoo, flagged) — fresh 6m high on broad USD; range 33.78–34.00 Fri.","trade":"no call — follows DXY; 34.00 the line"},
-"UST 10Y (%)":{"news":"5.154% (TNX; CNBC high 5.17%) +5bp — Oct PPI +0.3% m/m (cons 0.4%) but 6.5% y/y, core 5% y/y; Dec hike ~90%, 50bp ~10%. Yesterday's bullish call graded a win.","trade":"bullish yields: pay 5.12, stop 5.07, target 5.24 (below Oct high 5.31)"},
-"DXY (ICE fut)":{"news":"103.31 (Dec, +0.21%) — new 6m high, best week in two months on hike repricing; RSI 68, above upper band. Yesterday's long graded a win.","trade":"bullish on dips: buy 102.90, stop 102.25, target 103.90 — don't chase"},
-"Brent CO1":{"news":"96.08 (Jan, +0.27%) — IEA sees first surplus since the Iran war vs Houthi claims on Saudi assets; second weekly loss, -20% in Nov.","trade":"no trade — R 98.3/100, S 92.8; headline-binary with ATR ~5"},
-"Bitcoin":{"news":"68,128 (-4.5%, Yahoo, flagged) — below 70k, RSI 25; hike repricing + Nvidia-led tech risk-off.","trade":"no call"}
+{"date": "2026-11-16",
+"header_note": "levels as of Fri 13 Nov US close / Asia close (IBKR, delayed; final settles: DXY 103.325, Brent Jan 95.84, KOSPI200 824.78); Monday Asia open from Yahoo live feed (flagged). USDTHB, Bitcoin, Nasdaq 100 from Yahoo (flagged, unofficial). Bigdata.com out of credits — news from web only. Sat 14 Nov calls NOT graded today: no new bar since the call (weekend); they grade Tue on Monday's close.",
+"key_risk": "Warsh speaks 00:00 ICT Tue (SF Fed, opening remarks — he avoids forward guidance) then US retail sales 20:30 ICT Tue, with a Dec 9 hike ~85–90% priced, 2y ~4.85% after its biggest weekly jump since Oct 2024 and 10y at 5.15%: firm control group pushes 10y toward 5.24 and USD/THB through 34.00.",
+"assets": {
+"USDJPY": {"news": "159.71 Fri (-0.08%); Yahoo 159.69 at Mon open. Third test of 160 this year Thu; Katayama warned on 'one-sided, swift' moves, MoF spent ¥15.4trn in the summer. Japan Q3 GDP prelim due 06:50 ICT (polls +0.3–0.8% ann.); BOJ Dec hike expected but yen still weak.", "trade": "no trade — 160 is the MoF line, carry says higher; no edge either way. Existing shorts from 160: stop 160.60, target 158.70."},
+"USDTHB": {"news": "33.84 (Yahoo, flagged) — at 6m high (33.85) on broad USD; RSI 60, upper band 33.91. Thai Q3 GDP (NESDC) due this week, date TBC; Q2 was +1.9% y/y.", "trade": "no call — follows DXY/UST; 34.00 is the line, a close above opens 34.20."},
+"UST 10Y (%)": {"news": "5.154% Fri (+5bp; +28bp on the week) after hot Oct CPI 0.4% and PPI 6.5% y/y; 2y +~35bp w/w to ~4.85%. Dec 9 hike: 25bp ~84–90%, 50bp ~10–15% (GS 25, Citi 25 w/ risk of 50, StanChart leans 50). Fri bullish call carries; grades Tue.", "trade": "bullish yields: pay 5.12, stop 5.07, target 5.24 (below Oct high 5.31)."},
+"DXY (ICE fut)": {"news": "103.325 Dec fut (+0.22%), fresh 6m high; spot index 103.43 at Mon Asia open. RSI 68, above upper Bollinger band (103.04) — stretched.", "trade": "bullish on dips: buy 102.90, stop 102.25, target 103.90 — don't chase from here."},
+"Brent CO1": {"news": "95.84 Jan (settle Thu bar), Yahoo 95.25 at Mon open (-0.6%). Below 20/50DMA (103/99.6), -7% m/m; IEA surplus story vs Houthi/Iran risk premium.", "trade": "no trade — range 92.8–98.3, ATR ~5, headline-binary."},
+"Bitcoin": {"news": "~65,080 (Yahoo, flagged) — -11.7% w/w, -18.7% m/m, RSI 24; broke 50-week MA last week with >$1bn long liquidations and ETF outflows. Risk-off signal alongside the AI/tech wobble.", "trade": "no trade — oversold but no base; don't catch it. 6m low 58,560 is the next reference."}
 },
-"equities":[
-{"name":"S&P 500","line":"7,561 (-0.42%) — Nvidia slide after reported Huang resignation, Cisco -6%; +2.5% on the week"},
-{"name":"Nasdaq 100","line":"27,937 (-1.24%, Yahoo, flagged) — Nvidia's 6th straight weekly loss; Nvidia earnings Tue after close"},
-{"name":"KOSPI 200","line":"826.16 (-1.32%) — chip-led, still -4% on the month"},
-{"name":"Hang Seng","line":"23,638 (-1.55%) — firm USD, 5.15% US 10y"}
+"equities": [
+{"name": "S&P 500", "line": "7,562 (-0.40%) Fri; +2.5% w/w — 10y at 5.15% capping multiples; Nvidia results Tue after close (Wed 04:20 ICT)."},
+{"name": "Nasdaq 100", "line": "27,937 (-1.24%, Yahoo, flagged) — tech led the drop; -6.7% m/m, Nvidia the week's swing factor."},
+{"name": "KOSPI 200", "line": "824.78 (-1.49%) Fri; +5.5% w/w bounce off 777 low, still -4% m/m."},
+{"name": "Hang Seng", "line": "23,638 (-1.55%) Fri; -3.4% w/w on strong USD/higher US yields."}
 ]}

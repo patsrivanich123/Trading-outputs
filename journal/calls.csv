@@ -46,3 +46,7 @@ date,asset,bias,entry,invalidation,target,last_at_call,graded_on,outcome,pnl_pct
 2026-11-14,UST 10Y (%),bullish,5.12,5.07,5.24,5.154,,,,"PPI 6.5% y/y, 90% Dec hike; pay dips into retail sales"
 2026-11-14,DXY (ICE fut),bullish,102.9,102.25,103.9,103.31,,,,"6m high but above BB; buy dip, don't chase"
 2026-11-14,Brent CO1,no trade,,,,96.08,,,,"IEA surplus vs Houthi/Iran headlines; ATR 5, binary"
+2026-11-16,USDJPY,no trade,,,,159.7075,,,,"160 MoF line vs 5.15% UST carry; GDP 06:50, no edge"
+2026-11-16,UST 10Y (%),bullish,5.12,5.07,5.24,5.154,,,,"Dec hike priced, 2y +35bp wk; pay dips into retail sales"
+2026-11-16,DXY (ICE fut),bullish,102.9,102.25,103.9,103.325,,,,"6m high, above upper band; buy dip only, don't chase"
+2026-11-16,Brent CO1,no trade,,,,95.84,,,,"92.8-98.3 range, ATR 5, headline-driven; no edge"
