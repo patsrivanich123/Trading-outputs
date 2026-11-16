@@ -1,6 +1,6 @@
-{"date": "2026-11-16", "calls": [
-{"asset": "USDJPY", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 159.7075, "note": "160 MoF line vs 5.15% UST carry; GDP 06:50, no edge"},
-{"asset": "UST 10Y (%)", "bias": "bullish", "entry": 5.12, "invalidation": 5.07, "target": 5.24, "last_at_call": 5.154, "note": "Dec hike priced, 2y +35bp wk; pay dips into retail sales"},
-{"asset": "DXY (ICE fut)", "bias": "bullish", "entry": 102.9, "invalidation": 102.25, "target": 103.9, "last_at_call": 103.325, "note": "6m high, above upper band; buy dip only, don't chase"},
-{"asset": "Brent CO1", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 95.84, "note": "92.8-98.3 range, ATR 5, headline-driven; no edge"}
+{"date": "2026-11-17", "calls": [
+{"asset": "USDJPY", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 159.47, "note": "MoF warnings at 160 vs carry; no edge"},
+{"asset": "UST 10Y (%)", "bias": "bullish", "entry": 5.10, "invalidation": 5.06, "target": 5.2, "last_at_call": 5.121, "note": "Held 5.12 through equity rout; hike 95% priced"},
+{"asset": "DXY (ICE fut)", "bias": "bullish", "entry": 103.0, "invalidation": 102.25, "target": 104.0, "last_at_call": 103.535, "note": "Trend up but stretched; buy dips only"},
+{"asset": "Brent CO1", "bias": "bearish", "entry": 95.0, "invalidation": 98.5, "target": 88.6, "last_at_call": 92.44, "note": "Hormuz flows recovering; sell rallies below 98"}
 ]}

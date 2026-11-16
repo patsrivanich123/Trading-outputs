@@ -42,11 +42,15 @@ date,asset,bias,entry,invalidation,target,last_at_call,graded_on,outcome,pnl_pct
 2026-11-13,UST 10Y (%),bullish,5.08,4.98,5.24,5.103,2026-11-14,win,0.999,Two tailed auctions; pay dips to 5.08 into PPI
 2026-11-13,DXY (ICE fut),bullish,102.75,102.25,103.8,103.1,2026-11-14,win,0.204,New 6m high; buy dip to Thu low 102.75
 2026-11-13,Brent CO1,no trade,,,,95.82,2026-11-14,n/a,,"Houthi/Hormuz vs Trump 'no deal'; binary, ATR 5"
-2026-11-14,USDJPY,no trade,,,,159.7075,,,,"160 = MoF line, Katayama warned; carry vs intervention, no edge"
-2026-11-14,UST 10Y (%),bullish,5.12,5.07,5.24,5.154,,,,"PPI 6.5% y/y, 90% Dec hike; pay dips into retail sales"
-2026-11-14,DXY (ICE fut),bullish,102.9,102.25,103.9,103.31,,,,"6m high but above BB; buy dip, don't chase"
-2026-11-14,Brent CO1,no trade,,,,96.08,,,,"IEA surplus vs Houthi/Iran headlines; ATR 5, binary"
-2026-11-16,USDJPY,no trade,,,,159.7075,,,,"160 MoF line vs 5.15% UST carry; GDP 06:50, no edge"
-2026-11-16,UST 10Y (%),bullish,5.12,5.07,5.24,5.154,,,,"Dec hike priced, 2y +35bp wk; pay dips into retail sales"
-2026-11-16,DXY (ICE fut),bullish,102.9,102.25,103.9,103.325,,,,"6m high, above upper band; buy dip only, don't chase"
-2026-11-16,Brent CO1,no trade,,,,95.84,,,,"92.8-98.3 range, ATR 5, headline-driven; no edge"
+2026-11-14,USDJPY,no trade,,,,159.7075,2026-11-17,n/a,,"160 = MoF line, Katayama warned; carry vs intervention, no edge"
+2026-11-14,UST 10Y (%),bullish,5.12,5.07,5.24,5.154,2026-11-17,loss,-0.640,"PPI 6.5% y/y, 90% Dec hike; pay dips into retail sales"
+2026-11-14,DXY (ICE fut),bullish,102.9,102.25,103.9,103.31,2026-11-17,win,0.218,"6m high but above BB; buy dip, don't chase"
+2026-11-14,Brent CO1,no trade,,,,96.08,2026-11-17,n/a,,"IEA surplus vs Houthi/Iran headlines; ATR 5, binary"
+2026-11-16,USDJPY,no trade,,,,159.7075,2026-11-17,n/a,,"160 MoF line vs 5.15% UST carry; GDP 06:50, no edge"
+2026-11-16,UST 10Y (%),bullish,5.12,5.07,5.24,5.154,2026-11-17,loss,-0.640,"Dec hike priced, 2y +35bp wk; pay dips into retail sales"
+2026-11-16,DXY (ICE fut),bullish,102.9,102.25,103.9,103.325,2026-11-17,win,0.203,"6m high, above upper band; buy dip only, don't chase"
+2026-11-16,Brent CO1,no trade,,,,95.84,2026-11-17,n/a,,"92.8-98.3 range, ATR 5, headline-driven; no edge"
+2026-11-17,USDJPY,no trade,,,,159.47,,,,MoF warnings at 160 vs carry; no edge
+2026-11-17,UST 10Y (%),bullish,5.1,5.06,5.2,5.121,,,,Held 5.12 through equity rout; hike 95% priced
+2026-11-17,DXY (ICE fut),bullish,103.0,102.25,104.0,103.535,,,,Trend up but stretched; buy dips only
+2026-11-17,Brent CO1,bearish,95.0,98.5,88.6,92.44,,,,Hormuz flows recovering; sell rallies below 98

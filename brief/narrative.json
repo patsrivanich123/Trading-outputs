@@ -1,17 +1,17 @@
-{"date": "2026-11-16",
-"header_note": "levels as of Fri 13 Nov US close / Asia close (IBKR, delayed; final settles: DXY 103.325, Brent Jan 95.84, KOSPI200 824.78); Monday Asia open from Yahoo live feed (flagged). USDTHB, Bitcoin, Nasdaq 100 from Yahoo (flagged, unofficial). Bigdata.com out of credits — news from web only. Sat 14 Nov calls NOT graded today: no new bar since the call (weekend); they grade Tue on Monday's close.",
-"key_risk": "Warsh speaks 00:00 ICT Tue (SF Fed, opening remarks — he avoids forward guidance) then US retail sales 20:30 ICT Tue, with a Dec 9 hike ~85–90% priced, 2y ~4.85% after its biggest weekly jump since Oct 2024 and 10y at 5.15%: firm control group pushes 10y toward 5.24 and USD/THB through 34.00.",
+{"date": "2026-11-17",
+"header_note": "levels as of Mon 16 Nov US close / Asia close (IBKR, delayed). Brent Jan 92.44 is IBKR's last bar — web wires had 94-95 intraday, settle not confirmed (flagged). USDTHB, Bitcoin from web (flagged); Nasdaq 100 close not found. Bigdata.com out of credits — news from web only. Graded today: Sat 14 + Mon 16 calls on Monday's bar.",
+"key_risk": "US Oct retail sales 20:30 ICT then Nvidia results 04:20 ICT Wed, with a Dec 9 hike ~95% priced and 10y at 5.12%: a firm control group plus a tech bounce sends 10y back to 5.20 and USD/THB through 34.00; a miss with an Nvidia flop is the only path to a real bull-flattening rally.",
 "assets": {
-"USDJPY": {"news": "159.71 Fri (-0.08%); Yahoo 159.69 at Mon open. Third test of 160 this year Thu; Katayama warned on 'one-sided, swift' moves, MoF spent ¥15.4trn in the summer. Japan Q3 GDP prelim due 06:50 ICT (polls +0.3–0.8% ann.); BOJ Dec hike expected but yen still weak.", "trade": "no trade — 160 is the MoF line, carry says higher; no edge either way. Existing shorts from 160: stop 160.60, target 158.70."},
-"USDTHB": {"news": "33.84 (Yahoo, flagged) — at 6m high (33.85) on broad USD; RSI 60, upper band 33.91. Thai Q3 GDP (NESDC) due this week, date TBC; Q2 was +1.9% y/y.", "trade": "no call — follows DXY/UST; 34.00 is the line, a close above opens 34.20."},
-"UST 10Y (%)": {"news": "5.154% Fri (+5bp; +28bp on the week) after hot Oct CPI 0.4% and PPI 6.5% y/y; 2y +~35bp w/w to ~4.85%. Dec 9 hike: 25bp ~84–90%, 50bp ~10–15% (GS 25, Citi 25 w/ risk of 50, StanChart leans 50). Fri bullish call carries; grades Tue.", "trade": "bullish yields: pay 5.12, stop 5.07, target 5.24 (below Oct high 5.31)."},
-"DXY (ICE fut)": {"news": "103.325 Dec fut (+0.22%), fresh 6m high; spot index 103.43 at Mon Asia open. RSI 68, above upper Bollinger band (103.04) — stretched.", "trade": "bullish on dips: buy 102.90, stop 102.25, target 103.90 — don't chase from here."},
-"Brent CO1": {"news": "95.84 Jan (settle Thu bar), Yahoo 95.25 at Mon open (-0.6%). Below 20/50DMA (103/99.6), -7% m/m; IEA surplus story vs Houthi/Iran risk premium.", "trade": "no trade — range 92.8–98.3, ATR ~5, headline-binary."},
-"Bitcoin": {"news": "~65,080 (Yahoo, flagged) — -11.7% w/w, -18.7% m/m, RSI 24; broke 50-week MA last week with >$1bn long liquidations and ETF outflows. Risk-off signal alongside the AI/tech wobble.", "trade": "no trade — oversold but no base; don't catch it. 6m low 58,560 is the next reference."}
+"USDJPY": {"news": "159.47 (-0.15%). Japan Q3 GDP contracted (-0.1% ann. vs +0.3% expected) but Katayama warned of 'one-sided, rapid moves' and said Japan will coordinate with US Treasury; Mimura echoed. BOJ Dec hike ~76% priced (LSEG). Japan Oct CPI Fri.", "trade": "no trade — 160 is the MoF line, carry pushes higher; no edge. Shorts from 160: stop 160.60, target 158.70."},
+"USDTHB": {"news": "~33.85-33.88 (web, flagged) — at 6m high on broad USD. Thai Q3 GDP +2.9% y/y (cons 3.0-3.1%), +0.3% q/q; exports +23.6% on AI electronics; NESDC 2026 fcst up to 2.5%. Factor model: near fair value (34.08).", "trade": "no call — follows DXY/UST; 34.00 is the line, close above opens 34.20."},
+"UST 10Y (%)": {"news": "5.121% (-3bp) — barely rallied despite S&P -1.9% and oil -3.5%. Warsh (00:00 ICT) spoke on AI only, no rate guidance; Daly: 'more likely than not' more hikes needed. Dec 25bp hike ~95% priced. Fri/Sat bullish-yield calls graded losses.", "trade": "bullish yields: pay 5.10, stop 5.06, target 5.20 — retail sales the trigger."},
+"DXY (ICE fut)": {"news": "103.535 Dec fut (+0.20%), fresh 6m high; spot index ~103.47, highest since Apr 2025. RSI 69, above upper Bollinger (103.34) — stretched. Fri bullish call graded win.", "trade": "bullish on dips: buy 103.00, stop 102.25, target 104.00 — don't chase."},
+"Brent CO1": {"news": "92.44 Jan (IBKR last, -3.5%; wires 94-95 intraday, flagged) — Hormuz flows recovering, surplus narrative; Iran drone strike on US base in Bahrain didn't hold a bid. -13% m/m, below 20/50DMA (102.4/99.7).", "trade": "bearish: sell 95.00, stop 98.50, target 88.60 — headline risk is two-way, size small."},
+"Bitcoin": {"news": "~65,000 (web, flagged) — sixth weekly loss, dipped below 62,000 Sat; broke 200-week SMA per Cestrian. Trading as a high-beta AI/tech proxy.", "trade": "no trade — no base; don't catch it."}
 },
 "equities": [
-{"name": "S&P 500", "line": "7,562 (-0.40%) Fri; +2.5% w/w — 10y at 5.15% capping multiples; Nvidia results Tue after close (Wed 04:20 ICT)."},
-{"name": "Nasdaq 100", "line": "27,937 (-1.24%, Yahoo, flagged) — tech led the drop; -6.7% m/m, Nvidia the week's swing factor."},
-{"name": "KOSPI 200", "line": "824.78 (-1.49%) Fri; +5.5% w/w bounce off 777 low, still -4% m/m."},
-{"name": "Hang Seng", "line": "23,638 (-1.55%) Fri; -3.4% w/w on strong USD/higher US yields."}
+{"name": "S&P 500", "line": "7,420 (-1.87%) Mon — biggest 3-day drop since June; Nvidia leadership turmoil + chip-export curbs, chips -5.3%. NVDA results Wed 04:20 ICT."},
+{"name": "Nasdaq 100", "line": "n/a — close not found; Nasdaq Composite -2.49% (web, flagged)."},
+{"name": "KOSPI 200", "line": "788.63 (-4.38%) Mon — SK Hynix -7.9%, Samsung -5.0% on Nvidia + BofA NAND price-cut note; foreigners sold ₩760bn. Near 6m low 777."},
+{"name": "Hang Seng", "line": "23,754 (+0.49%) Mon — held up vs Korea; -2.8% w/w on strong USD/high US yields."}
 ]}

@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-15",
+ "asof": "2026-11-16",
  "source": "brief.calendar",
  "data": [
   {
@@ -16,39 +16,15 @@
    "required": "us_cpi"
   },
   {
-   "name": "Japan Q3 GDP prelim (Cabinet Office)",
-   "country": "JP",
-   "kind": "activity",
-   "ict": "2026-11-16 06:50",
-   "date": "2026-11-16",
-   "consensus": "+0.3% to +0.8% q/q ann. (polls vary)",
-   "prior": "+1.4% ann. (Q2 2nd est.)",
-   "rate": null,
-   "confirmed": true,
-   "impact": 1
-  },
-  {
-   "name": "Fed Chair Warsh opening remarks — SF Fed productivity conference",
-   "country": "US",
-   "kind": "cb",
-   "ict": "2026-11-17 00:00",
-   "date": "2026-11-17",
-   "consensus": null,
-   "prior": null,
-   "rate": "3.75-4.00%; Dec 9: 25bp hike ~84-90%, 50bp ~10-15% (FedWatch/press, 13 Nov)",
-   "confirmed": true,
-   "impact": 2
-  },
-  {
-   "name": "Thai Q3 GDP (NESDC) — date TBC",
+   "name": "Thai Q3 GDP (NESDC) — RELEASED 16 Nov: +2.9% y/y, +0.3% q/q sa (cons 3.0-3.1%); 2026 fcst raised to 2.5%",
    "country": "TH",
    "kind": "activity",
-   "ict": "2026-11-17 09:30",
-   "date": "2026-11-17",
-   "consensus": null,
-   "prior": "Q2 +1.9% y/y, -0.2% q/q sa",
+   "ict": "2026-11-16 09:30",
+   "date": "2026-11-16",
+   "consensus": "3.0-3.1% y/y",
+   "prior": "Q2 +2.4% y/y (revised)",
    "rate": null,
-   "confirmed": false,
+   "confirmed": true,
    "impact": 1
   },
   {
@@ -57,19 +33,19 @@
    "kind": "consumption",
    "ict": "2026-11-17 20:30",
    "date": "2026-11-17",
-   "consensus": "+0.2% m/m; control +0.4%",
+   "consensus": "+0.2% m/m (some flat); ex-autos +0.4%",
    "prior": "+0.8% m/m",
-   "rate": null,
+   "rate": "3.75-4.00%; Dec 9: 25bp hike ~95% priced (CME FedWatch via CNBC, 16 Nov)",
    "confirmed": true,
    "impact": 2
   },
   {
-   "name": "Nvidia Q3 FY27 results (after close; call 17:00 ET)",
+   "name": "Nvidia Q3 FY27 results (after close; first since Huang exit)",
    "country": "US",
    "kind": "earnings",
    "ict": "2026-11-18 04:20",
    "date": "2026-11-18",
-   "consensus": null,
+   "consensus": "rev ~$109bn, EPS ~$2.47; implied move ~8-9%",
    "prior": null,
    "rate": null,
    "confirmed": true,
@@ -95,7 +71,7 @@
    "date": "2026-11-19",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; Dec 9: 25bp hike ~84-90%, 50bp ~10-15% (FedWatch/press, 13 Nov)",
+   "rate": "3.75-4.00%; Dec 9: 25bp hike ~95% priced (CME FedWatch via CNBC, 16 Nov)",
    "confirmed": true,
    "impact": 2
   },
@@ -107,7 +83,7 @@
    "date": "2026-11-20",
    "consensus": null,
    "prior": null,
-   "rate": "BOJ 1.25%; next MPM 18 Dec (hike expected)",
+   "rate": "BOJ 1.25%; next MPM 18 Dec — hike ~76% priced (LSEG, 16 Nov)",
    "confirmed": false,
    "impact": 1,
    "required": "jp_cpi"
@@ -169,7 +145,7 @@
    "date": "2026-11-27",
    "consensus": null,
    "prior": null,
-   "rate": null,
+   "rate": "BOJ 1.25%; next MPM 18 Dec — hike ~76% priced (LSEG, 16 Nov)",
    "confirmed": false,
    "impact": 1,
    "required": "tokyo_cpi"
