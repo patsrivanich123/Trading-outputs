@@ -1,55 +1,30 @@
 {
- "asof": "2026-11-16",
+ "asof": "2026-11-17",
  "source": "brief.calendar",
  "data": [
   {
-   "name": "US CPI / core CPI (Oct) — RELEASED 10 Nov: +0.4% / core +0.3% m/m (cons 0.3/0.2); next (Nov) 10 Dec",
-   "country": "US",
-   "kind": "inflation",
-   "ict": "2026-11-10 20:30",
-   "date": "2026-11-10",
-   "consensus": "0.3% / core 0.2% m/m",
-   "prior": "0.6% / core 0.3% m/m (Sep)",
-   "rate": null,
-   "confirmed": true,
-   "impact": 2,
-   "required": "us_cpi"
-  },
-  {
-   "name": "Thai Q3 GDP (NESDC) — RELEASED 16 Nov: +2.9% y/y, +0.3% q/q sa (cons 3.0-3.1%); 2026 fcst raised to 2.5%",
-   "country": "TH",
-   "kind": "activity",
-   "ict": "2026-11-16 09:30",
-   "date": "2026-11-16",
-   "consensus": "3.0-3.1% y/y",
-   "prior": "Q2 +2.4% y/y (revised)",
-   "rate": null,
-   "confirmed": true,
-   "impact": 1
-  },
-  {
-   "name": "US retail sales (Oct)",
+   "name": "US retail sales (Oct) — RELEASED 17 Nov: +0.2% m/m, in line",
    "country": "US",
    "kind": "consumption",
    "ict": "2026-11-17 20:30",
    "date": "2026-11-17",
-   "consensus": "+0.2% m/m (some flat); ex-autos +0.4%",
+   "consensus": "+0.2% m/m",
    "prior": "+0.8% m/m",
-   "rate": "3.75-4.00%; Dec 9: 25bp hike ~95% priced (CME FedWatch via CNBC, 16 Nov)",
+   "rate": "3.75-4.00%; Dec 9: 25bp hike ~95% priced, Jan follow-up ~70% (CME FedWatch via CNBC/FXStreet, 17 Nov)",
    "confirmed": true,
-   "impact": 2
+   "impact": 1
   },
   {
-   "name": "Nvidia Q3 FY27 results (after close; first since Huang exit)",
+   "name": "Nvidia Q3 FY27 — RELEASED: rev $115.8bn (cons ~$109bn), EPS $2.68 (cons $2.47), Q4 guide $130bn; stock +2-4% after hours",
    "country": "US",
    "kind": "earnings",
    "ict": "2026-11-18 04:20",
    "date": "2026-11-18",
-   "consensus": "rev ~$109bn, EPS ~$2.47; implied move ~8-9%",
+   "consensus": "rev ~$109bn, EPS ~$2.47",
    "prior": null,
    "rate": null,
    "confirmed": true,
-   "impact": 2
+   "impact": 1
   },
   {
    "name": "UK CPI (Oct)",
@@ -71,9 +46,57 @@
    "date": "2026-11-19",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; Dec 9: 25bp hike ~95% priced (CME FedWatch via CNBC, 16 Nov)",
+   "rate": "3.75-4.00%; Dec 9: 25bp hike ~95% priced, Jan follow-up ~70% (CME FedWatch via CNBC/FXStreet, 17 Nov)",
    "confirmed": true,
    "impact": 2
+  },
+  {
+   "name": "Fed's Williams remarks (time per TD calendar)",
+   "country": "US",
+   "kind": "cb",
+   "ict": "2026-11-19 02:30",
+   "date": "2026-11-19",
+   "consensus": null,
+   "prior": null,
+   "rate": "3.75-4.00%; Dec 9: 25bp hike ~95% priced, Jan follow-up ~70% (CME FedWatch via CNBC/FXStreet, 17 Nov)",
+   "confirmed": false,
+   "impact": 1
+  },
+  {
+   "name": "Anthropic IPO prices (Nasdaq: ANT; 825m sh at $70-78)",
+   "country": "US",
+   "kind": "equity flows",
+   "ict": "2026-11-19 06:00",
+   "date": "2026-11-19",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": false,
+   "impact": 1
+  },
+  {
+   "name": "US initial jobless claims (wk to 14 Nov)",
+   "country": "US",
+   "kind": "labour",
+   "ict": "2026-11-19 20:30",
+   "date": "2026-11-19",
+   "consensus": null,
+   "prior": "197k",
+   "rate": null,
+   "confirmed": true,
+   "impact": 1
+  },
+  {
+   "name": "Anthropic (ANT) first day of trading, Nasdaq",
+   "country": "US",
+   "kind": "equity flows",
+   "ict": "2026-11-19 21:30",
+   "date": "2026-11-19",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": false,
+   "impact": 1
   },
   {
    "name": "Japan national CPI (Oct)",
@@ -82,10 +105,10 @@
    "ict": "2026-11-20 06:30",
    "date": "2026-11-20",
    "consensus": null,
-   "prior": null,
+   "prior": "core 2.1% y/y (Sep)",
    "rate": "BOJ 1.25%; next MPM 18 Dec — hike ~76% priced (LSEG, 16 Nov)",
-   "confirmed": false,
-   "impact": 1,
+   "confirmed": true,
+   "impact": 2,
    "required": "jp_cpi"
   },
   {
@@ -120,7 +143,7 @@
    "date": "2026-11-25",
    "consensus": null,
    "prior": null,
-   "rate": null,
+   "rate": "3.75-4.00%; Dec 9: 25bp hike ~95% priced, Jan follow-up ~70% (CME FedWatch via CNBC/FXStreet, 17 Nov)",
    "confirmed": true,
    "impact": 2,
    "required": "us_pce"
@@ -144,7 +167,7 @@
    "ict": "2026-11-27 06:30",
    "date": "2026-11-27",
    "consensus": null,
-   "prior": null,
+   "prior": "core 2.6% y/y expected for Oct (preview)",
    "rate": "BOJ 1.25%; next MPM 18 Dec — hike ~76% priced (LSEG, 16 Nov)",
    "confirmed": false,
    "impact": 1,
@@ -161,12 +184,23 @@
    "rate": null,
    "confirmed": true,
    "impact": 1
+  },
+  {
+   "name": "US ISM manufacturing (Nov)",
+   "country": "US",
+   "kind": "activity",
+   "ict": "2026-12-01 22:00",
+   "date": "2026-12-01",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": false,
+   "impact": 1
   }
  ],
  "validation": {
   "missing": [],
   "matched": [
-   "us_cpi 2026-11-10",
    "us_pce 2026-11-25",
    "jp_cpi 2026-11-20",
    "tokyo_cpi 2026-11-27"

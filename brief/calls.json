@@ -1,6 +1,6 @@
-{"date": "2026-11-17", "calls": [
-{"asset": "USDJPY", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 159.47, "note": "MoF warnings at 160 vs carry; no edge"},
-{"asset": "UST 10Y (%)", "bias": "bullish", "entry": 5.10, "invalidation": 5.06, "target": 5.2, "last_at_call": 5.121, "note": "Held 5.12 through equity rout; hike 95% priced"},
-{"asset": "DXY (ICE fut)", "bias": "bullish", "entry": 103.0, "invalidation": 102.25, "target": 104.0, "last_at_call": 103.535, "note": "Trend up but stretched; buy dips only"},
-{"asset": "Brent CO1", "bias": "bearish", "entry": 95.0, "invalidation": 98.5, "target": 88.6, "last_at_call": 92.44, "note": "Hormuz flows recovering; sell rallies below 98"}
+{"date": "2026-11-18", "calls": [
+{"asset": "USDJPY", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 159.375, "note": "160 MoF cap vs Fed-hike carry; JP CPI Fri"},
+{"asset": "UST 10Y (%)", "bias": "bullish", "entry": 5.08, "invalidation": 5.02, "target": 5.2, "last_at_call": 5.103, "note": "Stocks -3 days, yields won't rally; Musalem hawkish"},
+{"asset": "DXY (ICE fut)", "bias": "bullish", "entry": 102.9, "invalidation": 102.2, "target": 104.0, "last_at_call": 103.43, "note": "6m high, RSI 68; buy dip, don't chase"},
+{"asset": "Brent CO1", "bias": "bearish", "entry": 95.5, "invalidation": 98.5, "target": 89.0, "last_at_call": 93.14, "note": "IEA surplus, Hormuz flows back; sell rallies"}
 ]}
