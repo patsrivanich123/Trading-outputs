@@ -1,24 +1,24 @@
 {
- "asof": "2026-11-16",
+ "asof": "2026-11-17",
  "source": "macro.th.cpi.predictor",
  "data": {
   "series": "TH CPI headline y/y Nov 2026",
   "target_month": "2026-11",
-  "ours": 3.39,
+  "ours": 3.47,
   "consensus": null,
   "consensus_source": "pending: BBG ECO",
   "prior": 3.9,
-  "ours_mm": -0.34,
-  "level": 103.55,
+  "ours_mm": -0.26,
+  "level": 103.63,
   "level_prev": 103.9,
   "level_year_ago": 100.15,
   "delta_1d": null,
-  "driver": "energy -37bp (fuel -4.03% m/m) \u00b7 raw food -4bp \u00b7 core +7bp",
+  "driver": "energy -37bp (fuel -4.03% m/m) \u00b7 raw food +4bp \u00b7 core +7bp",
   "status": "ok",
   "range": {
-   "low": 3.25,
+   "low": 3.22,
    "high": 3.73,
-   "note": "low: fuel -1.5pp & no flood | high: fuel +1.5pp & double flood"
+   "note": "low: fuel -1.5pp & raw food -0.6pp | high: fuel +1.5pp & raw food +0.6pp (ridge OOS MAE)"
   },
   "inputs_available": [
    "TPSO history (predictor/data/tpso_history.csv)",
@@ -49,11 +49,11 @@
    {
     "name": "Raw food",
     "weight": 17.48,
-    "mm": -0.2,
-    "contrib_bp": -3.6,
+    "mm": 0.25,
+    "contrib_bp": 4.4,
     "status": "partial",
     "source": "MOC/DIT daily retail prices, 11 items (dataapi.moc.go.th gis-product-prices) + TPSO raw-food history",
-    "note": "seasonal -0.20% + flood overlay +0.00pp"
+    "note": "observed DIT feed (ridge, 11 items) +0.25%; seasonal was -0.20%"
    },
    {
     "name": "Core (ex raw food & energy)",
@@ -84,7 +84,7 @@
    }
   ],
   "sensitivity": {
-   "low": 3.25,
+   "low": 3.22,
    "high": 3.73
   },
   "track": [
@@ -573,9 +573,9 @@
     "backtest_headline": null,
     "backtest_core": null,
     "baseline_headline": null,
-    "predicted_headline": 3.39,
+    "predicted_headline": 3.47,
     "predicted_core": 1.54,
-    "predicted_on": "2026-11-16",
+    "predicted_on": "2026-11-17",
     "is_forecast": true
    }
   ],
@@ -596,6 +596,6 @@
   "report": "th_cpi_report.html",
   "print_date": null,
   "last_print": "2026-10",
-  "run_at": "2026-11-16T23:38"
+  "run_at": "2026-11-17T01:52"
  }
 }
