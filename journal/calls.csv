@@ -50,7 +50,7 @@ date,asset,bias,entry,invalidation,target,last_at_call,graded_on,outcome,pnl_pct
 2026-11-16,UST 10Y (%),bullish,5.12,5.07,5.24,5.154,2026-11-17,loss,-0.640,"Dec hike priced, 2y +35bp wk; pay dips into retail sales"
 2026-11-16,DXY (ICE fut),bullish,102.9,102.25,103.9,103.325,2026-11-17,win,0.203,"6m high, above upper band; buy dip only, don't chase"
 2026-11-16,Brent CO1,no trade,,,,95.84,2026-11-17,n/a,,"92.8-98.3 range, ATR 5, headline-driven; no edge"
-2026-11-17,USDJPY,no trade,,,,159.47,,,,MoF warnings at 160 vs carry; no edge
-2026-11-17,UST 10Y (%),bullish,5.1,5.06,5.2,5.121,,,,Held 5.12 through equity rout; hike 95% priced
-2026-11-17,DXY (ICE fut),bullish,103.0,102.25,104.0,103.535,,,,Trend up but stretched; buy dips only
-2026-11-17,Brent CO1,bearish,95.0,98.5,88.6,92.44,,,,Hormuz flows recovering; sell rallies below 98
+2026-11-17,USDJPY,no trade,,,,159.47,2026-11-18,n/a,,MoF warnings at 160 vs carry; no edge
+2026-11-17,UST 10Y (%),bullish,5.1,5.06,5.2,5.121,2026-11-18,loss,-0.351,Held 5.12 through equity rout; hike 95% priced
+2026-11-17,DXY (ICE fut),bullish,103.0,102.25,104.0,103.535,2026-11-18,loss,-0.101,Trend up but stretched; buy dips only
+2026-11-17,Brent CO1,bearish,95.0,98.5,88.6,92.44,2026-11-18,loss,-0.757,Hormuz flows recovering; sell rallies below 98

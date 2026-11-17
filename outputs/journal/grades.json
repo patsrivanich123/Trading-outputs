@@ -1,11 +1,11 @@
 {
- "asof": "2026-11-16",
+ "asof": "2026-11-17",
  "source": "journal.grade",
  "data": {
-  "graded_today": 8,
-  "n_scored": 15,
-  "hit_rate_all": 53.333333333333336,
-  "hit_rate_20": 53.333333333333336,
+  "graded_today": 4,
+  "n_scored": 18,
+  "hit_rate_all": 44.44444444444444,
+  "hit_rate_20": 44.44444444444444,
   "yesterday": [
    {
     "asset": "USDJPY",
@@ -17,43 +17,19 @@
     "asset": "UST 10Y (%)",
     "bias": "bullish",
     "outcome": "loss",
-    "pnl_pct": "-0.640"
+    "pnl_pct": "-0.351"
    },
    {
     "asset": "DXY (ICE fut)",
-    "bias": "bullish",
-    "outcome": "win",
-    "pnl_pct": "0.218"
-   },
-   {
-    "asset": "Brent CO1",
-    "bias": "no trade",
-    "outcome": "n/a",
-    "pnl_pct": ""
-   },
-   {
-    "asset": "USDJPY",
-    "bias": "no trade",
-    "outcome": "n/a",
-    "pnl_pct": ""
-   },
-   {
-    "asset": "UST 10Y (%)",
     "bias": "bullish",
     "outcome": "loss",
-    "pnl_pct": "-0.640"
-   },
-   {
-    "asset": "DXY (ICE fut)",
-    "bias": "bullish",
-    "outcome": "win",
-    "pnl_pct": "0.203"
+    "pnl_pct": "-0.101"
    },
    {
     "asset": "Brent CO1",
-    "bias": "no trade",
-    "outcome": "n/a",
-    "pnl_pct": ""
+    "bias": "bearish",
+    "outcome": "loss",
+    "pnl_pct": "-0.757"
    }
   ]
  }
