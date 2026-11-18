@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-17",
+ "asof": "2026-11-18",
  "source": "macro.us.cpi.nowcast",
  "data": {
   "benchmarks": {},
@@ -12,8 +12,8 @@
   "consensus": null,
   "prior": 4.08,
   "ours_mm": 0.13,
-  "delta_1d": -0.074,
-  "driver": "Energy -7.1bp vs last run",
+  "delta_1d": 0.0,
+  "driver": null,
   "status": "ok",
   "inputs_available": [
    "FRED CPI components",
@@ -694,7 +694,7 @@
     "naive_core": 0.3,
     "predicted_headline": 0.13,
     "predicted_core": 0.3,
-    "predicted_on": "2026-11-17",
+    "predicted_on": "2026-11-18",
     "is_forecast": true
    }
   ],
