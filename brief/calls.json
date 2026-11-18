@@ -1,6 +1,6 @@
-{"date": "2026-11-18", "calls": [
-{"asset": "USDJPY", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 159.375, "note": "160 MoF cap vs Fed-hike carry; JP CPI Fri"},
-{"asset": "UST 10Y (%)", "bias": "bullish", "entry": 5.08, "invalidation": 5.02, "target": 5.2, "last_at_call": 5.103, "note": "Stocks -3 days, yields won't rally; Musalem hawkish"},
-{"asset": "DXY (ICE fut)", "bias": "bullish", "entry": 102.9, "invalidation": 102.2, "target": 104.0, "last_at_call": 103.43, "note": "6m high, RSI 68; buy dip, don't chase"},
-{"asset": "Brent CO1", "bias": "bearish", "entry": 95.5, "invalidation": 98.5, "target": 89.0, "last_at_call": 93.14, "note": "IEA surplus, Hormuz flows back; sell rallies"}
+{"date": "2026-11-19", "calls": [
+{"asset": "USDJPY", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 159.3525, "note": "160 MoF line vs Fed carry; JP CPI Fri 06:30"},
+{"asset": "UST 10Y (%)", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 5.066, "note": "Hawkish minutes, 10y fell anyway; four straight losses, stand aside"},
+{"asset": "DXY (ICE fut)", "bias": "bullish", "entry": 103.0, "invalidation": 102.25, "target": 104.5, "last_at_call": 103.715, "note": "New 6m high, Waller 50bp; RSI 70, buy dips"},
+{"asset": "Brent CO1", "bias": "bearish", "entry": 94.5, "invalidation": 98.2, "target": 88.0, "last_at_call": 91.95, "note": "EIA builds, surplus; sell rallies below 98"}
 ]}
