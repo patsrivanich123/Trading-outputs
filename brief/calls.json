@@ -1,6 +1,6 @@
-{"date": "2026-11-19", "calls": [
-{"asset": "USDJPY", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 159.3525, "note": "160 MoF line vs Fed carry; JP CPI Fri 06:30"},
-{"asset": "UST 10Y (%)", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 5.066, "note": "Hawkish minutes, 10y fell anyway; four straight losses, stand aside"},
-{"asset": "DXY (ICE fut)", "bias": "bullish", "entry": 103.0, "invalidation": 102.25, "target": 104.5, "last_at_call": 103.715, "note": "New 6m high, Waller 50bp; RSI 70, buy dips"},
-{"asset": "Brent CO1", "bias": "bearish", "entry": 94.5, "invalidation": 98.2, "target": 88.0, "last_at_call": 91.95, "note": "EIA builds, surplus; sell rallies below 98"}
+{"date": "2026-11-20", "calls": [
+{"asset": "USDJPY", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 159.6925, "note": "160 MoF cap vs Fed carry; JP CPI just out"},
+{"asset": "UST 10Y (%)", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 5.052, "note": "Hawkish Fed vs equity rout; range 5.025-5.09, stand aside"},
+{"asset": "DXY (ICE fut)", "bias": "bullish", "entry": 103.3, "invalidation": 102.6, "target": 104.5, "last_at_call": 103.845, "note": "New 6m high, RSI 71; buy dip to 103.30"},
+{"asset": "Brent CO1", "bias": "bearish", "entry": 94.5, "invalidation": 98.2, "target": 88.0, "last_at_call": 91.98, "note": "Surplus, below 20/50DMA; sell rallies, Hormuz mines risk"}
 ]}

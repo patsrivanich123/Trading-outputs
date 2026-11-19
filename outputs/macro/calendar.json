@@ -3,68 +3,20 @@
  "source": "brief.calendar",
  "data": [
   {
-   "name": "FOMC minutes (27-28 Oct) — RELEASED: 'almost all' see more hikes; a couple floated >25bp for Dec; AI debt flagged",
-   "country": "US",
-   "kind": "cb",
-   "ict": "2026-11-19 02:00",
-   "date": "2026-11-19",
-   "consensus": null,
-   "prior": null,
-   "rate": "3.75-4.00%; Dec 9: 25bp hike ~95% priced (CME FedWatch via CNBC, 18 Nov); Waller floated 50bp",
-   "confirmed": true,
-   "impact": 1
-  },
-  {
-   "name": "US initial jobless claims (wk to 14 Nov)",
-   "country": "US",
-   "kind": "labour",
-   "ict": "2026-11-19 20:30",
-   "date": "2026-11-19",
-   "consensus": null,
-   "prior": "197k",
-   "rate": null,
-   "confirmed": true,
-   "impact": 1
-  },
-  {
-   "name": "US Philly Fed manufacturing (Nov)",
-   "country": "US",
-   "kind": "activity",
-   "ict": "2026-11-19 20:30",
-   "date": "2026-11-19",
-   "consensus": null,
-   "prior": null,
-   "rate": null,
-   "confirmed": false,
-   "impact": 1
-  },
-  {
-   "name": "Anthropic (ANT) first day of trading, Nasdaq — priced $83 (above $70-78), ~$81bn raised",
-   "country": "US",
-   "kind": "equity flows",
-   "ict": "2026-11-19 21:30",
-   "date": "2026-11-19",
-   "consensus": null,
-   "prior": null,
-   "rate": null,
-   "confirmed": false,
-   "impact": 2
-  },
-  {
    "name": "Japan national CPI (Oct)",
    "country": "JP",
    "kind": "inflation",
    "ict": "2026-11-20 06:30",
    "date": "2026-11-20",
    "consensus": null,
-   "prior": "core 2.1% y/y (Sep)",
+   "prior": "headline 2.1% / core 2.1% / core-core 2.4% y/y (Sep)",
    "rate": "BOJ 1.25%; next MPM 18 Dec, hike ~76% priced (LSEG, 16 Nov)",
    "confirmed": true,
    "impact": 2,
    "required": "jp_cpi"
   },
   {
-   "name": "UMich sentiment (Nov final)",
+   "name": "UMich sentiment & inflation expectations (Nov final)",
    "country": "US",
    "kind": "sentiment",
    "ict": "2026-11-20 22:00",
@@ -88,6 +40,18 @@
    "impact": 1
   },
   {
+   "name": "US initial jobless claims (wk to 21 Nov, moved up for Thanksgiving)",
+   "country": "US",
+   "kind": "labour",
+   "ict": "2026-11-25 20:30",
+   "date": "2026-11-25",
+   "consensus": null,
+   "prior": "203k",
+   "rate": null,
+   "confirmed": false,
+   "impact": 1
+  },
+  {
    "name": "US PCE / core PCE (Oct) — BEA",
    "country": "US",
    "kind": "inflation",
@@ -95,7 +59,7 @@
    "date": "2026-11-25",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; Dec 9: 25bp hike ~95% priced (CME FedWatch via CNBC, 18 Nov); Waller floated 50bp",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~95% priced (CME FedWatch via CNBC, 19 Nov); Waller floated 50bp",
    "confirmed": true,
    "impact": 2,
    "required": "us_pce"
@@ -119,7 +83,7 @@
    "ict": "2026-11-27 06:30",
    "date": "2026-11-27",
    "consensus": null,
-   "prior": null,
+   "prior": "headline 2.8% / core 2.6% y/y (Oct)",
    "rate": "BOJ 1.25%; next MPM 18 Dec, hike ~76% priced (LSEG, 16 Nov)",
    "confirmed": false,
    "impact": 2,
@@ -145,7 +109,7 @@
    "date": "2026-11-28",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; Dec 9: 25bp hike ~95% priced (CME FedWatch via CNBC, 18 Nov); Waller floated 50bp",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~95% priced (CME FedWatch via CNBC, 19 Nov); Waller floated 50bp",
    "confirmed": true,
    "impact": 1
   },
@@ -196,6 +160,42 @@
    "rate": null,
    "confirmed": false,
    "impact": 1
+  },
+  {
+   "name": "US nonfarm payrolls / unemployment (Nov) — BLS",
+   "country": "US",
+   "kind": "labour",
+   "ict": "2026-12-04 20:30",
+   "date": "2026-12-04",
+   "consensus": null,
+   "prior": null,
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~95% priced (CME FedWatch via CNBC, 19 Nov); Waller floated 50bp",
+   "confirmed": true,
+   "impact": 2
+  },
+  {
+   "name": "Thai CPI (Nov) — TPSO",
+   "country": "TH",
+   "kind": "inflation",
+   "ict": "2026-12-07 10:30",
+   "date": "2026-12-07",
+   "consensus": null,
+   "prior": "3.90% y/y, core 1.58 (Oct)",
+   "rate": "BoT MPC 23 Dec",
+   "confirmed": true,
+   "impact": 2
+  },
+  {
+   "name": "FOMC decision",
+   "country": "US",
+   "kind": "cb",
+   "ict": "2026-12-10 02:00",
+   "date": "2026-12-10",
+   "consensus": null,
+   "prior": null,
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~95% priced (CME FedWatch via CNBC, 19 Nov); Waller floated 50bp",
+   "confirmed": true,
+   "impact": 2
   }
  ],
  "validation": {
