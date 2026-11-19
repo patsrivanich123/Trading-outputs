@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-18",
+ "asof": "2026-11-19",
  "source": "macro.us.nfp.nowcast (FRED)",
  "data": {
   "series": "US nonfarm payrolls Nov 2026 (k, m/m)",
@@ -10,7 +10,7 @@
   "prior": 165.0,
   "mom3": 137.0,
   "delta_1d": null,
-  "driver": "mom3 +137k",
+  "driver": "d_ic +8k \u00b7 mom3 +137k",
   "status": "insufficient_data",
   "inputs_used": [
    "d_ic",
@@ -19,7 +19,6 @@
   ],
   "inputs_missing": [
    "adp",
-   "d_ic",
    "d_cc"
   ],
   "range": null,
@@ -190,6 +189,6 @@
     "mom3": 79.0
    }
   ],
-  "run_at": "2026-11-18T23:39"
+  "run_at": "2026-11-19T23:37"
  }
 }

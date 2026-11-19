@@ -58,7 +58,7 @@ date,asset,bias,entry,invalidation,target,last_at_call,graded_on,outcome,pnl_pct
 2026-11-18,UST 10Y (%),bullish,5.08,5.02,5.2,5.103,2026-11-19,loss,-0.725,"Stocks -3 days, yields won't rally; Musalem hawkish"
 2026-11-18,DXY (ICE fut),bullish,102.9,102.2,104.0,103.43,2026-11-19,win,0.276,"6m high, RSI 68; buy dip, don't chase"
 2026-11-18,Brent CO1,bearish,95.5,98.5,89.0,93.14,2026-11-19,win,1.278,"IEA surplus, Hormuz flows back; sell rallies"
-2026-11-19,USDJPY,no trade,,,,159.3525,,,,160 MoF line vs Fed carry; JP CPI Fri 06:30
-2026-11-19,UST 10Y (%),no trade,,,,5.066,,,,"Hawkish minutes, 10y fell anyway; four straight losses, stand aside"
-2026-11-19,DXY (ICE fut),bullish,103.0,102.25,104.5,103.715,,,,"New 6m high, Waller 50bp; RSI 70, buy dips"
-2026-11-19,Brent CO1,bearish,94.5,98.2,88.0,91.95,,,,"EIA builds, surplus; sell rallies below 98"
+2026-11-19,USDJPY,no trade,,,,159.3525,2026-11-20,n/a,,160 MoF line vs Fed carry; JP CPI Fri 06:30
+2026-11-19,UST 10Y (%),no trade,,,,5.066,2026-11-20,n/a,,"Hawkish minutes, 10y fell anyway; four straight losses, stand aside"
+2026-11-19,DXY (ICE fut),bullish,103.0,102.25,104.5,103.715,2026-11-20,win,0.125,"New 6m high, Waller 50bp; RSI 70, buy dips"
+2026-11-19,Brent CO1,bearish,94.5,98.2,88.0,91.95,2026-11-20,loss,-0.033,"EIA builds, surplus; sell rallies below 98"

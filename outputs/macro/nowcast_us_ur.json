@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-18",
+ "asof": "2026-11-19",
  "source": "macro.us.ur.nowcast (FRED/ALFRED)",
  "data": {
   "series": "US unemployment rate Nov 2026",
@@ -13,7 +13,7 @@
   "call": "no trade",
   "delta_1d": null,
   "status": "insufficient_data",
-  "driver": "eps -0.064 \u00b7 d_lfpr +0.100",
+  "driver": "d_ic4 -0.250 \u00b7 eps -0.064 \u00b7 d_lfpr +0.100",
   "coefs": {
    "d_cc": 0.00054,
    "d_iur": -0.24847,
@@ -46,7 +46,7 @@
    "consensus"
   ],
   "chart": "appendix/us_ur/backtest.png",
-  "run_at": "2026-11-18T23:39",
+  "run_at": "2026-11-19T23:36",
   "caveat": "claims series are current vintage (seasonal factors revised annually); u and LFPR are true first prints (ALFRED)"
  }
 }
