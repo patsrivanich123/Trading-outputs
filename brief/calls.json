@@ -1,6 +1,6 @@
-{"date": "2026-11-20", "calls": [
-{"asset": "USDJPY", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 159.6925, "note": "160 MoF cap vs Fed carry; JP CPI just out"},
-{"asset": "UST 10Y (%)", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 5.052, "note": "Hawkish Fed vs equity rout; range 5.025-5.09, stand aside"},
-{"asset": "DXY (ICE fut)", "bias": "bullish", "entry": 103.3, "invalidation": 102.6, "target": 104.5, "last_at_call": 103.845, "note": "New 6m high, RSI 71; buy dip to 103.30"},
-{"asset": "Brent CO1", "bias": "bearish", "entry": 94.5, "invalidation": 98.2, "target": 88.0, "last_at_call": 91.98, "note": "Surplus, below 20/50DMA; sell rallies, Hormuz mines risk"}
+{"date": "2026-11-21", "calls": [
+{"asset": "USDJPY", "bias": "bearish", "entry": 159.2, "invalidation": 160.1, "target": 157.0, "last_at_call": 158.5525, "note": "Risk-off, US 2y -12bp; MoF caps 160. Sell rallies"},
+{"asset": "UST 10Y (%)", "bias": "bearish", "entry": 4.97, "invalidation": 5.05, "target": 4.82, "last_at_call": 4.912, "note": "Broke 4.95; equity correction erodes hike pricing. Receive bounces"},
+{"asset": "DXY (ICE fut)", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 103.825, "note": "6m high, RSI 71; haven bid vs falling yields"},
+{"asset": "Brent CO1", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 92.56, "note": "Surplus vs Iran-strike headlines; two-way, stand aside"}
 ]}

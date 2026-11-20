@@ -1,31 +1,19 @@
 {
- "asof": "2026-11-19",
+ "asof": "2026-11-21",
  "source": "brief.calendar",
  "data": [
   {
-   "name": "Japan national CPI (Oct)",
+   "name": "Japan national CPI (Oct) — RELEASED: headline 2.3%, core 2.2% (cons 2.3%), core-core 2.2%",
    "country": "JP",
    "kind": "inflation",
    "ict": "2026-11-20 06:30",
    "date": "2026-11-20",
-   "consensus": null,
+   "consensus": "core 2.3%",
    "prior": "headline 2.1% / core 2.1% / core-core 2.4% y/y (Sep)",
-   "rate": "BOJ 1.25%; next MPM 18 Dec, hike ~76% priced (LSEG, 16 Nov)",
+   "rate": "BOJ 1.25%; next MPM 18 Dec",
    "confirmed": true,
-   "impact": 2,
+   "impact": 1,
    "required": "jp_cpi"
-  },
-  {
-   "name": "UMich sentiment & inflation expectations (Nov final)",
-   "country": "US",
-   "kind": "sentiment",
-   "ict": "2026-11-20 22:00",
-   "date": "2026-11-20",
-   "consensus": null,
-   "prior": null,
-   "rate": null,
-   "confirmed": true,
-   "impact": 1
   },
   {
    "name": "Japan Labour Thanksgiving Day (TSE closed)",
@@ -40,7 +28,56 @@
    "impact": 1
   },
   {
-   "name": "US initial jobless claims (wk to 21 Nov, moved up for Thanksgiving)",
+   "name": "US S&P Global flash PMIs (Nov)",
+   "country": "US",
+   "kind": "activity",
+   "ict": "2026-11-23 21:45",
+   "date": "2026-11-23",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": false,
+   "impact": 1
+  },
+  {
+   "name": "US 2y note auction $69B (moved up for Thanksgiving)",
+   "country": "US",
+   "kind": "supply",
+   "ict": "2026-11-24 01:00",
+   "date": "2026-11-24",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": false,
+   "impact": 1
+  },
+  {
+   "name": "US 5y note auction $70B (+ 2y FRN $28B)",
+   "country": "US",
+   "kind": "supply",
+   "ict": "2026-11-25 01:00",
+   "date": "2026-11-25",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": false,
+   "impact": 1
+  },
+  {
+   "name": "US PCE / core PCE (Oct) + Q3 GDP 2nd est — BEA",
+   "country": "US",
+   "kind": "inflation",
+   "ict": "2026-11-25 20:30",
+   "date": "2026-11-25",
+   "consensus": null,
+   "prior": null,
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~92% priced after Fri selloff (TheStreet, 20 Nov; was ~95-100%)",
+   "confirmed": true,
+   "impact": 2,
+   "required": "us_pce"
+  },
+  {
+   "name": "US initial jobless claims (moved up for Thanksgiving)",
    "country": "US",
    "kind": "labour",
    "ict": "2026-11-25 20:30",
@@ -52,17 +89,28 @@
    "impact": 1
   },
   {
-   "name": "US PCE / core PCE (Oct) — BEA",
+   "name": "US 7y note auction $44B",
    "country": "US",
-   "kind": "inflation",
-   "ict": "2026-11-25 20:30",
-   "date": "2026-11-25",
+   "kind": "supply",
+   "ict": "2026-11-26 01:00",
+   "date": "2026-11-26",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~95% priced (CME FedWatch via CNBC, 19 Nov); Waller floated 50bp",
-   "confirmed": true,
-   "impact": 2,
-   "required": "us_pce"
+   "rate": null,
+   "confirmed": false,
+   "impact": 1
+  },
+  {
+   "name": "Fed Beige Book",
+   "country": "US",
+   "kind": "cb",
+   "ict": "2026-11-26 02:00",
+   "date": "2026-11-26",
+   "consensus": null,
+   "prior": null,
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~92% priced after Fri selloff (TheStreet, 20 Nov; was ~95-100%)",
+   "confirmed": false,
+   "impact": 1
   },
   {
    "name": "US Thanksgiving (NYSE/bond market closed)",
@@ -84,7 +132,7 @@
    "date": "2026-11-27",
    "consensus": null,
    "prior": "headline 2.8% / core 2.6% y/y (Oct)",
-   "rate": "BOJ 1.25%; next MPM 18 Dec, hike ~76% priced (LSEG, 16 Nov)",
+   "rate": "BOJ 1.25%; next MPM 18 Dec, hike ~76% priced (LSEG, 16 Nov; stale)",
    "confirmed": false,
    "impact": 2,
    "required": "tokyo_cpi"
@@ -109,7 +157,7 @@
    "date": "2026-11-28",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~95% priced (CME FedWatch via CNBC, 19 Nov); Waller floated 50bp",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~92% priced after Fri selloff (TheStreet, 20 Nov; was ~95-100%)",
    "confirmed": true,
    "impact": 1
   },
@@ -169,9 +217,22 @@
    "date": "2026-12-04",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~95% priced (CME FedWatch via CNBC, 19 Nov); Waller floated 50bp",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~92% priced after Fri selloff (TheStreet, 20 Nov; was ~95-100%)",
    "confirmed": true,
-   "impact": 2
+   "impact": 2,
+   "required": "us_nfp"
+  },
+  {
+   "name": "Thailand National Day / Father's Day (5 Dec falls Sat; substitute holiday Mon 7 Dec unconfirmed)",
+   "country": "TH",
+   "kind": "holiday",
+   "ict": "2026-12-05 09:00",
+   "date": "2026-12-05",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": false,
+   "impact": 1
   },
   {
    "name": "Thai CPI (Nov) — TPSO",
@@ -181,9 +242,11 @@
    "date": "2026-12-07",
    "consensus": null,
    "prior": "3.90% y/y, core 1.58 (Oct)",
-   "rate": "BoT MPC 23 Dec",
+   "rate": "BoT 1.00%; MPC 23 Dec",
    "confirmed": true,
-   "impact": 2
+   "impact": 2,
+   "required": "th_cpi",
+   "pinned_source": "TPSO annual CPI release calendar 2569 (in the Jan-2026 CPI press document, uploads.tpso.go.th/editor/pdf/1770267421_9730fb584f591c6af957.pdf); time 10:30 per TPSO press header; dates can slip by a day — each monthly release restates the next date"
   },
   {
    "name": "FOMC decision",
@@ -193,7 +256,7 @@
    "date": "2026-12-10",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~95% priced (CME FedWatch via CNBC, 19 Nov); Waller floated 50bp",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~92% priced after Fri selloff (TheStreet, 20 Nov; was ~95-100%)",
    "confirmed": true,
    "impact": 2
   }
@@ -201,11 +264,15 @@
  "validation": {
   "missing": [],
   "matched": [
+   "th_cpi 2026-12-07",
+   "us_nfp 2026-12-04",
    "us_pce 2026-11-25",
    "jp_cpi 2026-11-20",
    "tokyo_cpi 2026-11-27"
   ],
   "inserted": [],
-  "pinned": []
+  "pinned": [
+   "th_cpi → 2026-12-07 10:30"
+  ]
  }
 }

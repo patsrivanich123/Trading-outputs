@@ -66,3 +66,7 @@ date,asset,bias,entry,invalidation,target,last_at_call,graded_on,outcome,pnl_pct
 2026-11-20,UST 10Y (%),no trade,,,,5.052,2026-11-21,n/a,,"Hawkish Fed vs equity rout; range 5.025-5.09, stand aside"
 2026-11-20,DXY (ICE fut),bullish,103.3,102.6,104.5,103.845,2026-11-21,loss,-0.019,"New 6m high, RSI 71; buy dip to 103.30"
 2026-11-20,Brent CO1,bearish,94.5,98.2,88.0,91.98,2026-11-21,loss,-0.631,"Surplus, below 20/50DMA; sell rallies, Hormuz mines risk"
+2026-11-21,USDJPY,bearish,159.2,160.1,157.0,158.5525,,,,"Risk-off, US 2y -12bp; MoF caps 160. Sell rallies"
+2026-11-21,UST 10Y (%),bearish,4.97,5.05,4.82,4.912,,,,Broke 4.95; equity correction erodes hike pricing. Receive bounces
+2026-11-21,DXY (ICE fut),no trade,,,,103.825,,,,"6m high, RSI 71; haven bid vs falling yields"
+2026-11-21,Brent CO1,no trade,,,,92.56,,,,"Surplus vs Iran-strike headlines; two-way, stand aside"
