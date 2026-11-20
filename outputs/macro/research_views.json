@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-19",
+ "asof": "2026-11-20",
  "source": "macro.research.publish (views.csv)",
  "data": {
   "views": [
@@ -18,10 +18,10 @@
     "source_type": "press report",
     "source_url": "https://www.exchangerates.org.uk/news/47597/2026-10-28-usd-jpy-forecast-two-major-banks-see-opposite-paths-for-the-yen-in-2027.html",
     "status": "active",
-    "live": 159.6925,
-    "live_asof": "2026-11-19 00:00:00",
-    "to_target": 5.308,
-    "age_days": 22,
+    "live": 158.5525,
+    "live_asof": "2026-11-20 00:00:00",
+    "to_target": 6.447,
+    "age_days": 23,
     "stale": false
    },
    {
@@ -39,9 +39,9 @@
     "source_type": "press report",
     "source_url": "https://www.tmgm.com/en/analysis/market-news/article/japanese-yen-wider-range-with-intervention-support-against-us-dollar-hsbc-202608111118",
     "status": "active",
-    "live": 159.6925,
-    "live_asof": "2026-11-19 00:00:00",
-    "age_days": 100,
+    "live": 158.5525,
+    "live_asof": "2026-11-20 00:00:00",
+    "age_days": 101,
     "stale": true
    },
    {
@@ -59,10 +59,10 @@
     "source_type": "press report (unverified date)",
     "source_url": "https://www.jpmorgan.com/insights/markets-and-economy/economy/economic-trends",
     "status": "stale?",
-    "live": 5.052,
-    "live_asof": "2026-11-19 00:00:00",
-    "to_target": -0.352,
-    "age_days": 141,
+    "live": 4.912,
+    "live_asof": "2026-11-20 00:00:00",
+    "to_target": -0.212,
+    "age_days": 142,
     "stale": true
    },
    {
@@ -80,7 +80,7 @@
     "source_type": "press report",
     "source_url": "https://www.bloomberg.com/news/articles/2026-09-28/jpmorgan-defies-consensus-with-three-thai-rate-hikes-in-2027",
     "status": "active",
-    "age_days": 52,
+    "age_days": 53,
     "stale": false
    },
    {
@@ -98,7 +98,7 @@
     "source_type": "press report",
     "source_url": "https://www.fxstreet.com/news/thai-baht-bot-cautious-on-normalisation-downside-persists-commerzbank-202610301722",
     "status": "active",
-    "age_days": 20,
+    "age_days": 21,
     "stale": false
    },
    {
@@ -116,7 +116,7 @@
     "source_type": "press report",
     "source_url": "https://www.fxstreet.com/news/thai-baht-bot-holds-rates-as-curve-steepening-risks-dbs-202610292054",
     "status": "active",
-    "age_days": 21,
+    "age_days": 22,
     "stale": false
    }
   ],
@@ -138,20 +138,20 @@
   },
   "lab": {
    "USDJPY": {
-    "date": "2026-11-19",
+    "date": "2026-11-20",
     "bias": "no trade",
     "entry": "",
     "invalidation": "",
     "target": "",
-    "note": "160 MoF line vs Fed carry; JP CPI Fri 06:30"
+    "note": "160 MoF cap vs Fed carry; JP CPI just out"
    },
    "UST 10Y": {
-    "date": "2026-11-19",
+    "date": "2026-11-20",
     "bias": "no trade",
     "entry": "",
     "invalidation": "",
     "target": "",
-    "note": "Hawkish minutes, 10y fell anyway; four straight losses, stand aside"
+    "note": "Hawkish Fed vs equity rout; range 5.025-5.09, stand aside"
    },
    "BoT policy rate": null,
    "BoT / USDTHB": null

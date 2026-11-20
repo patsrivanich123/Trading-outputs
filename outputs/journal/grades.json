@@ -1,11 +1,11 @@
 {
- "asof": "2026-11-19",
+ "asof": "2026-11-20",
  "source": "journal.grade",
  "data": {
   "graded_today": 4,
-  "n_scored": 23,
-  "hit_rate_all": 47.82608695652174,
-  "hit_rate_20": 55.00000000000001,
+  "n_scored": 25,
+  "hit_rate_all": 44.0,
+  "hit_rate_20": 45.0,
   "yesterday": [
    {
     "asset": "USDJPY",
@@ -22,14 +22,14 @@
    {
     "asset": "DXY (ICE fut)",
     "bias": "bullish",
-    "outcome": "win",
-    "pnl_pct": "0.125"
+    "outcome": "loss",
+    "pnl_pct": "-0.019"
    },
    {
     "asset": "Brent CO1",
     "bias": "bearish",
     "outcome": "loss",
-    "pnl_pct": "-0.033"
+    "pnl_pct": "-0.631"
    }
   ]
  }
