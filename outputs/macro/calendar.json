@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-21",
+ "asof": "2026-11-22",
  "source": "brief.calendar",
  "data": [
   {
@@ -9,7 +9,7 @@
    "ict": "2026-11-20 06:30",
    "date": "2026-11-20",
    "consensus": "core 2.3%",
-   "prior": "headline 2.1% / core 2.1% / core-core 2.4% y/y (Sep)",
+   "prior": null,
    "rate": "BOJ 1.25%; next MPM 18 Dec",
    "confirmed": true,
    "impact": 1,
@@ -25,6 +25,18 @@
    "prior": null,
    "rate": null,
    "confirmed": true,
+   "impact": 1
+  },
+  {
+   "name": "US Chicago Fed National Activity Index (Oct)",
+   "country": "US",
+   "kind": "activity",
+   "ict": "2026-11-23 20:30",
+   "date": "2026-11-23",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": false,
    "impact": 1
   },
   {
@@ -52,6 +64,18 @@
    "impact": 1
   },
   {
+   "name": "Fed: NY Fed President Williams speaks",
+   "country": "US",
+   "kind": "cb",
+   "ict": "2026-11-24 04:00",
+   "date": "2026-11-24",
+   "consensus": null,
+   "prior": null,
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~90% (Kalshi, Fri 20 Nov close); 2y -13bp to 4.63% Fri",
+   "confirmed": false,
+   "impact": 1
+  },
+  {
    "name": "US 5y note auction $70B (+ 2y FRN $28B)",
    "country": "US",
    "kind": "supply",
@@ -64,26 +88,26 @@
    "impact": 1
   },
   {
-   "name": "US PCE / core PCE (Oct) + Q3 GDP 2nd est — BEA",
+   "name": "US PCE / core PCE (Oct) + personal income/spending + Q3 GDP 2nd est — BEA",
    "country": "US",
    "kind": "inflation",
    "ict": "2026-11-25 20:30",
    "date": "2026-11-25",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~92% priced after Fri selloff (TheStreet, 20 Nov; was ~95-100%)",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~90% (Kalshi, Fri 20 Nov close); 2y -13bp to 4.63% Fri",
    "confirmed": true,
    "impact": 2,
    "required": "us_pce"
   },
   {
-   "name": "US initial jobless claims (moved up for Thanksgiving)",
+   "name": "US durable goods (Oct) + initial jobless claims (moved up for Thanksgiving)",
    "country": "US",
    "kind": "labour",
    "ict": "2026-11-25 20:30",
    "date": "2026-11-25",
    "consensus": null,
-   "prior": "203k",
+   "prior": "claims 203k",
    "rate": null,
    "confirmed": false,
    "impact": 1
@@ -108,7 +132,19 @@
    "date": "2026-11-26",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~92% priced after Fri selloff (TheStreet, 20 Nov; was ~95-100%)",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~90% (Kalshi, Fri 20 Nov close); 2y -13bp to 4.63% Fri",
+   "confirmed": false,
+   "impact": 1
+  },
+  {
+   "name": "ECB account of Oct meeting",
+   "country": "EA",
+   "kind": "cb",
+   "ict": "2026-11-26 19:30",
+   "date": "2026-11-26",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
    "confirmed": false,
    "impact": 1
   },
@@ -132,7 +168,7 @@
    "date": "2026-11-27",
    "consensus": null,
    "prior": "headline 2.8% / core 2.6% y/y (Oct)",
-   "rate": "BOJ 1.25%; next MPM 18 Dec, hike ~76% priced (LSEG, 16 Nov; stale)",
+   "rate": "BOJ 1.25%; next MPM 18 Dec, hike widely expected (pricing not re-verified this run)",
    "confirmed": false,
    "impact": 2,
    "required": "tokyo_cpi"
@@ -157,7 +193,7 @@
    "date": "2026-11-28",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~92% priced after Fri selloff (TheStreet, 20 Nov; was ~95-100%)",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~90% (Kalshi, Fri 20 Nov close); 2y -13bp to 4.63% Fri",
    "confirmed": true,
    "impact": 1
   },
@@ -165,6 +201,18 @@
    "name": "US ISM manufacturing (Nov)",
    "country": "US",
    "kind": "activity",
+   "ict": "2026-12-01 22:00",
+   "date": "2026-12-01",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": false,
+   "impact": 1
+  },
+  {
+   "name": "Nvidia ex-CEO Huang closed-door House interviews (time TBC)",
+   "country": "US",
+   "kind": "other",
    "ict": "2026-12-01 22:00",
    "date": "2026-12-01",
    "consensus": null,
@@ -217,7 +265,7 @@
    "date": "2026-12-04",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~92% priced after Fri selloff (TheStreet, 20 Nov; was ~95-100%)",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~90% (Kalshi, Fri 20 Nov close); 2y -13bp to 4.63% Fri",
    "confirmed": true,
    "impact": 2,
    "required": "us_nfp"
@@ -249,14 +297,14 @@
    "pinned_source": "TPSO annual CPI release calendar 2569 (in the Jan-2026 CPI press document, uploads.tpso.go.th/editor/pdf/1770267421_9730fb584f591c6af957.pdf); time 10:30 per TPSO press header; dates can slip by a day — each monthly release restates the next date"
   },
   {
-   "name": "FOMC decision",
+   "name": "FOMC decision (outside 14d window, anchor)",
    "country": "US",
    "kind": "cb",
    "ict": "2026-12-10 02:00",
    "date": "2026-12-10",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~92% priced after Fri selloff (TheStreet, 20 Nov; was ~95-100%)",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~90% (Kalshi, Fri 20 Nov close); 2y -13bp to 4.63% Fri",
    "confirmed": true,
    "impact": 2
   }

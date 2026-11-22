@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-20",
+ "asof": "2026-11-22",
  "source": "macro.research.publish (views.csv)",
  "data": {
   "views": [
@@ -21,7 +21,7 @@
     "live": 158.5525,
     "live_asof": "2026-11-20 00:00:00",
     "to_target": 6.447,
-    "age_days": 23,
+    "age_days": 25,
     "stale": false
    },
    {
@@ -41,7 +41,7 @@
     "status": "active",
     "live": 158.5525,
     "live_asof": "2026-11-20 00:00:00",
-    "age_days": 101,
+    "age_days": 103,
     "stale": true
    },
    {
@@ -62,7 +62,7 @@
     "live": 4.912,
     "live_asof": "2026-11-20 00:00:00",
     "to_target": -0.212,
-    "age_days": 142,
+    "age_days": 144,
     "stale": true
    },
    {
@@ -80,7 +80,7 @@
     "source_type": "press report",
     "source_url": "https://www.bloomberg.com/news/articles/2026-09-28/jpmorgan-defies-consensus-with-three-thai-rate-hikes-in-2027",
     "status": "active",
-    "age_days": 53,
+    "age_days": 55,
     "stale": false
    },
    {
@@ -98,7 +98,7 @@
     "source_type": "press report",
     "source_url": "https://www.fxstreet.com/news/thai-baht-bot-cautious-on-normalisation-downside-persists-commerzbank-202610301722",
     "status": "active",
-    "age_days": 21,
+    "age_days": 23,
     "stale": false
    },
    {
@@ -116,7 +116,7 @@
     "source_type": "press report",
     "source_url": "https://www.fxstreet.com/news/thai-baht-bot-holds-rates-as-curve-steepening-risks-dbs-202610292054",
     "status": "active",
-    "age_days": 22,
+    "age_days": 24,
     "stale": false
    }
   ],
@@ -138,20 +138,20 @@
   },
   "lab": {
    "USDJPY": {
-    "date": "2026-11-20",
-    "bias": "no trade",
-    "entry": "",
-    "invalidation": "",
-    "target": "",
-    "note": "160 MoF cap vs Fed carry; JP CPI just out"
+    "date": "2026-11-21",
+    "bias": "bearish",
+    "entry": "159.2",
+    "invalidation": "160.1",
+    "target": "157.0",
+    "note": "Risk-off, US 2y -12bp; MoF caps 160. Sell rallies"
    },
    "UST 10Y": {
-    "date": "2026-11-20",
-    "bias": "no trade",
-    "entry": "",
-    "invalidation": "",
-    "target": "",
-    "note": "Hawkish Fed vs equity rout; range 5.025-5.09, stand aside"
+    "date": "2026-11-21",
+    "bias": "bearish",
+    "entry": "4.97",
+    "invalidation": "5.05",
+    "target": "4.82",
+    "note": "Broke 4.95; equity correction erodes hike pricing. Receive bounces"
    },
    "BoT policy rate": null,
    "BoT / USDTHB": null
