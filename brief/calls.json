@@ -1,6 +1,6 @@
-{"date": "2026-11-23", "calls": [
-{"asset": "USDJPY", "bias": "bearish", "entry": 159.2, "invalidation": 160.1, "target": 157.0, "last_at_call": 158.5525, "note": "Risk-off, 2y -13bp; MoF caps 160. Sell rallies"},
-{"asset": "UST 10Y (%)", "bias": "bearish", "entry": 4.97, "invalidation": 5.05, "target": 4.82, "last_at_call": 4.912, "note": "Below 4.95, equity correction; receive bounces into supply"},
-{"asset": "DXY (ICE fut)", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 103.745, "note": "At 6m high, RSI 69; haven vs falling yields"},
-{"asset": "Brent CO1", "bias": "bearish", "entry": 92.0, "invalidation": 95.5, "target": 87.0, "last_at_call": 89.95, "note": "Feb roll; below 20/50DMA, risk-off liquidation; sell 92"}
+{"date": "2026-11-24", "calls": [
+{"asset": "USDJPY", "bias": "bearish", "entry": 159.9, "invalidation": 160.5, "target": 158.5, "last_at_call": 159.0075, "note": "Fade only at the 160 MoF wall; mid-range = no edge"},
+{"asset": "UST 10Y (%)", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 4.918, "note": "2y +7bp, 10y flat: flattener, not outright; PCE decides"},
+{"asset": "DXY (ICE fut)", "bias": "bullish", "entry": 103.7, "invalidation": 103.1, "target": 105.0, "last_at_call": 104.26, "note": "6m high, Fed hike priced 98%; buy dip, RSI 73"},
+{"asset": "Brent CO1", "bias": "bearish", "entry": 89.5, "invalidation": 92.2, "target": 83.0, "last_at_call": 86.68, "note": "Feb -3.6%, -19% 1m; sell bounce to 89.4 pivot"}
 ]}

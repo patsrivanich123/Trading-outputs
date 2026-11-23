@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-22",
+ "asof": "2026-11-24",
  "source": "brief.calendar",
  "data": [
   {
@@ -16,63 +16,27 @@
    "required": "jp_cpi"
   },
   {
-   "name": "Japan Labour Thanksgiving Day (TSE closed)",
-   "country": "JP",
-   "kind": "holiday",
-   "ict": "2026-11-23 07:00",
-   "date": "2026-11-23",
-   "consensus": null,
-   "prior": null,
-   "rate": null,
-   "confirmed": true,
-   "impact": 1
-  },
-  {
-   "name": "US Chicago Fed National Activity Index (Oct)",
-   "country": "US",
-   "kind": "activity",
-   "ict": "2026-11-23 20:30",
-   "date": "2026-11-23",
-   "consensus": null,
-   "prior": null,
-   "rate": null,
-   "confirmed": false,
-   "impact": 1
-  },
-  {
-   "name": "US S&P Global flash PMIs (Nov)",
-   "country": "US",
-   "kind": "activity",
-   "ict": "2026-11-23 21:45",
-   "date": "2026-11-23",
-   "consensus": null,
-   "prior": null,
-   "rate": null,
-   "confirmed": false,
-   "impact": 1
-  },
-  {
-   "name": "US 2y note auction $69B (moved up for Thanksgiving)",
+   "name": "US 2y note auction $69B — RELEASED: high yield 4.700% (Investing.com calendar, unconfirmed vs TreasuryDirect)",
    "country": "US",
    "kind": "supply",
    "ict": "2026-11-24 01:00",
    "date": "2026-11-24",
    "consensus": null,
-   "prior": null,
+   "prior": "4.708% (Oct)",
    "rate": null,
    "confirmed": false,
    "impact": 1
   },
   {
-   "name": "Fed: NY Fed President Williams speaks",
+   "name": "Fed: NY Fed President Williams — RELEASED: inflation too high, 'work to do', won't rule out back-to-back hikes; sees 3.5% end-2026",
    "country": "US",
    "kind": "cb",
    "ict": "2026-11-24 04:00",
    "date": "2026-11-24",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~90% (Kalshi, Fri 20 Nov close); 2y -13bp to 4.63% Fri",
-   "confirmed": false,
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~98% (CME FedWatch via CNBC, 23 Nov, up from ~88% Fri); 2y ~4.69-4.70%",
+   "confirmed": true,
    "impact": 1
   },
   {
@@ -95,7 +59,7 @@
    "date": "2026-11-25",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~90% (Kalshi, Fri 20 Nov close); 2y -13bp to 4.63% Fri",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~98% (CME FedWatch via CNBC, 23 Nov, up from ~88% Fri); 2y ~4.69-4.70%",
    "confirmed": true,
    "impact": 2,
    "required": "us_pce"
@@ -132,7 +96,7 @@
    "date": "2026-11-26",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~90% (Kalshi, Fri 20 Nov close); 2y -13bp to 4.63% Fri",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~98% (CME FedWatch via CNBC, 23 Nov, up from ~88% Fri); 2y ~4.69-4.70%",
    "confirmed": false,
    "impact": 1
   },
@@ -193,7 +157,7 @@
    "date": "2026-11-28",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~90% (Kalshi, Fri 20 Nov close); 2y -13bp to 4.63% Fri",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~98% (CME FedWatch via CNBC, 23 Nov, up from ~88% Fri); 2y ~4.69-4.70%",
    "confirmed": true,
    "impact": 1
   },
@@ -201,18 +165,6 @@
    "name": "US ISM manufacturing (Nov)",
    "country": "US",
    "kind": "activity",
-   "ict": "2026-12-01 22:00",
-   "date": "2026-12-01",
-   "consensus": null,
-   "prior": null,
-   "rate": null,
-   "confirmed": false,
-   "impact": 1
-  },
-  {
-   "name": "Nvidia ex-CEO Huang closed-door House interviews (time TBC)",
-   "country": "US",
-   "kind": "other",
    "ict": "2026-12-01 22:00",
    "date": "2026-12-01",
    "consensus": null,
@@ -265,7 +217,7 @@
    "date": "2026-12-04",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~90% (Kalshi, Fri 20 Nov close); 2y -13bp to 4.63% Fri",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~98% (CME FedWatch via CNBC, 23 Nov, up from ~88% Fri); 2y ~4.69-4.70%",
    "confirmed": true,
    "impact": 2,
    "required": "us_nfp"
@@ -297,6 +249,18 @@
    "pinned_source": "TPSO annual CPI release calendar 2569 (in the Jan-2026 CPI press document, uploads.tpso.go.th/editor/pdf/1770267421_9730fb584f591c6af957.pdf); time 10:30 per TPSO press header; dates can slip by a day — each monthly release restates the next date"
   },
   {
+   "name": "Japan Q3 GDP 2nd preliminary",
+   "country": "JP",
+   "kind": "activity",
+   "ict": "2026-12-08 06:50",
+   "date": "2026-12-08",
+   "consensus": null,
+   "prior": null,
+   "rate": "BOJ 1.25%; next MPM 18 Dec, hike widely expected (pricing not re-verified this run)",
+   "confirmed": false,
+   "impact": 1
+  },
+  {
    "name": "FOMC decision (outside 14d window, anchor)",
    "country": "US",
    "kind": "cb",
@@ -304,7 +268,7 @@
    "date": "2026-12-10",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~90% (Kalshi, Fri 20 Nov close); 2y -13bp to 4.63% Fri",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~98% (CME FedWatch via CNBC, 23 Nov, up from ~88% Fri); 2y ~4.69-4.70%",
    "confirmed": true,
    "impact": 2
   }
