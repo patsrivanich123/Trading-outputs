@@ -1,12 +1,12 @@
 {
- "asof": "2026-11-22",
+ "asof": "2026-11-23",
  "source": "assets.fx.usdthb (Yahoo + FRED)",
  "data": {
   "asset": "USDTHB",
-  "last": 33.97,
-  "asof": "2026-11-27",
-  "fair_value": 34.1034,
-  "residual_z": -0.36,
+  "last": 33.942,
+  "asof": "2026-11-20",
+  "fair_value": 34.0287,
+  "residual_z": -0.24,
   "rich_cheap": "near fair value",
   "returns_model": {
    "factors": [
@@ -17,8 +17,8 @@
    ],
    "units": "weekly % (US2Y in bp)",
    "frequency": "weekly (Fri closes)",
-   "n": 366,
-   "start": "2019-11-29",
+   "n": 364,
+   "start": "2019-12-06",
    "beta_5y": {
     "DXY": 0.423,
     "XAU": -0.111,
@@ -28,23 +28,23 @@
    "t_5y": {
     "DXY": 6.9,
     "XAU": -5.3,
-    "US2Y": 1.1,
+    "US2Y": 1.2,
     "JPY": 2.3
    },
    "r2_5y": 0.42,
    "beta_1y": {
-    "DXY": 0.541,
-    "XAU": -0.1,
-    "US2Y": -0.001,
-    "JPY": 0.004
+    "DXY": 0.533,
+    "XAU": -0.098,
+    "US2Y": 0.002,
+    "JPY": 0.014
    },
    "t_1y": {
-    "DXY": 5.8,
+    "DXY": 5.5,
     "XAU": -4.2,
-    "US2Y": -0.1,
-    "JPY": 0.1
+    "US2Y": 0.3,
+    "JPY": 0.2
    },
-   "r2_1y": 0.462,
+   "r2_1y": 0.464,
    "corr": {
     "DXY": {
      "DXY": 1.0,
@@ -55,12 +55,12 @@
     "XAU": {
      "DXY": -0.33,
      "XAU": 1.0,
-     "US2Y": -0.21,
+     "US2Y": -0.2,
      "JPY": -0.2
     },
     "US2Y": {
      "DXY": 0.28,
-     "XAU": -0.21,
+     "XAU": -0.2,
      "US2Y": 1.0,
      "JPY": 0.36
     },
@@ -73,6 +73,14 @@
    }
   },
   "rolling_betas": [
+   {
+    "date": "2023-12-01",
+    "DXY": 0.43,
+    "XAU": -0.27,
+    "US2Y": -0.003,
+    "JPY": 0.173,
+    "r2": 0.659
+   },
    {
     "date": "2023-12-08",
     "DXY": 0.417,
@@ -1307,33 +1315,31 @@
    },
    {
     "date": "2026-11-20",
-    "DXY": 0.535,
+    "DXY": 0.533,
     "XAU": -0.098,
-    "US2Y": 0.001,
-    "JPY": 0.015,
-    "r2": 0.463
-   },
-   {
-    "date": "2026-11-27",
-    "DXY": 0.541,
-    "XAU": -0.1,
-    "US2Y": -0.001,
-    "JPY": 0.004,
-    "r2": 0.462
+    "US2Y": 0.002,
+    "JPY": 0.014,
+    "r2": 0.464
    }
   ],
-  "live_daily": 33.97,
-  "live_daily_asof": "2026-11-22",
+  "live_daily": 33.942,
+  "live_daily_asof": "2026-11-20",
   "signal_test": {
    "horizon_weeks": 2,
-   "n": 261,
-   "slope": -0.304,
-   "corr": -0.234,
-   "big_n": 54,
+   "n": 259,
+   "slope": -0.291,
+   "corr": -0.226,
+   "big_n": 53,
    "big_reversion_hit": 70,
    "verdict": "residual mean-reverts: fade extremes"
   },
   "series": [
+   {
+    "date": "2023-12-01",
+    "usdthb": 35.257,
+    "fv": 35.2321,
+    "z": 0.07
+   },
    {
     "date": "2023-12-08",
     "usdthb": 35.11,
@@ -2261,18 +2267,12 @@
    {
     "date": "2026-11-20",
     "usdthb": 33.942,
-    "fv": 34.1758,
-    "z": -0.64
-   },
-   {
-    "date": "2026-11-27",
-    "usdthb": 33.97,
-    "fv": 34.1034,
-    "z": -0.36
+    "fv": 34.0287,
+    "z": -0.24
    }
   ],
   "caveat": "v0: weekly Fri closes (daily Yahoo data is asynchronous across FX/futures); rate factor = US 2y only (no Thai yields on FRED/Yahoo \u2014 TH 2y via BQuant next); DXY rebuilt from FX pairs, contains JPY (13.6%) -> DXY/JPY collinear (corr ~0.7), read their betas jointly; offshore Yahoo quote, not onshore fixing.",
   "chart": "outputs/assets/usdthb_factor.png",
-  "run_at": "2026-11-22T23:38"
+  "run_at": "2026-11-23T23:38"
  }
 }

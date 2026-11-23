@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-22",
+ "asof": "2026-11-23",
  "source": "macro.us.cpi.nowcast",
  "data": {
   "benchmarks": {},
@@ -694,7 +694,7 @@
     "naive_core": 0.3,
     "predicted_headline": 0.13,
     "predicted_core": 0.3,
-    "predicted_on": "2026-11-22",
+    "predicted_on": "2026-11-23",
     "is_forecast": true
    }
   ],
