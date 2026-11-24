@@ -74,7 +74,7 @@ date,asset,bias,entry,invalidation,target,last_at_call,graded_on,outcome,pnl_pct
 2026-11-23,UST 10Y (%),bearish,4.97,5.05,4.82,4.912,2026-11-24,loss,-0.122,"Below 4.95, equity correction; receive bounces into supply"
 2026-11-23,DXY (ICE fut),no trade,,,,103.745,2026-11-24,n/a,,"At 6m high, RSI 69; haven vs falling yields"
 2026-11-23,Brent CO1,bearish,92.0,95.5,87.0,89.95,2026-11-24,win,3.635,"Feb roll; below 20/50DMA, risk-off liquidation; sell 92"
-2026-11-24,USDJPY,bearish,159.9,160.5,158.5,159.0075,,,,Fade only at the 160 MoF wall; mid-range = no edge
-2026-11-24,UST 10Y (%),no trade,,,,4.918,,,,"2y +7bp, 10y flat: flattener, not outright; PCE decides"
-2026-11-24,DXY (ICE fut),bullish,103.7,103.1,105.0,104.26,,,,"6m high, Fed hike priced 98%; buy dip, RSI 73"
-2026-11-24,Brent CO1,bearish,89.5,92.2,83.0,86.68,,,,"Feb -3.6%, -19% 1m; sell bounce to 89.4 pivot"
+2026-11-24,USDJPY,bearish,159.9,160.5,158.5,159.0075,2026-11-25,loss,-0.159,Fade only at the 160 MoF wall; mid-range = no edge
+2026-11-24,UST 10Y (%),no trade,,,,4.918,2026-11-25,n/a,,"2y +7bp, 10y flat: flattener, not outright; PCE decides"
+2026-11-24,DXY (ICE fut),bullish,103.7,103.1,105.0,104.26,2026-11-25,loss,-0.475,"6m high, Fed hike priced 98%; buy dip, RSI 73"
+2026-11-24,Brent CO1,bearish,89.5,92.2,83.0,86.68,2026-11-25,loss,-2.423,"Feb -3.6%, -19% 1m; sell bounce to 89.4 pivot"

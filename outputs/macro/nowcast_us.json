@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-23",
+ "asof": "2026-11-24",
  "source": "macro.us.cpi.nowcast",
  "data": {
   "benchmarks": {},
@@ -8,16 +8,16 @@
   "benchmark_sources": null,
   "series": "US CPI headline y/y Nov 2026",
   "target_month": "2026-11",
-  "ours": 3.95,
+  "ours": 3.88,
   "consensus": null,
   "prior": 4.08,
-  "ours_mm": 0.13,
-  "delta_1d": 0.0,
-  "driver": null,
+  "ours_mm": 0.06,
+  "delta_1d": -0.07,
+  "driver": "Energy -6.8bp vs last run",
   "status": "ok",
   "inputs_available": [
    "FRED CPI components",
-   "gasoline MTD (3 wk)"
+   "gasoline MTD (4 wk)"
   ],
   "inputs_missing": [
    "Cleveland Fed nowcast",
@@ -43,10 +43,10 @@
    {
     "name": "Energy",
     "weight": 6.9,
-    "mm": -2.016,
-    "contrib_bp": -13.9,
+    "mm": -2.995,
+    "contrib_bp": -20.7,
     "status": "ok",
-    "note": "gasoline -4.51% SA (pump -7.55% NSA (3 wk avg 3.98 vs 4.31) + seasonal +3.04 = -4.51% SA) \u00b7 utilities 3m +0.40%",
+    "note": "gasoline -6.49% SA (pump -9.53% NSA (4 wk avg 3.90 vs 4.31) + seasonal +3.04 = -6.49% SA) \u00b7 utilities 3m +0.40%",
     "source": "BLS CPI energy (FRED CPIENGSL) \u00b7 gasoline: EIA weekly retail regular (FRED GASREGW), NSA\u2192SA with BLS gasoline SA/NSA (CUSR0000SETB01/CUUR0000SETB01) \u00b7 utilities: BLS household energy (CUSR0000SAH21)"
    },
    {
@@ -692,9 +692,9 @@
     "backtest_core": null,
     "naive_headline": 0.35,
     "naive_core": 0.3,
-    "predicted_headline": 0.13,
+    "predicted_headline": 0.06,
     "predicted_core": 0.3,
-    "predicted_on": "2026-11-23",
+    "predicted_on": "2026-11-24",
     "is_forecast": true
    }
   ],
