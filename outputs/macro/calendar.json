@@ -1,54 +1,17 @@
 {
- "asof": "2026-11-24",
+ "asof": "2026-11-25",
  "source": "brief.calendar",
  "data": [
   {
-   "name": "Japan national CPI (Oct) — RELEASED: headline 2.3%, core 2.2% (cons 2.3%), core-core 2.2%",
-   "country": "JP",
-   "kind": "inflation",
-   "ict": "2026-11-20 06:30",
-   "date": "2026-11-20",
-   "consensus": "core 2.3%",
-   "prior": null,
-   "rate": "BOJ 1.25%; next MPM 18 Dec",
-   "confirmed": true,
-   "impact": 1,
-   "required": "jp_cpi"
-  },
-  {
-   "name": "US 2y note auction $69B — RELEASED: high yield 4.700% (Investing.com calendar, unconfirmed vs TreasuryDirect)",
-   "country": "US",
-   "kind": "supply",
-   "ict": "2026-11-24 01:00",
-   "date": "2026-11-24",
-   "consensus": null,
-   "prior": "4.708% (Oct)",
-   "rate": null,
-   "confirmed": false,
-   "impact": 1
-  },
-  {
-   "name": "Fed: NY Fed President Williams — RELEASED: inflation too high, 'work to do', won't rule out back-to-back hikes; sees 3.5% end-2026",
-   "country": "US",
-   "kind": "cb",
-   "ict": "2026-11-24 04:00",
-   "date": "2026-11-24",
-   "consensus": null,
-   "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~98% (CME FedWatch via CNBC, 23 Nov, up from ~88% Fri); 2y ~4.69-4.70%",
-   "confirmed": true,
-   "impact": 1
-  },
-  {
-   "name": "US 5y note auction $70B (+ 2y FRN $28B)",
+   "name": "US 5y note auction $70B — RELEASED: high 4.719%, tail 0.3bp, bid-to-cover 2.37",
    "country": "US",
    "kind": "supply",
    "ict": "2026-11-25 01:00",
    "date": "2026-11-25",
    "consensus": null,
-   "prior": null,
+   "prior": "4.708% (Oct, per Investing.com)",
    "rate": null,
-   "confirmed": false,
+   "confirmed": true,
    "impact": 1
   },
   {
@@ -57,9 +20,9 @@
    "kind": "inflation",
    "ict": "2026-11-25 20:30",
    "date": "2026-11-25",
-   "consensus": null,
-   "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~98% (CME FedWatch via CNBC, 23 Nov, up from ~88% Fri); 2y ~4.69-4.70%",
+   "consensus": "core 0.3% m/m, 3.2% y/y (Investing.com); range 3.2–3.4% y/y",
+   "prior": "core 3.1% y/y (Sep)",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~96% priced (FXStreet, 24 Nov); 2y ~4.64%",
    "confirmed": true,
    "impact": 2,
    "required": "us_pce"
@@ -96,7 +59,7 @@
    "date": "2026-11-26",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~98% (CME FedWatch via CNBC, 23 Nov, up from ~88% Fri); 2y ~4.69-4.70%",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~96% priced (FXStreet, 24 Nov); 2y ~4.64%",
    "confirmed": false,
    "impact": 1
   },
@@ -132,7 +95,7 @@
    "date": "2026-11-27",
    "consensus": null,
    "prior": "headline 2.8% / core 2.6% y/y (Oct)",
-   "rate": "BOJ 1.25%; next MPM 18 Dec, hike widely expected (pricing not re-verified this run)",
+   "rate": "BOJ 1.25%; next MPM 18 Dec (pricing not re-verified this run)",
    "confirmed": false,
    "impact": 2,
    "required": "tokyo_cpi"
@@ -157,9 +120,21 @@
    "date": "2026-11-28",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~98% (CME FedWatch via CNBC, 23 Nov, up from ~88% Fri); 2y ~4.69-4.70%",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~96% priced (FXStreet, 24 Nov); 2y ~4.64%",
    "confirmed": true,
    "impact": 1
+  },
+  {
+   "name": "OPEC+ ministerial meeting — 2027 output framework (time TBC)",
+   "country": "EA",
+   "kind": "energy",
+   "ict": "2026-11-29 18:00",
+   "date": "2026-11-29",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": false,
+   "impact": 2
   },
   {
    "name": "US ISM manufacturing (Nov)",
@@ -217,7 +192,7 @@
    "date": "2026-12-04",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~98% (CME FedWatch via CNBC, 23 Nov, up from ~88% Fri); 2y ~4.69-4.70%",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~96% priced (FXStreet, 24 Nov); 2y ~4.64%",
    "confirmed": true,
    "impact": 2,
    "required": "us_nfp"
@@ -256,7 +231,7 @@
    "date": "2026-12-08",
    "consensus": null,
    "prior": null,
-   "rate": "BOJ 1.25%; next MPM 18 Dec, hike widely expected (pricing not re-verified this run)",
+   "rate": "BOJ 1.25%; next MPM 18 Dec (pricing not re-verified this run)",
    "confirmed": false,
    "impact": 1
   },
@@ -268,7 +243,7 @@
    "date": "2026-12-10",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~98% (CME FedWatch via CNBC, 23 Nov, up from ~88% Fri); 2y ~4.69-4.70%",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~96% priced (FXStreet, 24 Nov); 2y ~4.64%",
    "confirmed": true,
    "impact": 2
   }
@@ -279,7 +254,6 @@
    "th_cpi 2026-12-07",
    "us_nfp 2026-12-04",
    "us_pce 2026-11-25",
-   "jp_cpi 2026-11-20",
    "tokyo_cpi 2026-11-27"
   ],
   "inserted": [],

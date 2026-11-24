@@ -1,6 +1,6 @@
-{"date": "2026-11-24", "calls": [
-{"asset": "USDJPY", "bias": "bearish", "entry": 159.9, "invalidation": 160.5, "target": 158.5, "last_at_call": 159.0075, "note": "Fade only at the 160 MoF wall; mid-range = no edge"},
-{"asset": "UST 10Y (%)", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 4.918, "note": "2y +7bp, 10y flat: flattener, not outright; PCE decides"},
-{"asset": "DXY (ICE fut)", "bias": "bullish", "entry": 103.7, "invalidation": 103.1, "target": 105.0, "last_at_call": 104.26, "note": "6m high, Fed hike priced 98%; buy dip, RSI 73"},
-{"asset": "Brent CO1", "bias": "bearish", "entry": 89.5, "invalidation": 92.2, "target": 83.0, "last_at_call": 86.68, "note": "Feb -3.6%, -19% 1m; sell bounce to 89.4 pivot"}
+{"date": "2026-11-25", "calls": [
+{"asset": "USDJPY", "bias": "bearish", "entry": 159.9, "invalidation": 160.5, "target": 158.5, "last_at_call": 159.26, "note": "Fade only at 160 MoF wall; 159.9 unfilled, keep"},
+{"asset": "UST 10Y (%)", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 4.904, "note": "4.82-4.95 range into PCE; 5y tailed 0.3bp, no signal"},
+{"asset": "DXY (ICE fut)", "bias": "bullish", "entry": 103.3, "invalidation": 102.6, "target": 104.6, "last_at_call": 103.765, "note": "Uptrend, off 104.47 high; buy dip to 103.30"},
+{"asset": "Brent CO1", "bias": "bearish", "entry": 90.7, "invalidation": 93.6, "target": 86.0, "last_at_call": 88.78, "note": "Below 20/50DMA; sell 90.7 into OPEC+ Sun"}
 ]}

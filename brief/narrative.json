@@ -1,17 +1,49 @@
-{"date": "2026-11-24",
-"header_note": "levels as of Mon 23 Nov US close / Asia close (IBKR, delayed). UST 10Y: TNX 4.918 = Yahoo ^TNX 4.918 (match). Brent is the Feb contract (Jan expires 30 Nov); Yahoo BZ=F (Jan) 86.80. USDTHB, Bitcoin and Nasdaq 100 come from Yahoo (flagged). Bigdata.com is still out of credits, so news is from the web only. Graded: the 23 Nov calls and the Saturday 21 Nov set, both against Monday's bar. USDJPY and 10Y show as losses on the close-to-close move even though neither entry (159.20 / 4.97) filled.",
-"key_risk": "Wednesday's core PCE (20:30 ICT) and the 5y/7y auctions (01:00 ICT Wed/Thu) test a December hike that is now ~98% priced after Williams said the Fed has 'work to do' and wouldn't rule out back-to-back hikes. A hot PCE pushes the 2y towards 4.80% and DXY towards 105, which puts USDTHB through 34.00. For THB, the dollar is the driver, not the risk rally.",
-"assets": {
-"USDJPY": {"news": "159.01 (+0.29%). Risk-on (Nvidia +31%) and a 2y +7bp lifted it, but it stalled short of 160 again. Katayama says Tokyo will 'respond appropriately' to one-sided moves, and exporters have moved their offers below 160. Tokyo CPI is due Fri 06:30 ICT; BOJ 18 Dec.", "trade": "Bearish only at the wall: sell 159.90, stop 160.50, target 158.50. No edge in the middle of 158.5–160."},
-"USDTHB": {"news": "33.96 (Yahoo, flagged), still pinned just under 34.00 at the weakest baht in ~19 months. DXY at a 6m high is the pressure, and Monday's equity rebound didn't help. BoT 1.00%, MPC 23 Dec; TH CPI (Nov) on 7 Dec.", "trade": "No call. A close above 34.00 opens 34.20 if PCE is hot."},
-"UST 10Y (%)": {"news": "4.918 (+0.6bp), flat on a +4.7% equity day while the 2y rose ~7bp to ~4.70%: a hawkish flattening. The 2y auction reportedly priced at 4.700% (unconfirmed). Williams: inflation too high, sees 3.5% at end-2026, no preset path. 5y $70B tonight, 7y $44B Wed.", "trade": "No trade outright. The edge is a 2s10s flattener into PCE; for outright, 4.95/5.03 is resistance and 4.816 support."},
-"DXY (ICE fut)": {"news": "104.26 (Dec fut, +0.50%), a new 6m high above the upper band (RSI 73). Hike pricing went from 88% to 98% while yields elsewhere are capped. It ignored the risk-on day.", "trade": "Bullish: buy the dip at 103.70 (prior breakout/S1), stop 103.10, target 105.00. Don't chase at 104.3."},
-"Brent CO1": {"news": "Feb 86.68 (-3.64%), -19% over 1m and below the 20/50DMA (~95.4/96.5). The surplus view (IEA), Middle East flows recovering and fading Iran-strike fear outweigh Houthi and Gulf attacks. Trump says strikes could resume after New Year.", "trade": "Bearish: sell the bounce at 89.50, stop 92.20, target 83.00 (82.1 support). Size small: ATR 4.2."},
-"Bitcoin": {"news": "~61,270 (Yahoo, flagged), flat; it lagged the tech rebound and is still near last week's ~58.8k low.", "trade": "No call."}
-},
-"equities": [
-{"name": "S&P 500", "line": "7,236.85 (+4.72%), its best day since Apr 2025, after Nvidia reinstated Jensen Huang as CEO (NVDA +31%). It recovered about half of last week's drop; VIX 35.9 → 26.6."},
-{"name": "Nasdaq 100", "line": "26,746.10 (+6.86%, Yahoo, flagged). SOX +14%, memory +18%; still in correction (about -15% from the high)."},
-{"name": "KOSPI 200", "line": "732.22 (-3.06%), a new 6m low. Asia closed before the US Nvidia rally, so expect a gap-up today."},
-{"name": "Hang Seng", "line": "22,383.74 (-0.12%), a marginal new 6m low. CSI300 3,958 (+0.1%, Yahoo)."}
-]}
+{
+ "date": "2026-11-25",
+ "header_note": "levels as of Tue 24 Nov US close / Asia close (IBKR, delayed). UST 10Y: TNX 4.904 = Yahoo ^TNX 4.904 (match). Brent is the Feb contract (Jan expires 30 Nov); Yahoo BZ=F (Jan) 88.42. USDTHB, Bitcoin and Nasdaq 100 come from Yahoo (flagged). Bigdata.com is still out of credits, so news is from the web only. Yesterday's grades are close-to-close vs last_at_call: the USDJPY sell (159.90) and Brent sell (89.50) never filled (highs 159.58 / 88.86). DXY's 103.70 buy did fill (low 103.69) and closed 103.765, slightly in the money, but it grades as a loss against the 104.26 mark.",
+ "key_risk": "October core PCE tonight (20:30 ICT; consensus 0.3% m/m, 3.2% y/y, some at 3.4%) is the last inflation print before the 9 Dec FOMC, with a hike ~96% priced. A soft print can't add much; a 0.4% would push the 2y back above 4.70% and DXY through 104.5, putting USDTHB through 34.00. US markets are closed Thursday, so liquidity thins fast after the 7y auction.",
+ "assets": {
+  "USDJPY": {
+   "news": "159.26 (+0.16%), capped again below 160 (high 159.58). The softer dollar and US tariff jitters gave the yen some haven bid, but intervention fear is doing the work. Tokyo CPI Fri 06:30 ICT; BOJ 18 Dec.",
+   "trade": "Bearish only at the wall: sell 159.90, stop 160.50, target 158.50. No edge in the middle of 158.5–160."
+  },
+  "USDTHB": {
+   "news": "33.91 (Yahoo, flagged), off Monday's 34.02 as DXY pulled back 0.5%, but still near the weakest baht in ~19 months. KTB sees support 33.85, resistance 34.00. BoT 1.00%, MPC 23 Dec; TH CPI (Nov) on 7 Dec.",
+   "trade": "No call. A hot PCE retests 34.00, and a close above it opens 34.20."
+  },
+  "UST 10Y (%)": {
+   "news": "4.904 (-1.4bp), the lowest since 10 Nov; 2y ~4.64%. The $70B 5y auction came in at 4.719% with a 0.3bp tail (bid-to-cover 2.37), uneventful. The $44B 7y is 01:00 ICT Thu.",
+   "trade": "No trade. 4.82–4.95 range; PCE picks the direction, and the front end carries the hike risk, not the 10y."
+  },
+  "DXY (ICE fut)": {
+   "news": "103.765 (-0.47%), off Monday's 104.465 high (a ~20-month high per press). Fed hike odds near 96% keep the trend intact; RSI cooled to 65.",
+   "trade": "Bullish on dips: buy 103.30, stop 102.60, target 104.60."
+  },
+  "Brent CO1": {
+   "news": "Feb 88.78 (+2.4% vs Monday's 86.68 settle, but Jan traded under 89 on Iran talks). US–Iran diplomacy, Libya's Sharara restart and surplus talk keep it near 3m lows; IRGC claims of mined tankers are being ignored. OPEC+ meets Sun 29 Nov on the 2027 framework. Goldman raised its Dec Brent forecast to $105.",
+   "trade": "Bearish: sell 90.70, stop 93.60, target 86.00. Cut before Sunday if it isn't working; OPEC+ is binary."
+  },
+  "Bitcoin": {
+   "news": "~59,770 (Yahoo, flagged), -2.4%. It followed tech lower and is back near last week's ~58.8k low.",
+   "trade": "No call."
+  }
+ },
+ "equities": [
+  {
+   "name": "S&P 500",
+   "line": "7,202.45 (-0.48%). It gave back part of Monday's +4.7% as the Nvidia/Huang rally faded (NVDA ~-6%); defensives bid, tariff headlines weighed."
+  },
+  {
+   "name": "Nasdaq 100",
+   "line": "26,214.17 (-1.99%, Yahoo, flagged). AI names led the drop after Monday's +6.9%."
+  },
+  {
+   "name": "KOSPI 200",
+   "line": "777.84 (+6.43%). The expected gap-up as Korea chips caught Monday's US Nvidia rally; still -8.7% over 1m."
+  },
+  {
+   "name": "Hang Seng",
+   "line": "22,219.65 (-0.73%), another new 6m low (-5.5% w/w). It didn't join the Asia chip rebound."
+  }
+ ]
+}
