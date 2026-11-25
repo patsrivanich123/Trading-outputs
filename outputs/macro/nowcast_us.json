@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-24",
+ "asof": "2026-11-25",
  "source": "macro.us.cpi.nowcast",
  "data": {
   "benchmarks": {},
@@ -12,8 +12,8 @@
   "consensus": null,
   "prior": 4.08,
   "ours_mm": 0.06,
-  "delta_1d": -0.07,
-  "driver": "Energy -6.8bp vs last run",
+  "delta_1d": 0.0,
+  "driver": null,
   "status": "ok",
   "inputs_available": [
    "FRED CPI components",
@@ -33,9 +33,9 @@
   },
   "pce": {
    "series": "US core PCE y/y Nov 2026",
-   "ours": 3.2,
+   "ours": 3.37,
    "consensus": null,
-   "prior": 3.12,
+   "prior": 3.26,
    "ours_mm": 0.26,
    "note": "v0 mapping 0.80\u00d7core CPI m/m + 0.02; PPI not wired"
   },
@@ -694,7 +694,7 @@
     "naive_core": 0.3,
     "predicted_headline": 0.06,
     "predicted_core": 0.3,
-    "predicted_on": "2026-11-24",
+    "predicted_on": "2026-11-25",
     "is_forecast": true
    }
   ],

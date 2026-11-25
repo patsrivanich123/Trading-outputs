@@ -1,27 +1,29 @@
 {
- "asof": "2026-11-24",
+ "asof": "2026-11-25",
  "source": "macro.us.nfp.nowcast (FRED)",
  "data": {
   "series": "US nonfarm payrolls Nov 2026 (k, m/m)",
   "target_month": "2026-11",
-  "ours": null,
+  "ours": 134.0,
   "consensus": null,
   "consensus_source": null,
   "prior": 165.0,
   "mom3": 137.0,
   "delta_1d": null,
-  "driver": "d_ic +8k \u00b7 mom3 +137k",
-  "status": "insufficient_data",
+  "driver": "d_ic +7k \u00b7 d_cc +2k \u00b7 mom3 +137k",
+  "status": "ok",
   "inputs_used": [
    "d_ic",
    "d_cc",
    "mom3"
   ],
   "inputs_missing": [
-   "adp",
-   "d_cc"
+   "adp"
   ],
-  "range": null,
+  "range": {
+   "low": 47.0,
+   "high": 221.0
+  },
   "backtest": {
    "with_adp": {
     "n": 96,
@@ -189,6 +191,6 @@
     "mom3": 79.0
    }
   ],
-  "run_at": "2026-11-24T23:38"
+  "run_at": "2026-11-25T23:38"
  }
 }

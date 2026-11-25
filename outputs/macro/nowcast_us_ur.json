@@ -1,19 +1,27 @@
 {
- "asof": "2026-11-24",
+ "asof": "2026-11-25",
  "source": "macro.us.ur.nowcast (FRED/ALFRED)",
  "data": {
   "series": "US unemployment rate Nov 2026",
   "target_month": "2026-11",
-  "ours": null,
-  "ours_rounded": null,
+  "ours": 4.15,
+  "ours_rounded": 4.1,
   "consensus": null,
   "prior": 4.1,
   "prior_unrounded": 4.141,
-  "probs": {},
+  "probs": {
+   "3.8": 0.009,
+   "3.9": 0.052,
+   "4.0": 0.164,
+   "4.1": 0.286,
+   "4.2": 0.279,
+   "4.3": 0.153,
+   "4.4": 0.047
+  },
   "call": "no trade",
   "delta_1d": null,
-  "status": "insufficient_data",
-  "driver": "d_ic4 -0.250 \u00b7 eps -0.064 \u00b7 d_lfpr +0.100",
+  "status": "ok",
+  "driver": "d_cc +2.000 \u00b7 d_iur +0.000 \u00b7 d_ic4 -0.500 \u00b7 eps -0.064 \u00b7 d_lfpr +0.100",
   "coefs": {
    "d_cc": 0.00054,
    "d_iur": -0.24847,
@@ -46,7 +54,7 @@
    "consensus"
   ],
   "chart": "appendix/us_ur/backtest.png",
-  "run_at": "2026-11-24T23:38",
+  "run_at": "2026-11-25T23:38",
   "caveat": "claims series are current vintage (seasonal factors revised annually); u and LFPR are true first prints (ALFRED)"
  }
 }
