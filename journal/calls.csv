@@ -82,3 +82,7 @@ date,asset,bias,entry,invalidation,target,last_at_call,graded_on,outcome,pnl_pct
 2026-11-25,UST 10Y (%),no trade,,,,4.904,2026-11-26,n/a,,"4.82-4.95 range into PCE; 5y tailed 0.3bp, no signal"
 2026-11-25,DXY (ICE fut),bullish,103.3,102.6,104.6,103.765,2026-11-26,loss,-0.111,"Uptrend, off 104.47 high; buy dip to 103.30"
 2026-11-25,Brent CO1,bearish,90.7,93.6,86.0,88.78,2026-11-26,loss,-2.095,Below 20/50DMA; sell 90.7 into OPEC+ Sun
+2026-11-26,USDJPY,bearish,159.9,160.5,158.5,159.17,,,,"Sell only at 160 MoF wall; Tokyo CPI, BOJ hike priced"
+2026-11-26,UST 10Y (%),no trade,,,,4.848,,,,"At 4.82 support, US shut; receive only back near 4.95"
+2026-11-26,DXY (ICE fut),bullish,103.3,102.6,104.6,103.65,,,,"Uptrend intact, hike priced; 103.30 dip unfilled, keep"
+2026-11-26,Brent CO1,bearish,92.0,95.5,87.0,90.64,,,,"Houthi bounce into 20DMA; sell 92 pre-OPEC+, small"

@@ -3,65 +3,17 @@
  "source": "brief.calendar",
  "data": [
   {
-   "name": "US 5y note auction $70B — RELEASED: high 4.719%, tail 0.3bp, bid-to-cover 2.37",
-   "country": "US",
-   "kind": "supply",
-   "ict": "2026-11-25 01:00",
-   "date": "2026-11-25",
-   "consensus": null,
-   "prior": "4.708% (Oct, per Investing.com)",
-   "rate": null,
-   "confirmed": true,
-   "impact": 1
-  },
-  {
-   "name": "US PCE / core PCE (Oct) + personal income/spending + Q3 GDP 2nd est — BEA",
+   "name": "US PCE / core PCE (Oct) - BEA - RELEASED: headline 0.3% m/m, 3.8% y/y; core 3.3% y/y (cons 3.2%)",
    "country": "US",
    "kind": "inflation",
    "ict": "2026-11-25 20:30",
    "date": "2026-11-25",
-   "consensus": "core 0.3% m/m, 3.2% y/y (Investing.com); range 3.2–3.4% y/y",
+   "consensus": "core 3.2% y/y",
    "prior": "core 3.1% y/y (Sep)",
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~96% priced (FXStreet, 24 Nov); 2y ~4.64%",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike priced",
    "confirmed": true,
-   "impact": 2,
+   "impact": 1,
    "required": "us_pce"
-  },
-  {
-   "name": "US durable goods (Oct) + initial jobless claims (moved up for Thanksgiving)",
-   "country": "US",
-   "kind": "labour",
-   "ict": "2026-11-25 20:30",
-   "date": "2026-11-25",
-   "consensus": null,
-   "prior": "claims 203k",
-   "rate": null,
-   "confirmed": false,
-   "impact": 1
-  },
-  {
-   "name": "US 7y note auction $44B",
-   "country": "US",
-   "kind": "supply",
-   "ict": "2026-11-26 01:00",
-   "date": "2026-11-26",
-   "consensus": null,
-   "prior": null,
-   "rate": null,
-   "confirmed": false,
-   "impact": 1
-  },
-  {
-   "name": "Fed Beige Book",
-   "country": "US",
-   "kind": "cb",
-   "ict": "2026-11-26 02:00",
-   "date": "2026-11-26",
-   "consensus": null,
-   "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~96% priced (FXStreet, 24 Nov); 2y ~4.64%",
-   "confirmed": false,
-   "impact": 1
   },
   {
    "name": "ECB account of Oct meeting",
@@ -93,15 +45,15 @@
    "kind": "inflation",
    "ict": "2026-11-27 06:30",
    "date": "2026-11-27",
-   "consensus": null,
+   "consensus": "core (ex fresh food) ~2.9% y/y (FXStreet range 2.9-3.0%)",
    "prior": "headline 2.8% / core 2.6% y/y (Oct)",
-   "rate": "BOJ 1.25%; next MPM 18 Dec (pricing not re-verified this run)",
-   "confirmed": false,
+   "rate": "BOJ 1.25%; 18 Dec MPM: hike to 1.50% priced (FXStreet, Nov)",
+   "confirmed": true,
    "impact": 2,
    "required": "tokyo_cpi"
   },
   {
-   "name": "US Black Friday — early close equities 13:00 / bonds 14:00 ET",
+   "name": "US Black Friday - early close equities 13:00 / bonds 14:00 ET",
    "country": "US",
    "kind": "holiday",
    "ict": "2026-11-28 01:00",
@@ -120,12 +72,12 @@
    "date": "2026-11-28",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~96% priced (FXStreet, 24 Nov); 2y ~4.64%",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike priced (StockAnalysis/CNBC, 25 Nov post-PCE); 2y ~4.61-4.65%",
    "confirmed": true,
    "impact": 1
   },
   {
-   "name": "OPEC+ ministerial meeting — 2027 output framework (time TBC)",
+   "name": "OPEC+ ministerial meeting - 2027 output framework (time TBC)",
    "country": "EA",
    "kind": "energy",
    "ict": "2026-11-29 18:00",
@@ -134,7 +86,19 @@
    "prior": null,
    "rate": null,
    "confirmed": false,
-   "impact": 2
+   "impact": 1
+  },
+  {
+   "name": "Brent Jan (F7) futures last trade",
+   "country": "UK",
+   "kind": "energy",
+   "ict": "2026-12-01 02:30",
+   "date": "2026-12-01",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": true,
+   "impact": 1
   },
   {
    "name": "US ISM manufacturing (Nov)",
@@ -185,14 +149,14 @@
    "impact": 1
   },
   {
-   "name": "US nonfarm payrolls / unemployment (Nov) — BLS",
+   "name": "US nonfarm payrolls / unemployment (Nov) - BLS",
    "country": "US",
    "kind": "labour",
    "ict": "2026-12-04 20:30",
    "date": "2026-12-04",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~96% priced (FXStreet, 24 Nov); 2y ~4.64%",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike priced (StockAnalysis/CNBC, 25 Nov post-PCE); 2y ~4.61-4.65%",
    "confirmed": true,
    "impact": 2,
    "required": "us_nfp"
@@ -210,7 +174,7 @@
    "impact": 1
   },
   {
-   "name": "Thai CPI (Nov) — TPSO",
+   "name": "Thai CPI (Nov) - TPSO",
    "country": "TH",
    "kind": "inflation",
    "ict": "2026-12-07 10:30",
@@ -231,19 +195,31 @@
    "date": "2026-12-08",
    "consensus": null,
    "prior": null,
-   "rate": "BOJ 1.25%; next MPM 18 Dec (pricing not re-verified this run)",
+   "rate": "BOJ 1.25%; 18 Dec MPM: hike to 1.50% priced (FXStreet, Nov)",
    "confirmed": false,
    "impact": 1
   },
   {
-   "name": "FOMC decision (outside 14d window, anchor)",
+   "name": "FOMC decision + SEP",
    "country": "US",
    "kind": "cb",
    "ict": "2026-12-10 02:00",
    "date": "2026-12-10",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~96% priced (FXStreet, 24 Nov); 2y ~4.64%",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike priced (StockAnalysis/CNBC, 25 Nov post-PCE); 2y ~4.61-4.65%",
+   "confirmed": true,
+   "impact": 2
+  },
+  {
+   "name": "US CPI / core CPI (Nov) - BLS",
+   "country": "US",
+   "kind": "inflation",
+   "ict": "2026-12-10 20:30",
+   "date": "2026-12-10",
+   "consensus": null,
+   "prior": "Oct: some 12m changes not published (2025 lapse)",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike priced (StockAnalysis/CNBC, 25 Nov post-PCE); 2y ~4.61-4.65%",
    "confirmed": true,
    "impact": 2
   }
