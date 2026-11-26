@@ -1,6 +1,6 @@
-{"date": "2026-11-26", "calls": [
-{"asset": "USDJPY", "bias": "bearish", "entry": 159.9, "invalidation": 160.5, "target": 158.5, "last_at_call": 159.17, "note": "Sell only at 160 MoF wall; Tokyo CPI, BOJ hike priced"},
-{"asset": "UST 10Y (%)", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 4.848, "note": "At 4.82 support, US shut; receive only back near 4.95"},
-{"asset": "DXY (ICE fut)", "bias": "bullish", "entry": 103.3, "invalidation": 102.6, "target": 104.6, "last_at_call": 103.65, "note": "Uptrend intact, hike priced; 103.30 dip unfilled, keep"},
-{"asset": "Brent CO1", "bias": "bearish", "entry": 92.0, "invalidation": 95.5, "target": 87.0, "last_at_call": 90.64, "note": "Houthi bounce into 20DMA; sell 92 pre-OPEC+, small"}
+{"date": "2026-11-27", "calls": [
+{"asset": "USDJPY", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 159.255, "note": "Mid-range; Tokyo CPI miss; sell only a 160 test"},
+{"asset": "UST 10Y (%)", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 4.848, "note": "Holiday-thin at 4.82 support; wait for NFP 4 Dec"},
+{"asset": "DXY (ICE fut)", "bias": "bullish", "entry": 103.3, "invalidation": 102.6, "target": 104.6, "last_at_call": 103.735, "note": "Uptrend, hike priced; buy 103.30 dip, still unfilled"},
+{"asset": "Brent CO1", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 90.64, "note": "Binary OPEC+ Sunday plus Gulf headlines; flat into it"}
 ]}

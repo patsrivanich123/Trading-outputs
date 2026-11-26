@@ -1,55 +1,31 @@
 {
- "asof": "2026-11-25",
+ "asof": "2026-11-27",
  "source": "brief.calendar",
  "data": [
   {
-   "name": "US PCE / core PCE (Oct) - BEA - RELEASED: headline 0.3% m/m, 3.8% y/y; core 3.3% y/y (cons 3.2%)",
+   "name": "US PCE / core PCE (Oct) - BEA - RELEASED: headline 3.8% y/y; core 3.3% y/y (cons 3.2%)",
    "country": "US",
    "kind": "inflation",
    "ict": "2026-11-25 20:30",
    "date": "2026-11-25",
    "consensus": "core 3.2% y/y",
    "prior": "core 3.1% y/y (Sep)",
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike priced",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~97% priced",
    "confirmed": true,
    "impact": 1,
    "required": "us_pce"
   },
   {
-   "name": "ECB account of Oct meeting",
-   "country": "EA",
-   "kind": "cb",
-   "ict": "2026-11-26 19:30",
-   "date": "2026-11-26",
-   "consensus": null,
-   "prior": null,
-   "rate": null,
-   "confirmed": false,
-   "impact": 1
-  },
-  {
-   "name": "US Thanksgiving (NYSE/bond market closed)",
-   "country": "US",
-   "kind": "holiday",
-   "ict": "2026-11-26 21:30",
-   "date": "2026-11-26",
-   "consensus": null,
-   "prior": null,
-   "rate": null,
-   "confirmed": true,
-   "impact": 1
-  },
-  {
-   "name": "Tokyo CPI (Nov)",
+   "name": "Tokyo CPI (Nov) - RELEASED: core 2.9% y/y (cons 3.0%), headline 2.8% (single source, investingLive)",
    "country": "JP",
    "kind": "inflation",
    "ict": "2026-11-27 06:30",
    "date": "2026-11-27",
-   "consensus": "core (ex fresh food) ~2.9% y/y (FXStreet range 2.9-3.0%)",
-   "prior": "headline 2.8% / core 2.6% y/y (Oct)",
-   "rate": "BOJ 1.25%; 18 Dec MPM: hike to 1.50% priced (FXStreet, Nov)",
+   "consensus": "core 3.0% y/y",
+   "prior": "core 2.6% / headline 2.8% (Oct)",
+   "rate": "BOJ 1.25%; 18 Dec MPM: hike to 1.50% ~71% priced (investingLive, 27 Nov)",
    "confirmed": true,
-   "impact": 2,
+   "impact": 1,
    "required": "tokyo_cpi"
   },
   {
@@ -72,21 +48,21 @@
    "date": "2026-11-28",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike priced (StockAnalysis/CNBC, 25 Nov post-PCE); 2y ~4.61-4.65%",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~97% priced (Reuters/FXStreet, 26 Nov)",
    "confirmed": true,
    "impact": 1
   },
   {
-   "name": "OPEC+ ministerial meeting - 2027 output framework (time TBC)",
+   "name": "OPEC+ full ministerial - 2027 production framework / capacity baselines (time TBC)",
    "country": "EA",
    "kind": "energy",
    "ict": "2026-11-29 18:00",
    "date": "2026-11-29",
    "consensus": null,
-   "prior": null,
+   "prior": "Dec targets held (1 Nov)",
    "rate": null,
    "confirmed": false,
-   "impact": 1
+   "impact": 2
   },
   {
    "name": "Brent Jan (F7) futures last trade",
@@ -155,8 +131,8 @@
    "ict": "2026-12-04 20:30",
    "date": "2026-12-04",
    "consensus": null,
-   "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike priced (StockAnalysis/CNBC, 25 Nov post-PCE); 2y ~4.61-4.65%",
+   "prior": "model: NFP 134k (no skill), UR 4.15%",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~97% priced (Reuters/FXStreet, 26 Nov)",
    "confirmed": true,
    "impact": 2,
    "required": "us_nfp"
@@ -179,7 +155,7 @@
    "kind": "inflation",
    "ict": "2026-12-07 10:30",
    "date": "2026-12-07",
-   "consensus": null,
+   "consensus": "our nowcast 3.29% y/y",
    "prior": "3.90% y/y, core 1.58 (Oct)",
    "rate": "BoT 1.00%; MPC 23 Dec",
    "confirmed": true,
@@ -195,7 +171,7 @@
    "date": "2026-12-08",
    "consensus": null,
    "prior": null,
-   "rate": "BOJ 1.25%; 18 Dec MPM: hike to 1.50% priced (FXStreet, Nov)",
+   "rate": "BOJ 1.25%; 18 Dec MPM: hike to 1.50% ~71% priced (investingLive, 27 Nov)",
    "confirmed": false,
    "impact": 1
   },
@@ -207,9 +183,10 @@
    "date": "2026-12-10",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike priced (StockAnalysis/CNBC, 25 Nov post-PCE); 2y ~4.61-4.65%",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~97% priced (Reuters/FXStreet, 26 Nov)",
    "confirmed": true,
-   "impact": 2
+   "impact": 2,
+   "required": "fomc"
   },
   {
    "name": "US CPI / core CPI (Nov) - BLS",
@@ -217,17 +194,20 @@
    "kind": "inflation",
    "ict": "2026-12-10 20:30",
    "date": "2026-12-10",
-   "consensus": null,
+   "consensus": "our nowcast headline 3.88% y/y",
    "prior": "Oct: some 12m changes not published (2025 lapse)",
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike priced (StockAnalysis/CNBC, 25 Nov post-PCE); 2y ~4.61-4.65%",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~97% priced (Reuters/FXStreet, 26 Nov)",
    "confirmed": true,
-   "impact": 2
+   "impact": 2,
+   "required": "us_cpi"
   }
  ],
  "validation": {
   "missing": [],
   "matched": [
    "th_cpi 2026-12-07",
+   "fomc 2026-12-10",
+   "us_cpi 2026-12-10",
    "us_nfp 2026-12-04",
    "us_pce 2026-11-25",
    "tokyo_cpi 2026-11-27"
