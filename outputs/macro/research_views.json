@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-25",
+ "asof": "2026-11-26",
  "source": "macro.research.publish (views.csv)",
  "data": {
   "views": [
@@ -18,10 +18,10 @@
     "source_type": "press report",
     "source_url": "https://www.exchangerates.org.uk/news/47597/2026-10-28-usd-jpy-forecast-two-major-banks-see-opposite-paths-for-the-yen-in-2027.html",
     "status": "active",
-    "live": 159.17,
-    "live_asof": "2026-11-25 00:00:00",
-    "to_target": 5.83,
-    "age_days": 28,
+    "live": 159.255,
+    "live_asof": "2026-11-26 00:00:00",
+    "to_target": 5.745,
+    "age_days": 29,
     "stale": false
    },
    {
@@ -39,9 +39,9 @@
     "source_type": "press report",
     "source_url": "https://www.tmgm.com/en/analysis/market-news/article/japanese-yen-wider-range-with-intervention-support-against-us-dollar-hsbc-202608111118",
     "status": "active",
-    "live": 159.17,
-    "live_asof": "2026-11-25 00:00:00",
-    "age_days": 106,
+    "live": 159.255,
+    "live_asof": "2026-11-26 00:00:00",
+    "age_days": 107,
     "stale": true
    },
    {
@@ -62,7 +62,7 @@
     "live": 4.848,
     "live_asof": "2026-11-25 00:00:00",
     "to_target": -0.148,
-    "age_days": 147,
+    "age_days": 148,
     "stale": true
    },
    {
@@ -80,7 +80,7 @@
     "source_type": "press report",
     "source_url": "https://www.bloomberg.com/news/articles/2026-09-28/jpmorgan-defies-consensus-with-three-thai-rate-hikes-in-2027",
     "status": "active",
-    "age_days": 58,
+    "age_days": 59,
     "stale": false
    },
    {
@@ -98,7 +98,7 @@
     "source_type": "press report",
     "source_url": "https://www.fxstreet.com/news/thai-baht-bot-cautious-on-normalisation-downside-persists-commerzbank-202610301722",
     "status": "active",
-    "age_days": 26,
+    "age_days": 27,
     "stale": false
    },
    {
@@ -116,7 +116,7 @@
     "source_type": "press report",
     "source_url": "https://www.fxstreet.com/news/thai-baht-bot-holds-rates-as-curve-steepening-risks-dbs-202610292054",
     "status": "active",
-    "age_days": 27,
+    "age_days": 28,
     "stale": false
    }
   ],
@@ -138,20 +138,20 @@
   },
   "lab": {
    "USDJPY": {
-    "date": "2026-11-25",
+    "date": "2026-11-26",
     "bias": "bearish",
     "entry": "159.9",
     "invalidation": "160.5",
     "target": "158.5",
-    "note": "Fade only at 160 MoF wall; 159.9 unfilled, keep"
+    "note": "Sell only at 160 MoF wall; Tokyo CPI, BOJ hike priced"
    },
    "UST 10Y": {
-    "date": "2026-11-25",
+    "date": "2026-11-26",
     "bias": "no trade",
     "entry": "",
     "invalidation": "",
     "target": "",
-    "note": "4.82-4.95 range into PCE; 5y tailed 0.3bp, no signal"
+    "note": "At 4.82 support, US shut; receive only back near 4.95"
    },
    "BoT policy rate": null,
    "BoT / USDTHB": null
