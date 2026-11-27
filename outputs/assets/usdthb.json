@@ -1,12 +1,12 @@
 {
- "asof": "2026-11-26",
+ "asof": "2026-11-27",
  "source": "assets.fx.usdthb (Yahoo + FRED)",
  "data": {
   "asset": "USDTHB",
-  "last": 34.01,
+  "last": 33.89,
   "asof": "2026-11-27",
-  "fair_value": 33.9526,
-  "residual_z": 0.16,
+  "fair_value": 33.9072,
+  "residual_z": -0.05,
   "rich_cheap": "near fair value",
   "returns_model": {
    "factors": [
@@ -21,7 +21,7 @@
    "start": "2019-12-06",
    "beta_5y": {
     "DXY": 0.423,
-    "XAU": -0.111,
+    "XAU": -0.11,
     "US2Y": 0.004,
     "JPY": 0.096
    },
@@ -33,27 +33,27 @@
    },
    "r2_5y": 0.42,
    "beta_1y": {
-    "DXY": 0.538,
+    "DXY": 0.539,
     "XAU": -0.099,
     "US2Y": 0.001,
-    "JPY": 0.004
+    "JPY": 0.005
    },
    "t_1y": {
     "DXY": 5.7,
-    "XAU": -4.1,
+    "XAU": -4.2,
     "US2Y": 0.1,
     "JPY": 0.1
    },
-   "r2_1y": 0.461,
+   "r2_1y": 0.462,
    "corr": {
     "DXY": {
      "DXY": 1.0,
-     "XAU": -0.33,
+     "XAU": -0.32,
      "US2Y": 0.28,
      "JPY": 0.68
     },
     "XAU": {
-     "DXY": -0.33,
+     "DXY": -0.32,
      "XAU": 1.0,
      "US2Y": -0.2,
      "JPY": -0.2
@@ -1315,15 +1315,15 @@
    },
    {
     "date": "2026-11-27",
-    "DXY": 0.538,
+    "DXY": 0.539,
     "XAU": -0.099,
     "US2Y": 0.001,
-    "JPY": 0.004,
-    "r2": 0.461
+    "JPY": 0.005,
+    "r2": 0.462
    }
   ],
-  "live_daily": 34.01,
-  "live_daily_asof": "2026-11-26",
+  "live_daily": 33.89,
+  "live_daily_asof": "2026-11-27",
   "signal_test": {
    "horizon_weeks": 2,
    "n": 260,
@@ -2266,13 +2266,13 @@
    },
    {
     "date": "2026-11-27",
-    "usdthb": 34.01,
-    "fv": 33.9526,
-    "z": 0.16
+    "usdthb": 33.89,
+    "fv": 33.9072,
+    "z": -0.05
    }
   ],
   "caveat": "v0: weekly Fri closes (daily Yahoo data is asynchronous across FX/futures); rate factor = US 2y only (no Thai yields on FRED/Yahoo \u2014 TH 2y via BQuant next); DXY rebuilt from FX pairs, contains JPY (13.6%) -> DXY/JPY collinear (corr ~0.7), read their betas jointly; offshore Yahoo quote, not onshore fixing.",
   "chart": "outputs/assets/usdthb_factor.png",
-  "run_at": "2026-11-26T23:38"
+  "run_at": "2026-11-27T23:37"
  }
 }

@@ -83,10 +83,10 @@ date,asset,bias,entry,invalidation,target,last_at_call,graded_on,outcome,pnl_pct
 2026-11-25,DXY (ICE fut),bullish,103.3,102.6,104.6,103.765,2026-11-26,loss,-0.111,"Uptrend, off 104.47 high; buy dip to 103.30"
 2026-11-25,Brent CO1,bearish,90.7,93.6,86.0,88.78,2026-11-26,loss,-2.095,Below 20/50DMA; sell 90.7 into OPEC+ Sun
 2026-11-26,USDJPY,bearish,159.9,160.5,158.5,159.17,2026-11-27,loss,-0.053,"Sell only at 160 MoF wall; Tokyo CPI, BOJ hike priced"
-2026-11-26,UST 10Y (%),no trade,,,,4.848,,,,"At 4.82 support, US shut; receive only back near 4.95"
+2026-11-26,UST 10Y (%),no trade,,,,4.848,2026-11-28,n/a,,"At 4.82 support, US shut; receive only back near 4.95"
 2026-11-26,DXY (ICE fut),bullish,103.3,102.6,104.6,103.65,2026-11-27,win,0.082,"Uptrend intact, hike priced; 103.30 dip unfilled, keep"
-2026-11-26,Brent CO1,bearish,92.0,95.5,87.0,90.64,,,,"Houthi bounce into 20DMA; sell 92 pre-OPEC+, small"
-2026-11-27,USDJPY,no trade,,,,159.255,,,,Mid-range; Tokyo CPI miss; sell only a 160 test
-2026-11-27,UST 10Y (%),no trade,,,,4.848,,,,Holiday-thin at 4.82 support; wait for NFP 4 Dec
-2026-11-27,DXY (ICE fut),bullish,103.3,102.6,104.6,103.735,,,,"Uptrend, hike priced; buy 103.30 dip, still unfilled"
-2026-11-27,Brent CO1,no trade,,,,90.64,,,,Binary OPEC+ Sunday plus Gulf headlines; flat into it
+2026-11-26,Brent CO1,bearish,92.0,95.5,87.0,90.64,2026-11-28,flat,-0.000,"Houthi bounce into 20DMA; sell 92 pre-OPEC+, small"
+2026-11-27,USDJPY,no trade,,,,159.255,2026-11-28,n/a,,Mid-range; Tokyo CPI miss; sell only a 160 test
+2026-11-27,UST 10Y (%),no trade,,,,4.848,2026-11-28,n/a,,Holiday-thin at 4.82 support; wait for NFP 4 Dec
+2026-11-27,DXY (ICE fut),bullish,103.3,102.6,104.6,103.735,2026-11-28,win,0.236,"Uptrend, hike priced; buy 103.30 dip, still unfilled"
+2026-11-27,Brent CO1,no trade,,,,90.64,2026-11-28,n/a,,Binary OPEC+ Sunday plus Gulf headlines; flat into it
