@@ -186,7 +186,7 @@
   }
  ],
  "grades": {
-  "graded_today": 6,
+  "graded_today": 5,
   "n_scored": 39,
   "hit_rate_all": 38.46153846153847,
   "hit_rate_20": 35.0,
@@ -196,12 +196,6 @@
     "bias": "no trade",
     "outcome": "n/a",
     "pnl_pct": ""
-   },
-   {
-    "asset": "Brent CO1",
-    "bias": "bearish",
-    "outcome": "flat",
-    "pnl_pct": "-0.000"
    },
    {
     "asset": "USDJPY",
@@ -227,6 +221,7 @@
     "outcome": "n/a",
     "pnl_pct": ""
    }
-  ]
+  ],
+  "note": "Brent 26-Nov bearish left ungraded: IBKR Feb bar for Thu 26 Nov is a Thanksgiving no-settle repeat (90.64); grade on first real new bar."
  }
 }

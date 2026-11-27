@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-27",
+ "asof": "2026-11-28",
  "source": "assets.fx.usdthb (Yahoo + FRED)",
  "data": {
   "asset": "USDTHB",
@@ -2273,6 +2273,6 @@
   ],
   "caveat": "v0: weekly Fri closes (daily Yahoo data is asynchronous across FX/futures); rate factor = US 2y only (no Thai yields on FRED/Yahoo \u2014 TH 2y via BQuant next); DXY rebuilt from FX pairs, contains JPY (13.6%) -> DXY/JPY collinear (corr ~0.7), read their betas jointly; offshore Yahoo quote, not onshore fixing.",
   "chart": "outputs/assets/usdthb_factor.png",
-  "run_at": "2026-11-27T23:37"
+  "run_at": "2026-11-28T06:40"
  }
 }

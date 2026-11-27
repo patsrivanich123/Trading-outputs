@@ -1,35 +1,34 @@
 {
- "asof": "2026-11-27",
+ "asof": "2026-11-28",
  "source": "brief.calendar",
  "data": [
   {
-   "name": "US PCE / core PCE (Oct) - BEA - RELEASED: headline 3.8% y/y; core 3.3% y/y (cons 3.2%)",
+   "name": "US PCE / core PCE (Oct) - BEA - RELEASED: headline 3.8% y/y; core 3.3% y/y (cons 3.2%). Next (Nov) after window",
    "country": "US",
    "kind": "inflation",
    "ict": "2026-11-25 20:30",
    "date": "2026-11-25",
    "consensus": "core 3.2% y/y",
    "prior": "core 3.1% y/y (Sep)",
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~97% priced",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~97% priced (Reuters/FXStreet 26 Nov; Trading Economics 27 Nov \"almost certain\")",
    "confirmed": true,
    "impact": 1,
    "required": "us_pce"
   },
   {
-   "name": "Tokyo CPI (Nov) - RELEASED: core 2.9% y/y (cons 3.0%), headline 2.8% (single source, investingLive)",
+   "name": "Tokyo CPI (Nov) - RELEASED: core 2.9% y/y (cons 3.0%), headline 2.8% (single source). Next 25 Dec",
    "country": "JP",
    "kind": "inflation",
    "ict": "2026-11-27 06:30",
    "date": "2026-11-27",
    "consensus": "core 3.0% y/y",
-   "prior": "core 2.6% / headline 2.8% (Oct)",
+   "prior": "core 2.6% (Oct)",
    "rate": "BOJ 1.25%; 18 Dec MPM: hike to 1.50% ~71% priced (investingLive, 27 Nov)",
    "confirmed": true,
-   "impact": 1,
-   "required": "tokyo_cpi"
+   "impact": 1
   },
   {
-   "name": "US Black Friday - early close equities 13:00 / bonds 14:00 ET",
+   "name": "US Black Friday early close (equities 13:00 / bonds 14:00 ET) - done",
    "country": "US",
    "kind": "holiday",
    "ict": "2026-11-28 01:00",
@@ -41,19 +40,19 @@
    "impact": 1
   },
   {
-   "name": "Fed blackout begins (FOMC 8-9 Dec)",
+   "name": "Fed blackout in force (FOMC 8-9 Dec)",
    "country": "US",
    "kind": "cb",
    "ict": "2026-11-28 12:00",
    "date": "2026-11-28",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~97% priced (Reuters/FXStreet, 26 Nov)",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~97% priced (Reuters/FXStreet 26 Nov; Trading Economics 27 Nov \"almost certain\")",
    "confirmed": true,
    "impact": 1
   },
   {
-   "name": "OPEC+ full ministerial - 2027 production framework / capacity baselines (time TBC)",
+   "name": "OPEC+ full ministerial - 2027 production framework / quotas (time TBC)",
    "country": "EA",
    "kind": "energy",
    "ict": "2026-11-29 18:00",
@@ -132,7 +131,7 @@
    "date": "2026-12-04",
    "consensus": null,
    "prior": "model: NFP 134k (no skill), UR 4.15%",
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~97% priced (Reuters/FXStreet, 26 Nov)",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~97% priced (Reuters/FXStreet 26 Nov; Trading Economics 27 Nov \"almost certain\")",
    "confirmed": true,
    "impact": 2,
    "required": "us_nfp"
@@ -150,7 +149,7 @@
    "impact": 1
   },
   {
-   "name": "Thai CPI (Nov) - TPSO",
+   "name": "Thai CPI (Nov) - TPSO (check: 7 Dec may be a substitute holiday)",
    "country": "TH",
    "kind": "inflation",
    "ict": "2026-12-07 10:30",
@@ -162,6 +161,18 @@
    "impact": 2,
    "required": "th_cpi",
    "pinned_source": "TPSO annual CPI release calendar 2569 (in the Jan-2026 CPI press document, uploads.tpso.go.th/editor/pdf/1770267421_9730fb584f591c6af957.pdf); time 10:30 per TPSO press header; dates can slip by a day — each monthly release restates the next date"
+  },
+  {
+   "name": "US 3Y note auction (tentative Treasury schedule)",
+   "country": "US",
+   "kind": "supply",
+   "ict": "2026-12-08 01:00",
+   "date": "2026-12-08",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": false,
+   "impact": 1
   },
   {
    "name": "Japan Q3 GDP 2nd preliminary",
@@ -183,10 +194,22 @@
    "date": "2026-12-10",
    "consensus": null,
    "prior": null,
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~97% priced (Reuters/FXStreet, 26 Nov)",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~97% priced (Reuters/FXStreet 26 Nov; Trading Economics 27 Nov \"almost certain\")",
    "confirmed": true,
    "impact": 2,
    "required": "fomc"
+  },
+  {
+   "name": "Thailand Constitution Day - market holiday",
+   "country": "TH",
+   "kind": "holiday",
+   "ict": "2026-12-10 09:00",
+   "date": "2026-12-10",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": true,
+   "impact": 1
   },
   {
    "name": "US CPI / core CPI (Nov) - BLS",
@@ -196,10 +219,22 @@
    "date": "2026-12-10",
    "consensus": "our nowcast headline 3.88% y/y",
    "prior": "Oct: some 12m changes not published (2025 lapse)",
-   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~97% priced (Reuters/FXStreet, 26 Nov)",
+   "rate": "3.75-4.00%; FOMC 8-9 Dec: 25bp hike ~97% priced (Reuters/FXStreet 26 Nov; Trading Economics 27 Nov \"almost certain\")",
    "confirmed": true,
    "impact": 2,
    "required": "us_cpi"
+  },
+  {
+   "name": "US 30Y bond reopening auction (tentative Treasury schedule)",
+   "country": "US",
+   "kind": "supply",
+   "ict": "2026-12-11 01:00",
+   "date": "2026-12-11",
+   "consensus": null,
+   "prior": null,
+   "rate": null,
+   "confirmed": false,
+   "impact": 1
   }
  ],
  "validation": {
@@ -209,8 +244,7 @@
    "fomc 2026-12-10",
    "us_cpi 2026-12-10",
    "us_nfp 2026-12-04",
-   "us_pce 2026-11-25",
-   "tokyo_cpi 2026-11-27"
+   "us_pce 2026-11-25"
   ],
   "inserted": [],
   "pinned": [

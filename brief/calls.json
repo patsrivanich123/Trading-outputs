@@ -1,6 +1,6 @@
-{"date": "2026-11-27", "calls": [
-{"asset": "USDJPY", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 159.255, "note": "Mid-range; Tokyo CPI miss; sell only a 160 test"},
-{"asset": "UST 10Y (%)", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 4.848, "note": "Holiday-thin at 4.82 support; wait for NFP 4 Dec"},
-{"asset": "DXY (ICE fut)", "bias": "bullish", "entry": 103.3, "invalidation": 102.6, "target": 104.6, "last_at_call": 103.735, "note": "Uptrend, hike priced; buy 103.30 dip, still unfilled"},
-{"asset": "Brent CO1", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 90.64, "note": "Binary OPEC+ Sunday plus Gulf headlines; flat into it"}
+{"date": "2026-11-28", "calls": [
+{"asset": "USDJPY", "bias": "bearish", "entry": 160.0, "invalidation": 160.6, "target": 158.75, "last_at_call": 159.5525, "note": "Fade 160 MoF wall; BOJ Dec hike 71% priced"},
+{"asset": "UST 10Y (%)", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 4.938, "note": "Bounced off 4.82; mid-range into NFP; receive only 5.00+"},
+{"asset": "DXY (ICE fut)", "bias": "bullish", "entry": 103.5, "invalidation": 102.9, "target": 104.6, "last_at_call": 103.98, "note": "Uptrend, hike priced; raise dip bid to 103.50"},
+{"asset": "Brent CO1", "bias": "no trade", "entry": null, "invalidation": null, "target": null, "last_at_call": 90.64, "note": "OPEC+ Sunday binary; Jan expiry Monday; flat"}
 ]}
